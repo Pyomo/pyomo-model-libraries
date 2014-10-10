@@ -1,0 +1,5 @@
+param N:=50000;
+param alpha:=2.0;
+param beta:=1.0;
+param gamma:=1.0;
+param delta:=1.0;

@@ -1,0 +1,51 @@
+WARNING: No construction rule or expression specified for objective 'a'
+WARNING: No construction rule or expression specified for objective 'b'
+WARNING: No construction rule or expression specified for objective 'c'
+Model unknown
+
+  Variables:
+    x : Size=2, Index=x_index, Domain=Reals
+        Key : Lower : Value : Upper : Initial : Fixed : Stale
+          1 :  None :   1.0 :  None :     1.0 : False : False
+          2 :  None :   1.0 :  None :     1.0 : False : False
+
+  Objectives:
+    a : Size=0, Index=None, Active=True
+        Key : Active : Value
+    b : Size=0, Index=None, Active=True
+        Key : Active : Value
+    c : Size=0, Index=c_index, Active=True
+        Key : Active : Value
+    d : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :   3.0
+    e : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :   1.0
+    f : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :   3.0
+    g : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :   3.0
+    gg : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :   3.0
+    h : Size=4, Index=h_index, Active=True
+        Key : Active : Value
+          1 :   True :   2.0
+          2 :   True :   6.0
+          3 :   True :  12.0
+          4 :   True :  20.0
+    m : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :   3.0
+    n : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :   3.0
+    p : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :   3.0
+
+  Constraints:
+    None

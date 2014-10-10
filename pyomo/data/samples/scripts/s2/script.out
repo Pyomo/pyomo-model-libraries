@@ -1,0 +1,26 @@
+Solution 0
+['x[hammer]', 'x[screwdriver]', 'x[towel]', 'x[wrench]']
+  Variable x[hammer]
+     Id 0
+     Rc 5.85714285714
+     Value 1.0
+  Variable x[screwdriver]
+     Id 3
+     Rc 4.28571428571
+     Value 1.0
+  Variable x[towel]
+     Id 1
+     Rc 9.71428571429
+     Value 1.0
+  Variable x[wrench]
+     Id 2
+     Rc 0.0
+     Value 0.285714285714
+  Constraint W
+     Dual 0.0
+  Constraint weight
+     Dual 0.428571428571
+
+Dual Values
+W 0.0
+weight 0.428571428571

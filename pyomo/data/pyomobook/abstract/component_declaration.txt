@@ -1,0 +1,63 @@
+9 Set Declarations
+    A : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=(1, 3)
+        [1, 2, 3]
+    B : Dim=0, Dimen=2, Size=3, Domain=None, Ordered=False, Bounds=None
+        [(1, 1), (2, 2), (3, 3)]
+    v_index : Dim=0, Dimen=4, Size=9, Domain=None, Ordered=False, Bounds=None
+        Virtual
+    v_index_0 : Dim=0, Dimen=2, Size=3, Domain=None, Ordered=False, Bounds=None
+        [(2, 2), (4, 4), (6, 6)]
+    w_index : Dim=0, Dimen=3, Size=3, Domain=None, Ordered=False, Bounds=None
+        Virtual
+    w_index_0 : Dim=0, Dimen=1, Size=1, Domain=None, Ordered=False, Bounds=(2, 2)
+        [2]
+    x_index : Dim=0, Dimen=3, Size=6, Domain=None, Ordered=False, Bounds=None
+        Virtual
+    x_index_0 : Dim=0, Dimen=1, Size=2, Domain=None, Ordered=False, Bounds=None
+        ['a', 'b']
+    y_index : Dim=0, Dimen=3, Size=9, Domain=None, Ordered=False, Bounds=None
+        Virtual
+
+5 Param Declarations
+    v : Size=9, Index=v_index, Domain=Any, Default=None, Mutable=False
+        Key          : Value
+        (2, 2, 1, 1) :   1.0
+        (2, 2, 2, 2) :   1.0
+        (2, 2, 3, 3) :   1.0
+        (4, 4, 1, 1) :   1.0
+        (4, 4, 2, 2) :   1.0
+        (4, 4, 3, 3) :   1.0
+        (6, 6, 1, 1) :   1.0
+        (6, 6, 2, 2) :   1.0
+        (6, 6, 3, 3) :   1.0
+    w : Size=3, Index=w_index, Domain=Any, Default=None, Mutable=False
+        Key       : Value
+        (2, 1, 1) :   1.0
+        (2, 2, 2) :   1.0
+        (2, 3, 3) :   1.0
+    x : Size=6, Index=x_index, Domain=Any, Default=None, Mutable=False
+        Key         : Value
+        ('a', 1, 1) :   1.0
+        ('a', 2, 2) :   1.0
+        ('a', 3, 3) :   1.0
+        ('b', 1, 1) :   1.0
+        ('b', 2, 2) :   1.0
+        ('b', 3, 3) :   1.0
+    y : Size=9, Index=y_index, Domain=Any, Default=None, Mutable=False
+        Key       : Value
+        (1, 1, 1) :   1.0
+        (1, 2, 2) :   1.0
+        (1, 3, 3) :   1.0
+        (2, 1, 1) :   1.0
+        (2, 2, 2) :   1.0
+        (2, 3, 3) :   1.0
+        (3, 1, 1) :   1.0
+        (3, 2, 2) :   1.0
+        (3, 3, 3) :   1.0
+    z : Size=3, Index=B, Domain=Any, Default=None, Mutable=False
+        Key    : Value
+        (1, 1) :   1.0
+        (2, 2) :   1.0
+        (3, 3) :   1.0
+
+14 Declarations: A B z y_index y x_index_0 x_index x w_index_0 w_index w v_index_0 v_index v

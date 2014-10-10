@@ -1,0 +1,54 @@
+Model unknown
+
+  Variables:
+    x : Size=2, Index=x_index, Domain=Reals
+        Key : Lower : Value : Upper : Initial : Fixed : Stale
+          1 :  None :   1.0 :  None :     1.0 : False : False
+          2 :  None :   1.0 :  None :     1.0 : False : False
+    y : Size=3, Index=y_index, Domain=NonNegativeReals
+        Key : Lower : Value : Upper : Initial : Fixed : Stale
+          1 :     0 :   0.0 :  None :     0.0 : False : False
+          2 :     0 :   0.0 :  None :     0.0 : False : False
+          3 :     0 :   0.0 :  None :     0.0 : False : False
+    StartTime : Size=5, Index=StartTime_index, Domain=Reals
+        Key : Lower : Value : Upper : Initial : Fixed : Stale
+          1 :  None :   1.0 :  None :     1.0 : False : False
+          2 :  None :   1.0 :  None :     1.0 : False : False
+          3 :  None :   1.0 :  None :     1.0 : False : False
+          4 :  None :   1.0 :  None :     1.0 : False : False
+          5 :  None :   1.0 :  None :     1.0 : False : False
+    z : Size=0, Index=EMPTY, Domain=Reals
+        Key : Lower : Value : Upper : Initial : Fixed : Stale
+
+  Objectives:
+    None
+
+  Constraints:
+    Diff : Size=1
+        Key  : Lower : Body : Upper
+        None :  None :  0.0 :   7.5
+    CoverConstr : Size=3
+        Key : Lower : Body : Upper
+          1 :   1.0 :  0.0 :  None
+          2 :   2.9 :  0.0 :  None
+          3 :   3.1 :  0.0 :  None
+    CapacityIneq : Size=3
+        Key : Lower : Body : Upper
+          1 :  0.25 :  0.0 :   1.0
+          2 :  0.25 :  0.0 :   1.0
+          3 :  0.25 :  0.0 :   1.0
+    CapacityEq : Size=3
+        Key : Lower : Body : Upper
+          1 :   0.0 : -1.0 :   0.0
+          2 :   0.0 : -2.9 :   0.0
+          3 :   0.0 : -3.1 :   0.0
+    Pred : Size=4
+        Key : Lower : Body : Upper
+          1 :  None :  0.0 :   0.0
+          2 :  None :  0.0 :   0.0
+          3 :  None :  0.0 :   0.0
+          4 :  None :  0.0 :   0.0
+    C2 : Size=0
+        Key : Lower : Body : Upper
+    C1 : Size=0
+        Key : Lower : Body : Upper

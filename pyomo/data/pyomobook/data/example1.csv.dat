@@ -1,0 +1,1 @@
+import example1.csv : c1=[A,B,C] Z=D;

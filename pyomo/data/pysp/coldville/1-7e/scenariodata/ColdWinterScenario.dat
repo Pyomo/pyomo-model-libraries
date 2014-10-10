@@ -1,0 +1,38 @@
+#ColdWinter scenario
+
+set MATERIALS := SALT FUEL;
+
+set METHODS := SALTING PLOWING;
+
+
+#Data_deterministic
+
+param SummerMaterialCost := 
+SALT 20
+FUEL 70;
+
+param MaterialSalvagePrice :=
+SALT 15
+FUEL 65;
+
+param FleetCapacity := 5000;
+
+param MaterialRequirement:
+      SALTING  PLOWING :=
+SALT     1        0
+FUEL     1        1 ;
+
+
+#Data_stochastic
+
+param WinterMaterialCost :=
+SALT 32
+FUEL 73;
+
+param TruckCost := 120;
+
+param Efficiency :=
+SALTING 1.1
+PLOWING 1;
+
+param TruckdayRequirement := 5100;

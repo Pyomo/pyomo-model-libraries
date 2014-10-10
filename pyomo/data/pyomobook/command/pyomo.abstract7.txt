@@ -1,0 +1,92 @@
+[    0.00] Setting up Pyomo environment
+[    0.00] Applying Pyomo preprocessing actions
+The following options were specified:
+catch: True
+data_files: []
+debug: False
+disable_gc: False
+help_components: False
+help_solvers: False
+info: False
+interactive: False
+json: False
+keepfiles: False
+linearize_expressions: False
+log: False
+model_file: 'abstract7.py'
+model_name: 'model'
+model_options: []
+namespaces: []
+only_instance: False
+output: None
+path: '.'
+postprocess: []
+preprocess: []
+profile: 0
+profile_memory: 0
+quiet: False
+report_timing: False
+results_format: 'yaml'
+save_model: None
+save_results: None
+show_results: False
+skip_canonical_repn: False
+smanager_type: 'serial'
+solver: 'glpk'
+solver_io: None
+solver_options: []
+solver_suffixes: []
+summary: False
+symbolic_solver_labels: False
+tee: False
+tempdir: None
+timelimit: 0
+usermodel: <module 'abstract7' from 'abstract7.py'>
+verbose: 0
+version: False
+warning: False
+[    0.00] Creating model
+[    0.03] Applying solver
+[    0.04] Processing results
+    Number of solutions: 1
+    Solution Information
+      Gap: 0.0
+      Status: feasible
+      Function Value: 0.8
+    Solver results file: results.yml
+
+Problem: 
+- Name: unknown
+  Lower bound: 0.8
+  Upper bound: 0.8
+  Number of objectives: 1
+  Number of constraints: 3
+  Number of variables: 2
+  Number of nonzeros: 3
+  Sense: minimize
+Solver: 
+- Status: ok
+  Termination condition: optimal
+  Statistics: 
+    Branch and bound: 
+      Number of bounded subproblems: 0
+      Number of created subproblems: 0
+  Error rc: 0
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: 0.0
+  Status: feasible
+  Objective: 
+    x1: 
+      Id: 0
+      Value: 0.8
+  Variable: 
+    x5:
+      Id: 0
+      Value: 0.4
+  Constraint: No nonzero values
+
+[    0.04] Applying Pyomo postprocessing actions
+Solution found with value None
+[    0.04] Pyomo Finished

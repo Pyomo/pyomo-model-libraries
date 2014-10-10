@@ -1,0 +1,42 @@
+# ==========================================================
+# = Solver Results                                         =
+# ==========================================================
+
+# ----------------------------------------------------------
+#   Problem Information
+# ----------------------------------------------------------
+Problem: 
+- Lower bound: 25
+  Upper bound: 25
+  Number of objectives: 1
+  Number of constraints: 2
+  Number of variables: 5
+  Number of nonzeros: 5
+  Sense: maximize
+
+# ----------------------------------------------------------
+#   Solver Information
+# ----------------------------------------------------------
+Solver: 
+- Status: ok
+  Termination condition: optimal
+  Error rc: 0
+
+# ----------------------------------------------------------
+#   Solution Information
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: 0.0
+  Status: optimal
+  Objective: 
+    value: 
+      Value: 25
+  Variable: 
+    x(hammer): 
+      Value: 1
+    x(screwdriver): 
+      Value: 1
+    x(towel): 
+      Value: 1

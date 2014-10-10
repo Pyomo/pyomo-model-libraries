@@ -1,0 +1,34 @@
+
+set I := 	1	2	3	4;
+set IsubFirst := 	1;
+set IsubMiddle := 	2	3;
+set IsubLast := 	4;
+set J :=	j1	j2	j3;
+
+#Data_deterministic
+
+# yield (cubic feet per acre) for each asset class
+param a:=
+1	0
+2	250
+3	510
+4	710;
+
+# max acres (in thousands) for each contract level
+param ZBounds :=
+j1	98000
+j2	7000
+j3	INF;
+
+# profit per contract level in cents
+param cost:=
+j1	100
+j2	70
+j3	50;
+
+# Thousands of acres
+param initTimber:=
+1	8
+2	10
+3	20
+4	60;

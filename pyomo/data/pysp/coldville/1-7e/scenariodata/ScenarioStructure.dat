@@ -1,0 +1,36 @@
+# IMPORTANT - THE STAGES ARE ASSUMED TO BE IN TIME-ORDER.
+
+set Stages := FirstStage SecondStage ;
+
+set Nodes := RootNode 
+             WarmWinterNode
+             ColdWinterNode ;
+
+param NodeStage := RootNode         FirstStage 
+                   WarmWinterNode   SecondStage
+                   ColdWinterNode   SecondStage ;
+
+set Children[RootNode] := WarmWinterNode 
+                          ColdWinterNode ;
+
+param ConditionalProbability := RootNode         1.0
+                                WarmWinterNode   0.3
+                                ColdWinterNode   0.7;
+
+#NOTE: Change ConditionalProbabilities to (1, 0.3, 0.7) for part e
+
+set Scenarios := WarmWinterScenario 
+                 ColdWinterScenario ;
+
+param ScenarioLeafNode := WarmWinterScenario WarmWinterNode
+                          ColdWinterScenario ColdWinterNode ;
+
+set StageVariables[FirstStage] := SummerMaterialPurchase[*] ;
+set StageVariables[SecondStage] := WinterMaterialPurchase[*]
+                                   SalvagedMaterial[*]
+                                   TruckdayUsedinMethod[*] ;
+
+param StageCostVariable := FirstStage FirstStageCost
+                           SecondStage SecondStageCost ;
+
+#param ScenarioBasedData := False ;

@@ -1,0 +1,76 @@
+
+set MACHINES :=	M1	M2	M3	M4	M5	M6	M7	M8	M9	M10	M11 M12	M13	M14	M15	M16	M17	M18	M19	M20	M21	M22	M23	M24	M25	M26	M27	;
+set WAFERS :=	W1	W2	W3	W4	W5	W6	W7	W8  W9	W10	;																	
+set WAFERS_sub1 :=	W1	W2	W3	W4	W5	W6	;																					
+set WAFERS_sub2 :=	W7	W8	W9	W10	;																							
+set STEPS :=	S1	S2	S3	S4	S5	S6	S7	;																				
+set STEPS_sub1 :=	S1	S2	S3	S4	;																							
+																				
+
+#Data_deterministic
+
+param B:= 6;
+
+param Cap := 
+M1	800
+M2	800
+M3	800
+M4	800
+M5	800
+M6	800
+M7	800
+M8	800
+M9	800
+M10	800
+M11	800
+M12	800
+M13	800
+M14	800
+M15	800
+M16	800
+M17	800
+M18	800
+M19	800
+M20	800
+M21	800
+M22	800
+M23	800
+M24	800
+M25	800
+M26	800
+M27	800 ;
+
+#NOTE: X_RP or X_EV only necessary when fixing X
+#NOTE: HAD TO ADJUST X_RP, X_EV down 0.01 due to rounding issues ??
+#X_RP - M13 from  0.937 to 0.936, X_EV - M13 from 1.816 to 1.814	
+param X_RP default 0.0 :=	
+M7	0.721
+M6 	0.254
+M1	0.598
+M2	0.642
+M8	0.900
+M26	0.078
+M21	0.078
+M11	0.112
+M10	0.089
+M13	0.936
+M15	0.396
+M14	0.578
+M16	0.617
+;
+
+param X_EV default 0.0 :=	
+M1	0.491
+M2	0.816
+M7	0.451
+M8	0.595
+M10	0.21
+M11	0.234
+M13	1.814
+M16	0.701
+M21	0.362
+M27	0.325
+;
+
+#Data_stochastic
+

@@ -1,0 +1,15 @@
+======================
+ pyomo.data CHANGELOG
+======================
+
+-------------------------------------------------------------------------------
+ 2.0
+-------------------------------------------------------------------------------
+
+- Integration of the following packages:
+    coopr.data.cute (1.6)
+    coopr.data.pyomo (1.6)
+    coopr.data.pyomobook (1.2)
+    coopr.data.pysp (1.0.4)
+    coopr.data.samples (1.6)
+

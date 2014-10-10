@@ -1,0 +1,53 @@
+#Expected value data
+
+set TYPES := J1 J2 J3 J4 ;
+
+set ROUTES := R1 R2 R3 R4 R5 ;
+
+
+#Data_deterministic
+
+param C : 
+        R1     R2      R3      R4      R5 :=
+J1      18     21      18      16      10
+J2      0      15      16      14      9
+J3      0      10      0       9       6
+J4      17     16      17      15      10 ;
+
+param: Q :=
+R1 13
+R2 13
+R3 7
+R4 7
+R5 1 ;
+
+param K :
+        R1     R2      R3      R4      R5 :=
+J1      16     15      28      23      81
+J2      0      10      14      15      57
+J3      0       5      0       7       29
+J4      9      11      22      17      55 ;
+
+param B :=
+J1 10
+J2 19
+J3 25
+J4 15 ;
+
+param X_EV :
+        R1     R2      R3      R4      R5 :=
+J1      10     0       0       0       0
+J2      0      2.333   5       11.667  0
+J3      0      15.333  0       0       9.667
+J4      10     0       5       0       0 ;
+
+
+#Data_stochastic
+
+param D :=
+R1 250
+R2 100
+R3 180
+R4 175
+R5 600 ;
+

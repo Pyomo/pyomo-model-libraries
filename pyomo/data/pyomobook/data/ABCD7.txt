@@ -1,0 +1,1 @@
+ERROR Cannot dispatch Excel without win32com
