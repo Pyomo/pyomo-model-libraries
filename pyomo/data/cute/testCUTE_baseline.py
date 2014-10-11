@@ -7,7 +7,7 @@ from os.path import abspath, dirname
 
 import pyutilib.th as unittest
 import pyutilib.subprocess
-import pyomo.core.scripting.pyomo as main
+import pyomo.scripting.pyomo_command as main
 from pyomo.core.base import expr as Expr
 from pyomo.opt import ProblemFormat
 from pyomo.core import *

@@ -11,7 +11,7 @@ datadir = os.path.normpath(currdir+'../../../../pyomo.core/examples/pyomo/p-medi
 import re
 import glob
 import pyutilib.th as unittest
-import pyomo.core.scripting.convert
+import pyomo.scripting.convert
 import pyomo.opt
 import pyomo.modeling
 
@@ -32,7 +32,7 @@ class Test(unittest.TestCase):
 class Test1(object):
 
     def test1(self):
-        res = pyomo.core.scripting.convert.pyomo2nl(['--save-model',currdir+'test1.nl',datadir+'pmedian.py',datadir+'pmedian.dat'])
+        res = pyomo.scripting.convert.pyomo2nl(['--save-model',currdir+'test1.nl',datadir+'pmedian.py',datadir+'pmedian.dat'])
         if not os.path.exists(currdir+'test1.nl'):
             raise ValueError("Missing file test1.nl generated in test1")
         os.remove(currdir+'test1.nl')
@@ -42,7 +42,7 @@ class Test1(object):
             self.recordTestData('maximum memory used', res.retval.options.max_memory)
 
     def test2(self):
-        res = pyomo.core.scripting.convert.pyomo2lp(['--save-model',currdir+'test2.lp',datadir+'pmedian.py',datadir+'pmedian.dat'])
+        res = pyomo.scripting.convert.pyomo2lp(['--save-model',currdir+'test2.lp',datadir+'pmedian.py',datadir+'pmedian.dat'])
         if not os.path.exists(currdir+'test2.lp'):
             raise ValueError("Missing file test2.lp generated in test2")
         os.remove(currdir+'test2.lp')
@@ -72,7 +72,7 @@ def nl_test(self, name):
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
-    res = pyomo.core.scripting.convert.pyomo2nl(['--save-model',fname]+options)
+    res = pyomo.scripting.convert.pyomo2nl(['--save-model',fname]+options)
     if not os.path.exists(fname):
         raise ValueError("Missing file %s generated in test2" % fname)
     os.remove(fname)
@@ -89,7 +89,7 @@ def lp_test(self, name):
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
-    res = pyomo.core.scripting.convert.pyomo2lp(['--save-model',fname]+options)
+    res = pyomo.scripting.convert.pyomo2lp(['--save-model',fname]+options)
     if not os.path.exists(fname):
         raise ValueError("Missing file %s generated in test2" % fname)
     os.remove(fname)
@@ -104,7 +104,7 @@ def lp_with_cplex_solve_test(self, name):
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
-    res=pyomo.core.scripting.pyomo.run(['--solver=cplex'] + options)
+    res=pyomo.scripting.pyomo.run(['--solver=cplex'] + options)
     if res.errorcode:
         raise ValueError("pyomo returned nonzero return code (%s)" % res.errorcode)
     if not res.retval.options.max_memory is None:
