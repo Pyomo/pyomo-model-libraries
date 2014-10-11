@@ -6,7 +6,7 @@ import os
 import sys
 from os.path import abspath, dirname
 currdir = dirname(abspath(__file__))+os.sep
-datadir = os.path.normpath(currdir+'../../../../pyomo.core/examples/pyomo/p-median/')+os.sep
+datadir = os.path.normpath(currdir+'../../../../pyomo/examples/pyomo/p-median/')+os.sep
 
 import re
 import glob
