@@ -1,7 +1,7 @@
 #
 # This is a performance test that we cannot easily execute right now
 #
-import pyomo.environ
+import pyomo.modeling
 from pyomo.core import *
 
 

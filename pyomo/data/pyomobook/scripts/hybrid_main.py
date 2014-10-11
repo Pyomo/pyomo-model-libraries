@@ -1,4 +1,4 @@
-import pyomo.environ
+import pyomo.modeling
 
 # @constructor:
 def disease_mdl(INPUTS, DATA):

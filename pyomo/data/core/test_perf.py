@@ -13,7 +13,7 @@ import glob
 import pyutilib.th as unittest
 import pyomo.core.scripting.convert
 import pyomo.opt
-import pyomo.environ
+import pyomo.modeling
 
 solver = pyomo.opt.load_solvers('cplex')
 

@@ -1,4 +1,4 @@
-import pyomo.environ
+import pyomo.modeling
 from pyomo.opt import SolverFactory
 from pyutilib.misc import Options
 

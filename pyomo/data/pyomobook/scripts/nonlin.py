@@ -1,5 +1,5 @@
 import sys
-import pyomo.environ
+import pyomo.modeling
 from pyomo.core import *
 
 LenIn = 5

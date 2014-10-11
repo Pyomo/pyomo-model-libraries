@@ -1,4 +1,4 @@
-import pyomo.environ
+import pyomo.modeling
 from pyomo.opt import SolverFactory
 from concrete1 import model as model1
 from concrete2 import model as model2
