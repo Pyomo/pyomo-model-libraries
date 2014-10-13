@@ -1,6 +1,6 @@
 from pyomo.core import *
 import pyomo.opt
-import pyomo.modeling
+import pyomo.environ
 #
 # Import model
 import knapsack

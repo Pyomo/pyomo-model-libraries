@@ -1,4 +1,4 @@
-import pyomo.modeling
+import pyomo.environ
 from pyomo.misc import PyomoAPIData
 from pyomo.core import *
 from pyutilib.misc import Options

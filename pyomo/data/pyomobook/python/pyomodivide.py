@@ -1,5 +1,5 @@
 # pyomodivide.py
-import pyomo.modeling
+import pyomo.environ
 from pyomo.core import *
 
 # @all:

@@ -3,7 +3,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/nonlinear/multimodal/')
 
 # @all:
-import pyomo.modeling
+import pyomo.environ
 from pyomo.opt import SolverFactory
 from multimodal import model
 

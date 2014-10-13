@@ -21,7 +21,7 @@ _known_warnings = [
 """DEPRECATION WARNING: beginning in Pyomo 4.0, plugins (including
 solvers and DataPortal clients) will not be automatically registered. To
 automatically register all plugins bundled with core Pyomo, user scripts
-should include the line, "import pyomo.modeling".""",
+should include the line, "import pyomo.environ".""",
  ]
 
 

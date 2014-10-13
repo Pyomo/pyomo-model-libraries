@@ -9,7 +9,7 @@ currdir = dirname(abspath(__file__))+os.sep
 
 import pyutilib.th as unittest
 import pyutilib.autotest
-import pyomo.modeling
+import pyomo.environ
 
 pyutilib.autotest.create_test_suites(filename=currdir+'test_baselines.yml', _globals=globals())
 

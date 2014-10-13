@@ -1,4 +1,4 @@
-import pyomo.modeling
+import pyomo.environ
 from pyomo.opt import SolverFactory
 from abstract5 import model
 

@@ -30,7 +30,7 @@
 WARNING: DEPRECATION WARNING: beginning in Pyomo 4.0, plugins (including
 	solvers and DataPortal clients) will not be automatically registered. To
 	automatically register all plugins bundled with core Pyomo, user scripts
-	should include the line, "import pyomo.modeling".
+	should include the line, "import pyomo.environ".
 3 Set Declarations
     M : Dim=0, Dimen=1, Size=2, Domain=None, Ordered=False, Bounds=(1, 2)
         [1, 2]

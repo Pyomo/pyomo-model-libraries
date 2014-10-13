@@ -1,7 +1,7 @@
 # nonlin with indexes
 import sys
 import math
-import pyomo.modeling
+import pyomo.environ
 from pyomo.core import*
 
 SizesIn = {"xAxis":5, "yAxis":4}
