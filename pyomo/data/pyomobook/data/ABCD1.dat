@@ -1,1 +1,1 @@
-import ABCD.tab format=set : Z ;
+load ABCD.tab format=set : Z ;

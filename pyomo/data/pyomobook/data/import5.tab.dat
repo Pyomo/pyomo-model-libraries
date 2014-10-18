@@ -1,1 +1,1 @@
-import D.tab format=set_array: B;
+load D.tab format=set_array: B;

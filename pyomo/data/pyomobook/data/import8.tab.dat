@@ -1,1 +1,1 @@
-import U.tab format=transposed_array: A=[X] U;
+load U.tab format=transposed_array: A=[X] U;

@@ -1,1 +1,1 @@
-import U.tab format=array: A=[X] U;
+load U.tab format=array: A=[X] U;

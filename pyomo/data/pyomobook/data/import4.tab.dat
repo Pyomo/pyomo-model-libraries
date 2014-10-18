@@ -1,1 +1,1 @@
-import C.tab format=set : C;
+load C.tab format=set : C;

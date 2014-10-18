@@ -1,1 +1,1 @@
-import ABCD.txt using=csv : Z=[A,B,C] D ;
+load ABCD.txt using=csv : Z=[A,B,C] D ;

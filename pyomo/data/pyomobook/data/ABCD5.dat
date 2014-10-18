@@ -1,1 +1,1 @@
-import ABCD.tab : Z=[B] Y=D W=C;
+load ABCD.tab : Z=[B] Y=D W=C;

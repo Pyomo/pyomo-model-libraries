@@ -1,1 +1,1 @@
-import ABCD.tab : [A,B,C] D ;
+load ABCD.tab : [A,B,C] D ;

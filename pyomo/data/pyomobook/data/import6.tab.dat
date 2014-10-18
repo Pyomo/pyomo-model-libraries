@@ -1,1 +1,1 @@
-import Z.tab format=param: p;
+load Z.tab format=param: p;

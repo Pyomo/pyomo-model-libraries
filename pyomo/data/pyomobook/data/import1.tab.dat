@@ -1,1 +1,1 @@
-import Y.tab : [A] Y;
+load Y.tab : [A] Y;
