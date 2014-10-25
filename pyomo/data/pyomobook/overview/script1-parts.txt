@@ -42,11 +42,6 @@
         None :   2.0 : 2*x_1 + 5*x_2 :  +Inf :   True
 
 5 Declarations: x_1 x_2 obj con1 con2
-WARNING: "[base]/pyomo.opt/pyomo/opt/base/solvers.py", 202, __solver_call__
-	DEPRECATION WARNING: beginning in Pyomo 4.0, plugins (including
-	solvers and DataPortal clients) will not be automatically registered. To
-	automatically register all plugins bundled with core Pyomo, user scripts
-	should include the line, "import pyomo.environ".
 # ==========================================================
 # = Solver Results                                         =
 # ==========================================================
