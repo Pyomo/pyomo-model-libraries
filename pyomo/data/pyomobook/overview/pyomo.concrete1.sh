@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # @cmd:
-pyomo --solver=glpk concrete1.py
+pyomo solve --solver=glpk concrete1.py
 # @:cmd
 cat results.yml

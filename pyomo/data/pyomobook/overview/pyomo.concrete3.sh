@@ -1,4 +1,4 @@
 #!/bin/sh
 
-pyomo --solver=glpk concrete3.py
+pyomo solve --solver=glpk concrete3.py
 cat results.yml

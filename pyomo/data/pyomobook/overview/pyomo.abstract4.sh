@@ -1,4 +1,4 @@
 #!/bin/sh
 
-pyomo --solver=glpk abstract4.py
+pyomo solve --solver=glpk abstract4.py
 cat results.yml
