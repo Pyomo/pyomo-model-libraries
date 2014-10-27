@@ -1,5 +1,5 @@
 #!/bin/sh
 
 # @cmd:
-pyomo graph_coloring.py south_america.dat
+pyomo solve graph_coloring.py south_america.dat
 # @:cmd
