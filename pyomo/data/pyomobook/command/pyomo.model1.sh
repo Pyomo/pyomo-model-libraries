@@ -2,5 +2,5 @@
 
 cd ../overview
 # @cmd:
-pyomo --instance-only concrete1.py
+pyomo solve --instance-only concrete1.py
 # @:cmd

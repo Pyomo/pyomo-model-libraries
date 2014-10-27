@@ -1,5 +1,5 @@
 #!/bin/sh
 
 # @cmd:
-pyomo --solver=glpk -c abstract7.py
+pyomo solve --solver=glpk -c abstract7.py
 # @:cmd

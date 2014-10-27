@@ -32,7 +32,7 @@ def pyomo_postprocess(options=None, instance=None,
             row.append( data[i].get(var,None) )
         rows.append(row)
     print("Creating results file results.csv")
-    OUTPUT = open('results.csv', 'w', newline='')
+    OUTPUT = open('results.csv', 'w')
     writer = csv.writer(OUTPUT)
     writer.writerows(rows)
     OUTPUT.close()
