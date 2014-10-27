@@ -7,11 +7,11 @@
         [0, 1, 2, 3]
     T_index : Dim=0, Dimen=2, Size=9, Domain=None, Ordered=False, Bounds=None
         Virtual
-    U_index : Dim=0, Dimen=2, Size=9, Domain=None, Ordered=False, Bounds=None
+    U_index : Dim=0, Dimen=2, Size=9, Domain=None, Ordered=Insertion, Bounds=None
         Virtual
-    XX_index : Dim=0, Dimen=2, Size=9, Domain=None, Ordered=False, Bounds=None
+    XX_index : Dim=0, Dimen=2, Size=9, Domain=None, Ordered=Insertion, Bounds=None
         Virtual
-    X_index : Dim=0, Dimen=2, Size=9, Domain=None, Ordered=False, Bounds=None
+    X_index : Dim=0, Dimen=2, Size=9, Domain=None, Ordered=Insertion, Bounds=None
         Virtual
 
 8 Param Declarations

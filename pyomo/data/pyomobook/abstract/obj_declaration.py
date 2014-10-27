@@ -30,13 +30,13 @@ model.g = Objective(rule=TheObjective)
 
 def gg_rule(model):
     return model.x[1] + 2*model.x[2]
-model.gg = Objective()
+model.gg = Objective(rule=gg_rule)
 # @:decl5
 
 # @decl6:
 def h_rule(model, i):
     return i*model.x[1] + i*i*model.x[2]
-model.h = Objective([1, 2, 3, 4])
+model.h = Objective([1, 2, 3, 4], rule=h_rule)
 # @:decl6
 
 # @decl7:
@@ -44,7 +44,7 @@ def m_rule(model):
     expr = model.x[1]
     expr += 2*model.x[2]
     return expr
-model.m = Objective()
+model.m = Objective(rule=m_rule)
 # @:decl7
 
 # @decl8:
@@ -55,7 +55,7 @@ def n_rule(model):
     else:
         return model.x[1] + 3*model.x[2]
     return expr
-model.n = Objective()
+model.n = Objective(rule=n_rule)
 # @:decl8
 
 # @decl9:
