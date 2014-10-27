@@ -39,15 +39,15 @@ def obj_rule(m):
     N = value(m.N)
     return sum(m.x[i,N] for i in sequence(m.N)
                         if (i,N) in m.edges)
-model.obj = Objective(sense=maximize)
+model.obj = Objective(sense=maximize, rule=obj_rule)
 
 def flow_rule(m, i):
     return sum(m.x[j,i] for j in sequence(m.N-1)
                         if (j,i) in m.edges) == \
            sum(m.x[i,j] for j in sequence(2,m.N)
                         if (i,j) in m.edges)
-model.flow = Constraint(RangeSet(2,model.N-1))
+model.flow = Constraint(RangeSet(2,model.N-1), rule=flow_rule)
 
 def limit_rule(m, i, j):
     return m.x[i,j] <= m.w[i,j]
-model.limit = Constraint(model.edges)
+model.limit = Constraint(model.edges, rule=limit_rule)
