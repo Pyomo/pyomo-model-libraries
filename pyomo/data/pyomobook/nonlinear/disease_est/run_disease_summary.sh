@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pyomo --solver=ipopt --summary DiseaseEstimation.py DiseaseEstimation.dat
+pyomo solve --solver=ipopt --summary DiseaseEstimation.py DiseaseEstimation.dat

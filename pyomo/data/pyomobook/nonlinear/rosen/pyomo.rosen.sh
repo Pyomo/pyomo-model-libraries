@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # @cmd:
-pyomo --solver=ipopt --summary Rosenbrock.py
+pyomo solve --solver=ipopt --summary Rosenbrock.py
 # @:cmd
 

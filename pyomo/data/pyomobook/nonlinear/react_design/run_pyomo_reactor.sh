@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pyomo --solver=ipopt --summary --stream-solver ReactorDesign.py
+pyomo solve --solver=ipopt --summary --stream-solver ReactorDesign.py

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pyomo --solver=ipopt --summary multimodal_init1.py
+pyomo solve --solver=ipopt --summary multimodal_init1.py

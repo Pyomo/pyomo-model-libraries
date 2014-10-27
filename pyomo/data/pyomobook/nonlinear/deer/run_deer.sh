@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pyomo --solver=ipopt --summary DeerProblem.py DeerProblem.dat
+pyomo solve --solver=ipopt --summary DeerProblem.py DeerProblem.dat
