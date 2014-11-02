@@ -1,6 +1,7 @@
 import pyomo.environ
-from pyomo.misc import PyomoAPIData
+from pyomo.util import PyomoAPIData
 from pyomo.core import *
+import pyomo.scripting
 from pyutilib.misc import Options
 
 # create the concrete model
@@ -49,8 +50,7 @@ sv_values = [1.0 + v * 0.05 for v in range(1, 20)]
 print("   %s %s" % (str('sv'.rjust(10)), str('cb'.rjust(10))))
 for sv_value in sv_values:
     instance.sv = sv_value
-    output = \
-        scripting.util.apply_optimizer(data, instance=instance)
+    output = pyomo.scripting.util.apply_optimizer(data, instance=instance)
     instance.load(output.results)
     print("    %s %s" %(str(instance.sv.value).rjust(10),\
         str(instance.cb.value).rjust(15)))
