@@ -33,19 +33,34 @@ for fname in glob.glob('*'):
         dir_ = os.path.dirname(os.path.abspath(file))+os.sep
         name='.'.join(bname.split('.')[:-1])
         tname = os.path.basename(os.path.dirname(dir_))+'_'+name
-        if os.path.exists(dir_+name+'.txt'):
+        #
+        suffix = None
+        for suffix_ in ['.txt', '.yml']:
+            if os.path.exists(dir_+name+suffix_):
+                suffix = suffix_
+                break
+        #
+        if not suffix is None:
             os.chdir(dir_)
-            Test.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+'.txt', name=tname, filter=filter, tolerance=1e-7)
+            Test.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, tolerance=1e-7)
             os.chdir(currdir)
+
     #
     for file in list(glob.glob(fname+'/*.sh')) + list(glob.glob(fname+'/*/*.sh')):
         bname = os.path.basename(file)
         dir_ = os.path.dirname(os.path.abspath(file))+os.sep
         name='.'.join(bname.split('.')[:-1])
         tname = os.path.basename(os.path.dirname(dir_))+'_'+name
-        if os.path.exists(dir_+name+'.txt'):
+        #
+        suffix = None
+        for suffix_ in ['.txt', '.yml']:
+            if os.path.exists(dir_+name+suffix_):
+                suffix = suffix_
+                break
+        #
+        if not suffix is None:
             os.chdir(dir_)
-            Test.add_baseline_test(cmd='cd %s; %s' % (dir_, os.path.abspath(bname)),  baseline=dir_+name+'.txt', name=tname, filter=filter)
+            Test.add_baseline_test(cmd='cd %s; %s' % (dir_, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter)
             os.chdir(currdir)
     #
     Test = None
