@@ -5,6 +5,7 @@ import random
 
 random.seed(1000)
 
+print('log: "')
 # @all:
 def create(N):
     #
@@ -51,6 +52,7 @@ def create(N):
 
 model = create(4)
 # @:all
+print('"')
 
 instance = model.create()
 opt = SolverFactory('glpk')
