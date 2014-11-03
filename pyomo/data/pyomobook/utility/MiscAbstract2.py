@@ -26,12 +26,22 @@ def w_rule(m, i, j):
     return random.randint(1,10)
 model.w = Param(model.edges, initialize=w_rule)
 
+def preaction_rule(m):
+    print '"'
+    print 'action: "'
+model.preaction = BuildAction(rule=preaction_rule)
+
 # @all:
 def action_rule(m, i, j):
     # A debugging statement
     print("%d %d %d" % (i,j, value(m.w[i,j])))
 model.action = BuildAction(model.edges, rule=action_rule)
 # @:all
+
+def postaction_rule(m):
+    print '"'
+    print 'log2: "'
+model.postaction = BuildAction(rule=postaction_rule)
 
 model.x = Var(model.edges, within=NonNegativeReals)
 
