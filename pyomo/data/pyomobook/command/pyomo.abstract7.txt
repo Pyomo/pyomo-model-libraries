@@ -1,50 +1,11 @@
 [    0.00] Setting up Pyomo environment
 [    0.00] Applying Pyomo preprocessing actions
-The following options were specified:
-catch: True
-data_files: []
-debug: False
-disable_gc: False
-help_components: False
-help_solvers: False
-info: False
-interactive: False
-json: False
-keepfiles: False
-linearize_expressions: False
-log: False
-model_file: 'abstract7.py'
-model_name: 'model'
-model_options: []
-namespaces: []
-only_instance: False
-output: None
-path: '.'
-postprocess: []
-preprocess: []
-profile: 0
-profile_memory: 0
-quiet: False
-report_timing: False
-results_format: 'yaml'
-save_model: None
-save_results: None
-show_results: False
-skip_canonical_repn: False
-smanager_type: 'serial'
-solver: 'glpk'
-solver_io: None
-solver_options: []
-solver_suffixes: []
-summary: False
-symbolic_solver_labels: False
-tee: False
-tempdir: None
-timelimit: 0
-usermodel: <module 'abstract7' from 'abstract7.py'>
-verbose: 0
-version: False
-warning: False
+Here are some of the options that were specified:
+  debug: False
+  keepfiles: False
+  model_file: abstract7.py
+  results_format: yaml
+  solver: glpk
 [    0.00] Creating model
 [    0.03] Applying solver
 [    0.04] Processing results

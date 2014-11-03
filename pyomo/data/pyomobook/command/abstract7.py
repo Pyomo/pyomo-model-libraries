@@ -6,8 +6,12 @@ from os.path import dirname, abspath
 
 # @preprocess:
 def pyomo_preprocess(options=None):
-    print("The following options were specified:\n%s" % \
-                                                options)
+    print("Here are some of the options that were specified:")
+    print("  debug: %s" % str(options['debug']))
+    print("  keepfiles: %s" % str(options['keepfiles']))
+    print("  model_file: %s" % str(options['model_file']))
+    print("  results_format: %s" % str(options['results_format']))
+    print("  solver: %s" % str(options['solver']))
 # @:preprocess
 
 # @create_model:
@@ -20,7 +24,7 @@ def pyomo_create_model(options=None, model_options=None):
 
 # @create_modeldata:
 def pyomo_create_dataportal(options=None, model=None):
-    data = DataPortal()
+    data = DataPortal(model=model)
     data.load(filename='abstract6.dat')
     return data
 # @:create_modeldata
