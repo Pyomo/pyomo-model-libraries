@@ -4,10 +4,69 @@ import glob
 import os
 import os.path
 import sys
+import pyomo.environ
 
 # Find all *.txt files, and use them to define baseline tests
 currdir = os.path.dirname(os.path.abspath(__file__))+os.sep
 datadir = currdir
+
+solver_dependencies =   {
+                        'Test_nonlinear': 
+                            {'test_rosen_pyomo_rosen': 'ipopt',
+                            'test_react_design_run_pyomo_reactor_table': 'ipopt',
+                            'test_react_design_run_pyomo_reactor': 'ipopt',
+                            'test_multimodal_pyomo_multimodal_init1': 'ipopt',
+                            'test_multimodal_pyomo_multimodal_init2': 'ipopt',
+                            'test_disease_est_run_disease_summary': 'ipopt',
+                            'test_disease_est_run_disease_callback': 'ipopt',
+                            'test_deer_run_deer': 'ipopt'}
+                        }
+package_dependencies =  {
+                        'Test_data':
+                            {'test_data_ABCD9': 'pyodbc',
+                            'test_data_ABCD8': 'pyodbc',
+                            'test_data_ABCD7': 'win32com'}
+                        }
+solver_available = {}
+package_available = {}
+
+def check_skip(tfname_, name):
+    #
+    # Initialize the availability data
+    #
+    if len(solver_available) == 0:
+        for tf_ in solver_dependencies:
+            for n_ in solver_dependencies[tf_]:
+                solver_ = solver_dependencies[tf_][n_]
+                if not solver_ in solver_available:
+                    opt = pyomo.environ.SolverFactory(solver_)
+                    solver_available[solver_] = opt.available()
+        for tf_ in package_dependencies:
+            for n_ in package_dependencies[tf_]:
+                package_ = package_dependencies[tf_][n_]
+                if not package_ in package_available:
+                    try:
+                        __import__()
+                        package_available[package_] = True
+                    except:
+                        package_available[package_] = False
+        #print solver_available
+        #print package_available
+    #
+    # Return a boolean if the test should be skipped
+    #
+    if tfname_ in solver_dependencies:
+        if name in solver_dependencies[tfname_] and \
+           not solver_available[solver_dependencies[tfname_][name]]:
+            # Skip the test because a solver is not available
+            return True
+    if tfname_ in package_dependencies:
+        if name in package_dependencies[tfname_] and \
+           not package_available[package_dependencies[tfname_][name]]:
+            # Skip the test because a package is not available
+            return True
+    return False
+
 
 def filter(str):
     if str.startswith('Function'):
@@ -23,8 +82,9 @@ for fname in glob.glob('*'):
 
     # Declare an empty TestCase class
     fname_ = fname.replace('-','_')
-    globals()['Test_'+fname_] = Test = type('Test_'+fname_, (unittest.TestCase,), {})
-    Test = globals()['Test_'+fname_]
+    tfname_ = 'Test_'+fname_
+    globals()[tfname_] = Test = type(tfname_, (unittest.TestCase,), {})
+    Test = globals()[tfname_]
     #class Test(unittest.TestCase): pass
     
     #
@@ -34,6 +94,8 @@ for fname in glob.glob('*'):
         name='.'.join(bname.split('.')[:-1])
         tname = os.path.basename(os.path.dirname(dir_))+'_'+name
         #
+        forceskip = check_skip(tfname_, 'test_'+tname.replace('.','_'))
+        #
         suffix = None
         for suffix_ in ['.txt', '.yml']:
             if os.path.exists(dir_+name+suffix_):
@@ -42,7 +104,7 @@ for fname in glob.glob('*'):
         #
         if not suffix is None:
             os.chdir(dir_)
-            Test.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, tolerance=1e-7)
+            Test.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, tolerance=1e-7, forceskip=forceskip)
             os.chdir(currdir)
 
     #
@@ -52,6 +114,8 @@ for fname in glob.glob('*'):
         name='.'.join(bname.split('.')[:-1])
         tname = os.path.basename(os.path.dirname(dir_))+'_'+name
         #
+        forceskip = check_skip(tfname_, 'test_'+tname.replace('.','_'))
+        #
         suffix = None
         for suffix_ in ['.txt', '.yml']:
             if os.path.exists(dir_+name+suffix_):
@@ -60,7 +124,7 @@ for fname in glob.glob('*'):
         #
         if not suffix is None:
             os.chdir(dir_)
-            Test.add_baseline_test(cmd='cd %s; %s' % (dir_, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter)
+            Test.add_baseline_test(cmd='cd %s; %s' % (dir_, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, forceskip=forceskip)
             os.chdir(currdir)
     #
     Test = None
