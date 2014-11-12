@@ -57,4 +57,5 @@ for name in CUTE.expensive_models:
     ExpensiveBaselineTests.add_fn_test(fn=pyomo_baseline_test, name=name)
 
 if __name__ == "__main__":
+    import pyomo.environ
     unittest.main()

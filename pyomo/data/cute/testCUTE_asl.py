@@ -126,4 +126,5 @@ for name in CUTE.expensive_models:
     ExpensiveASLTests.add_fn_test(fn=pyomo_asl_test, name=name)
 
 if __name__ == "__main__":
+    import pyomo.environ
     unittest.main()
