@@ -25,8 +25,9 @@ for sol in transformed_results.solution:
     print(sorted(sol.variable.keys()))
     for var in sorted(sol.variable.keys()):
         print("  Variable "+str(var))
-        for key in sorted(sol.variable[var].keys()):
-            print('     '+str(key)+' '+str(sol.variable[var][key]))
+        print("    "+str(sol.variable[var]['Value']))
+        #for key in sorted(sol.variable[var].keys()):
+            #print('     '+str(key)+' '+str(sol.variable[var][key]))
     #
     for con in sorted(sol.constraint.keys()):
         print("  Constraint "+str(con))
