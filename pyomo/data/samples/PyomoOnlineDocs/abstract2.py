@@ -1,7 +1,7 @@
 # abstract2.py
 
 from __future__ import division
-from pyomo.core import *
+from pyomo.environ import *
 
 model = AbstractModel()
 

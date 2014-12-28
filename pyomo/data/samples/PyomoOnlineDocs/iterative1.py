@@ -1,6 +1,6 @@
 # iterative1.py
-from __future__ import division
-from pyomo.core import *
+
+from pyomo.environ import *
 from pyomo.opt import SolverFactory
 
 # Create a solver
@@ -21,7 +21,7 @@ model.c = ConstraintList()
 # Create a model instance and optimize
 instance = model.create()
 results = opt.solve(instance)
-print results
+print(results)
 
 # Iterate to eliminate the previously found solution
 for i in range(5):
@@ -37,4 +37,4 @@ for i in range(5):
 
     instance.preprocess()
     results = opt.solve(instance)
-    print results
+    print(results)
