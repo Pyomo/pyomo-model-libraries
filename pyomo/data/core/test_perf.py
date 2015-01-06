@@ -12,6 +12,7 @@ import re
 import glob
 import pyutilib.th as unittest
 import pyomo.scripting.convert
+import pyomo.scripting.pyomo_command as main
 import pyomo.opt
 import pyomo.environ
 
@@ -104,7 +105,7 @@ def lp_with_cplex_solve_test(self, name):
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
-    res=pyomo.scripting.pyomo.run(['--solver=cplex'] + options)
+    res=main.run(['--solver=cplex'] + options)
     if res.errorcode:
         raise ValueError("pyomo returned nonzero return code (%s)" % res.errorcode)
     if not res.retval.options.max_memory is None:
