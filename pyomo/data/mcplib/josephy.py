@@ -3,7 +3,7 @@
 #   Complementarity problem from Kojima, via Josephy.
 #
 
-from pyomo.environ import *
+from pyomo.core import *
 from pyomo.mpec import *
 
 

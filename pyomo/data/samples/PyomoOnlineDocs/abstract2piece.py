@@ -1,7 +1,7 @@
 # abstract2piece.py
 # Similar to abstract2.py, but the objective is now c times x to the fourth power
 
-from pyomo.environ import *
+from pyomo.core import *
 
 model = AbstractModel()
 

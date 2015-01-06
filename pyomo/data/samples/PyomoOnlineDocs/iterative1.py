@@ -1,6 +1,6 @@
 # iterative1.py
 
-from pyomo.environ import *
+from pyomo.core import *
 from pyomo.opt import SolverFactory
 
 # Create a solver

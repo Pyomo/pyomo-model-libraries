@@ -1,7 +1,7 @@
 # abstract2piecebuild.py
 # Similar to abstract2piece.py, but the breakpoints are created using a build action
 
-from pyomo.environ import *
+from pyomo.core import *
 
 model = AbstractModel()
 
