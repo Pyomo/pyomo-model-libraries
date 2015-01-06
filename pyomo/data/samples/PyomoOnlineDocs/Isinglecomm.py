@@ -1,6 +1,6 @@
 # Isinglecomm.py
 # NodesIn and NodesOut are intialized using the Arcs
-from pyomo.core import *
+from pyomo.environ import *
 
 model = AbstractModel()
 

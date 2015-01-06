@@ -1,6 +1,6 @@
 # d2singlecomm.py - double indexes instead of an Arc set
 # equivelant to singlecomm.py
-from pyomo.core import *
+from pyomo.environ import *
 
 model = AbstractModel()
 

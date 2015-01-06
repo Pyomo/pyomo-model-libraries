@@ -1,6 +1,6 @@
 # parallel.py
 from __future__ import division
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.opt import SolverFactory
 from pyomo.opt.parallel import SolverManagerFactory
 import sys

@@ -1,6 +1,6 @@
 # driveabs2.py
 from __future__ import division
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.opt import SolverFactory
 
 # Create a solver

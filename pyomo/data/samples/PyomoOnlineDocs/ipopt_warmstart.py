@@ -1,5 +1,4 @@
-import pyomo.environ
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.opt import SolverFactory
 
 ### Create the ipopt solver plugin using the ASL interface

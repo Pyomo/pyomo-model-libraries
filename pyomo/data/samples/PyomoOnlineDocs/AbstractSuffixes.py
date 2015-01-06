@@ -1,4 +1,4 @@
-from pyomo.core import *
+from pyomo.environ import *
 
 model = AbstractModel()
 model.I = RangeSet(1,4)

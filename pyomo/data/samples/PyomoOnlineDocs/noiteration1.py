@@ -1,6 +1,6 @@
 # noiteration1.py
 
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.opt import SolverFactory
 
 # Create a solver

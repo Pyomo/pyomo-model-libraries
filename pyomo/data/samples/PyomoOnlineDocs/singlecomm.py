@@ -1,5 +1,5 @@
 # singlecomm.py - simple version of single commodity flow
-from pyomo.core import *
+from pyomo.environ import *
 
 model = AbstractModel()
 
