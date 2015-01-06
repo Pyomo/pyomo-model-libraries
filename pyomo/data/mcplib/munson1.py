@@ -13,7 +13,7 @@
 # http://www.ampl.com/NEW/COMPLEMENT/munson1.mod
 #
 
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.mpec import *
 
 

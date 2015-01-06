@@ -1,4 +1,4 @@
-from pyomo.core import *
+from pyomo.environ import *
 try:
     import numpy
     numpy_available=True

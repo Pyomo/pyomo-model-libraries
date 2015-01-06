@@ -1,4 +1,4 @@
-from pyomo.core import *
+from pyomo.environ import *
 import pyutilib.common
 import sys
 

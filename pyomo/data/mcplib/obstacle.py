@@ -15,7 +15,7 @@
 # 	elliptic problems.  North-Holland, 1978.
 #
 
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.mpec import *
 
 model = ConcreteModel()
