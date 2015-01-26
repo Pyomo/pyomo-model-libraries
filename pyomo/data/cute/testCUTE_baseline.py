@@ -7,7 +7,7 @@ from os.path import abspath, dirname
 
 import pyutilib.th as unittest
 import pyutilib.subprocess
-import pyomo.scripting.pyomo_command as main
+import pyomo.scripting.pyomo_main as main
 from pyomo.core.base import expr as Expr
 from pyomo.opt import ProblemFormat
 from pyomo.core import *
@@ -19,7 +19,7 @@ currdir = dirname(abspath(__file__))+os.sep
 class Tests(unittest.TestCase):
     def pyomo(self, cmd):
         os.chdir(currdir)
-        output = main.run(['-q', '-c']+cmd)
+        output = main.main(['solve', '--logging=quiet', '-c', '--solver=glpk']+cmd)
         return output
 
 class SmokeBaselineTests(Tests):
