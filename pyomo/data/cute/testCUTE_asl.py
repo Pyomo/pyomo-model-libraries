@@ -31,7 +31,7 @@ class Tests(unittest.TestCase):
 
     def pyomo(self, cmd):
         os.chdir(currdir)
-        output = main.main(['solve', '--logging=quiet', '-c', '--solver=glpk']+cmd)
+        output = main.main(['convert', '--logging=quiet', '-c']+cmd)
         return output
 
 class SmokeASLTests(Tests):
@@ -61,7 +61,7 @@ def pyomo_asl_test(self, name):
     if has_json is False:
         self.skipTest('JSON module not available')
         return
-    self.pyomo(['--save-model='+currdir+name+'.test.nl',
+    self.pyomo(['--output='+currdir+name+'.test.nl',
                 '--symbolic-solver-labels',
                 '--skip-canonical-repn',
                 currdir+name+'_cute.py'])

@@ -33,24 +33,24 @@ class Test(unittest.TestCase):
 class Test1(object):
 
     def test1(self):
-        res = pyomo.scripting.convert.pyomo2nl(['--save-model',currdir+'test1.nl',datadir+'pmedian.py',datadir+'pmedian.dat'])
+        res = pyomo.scripting.convert.pyomo2nl(['--output',currdir+'test1.nl',datadir+'pmedian.py',datadir+'pmedian.dat'])
         if not os.path.exists(currdir+'test1.nl'):
             raise ValueError("Missing file test1.nl generated in test1")
         os.remove(currdir+'test1.nl')
         if res.errorcode:
             raise ValueError("pyomo2nl returned nonzero return code (%s)" % res.errorcode)
-        if not res.retval.options.max_memory is None:
-            self.recordTestData('maximum memory used', res.retval.options.max_memory)
+        if not res.retval.local.max_memory is None:
+            self.recordTestData('maximum memory used', res.retval.local.max_memory)
 
     def test2(self):
-        res = pyomo.scripting.convert.pyomo2lp(['--save-model',currdir+'test2.lp',datadir+'pmedian.py',datadir+'pmedian.dat'])
+        res = pyomo.scripting.convert.pyomo2lp(['--output',currdir+'test2.lp',datadir+'pmedian.py',datadir+'pmedian.dat'])
         if not os.path.exists(currdir+'test2.lp'):
             raise ValueError("Missing file test2.lp generated in test2")
         os.remove(currdir+'test2.lp')
         if res.errorcode:
             raise ValueError("pyomo2lp returned nonzero return code (%s)" % res.errorcode)
-        if not res.retval.options.max_memory is None:
-            self.recordTestData('maximum memory used', res.retval.options.max_memory)
+        if not res.retval.local.max_memory is None:
+            self.recordTestData('maximum memory used', res.retval.local.max_memory)
 
 @unittest.category('performance')
 class Test2(Test):
@@ -73,14 +73,14 @@ def nl_test(self, name):
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
-    res = pyomo.scripting.convert.pyomo2nl(['--save-model',fname]+options)
+    res = pyomo.scripting.convert.pyomo2nl(['--output',fname]+options)
     if not os.path.exists(fname):
         raise ValueError("Missing file %s generated in test2" % fname)
     os.remove(fname)
     if res.errorcode:
         raise ValueError("pyomo2nl returned nonzero return code (%s)" % res.errorcode)
-    if not res.retval.options.max_memory is None:
-        self.recordTestData('maximum memory used', res.retval.options.max_memory)
+    if not res.retval.local.max_memory is None:
+        self.recordTestData('maximum memory used', res.retval.local.max_memory)
 
 @unittest.nottest
 def lp_test(self, name):
@@ -90,14 +90,14 @@ def lp_test(self, name):
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
-    res = pyomo.scripting.convert.pyomo2lp(['--save-model',fname]+options)
+    res = pyomo.scripting.convert.pyomo2lp(['--output',fname]+options)
     if not os.path.exists(fname):
         raise ValueError("Missing file %s generated in test2" % fname)
     os.remove(fname)
     if res.errorcode:
         raise ValueError("pyomo2lp returned nonzero return code (%s)" % res.errorcode)
-    if not res.retval.options.max_memory is None:
-        self.recordTestData('maximum memory used', res.retval.options.max_memory)
+    if not res.retval.local.max_memory is None:
+        self.recordTestData('maximum memory used', res.retval.local.max_memory)
 
 @unittest.nottest
 def lp_with_cplex_solve_test(self, name):
@@ -108,8 +108,8 @@ def lp_with_cplex_solve_test(self, name):
     res=main.run(['--solver=cplex'] + options)
     if res.errorcode:
         raise ValueError("pyomo returned nonzero return code (%s)" % res.errorcode)
-    if not res.retval.options.max_memory is None:
-        self.recordTestData('maximum memory used', res.retval.options.max_memory)
+    if not res.retval.local.max_memory is None:
+        self.recordTestData('maximum memory used', res.retval.local.max_memory)
 
 # add the unit tests...
 

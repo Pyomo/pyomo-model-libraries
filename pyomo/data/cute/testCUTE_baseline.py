@@ -19,7 +19,7 @@ currdir = dirname(abspath(__file__))+os.sep
 class Tests(unittest.TestCase):
     def pyomo(self, cmd):
         os.chdir(currdir)
-        output = main.main(['solve', '--logging=quiet', '-c', '--solver=glpk']+cmd)
+        output = main.main(['convert', '--logging=quiet', '-c']+cmd)
         return output
 
 class SmokeBaselineTests(Tests):
@@ -42,7 +42,7 @@ def pyomo_baseline_test(self, name):
         self.skipTest('Ignoring test '+name)
         return
 
-    self.pyomo(['--save-model='+currdir+name+'.test.nl',
+    self.pyomo(['--output='+currdir+name+'.test.nl',
                 '--skip-canonical-repn',
                 currdir+name+'_cute.py'])
 
