@@ -10,4 +10,4 @@ instance = model.create('set5.dat')
 
 
 for tpl in sorted(list(instance.A.data())):
-    print tpl
+    print(tpl)
