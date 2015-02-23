@@ -51,5 +51,5 @@ def f(model):
 	100*(model.x[2*i]-model.x[2*i+1])**6 +\
 	(tan(model.x[2*i+1]-model.x[2*i+2])+model.x[2*i+1]-model.x[2*i+2])**4 +\
 	(model.x[2*i-1])**8 +\
-	(model.x[2*i+2]-1.0)**2 for i in xrange(1,m+1))
+	(model.x[2*i+2]-1.0)**2 for i in range(1,m+1))
 model.f = Objective(rule=f)

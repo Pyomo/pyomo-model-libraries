@@ -55,8 +55,8 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f_rule(model):
-	return 1.0 + sum(alpha*model.x[i]**2*(i/float(N))**model.K[1] for i in xrange(1,N+1))+\
-	sum(beta*model.x[i]**2*(model.x[i+1]+model.x[i+1]**2)**2*(i/float(N))**model.K[2] for i in xrange(1,N))+\
-	sum(gamma*model.x[i]**2*model.x[i+M]**4*(i/float(N))**model.K[3] for i in xrange(1,2*M+1)) +\
-	sum(delta*model.x[i]*model.x[i+2*M]*(i/float(N))**model.K[4] for i in xrange(1,M+1))
+	return 1.0 + sum(alpha*model.x[i]**2*(i/float(N))**model.K[1] for i in range(1,N+1))+\
+	sum(beta*model.x[i]**2*(model.x[i+1]+model.x[i+1]**2)**2*(i/float(N))**model.K[2] for i in range(1,N))+\
+	sum(gamma*model.x[i]**2*model.x[i+M]**4*(i/float(N))**model.K[3] for i in range(1,2*M+1)) +\
+	sum(delta*model.x[i]*model.x[i+2*M]*(i/float(N))**model.K[4] for i in range(1,M+1))
 model.f = Objective(rule=f_rule)

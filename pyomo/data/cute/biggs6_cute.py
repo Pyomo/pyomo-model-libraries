@@ -53,7 +53,7 @@ model.x = Var(model.s,initialize=x_init)
 def f_rule(model):
 	return sum((-exp(-0.1*i)+5*exp(-i)-3*exp(-0.4*i)\
 	+ model.x[3]*exp(-0.1*i*model.x[1]) - model.x[4]*exp(-0.1*i*model.x[2]) +\
-	model.x[6]*exp(-0.1*i*model.x[5]))**2 for i in xrange(1,model.M+1))
+	model.x[6]*exp(-0.1*i*model.x[5]))**2 for i in range(1,model.M+1))
 model.f = Objective(rule=f_rule)
 
 

@@ -61,7 +61,7 @@ model.f = Objective(rule=f,sense=minimize)
 
 def cons1_rule(model,i):
     expr = 1.0
-    for j in xrange(1,i+1):
+    for j in range(1,i+1):
         expr *= model.x[j]
     return expr-1.0 == 0
 model.cons1 = Constraint([2,4,6,8,10],rule=cons1_rule)

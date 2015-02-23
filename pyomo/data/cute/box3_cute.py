@@ -51,5 +51,5 @@ model.t = Param(RangeSet(1,model.M),initialize=t)
 	
 def f_rule(model):
 	return sum((exp(-model.t[i]*model.x[1])-exp(-model.t[i]*model.x[2])-model.x[3]\
-	*exp(-model.t[i])+model.x[3]*exp(-i))**2 for i in xrange(1,model.M+1))
+	*exp(-model.t[i])+model.x[3]*exp(-i))**2 for i in range(1,model.M+1))
 model.f = Objective(rule=f_rule)

@@ -36,10 +36,10 @@ model.snx = RangeSet(2,model.nx-1)
 model.sny = RangeSet(2,model.ny-1)
 
 def f_rule(model):
-	return (sum((model.x[i,j]-1)**2 for i in xrange(1,model.nx) for j in xrange(1,model.ny))+\
-			sum((model.y[i,j]-1)**2 for i in xrange(1,model.nx) for j in xrange(1,model.ny))+\
-			sum((model.x[i,model.ny]-1)**2 for i in xrange(1,model.nx))+\
-			sum((model.y[model.nx,j]-1)**2 for j in xrange(1,model.ny)))/2.0
+	return (sum((model.x[i,j]-1)**2 for i in range(1,model.nx) for j in range(1,model.ny))+\
+			sum((model.y[i,j]-1)**2 for i in range(1,model.nx) for j in range(1,model.ny))+\
+			sum((model.x[i,model.ny]-1)**2 for i in range(1,model.nx))+\
+			sum((model.y[model.nx,j]-1)**2 for j in range(1,model.ny)))/2.0
 model.f = Objective(rule=f_rule)
 
 def v1(model,i,j):

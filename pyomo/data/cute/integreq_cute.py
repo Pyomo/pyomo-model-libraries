@@ -55,5 +55,5 @@ model.x[N+1].fixed=True
 model.f = Objective(expr=0)
 
 def cons_rule(model,i):
-    return ( model.x[i]+h*((1-model.t[i])*sum(model.t[j]*(model.x[j]+model.t[j]+1.0)**3 for j in xrange(1,i+1)) + model.t[i]*sum((1.0-model.t[j])*(model.x[j]+model.t[j]+1.0)**3 for j in xrange(i+1,N+1)))/2.0 ) == 0
+    return ( model.x[i]+h*((1-model.t[i])*sum(model.t[j]*(model.x[j]+model.t[j]+1.0)**3 for j in range(1,i+1)) + model.t[i]*sum((1.0-model.t[j])*(model.x[j]+model.t[j]+1.0)**3 for j in range(i+1,N+1)))/2.0 ) == 0
 model.cons = Constraint(model.M,rule=cons_rule)

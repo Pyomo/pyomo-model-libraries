@@ -39,7 +39,7 @@ model.range1 = RangeSet(0,N-1)
 model.range2 = RangeSet(0,DEG-1)
 
 def c_index_init(model):
-    return [(i,j) for i in xrange(0,DEG) for j in xrange(i,N)]
+    return [(i,j) for i in range(0,DEG) for j in range(i,N)]
 model.c_index = Set(dimen=2,ordered=True,initialize=c_index_init)
 
 def c_rule(model,i,j):
@@ -78,8 +78,8 @@ model.f = Objective(expr=sum(model.a[j]**2 for j in model.range1))
 model.cons1 = Constraint(expr=sum(model.a[j]*model.c[0,j] for j in model.range1) - model.ct[0] == 0)
 
 def cons2_rule(model,i):
-    return sum(model.a[j]*model.c[i,j] for j in xrange(i,N)) - model.ct[i] == 0
-model.cons2 = Constraint(xrange(1,DEG),rule=cons2_rule)
+    return sum(model.a[j]*model.c[i,j] for j in range(i,N)) - model.ct[i] == 0
+model.cons2 = Constraint(range(1,DEG),rule=cons2_rule)
 
 def cons3_rule(model,j):
     return (model.a[j]**3-model.a[j])/PEN == 0

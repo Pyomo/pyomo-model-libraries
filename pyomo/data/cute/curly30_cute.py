@@ -38,10 +38,10 @@ model.x = Var(RangeSet(1,N),initialize=0.0001/(N+1))
 
 def Q(model,i):
 	if i<=N-K:
-		return sum(model.x[j] for j in xrange(i,i+K+1))
+		return sum(model.x[j] for j in range(i,i+K+1))
 	else:
-		return sum(model.x[j] for j in xrange(i,N+1))
+		return sum(model.x[j] for j in range(i,N+1))
 
 def f(model):
-	return sum(Q(model,i)*(Q(model,i)*(Q(model,i)**2-20)-0.1) for i in xrange(1,N+1))
+	return sum(Q(model,i)*(Q(model,i)*(Q(model,i)**2-20)-0.1) for i in range(1,N+1))
 model.f = Objective(rule=f)

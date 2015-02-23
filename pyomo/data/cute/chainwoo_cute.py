@@ -58,6 +58,6 @@ def f(model):
 	(1.0-model.x[2*i-1])**2 +90*(model.x[2*i+2]-model.x[2*i+1]**2)**2 +\
 	(1.0-model.x[2*i+1])**2 +\
 	10*(model.x[2*i]+model.x[2*i+2]-2.0)**2 +\
-	(model.x[2*i]-model.x[2*i+2])**2/10 for i in xrange(1,int(ns)+1))
+	(model.x[2*i]-model.x[2*i+2])**2/10 for i in range(1,int(ns)+1))
 model.f = Objective(rule=f)
 	

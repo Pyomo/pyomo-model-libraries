@@ -40,7 +40,7 @@ model.x = Var(RangeSet(1,N),initialize=1.0)
 
 	
 def f_rule(model):
-	return sum((model.x[i]-1000000)**2 for i in xrange(1,N))+\
-	sum((model.x[i+1]-0.000002)**2 for i in xrange(1,N))+\
-	sum((model.x[i]*model.x[i+1]-2.0)**2 for i in xrange(1,N))
+	return sum((model.x[i]-1000000)**2 for i in range(1,N))+\
+	sum((model.x[i+1]-0.000002)**2 for i in range(1,N))+\
+	sum((model.x[i]*model.x[i+1]-2.0)**2 for i in range(1,N))
 model.f = Objective(rule=f_rule)

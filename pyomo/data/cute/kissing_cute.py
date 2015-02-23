@@ -77,7 +77,7 @@ model.N = RangeSet(1,np)
 model.M = RangeSet(1,mdim)
 
 def cons1_index_init(model):
-    return [(i,j) for i in xrange(1,np) for j in xrange(i+1,np+1)]
+    return [(i,j) for i in range(1,np) for j in range(i+1,np+1)]
 model.cons1_index = Set(dimen=2,initialize=cons1_index_init)
 
 model.x_init = Param(model.N,model.M, mutable=True)

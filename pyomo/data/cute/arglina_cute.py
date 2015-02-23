@@ -41,12 +41,12 @@ M = 200.0
 model.x = Var(RangeSet(1,N),initialize=1.0)
 
 def f_rule(model):
-	return sum((sum(-2.0*model.x[j]/M for j in xrange(1,i)) + \
+	return sum((sum(-2.0*model.x[j]/M for j in range(1,i)) + \
 			 model.x[i]*(1.0-2.0/M) + \
-			 sum(-2.0*model.x[j]/M for j in xrange(i+1,int(N)+1)) - \
-			 1.0)**2 for i in xrange(1,int(N)+1) )+ \
-	       sum( (sum(-2.0*model.x[j]/M for j in xrange(1,int(N)+1)) -1.0 )**2 \
-			 for i in xrange(int(N)+1,int(M)+1) )
+			 sum(-2.0*model.x[j]/M for j in range(i+1,int(N)+1)) - \
+			 1.0)**2 for i in range(1,int(N)+1) )+ \
+	       sum( (sum(-2.0*model.x[j]/M for j in range(1,int(N)+1)) -1.0 )**2 \
+			 for i in range(int(N)+1,int(M)+1) )
 model.f = Objective(rule=f_rule)
 
 

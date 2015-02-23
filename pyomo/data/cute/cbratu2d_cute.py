@@ -55,13 +55,13 @@ def con2(model,i,j):
 	model.x[i,j-1]-c*exp(model.u[i,j])*sin(model.x[i,j])) == 0
 model.cons2 = Constraint(RangeSet(2,p-1),RangeSet(2,p-1),rule=con2)
 
-for j in xrange(1,p+1):
+for j in range(1,p+1):
 	model.u[1,j].fix(0.0)
 	model.u[p,j].fix(0.0)
 	model.x[1,j].fix(0.0)
 	model.x[p,j].fix(0.0)
 
-for i in xrange(2,p):
+for i in range(2,p):
 	model.u[i,p].fix(0.0)
 	model.u[i,1].fix(0.0)
 	model.x[i,p].fix(0.0)

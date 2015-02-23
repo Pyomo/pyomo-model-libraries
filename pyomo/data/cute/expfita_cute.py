@@ -64,7 +64,7 @@ def f_rule(model):
 	return sum((\
 	(model.P[0]+model.P[1]*model.T[i]+model.P[2]*model.T[i]**2)/\
 	(model.ET[i]*(1+model.Q[1]*(model.T[i]-5)+model.Q[2]*(model.T[i]-5)**2))\
-	-1 )**2 for i in xrange(1,int(R)+1))
+	-1 )**2 for i in range(1,int(R)+1))
 model.f = Objective(rule=f_rule)
 
 def cons1(model,i):

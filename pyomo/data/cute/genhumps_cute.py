@@ -42,5 +42,5 @@ def x_init_rule(model,i):
 model.x = Var(RangeSet(1,N),initialize=x_init_rule)
 
 def f_rule(model):
-	return sum(sin (zeta*model.x[i])**2*sin(zeta*model.x[i+1])**2+0.05*(model.x[i]**2+model.x[i+1]**2) for i in xrange(1,N))
+	return sum(sin (zeta*model.x[i])**2*sin(zeta*model.x[i+1])**2+0.05*(model.x[i]**2+model.x[i+1]**2) for i in range(1,N))
 model.f = Objective(rule=f_rule)

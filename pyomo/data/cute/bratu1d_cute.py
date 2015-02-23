@@ -47,9 +47,9 @@ model.x = Var(RangeSet(0,N+1),initialize=x)
 
 def f_rule(model):
 	return 2*L*h*(exp(model.x[1])-exp(model.x[0]))/(model.x[1]-model.x[0])\
-	+ sum (2.0*model.x[i]**2/h for i in xrange(1,N+1))\
-	- sum (2.0*model.x[i]*model.x[i-1]/h for i in xrange(1,N+1))\
-	+ sum (2.0*L*h*(exp(model.x[i+1])-exp(model.x[i]))/(model.x[i+1]-model.x[i]) for i in xrange(1,N+1)) 
+	+ sum (2.0*model.x[i]**2/h for i in range(1,N+1))\
+	- sum (2.0*model.x[i]*model.x[i-1]/h for i in range(1,N+1))\
+	+ sum (2.0*L*h*(exp(model.x[i+1])-exp(model.x[i]))/(model.x[i+1]-model.x[i]) for i in range(1,N+1)) 
 model.f = Objective(rule=f_rule)
 
 model.x[0] = 0.0

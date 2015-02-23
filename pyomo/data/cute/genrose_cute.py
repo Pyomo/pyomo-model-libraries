@@ -39,8 +39,8 @@ n = 500
 model.x = Var(RangeSet(1,n),initialize=1.0/(n+1.0))
 
 def f_rule(model):
-	return 1.0 + sum(100*(model.x[i]-model.x[i-1]**2)**2 for i in xrange(2,n+1))+\
-	sum((model.x[i]-1.0)**2 for i in xrange(2,n+1))
+	return 1.0 + sum(100*(model.x[i]-model.x[i-1]**2)**2 for i in range(2,n+1))+\
+	sum((model.x[i]-1.0)**2 for i in range(2,n+1))
 model.f = Objective(rule=f_rule)
 	
 	

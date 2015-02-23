@@ -52,7 +52,7 @@ model.h = Var(RangeSet(1,n),initialize=1.0,bounds=(0,None))
 model.f = Objective(expr=0.0)
 	
 def con1(model,i):
-	return sum(-0.5*c*model.w[j]*model.x[i]/(model.x[i]+model.x[j])*model.h[i]*model.h[j] for j in xrange(1,n+1)) + model.h[i] == 1.0
+	return sum(-0.5*c*model.w[j]*model.x[i]/(model.x[i]+model.x[j])*model.h[i]*model.h[j] for j in range(1,n+1)) + model.h[i] == 1.0
 model.cons = Constraint(RangeSet(1,n),rule=con1)
 
  

@@ -45,7 +45,7 @@ def x_init_rule(model,i):
 model.x = Var(RangeSet(1,N),initialize=x_init_rule)
 
 def f_rule(model):
-	return sum ((model.x[i]+model.x[i+1])**2 for i in xrange(1,N))
+	return sum ((model.x[i]+model.x[i+1])**2 for i in range(1,N))
 model.f = Objective(rule=f_rule)
 	
 def cons_rule(model,i):

@@ -41,11 +41,11 @@ def x_init_rule(model,i):
 model.x = Var(RangeSet(1,n),initialize=x_init_rule)
 
 def f_rule(model):
-	return sum(((n+1-i)*model.x[i]/n-1.0)**2 for i in xrange(1,n+1))/2.0
+	return sum(((n+1-i)*model.x[i]/n-1.0)**2 for i in range(1,n+1))/2.0
 model.f = Objective(rule=f_rule)
 
 def cons1_rule(model):
-	return (sum(model.x[i]**2 for i in xrange(1,n+1)) - 1.0 )/2.0 == 0.0
+	return (sum(model.x[i]**2 for i in range(1,n+1)) - 1.0 )/2.0 == 0.0
 model.cons1 = Constraint(rule=cons1_rule)
 	
 	

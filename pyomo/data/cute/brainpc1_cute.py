@@ -59,7 +59,7 @@ model.x[2,0].fixed = True
 
 def f_rule(model):
 	return sum((-(model.x[1,value(model.TO[t])]+model.x[2,value(model.TO[t])])*model.k[1]+model.x[1,value(model.TO[t])]+\
-	model.x[2,value(model.TO[t])]+model.U[value(model.TO[t])]*model.k[1]-model.oc_init[t])**2 for t in xrange(1,int(NO)+1))
+	model.x[2,value(model.TO[t])]+model.U[value(model.TO[t])]*model.k[1]-model.oc_init[t])**2 for t in range(1,int(NO)+1))
 model.f = Objective(rule=f_rule)
 
 def con1_rule(model,t):

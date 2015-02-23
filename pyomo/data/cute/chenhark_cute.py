@@ -50,10 +50,10 @@ def x_init(model,i):
 model.x = Var(RangeSet(1,n),initialize=x_init,bounds=(0.0,None))
 
 def f(model):
-	return sum(0.5*(model.x[i+1]+model.x[i-1] - 2*model.x[i])**2 for i in xrange(2,n)) +\
+	return sum(0.5*(model.x[i+1]+model.x[i-1] - 2*model.x[i])**2 for i in range(2,n)) +\
 	0.5*model.x[1]**2+0.5*(2*model.x[1] - model.x[2])**2 +0.5*(2*model.x[n] - model.x[n-1])**2 +\
 	0.5*(model.x[n])**2 +sum(model.x[i]*(-6*model.x_p[i] + \
-	4*model.x_p[i+1] + 4*model.x_p[i-1] -model.x_p[i+2] - model.x_p[i-2])for i in xrange(1,nfree+ndegen+1)) +\
+	4*model.x_p[i+1] + 4*model.x_p[i-1] -model.x_p[i+2] - model.x_p[i-2])for i in range(1,nfree+ndegen+1)) +\
 	sum(model.x[i]*(-6*model.x_p[i] + 4*model.x_p[i+1] + 4*model.x_p[i-1] -\
-   model.x_p[i+2] - model.x_p[i-2] + 1)for i in xrange(nfree+ndegen+1,n+1))
+   model.x_p[i+2] - model.x_p[i-2] + 1)for i in range(nfree+ndegen+1,n+1))
 model.f = Objective(rule=f)

@@ -33,18 +33,18 @@ def x_init_rule(model,k,i,j):
 		return 1.0
 	else:
 		return 0.01
-model.x = Var([(k,i,j) for k in xrange(1,n+1) for i in xrange(k,n+1) for j in xrange(k,n+1)],initialize=x_init_rule)
+model.x = Var([(k,i,j) for k in range(1,n+1) for i in range(k,n+1) for j in range(k,n+1)],initialize=x_init_rule)
 
 def f_rule(model):
 	return -model.x[n,n,n]
 model.f = Objective(rule=f_rule)
 
-conse_index = [(k,i,j) for k in xrange(1,n-1+1) for i in xrange(k+1,n+1) for j in xrange(k+1,n+1)]
+conse_index = [(k,i,j) for k in range(1,n-1+1) for i in range(k+1,n+1) for j in range(k+1,n+1)]
 def conse_rule(model,k,i,j):
 	return model.x[k,i,k]*model.x[k,k,j]/model.x[k,k,k] + model.x[k+1,i,j] - model.x[k,i,j] == 0
 model.conse = Constraint(conse_index,rule=conse_rule)
 
-consmikk_index = [(k,i) for k in xrange(2,n) for i in xrange(k+1,n+1)]
+consmikk_index = [(k,i) for k in range(2,n) for i in range(k+1,n+1)]
 
 def consmikk_rule(model,k,i):
 	return model.x[k,i,k] - model.x[k,k,k] <= 0
@@ -54,7 +54,7 @@ def consmkik_rule(model,k,i):
 	return model.x[k,k,i] - model.x[k,k,k] <= 0
 model.consmkik = Constraint(consmikk_index,rule=consmkik_rule)
 
-consmijk_index = [(k,i,j) for k in xrange(2,n) for i in xrange(k+1,n+1) for j in xrange(k+1,n+1)]
+consmijk_index = [(k,i,j) for k in range(2,n) for i in range(k+1,n+1) for j in range(k+1,n+1)]
 def consmijk_rule(model,k,i,j):
 	return model.x[k,i,j] - model.x[k,k,k] <= 0
 model.consmijk = Constraint(consmijk_index,rule=consmijk_rule)

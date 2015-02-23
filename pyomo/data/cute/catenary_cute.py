@@ -56,7 +56,7 @@ model.y = Var(RangeSet(0,N+1),initialize=y)
 model.z = Var(RangeSet(0,N+1),initialize=0.0)
 
 def f_rule(model):
-	return mg*model.y[0]/2.0 + sum(mg*model.y[i] for i in xrange(1,N+1)) + mg*model.y[N+1]/2.0
+	return mg*model.y[0]/2.0 + sum(mg*model.y[i] for i in range(1,N+1)) + mg*model.y[N+1]/2.0
 model.f = Objective(rule=f_rule)
 
 def con1(model,i):

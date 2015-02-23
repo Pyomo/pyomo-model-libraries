@@ -46,7 +46,7 @@ model.obj = Objective(rule=obj_rule,sense=minimize)
 def cons1_rule(model):
 	return sum(model.mu[i]**2 * model.mu[j]**2 * model.A[i] * model.A[j] * rho(model,i) * rho(model,j)\
 	       *(sin(model.mu[i]+model.mu[j])/(model.mu[i]+model.mu[j])+sin(model.mu[i]-model.mu[j])/(model.mu[i]-model.mu[j]))\
-	       for i in model.N for j in xrange(i+1,30+1))\
+	       for i in model.N for j in range(i+1,30+1))\
 	       + sum(model.mu[j]**4 * model.A[j]**2 * rho(model,j)**2 * ((sin(2.0*model.mu[j])/(2.0*model.mu[j]) + 1.0)/2.0)\
 	       for j in model.N)\
 	       -sum(model.mu[j]**2 * model.A[j] * rho(model,j) * (2.0*sin(model.mu[j])/(model.mu[j]**3)\

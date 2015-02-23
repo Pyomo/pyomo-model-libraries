@@ -57,8 +57,8 @@ def space_bounds_rule(model,i):
 model.space = Var(RangeSet(1,K-1),initialize=space_init_rule,bounds=space_bounds_rule)
 
 def f_rule(model):
-	return sum (.5*(model.space[i+1]-model.space[i])**2 for i in xrange(1,K-1))+\
-	sum(0.5*(model.knot[K-i]+model.space[i]-model.alpha[K+1-i])**2 for i in xrange(1,K))
+	return sum (.5*(model.space[i+1]-model.space[i])**2 for i in range(1,K-1))+\
+	sum(0.5*(model.knot[K-i]+model.space[i]-model.alpha[K+1-i])**2 for i in range(1,K))
 model.f = Objective(rule=f_rule)
 
 def cons1_rule(model,i):

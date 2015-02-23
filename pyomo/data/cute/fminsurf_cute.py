@@ -51,22 +51,22 @@ model.x = Var(RangeSet(1,p),RangeSet(1,p))
 
 def f_rule(model):
 	return sum((0.5*(p-1)**2*((model.x[i,j]-model.x[i+1,j+1])**2+(model.x[i+1,j]-model.x[i,j+1])**2)+1.0)\
-	**0.5 for i in xrange(1,p) for j in xrange(1,p))/scale +\
-	(sum(model.x[i,j] for j in xrange(1,p+1) for i in xrange(1,p+1)))**2/p**4
+	**0.5 for i in range(1,p) for j in range(1,p))/scale +\
+	(sum(model.x[i,j] for j in range(1,p+1) for i in range(1,p+1)))**2/p**4
 model.f = Objective(rule=f_rule)
 
-for j in xrange(1,p+1):
+for j in range(1,p+1):
 	model.x[1,j]=(j-1)*wtoe+h00
 
-for j in xrange(1,p+1):
+for j in range(1,p+1):
 	model.x[p,j]=(j-1)*wtoe+h10
 
-for i in xrange(2,p):
+for i in range(2,p):
 	model.x[i,p]=(i-1)*ston+h00
 
-for i in xrange(2,p):
+for i in range(2,p):
 	model.x[i,1]=(i-1)*ston+h01
 
-for i in xrange(2,p):
-	for j in xrange(2,p):
+for i in range(2,p):
+	for j in range(2,p):
 		model.x[i,j]=0.0

@@ -40,9 +40,9 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f_rule(model):
-	return (sum(model.a[j]*model.x[j]**2 for j in xrange(1,9)))+\
-	(sum(model.b[j]*model.x[j]*model.x[j+1] for j in xrange(1,8)))+\
-	(sum(model.c[j]*model.x[j] for j in xrange(2,9)))
+	return (sum(model.a[j]*model.x[j]**2 for j in range(1,9)))+\
+	(sum(model.b[j]*model.x[j]*model.x[j+1] for j in range(1,8)))+\
+	(sum(model.c[j]*model.x[j] for j in range(2,9)))
 model.f = Objective(rule=f_rule)
 
 def con1(model,j):
@@ -50,7 +50,7 @@ def con1(model,j):
 model.con1 = Constraint(RangeSet(1,4),rule=con1)
 
 def con5(model,j):
-	return sum(model.x[2*i-j] for i in xrange(1,5))<=2.0
+	return sum(model.x[2*i-j] for i in range(1,5))<=2.0
 model.con5 = Constraint(RangeSet(0,1),rule=con5)
 
 def con7(model):

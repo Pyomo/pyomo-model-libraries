@@ -38,7 +38,7 @@ model.N = 1000
 model.x = Var(RangeSet(1,model.N))
 
 def f_rule(model):
-	return (model.x[1]-1)**2 + sum((model.x[i+1]-model.x[i])**2 for i in xrange(1,model.N)) + (1-model.x[model.N])**2
+	return (model.x[1]-1)**2 + sum((model.x[i+1]-model.x[i])**2 for i in range(1,model.N)) + (1-model.x[model.N])**2
 model.f = Objective(rule=f_rule)
 
 def cons1(model,i):

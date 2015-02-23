@@ -38,8 +38,8 @@ def x_init_rule(model,i):
 model.x = Var(RangeSet(1,N),bounds=(0.0,None),initialize=x_init_rule)
 
 def f_rule(model):
-	return sum (-1*model.x[i]**2*0.5 for i in xrange(1,N+1)) +\
-	sum(-model.x[i]for i in xrange(1,N+1)) +\
-	(sum(model.x[i] for i in xrange(1,N+1)))**2+\
-	sum (2*(sum(model.x[i] for i in xrange(j,N+1)))**2 for j in xrange(2,N+1))
+	return sum (-1*model.x[i]**2*0.5 for i in range(1,N+1)) +\
+	sum(-model.x[i]for i in range(1,N+1)) +\
+	(sum(model.x[i] for i in range(1,N+1)))**2+\
+	sum (2*(sum(model.x[i] for i in range(j,N+1)))**2 for j in range(2,N+1))
 model.f = Objective(rule=f_rule)

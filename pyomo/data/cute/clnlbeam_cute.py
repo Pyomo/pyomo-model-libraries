@@ -50,7 +50,7 @@ model.u = Var(RangeSet(0,ni))
 
 def f(model):
 	return sum((0.5*h*(model.u[i+1]**2 + model.u[i]**2) + 0.5*alpha*h*(cos(model.t[i+1]) +\
-	cos(model.t[i])))for i in xrange(0,ni))
+	cos(model.t[i])))for i in range(0,ni))
 model.f = Objective(rule=f)
 
 def con1(model,i):
