@@ -187,4 +187,27 @@ print(data['z'])    #1.1
 print(data['y'])    #{'A2': 3.4, 'A3': 3.5, 'A1': 3.3}
 # @:getitem
 # --------------------------------------------------
+# @excel1:
+model = AbstractModel()
+data = DataPortal()
+model.A = Set(dimen=2)
+model.p = Param(model.A)
+#data.load(filename='excel.xls', range='PPtable', 
+#                       param=model.p, index=model.A)
+instance = model.create(data)
+# @:excel1
+instance.pprint()
+# --------------------------------------------------
+# @db1:
+model = AbstractModel()
+data = DataPortal()
+model.A = Set(dimen=2)
+model.p = Param(model.A)
+#data.load(filename='db.sqlite', using='sqlite3',
+#                   query="SELECT A,B,PP from Data",
+#                   param=model.p, index=model.A)
+instance = model.create(data)
+# @:db1
+instance.pprint()
+# --------------------------------------------------
 
