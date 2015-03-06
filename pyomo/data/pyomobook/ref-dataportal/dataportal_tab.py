@@ -179,11 +179,12 @@ instance.pprint()
 # @getitem::
 data = DataPortal()
 data.load(filename='A.tab', set="A", format="set")
-data.load(filename='Z.tab', param="z", format="param")
-data.load(filename='Y.tab', param="y", format="table")
-
 print(data['A'])    #['A1', 'A2', 'A3']
+
+data.load(filename='Z.tab', param="z", format="param")
 print(data['z'])    #1.1
+
+data.load(filename='Y.tab', param="y", format="table")
 print(data['y'])    #{'A2': 3.4, 'A3': 3.5, 'A1': 3.3}
 # @:getitem
 # --------------------------------------------------
