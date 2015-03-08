@@ -152,7 +152,6 @@ model.q = Param(model.A, model.B)
 data.load(filename='PP.tab', param=model.q, index=(model.A,model.B))
 #instance = model.create(data)
 # @:param11
-print(data.data())
 # --------------------------------------------------
 # @concrete1:
 data = DataPortal()
@@ -185,7 +184,8 @@ data.load(filename='Z.tab', param="z", format="param")
 print(data['z'])    #1.1
 
 data.load(filename='Y.tab', param="y", format="table")
-print(data['y'])    #{'A2': 3.4, 'A3': 3.5, 'A1': 3.3}
+for key in sorted(data['y']):
+    print("%s %s" % (key, data['y'][key]))
 # @:getitem
 # --------------------------------------------------
 # @excel1:
@@ -193,8 +193,8 @@ model = AbstractModel()
 data = DataPortal()
 model.A = Set(dimen=2)
 model.p = Param(model.A)
-#data.load(filename='excel.xls', range='PPtable', 
-#                       param=model.p, index=model.A)
+data.load(filename='excel.xls', range='PPtable', 
+                    param=model.p, index=model.A)
 instance = model.create(data)
 # @:excel1
 instance.pprint()
@@ -204,7 +204,7 @@ model = AbstractModel()
 data = DataPortal()
 model.A = Set(dimen=2)
 model.p = Param(model.A)
-#data.load(filename='db.sqlite', using='sqlite3',
+#data.load(filename='db.sqlite', using='pymysql',
 #                   query="SELECT A,B,PP from Data",
 #                   param=model.p, index=model.A)
 instance = model.create(data)
