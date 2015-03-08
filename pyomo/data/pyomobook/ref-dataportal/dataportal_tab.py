@@ -199,6 +199,17 @@ instance = model.create(data)
 # @:excel1
 instance.pprint()
 # --------------------------------------------------
+# @excel2:
+model = AbstractModel()
+data = DataPortal()
+model.A = Set(dimen=2)
+model.p = Param(model.A)
+#data.load(filename='excel.xls', range='AX2:AZ5', 
+#                    param=model.p, index=model.A)
+instance = model.create(data)
+# @:excel2
+instance.pprint()
+# --------------------------------------------------
 # @db1:
 model = AbstractModel()
 data = DataPortal()
@@ -210,5 +221,18 @@ model.p = Param(model.A)
 instance = model.create(data)
 # @:db1
 instance.pprint()
+# --------------------------------------------------
+# @json1:
+model = AbstractModel()
+data = DataPortal()
+model.A = Set()
+model.B = Set(dimen=2)
+model.p = Param()
+model.q = Param(model.A)
+model.r = Param(model.B)
+data.load(filename='T.json')
+instance = model.create(data)
+instance.pprint()
+# @:json1
 # --------------------------------------------------
 

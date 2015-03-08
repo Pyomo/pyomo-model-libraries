@@ -208,3 +208,34 @@ A3 3.5
         Key : Value
 
 2 Declarations: A p
+1 Set Declarations
+    A : Dim=0, Dimen=2, Size=0, Domain=None, Ordered=False, Bounds=None
+        []
+
+1 Param Declarations
+    p : Size=0, Index=A, Domain=Any, Default=None, Mutable=False
+        Key : Value
+
+2 Declarations: A p
+2 Set Declarations
+    A : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=None
+        ['A1', 'A2', 'A3']
+    B : Dim=0, Dimen=2, Size=3, Domain=None, Ordered=False, Bounds=None
+        [(1, 'B1'), (2, 'B2'), (3, 'B3')]
+
+3 Param Declarations
+    p : Size=1, Index=None, Domain=Any, Default=None, Mutable=False
+        Key  : Value
+        None :   0.1
+    q : Size=3, Index=A, Domain=Any, Default=None, Mutable=False
+        Key : Value
+         A1 :   3.3
+         A2 :   3.4
+         A3 :   3.5
+    r : Size=3, Index=B, Domain=Any, Default=None, Mutable=False
+        Key       : Value
+        (1, 'B1') :   3.3
+        (2, 'B2') :   3.4
+        (3, 'B3') :   3.5
+
+5 Declarations: A B p q r
