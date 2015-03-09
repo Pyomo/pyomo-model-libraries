@@ -227,12 +227,27 @@ model = AbstractModel()
 data = DataPortal()
 model.A = Set()
 model.B = Set(dimen=2)
+model.C = Set(model.A)
 model.p = Param()
 model.q = Param(model.A)
 model.r = Param(model.B)
 data.load(filename='T.json')
+# @:json1
 instance = model.create(data)
 instance.pprint()
-# @:json1
+# --------------------------------------------------
+# @yaml1:
+model = AbstractModel()
+data = DataPortal()
+model.A = Set()
+model.B = Set(dimen=2)
+model.C = Set(model.A)
+model.p = Param()
+model.q = Param(model.A)
+model.r = Param(model.B)
+data.load(filename='T.yaml')
+# @:yaml1
+instance = model.create(data)
+instance.pprint()
 # --------------------------------------------------
 

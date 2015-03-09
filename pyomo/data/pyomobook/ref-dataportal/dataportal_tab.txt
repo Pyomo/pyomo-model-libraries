@@ -217,11 +217,15 @@ A3 3.5
         Key : Value
 
 2 Declarations: A p
-2 Set Declarations
+3 Set Declarations
     A : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=None
         ['A1', 'A2', 'A3']
     B : Dim=0, Dimen=2, Size=3, Domain=None, Ordered=False, Bounds=None
         [(1, 'B1'), (2, 'B2'), (3, 'B3')]
+    C : Dim=1, Dimen=1, Size=6, Domain=None, ArraySize=2, Ordered=False, Bounds=None
+        Key : Members
+         A1 : [1, 2, 3]
+         A3 : [10, 20, 30]
 
 3 Param Declarations
     p : Size=1, Index=None, Domain=Any, Default=None, Mutable=False
@@ -238,4 +242,30 @@ A3 3.5
         (2, 'B2') :   3.4
         (3, 'B3') :   3.5
 
-5 Declarations: A B p q r
+6 Declarations: A B C p q r
+3 Set Declarations
+    A : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=None
+        ['A1', 'A2', 'A3']
+    B : Dim=0, Dimen=2, Size=3, Domain=None, Ordered=False, Bounds=None
+        [(1, 'B1'), (2, 'B2'), (3, 'B3')]
+    C : Dim=1, Dimen=1, Size=6, Domain=None, ArraySize=2, Ordered=False, Bounds=None
+        Key : Members
+         A1 : [1, 2, 3]
+         A3 : [10, 20, 30]
+
+3 Param Declarations
+    p : Size=1, Index=None, Domain=Any, Default=None, Mutable=False
+        Key  : Value
+        None :   0.1
+    q : Size=3, Index=A, Domain=Any, Default=None, Mutable=False
+        Key : Value
+         A1 :   3.3
+         A2 :   3.4
+         A3 :   3.5
+    r : Size=3, Index=B, Domain=Any, Default=None, Mutable=False
+        Key       : Value
+        (1, 'B1') :   3.3
+        (2, 'B2') :   3.4
+        (3, 'B3') :   3.5
+
+6 Declarations: A B C p q r
