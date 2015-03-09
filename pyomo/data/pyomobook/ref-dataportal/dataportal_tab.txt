@@ -269,3 +269,13 @@ A3 3.5
         (3, 'B3') :   3.5
 
 6 Declarations: A B C p q r
+1 Set Declarations
+    C : Dim=0, Dimen=2, Size=9, Domain=None, Ordered=False, Bounds=None
+        [('A1', 1), ('A1', 2), ('A1', 3), ('A2', 1), ('A2', 2), ('A2', 3), ('A3', 1), ('A3', 2), ('A3', 3)]
+
+1 Declarations: C
+1 Set Declarations
+    C : Dim=0, Dimen=2, Size=3, Domain=None, Ordered=False, Bounds=None
+        [('A1', 1), ('A2', 2), ('A3', 3)]
+
+1 Declarations: C

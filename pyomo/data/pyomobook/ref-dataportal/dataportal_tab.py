@@ -251,3 +251,16 @@ instance = model.create(data)
 instance.pprint()
 # --------------------------------------------------
 
+# @namespaces1:
+model = AbstractModel()
+model.C = Set(dimen=2)
+data = DataPortal()
+data.load(filename='C.tab', set=model.C, namespace='ns1')
+data.load(filename='D.tab', set=model.C, namespace='ns2', 
+                            format='set_array')
+instance1 = model.create(data, namespaces=['ns1'])
+instance2 = model.create(data, namespaces=['ns2'])
+# @:namespaces1
+instance1.pprint()
+instance2.pprint()
+
