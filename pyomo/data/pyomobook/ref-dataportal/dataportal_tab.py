@@ -216,10 +216,22 @@ data = DataPortal()
 model.A = Set(dimen=2)
 model.p = Param(model.A)
 data.load(filename='PP.sqlite', using='sqlite3',
-                   query="SELECT A,B,PP FROM PPtable",
+                   table='PPtable',
                    param=model.p, index=model.A)
 instance = model.create(data)
 # @:db1
+instance.pprint()
+# --------------------------------------------------
+# @db2:
+model = AbstractModel()
+data = DataPortal()
+model.A = Set()
+model.p = Param(model.A)
+data.load(filename='PP.sqlite', using='sqlite3',
+                   query="SELECT A,PP FROM PPtable",
+                   param=model.p, index=model.A)
+instance = model.create(data)
+# @:db2
 instance.pprint()
 # --------------------------------------------------
 # @json1:

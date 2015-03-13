@@ -208,6 +208,7 @@ A3 3.5
         Key : Value
 
 2 Declarations: A p
+(('A', None, None, None, None, None, None), ('B', None, None, None, None, None, None), ('PP', None, None, None, None, None, None))
 1 Set Declarations
     A : Dim=0, Dimen=2, Size=3, Domain=None, Ordered=False, Bounds=None
         [('A1', 'B1'), ('A2', 'B2'), ('A3', 'B3')]
@@ -218,6 +219,18 @@ A3 3.5
         ('A1', 'B1') :   4.3
         ('A2', 'B2') :   4.4
         ('A3', 'B3') :   4.5
+
+2 Declarations: A p
+1 Set Declarations
+    A : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=None
+        ['A1', 'A2', 'A3']
+
+1 Param Declarations
+    p : Size=3, Index=A, Domain=Any, Default=None, Mutable=False
+        Key : Value
+         A1 :   4.3
+         A2 :   4.4
+         A3 :   4.5
 
 2 Declarations: A p
 3 Set Declarations
