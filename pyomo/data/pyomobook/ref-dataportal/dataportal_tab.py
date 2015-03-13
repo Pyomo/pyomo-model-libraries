@@ -215,9 +215,9 @@ model = AbstractModel()
 data = DataPortal()
 model.A = Set(dimen=2)
 model.p = Param(model.A)
-#data.load(filename='db.sqlite', using='pymysql',
-#                   query="SELECT A,B,PP from Data",
-#                   param=model.p, index=model.A)
+data.load(filename='PP.sqlite', using='sqlite3',
+                   query="SELECT A,B,PP FROM PPtable",
+                   param=model.p, index=model.A)
 instance = model.create(data)
 # @:db1
 instance.pprint()
