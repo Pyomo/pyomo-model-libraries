@@ -8,4 +8,4 @@ model.A = Set(dimen=2)
 
 instance = model.create('set4.dat')
 
-print sorted(list(instance.A.data()))
+print(sorted(list(instance.A.data())))
