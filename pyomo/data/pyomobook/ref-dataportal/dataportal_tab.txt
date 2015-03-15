@@ -208,7 +208,6 @@ A3 3.5
         Key : Value
 
 2 Declarations: A p
-(('A', None, None, None, None, None, None), ('B', None, None, None, None, None, None), ('PP', None, None, None, None, None, None))
 1 Set Declarations
     A : Dim=0, Dimen=2, Size=3, Domain=None, Ordered=False, Bounds=None
         [('A1', 'B1'), ('A2', 'B2'), ('A3', 'B3')]
@@ -221,6 +220,7 @@ A3 3.5
         ('A3', 'B3') :   4.5
 
 2 Declarations: A p
+HERE
 1 Set Declarations
     A : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=None
         ['A1', 'A2', 'A3']
@@ -235,9 +235,9 @@ A3 3.5
 2 Declarations: A p
 3 Set Declarations
     A : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=None
-        ['A1', 'A2', 'A3']
+        [u'A1', u'A2', u'A3']
     B : Dim=0, Dimen=2, Size=3, Domain=None, Ordered=False, Bounds=None
-        [(1, 'B1'), (2, 'B2'), (3, 'B3')]
+        [(1, u'B1'), (2, u'B2'), (3, u'B3')]
     C : Dim=1, Dimen=1, Size=6, Domain=None, ArraySize=2, Ordered=False, Bounds=None
         Key : Members
          A1 : [1, 2, 3]
@@ -253,10 +253,10 @@ A3 3.5
          A2 :   3.4
          A3 :   3.5
     r : Size=3, Index=B, Domain=Any, Default=None, Mutable=False
-        Key       : Value
-        (1, 'B1') :   3.3
-        (2, 'B2') :   3.4
-        (3, 'B3') :   3.5
+        Key        : Value
+        (1, u'B1') :   3.3
+        (2, u'B2') :   3.4
+        (3, u'B3') :   3.5
 
 6 Declarations: A B C p q r
 3 Set Declarations

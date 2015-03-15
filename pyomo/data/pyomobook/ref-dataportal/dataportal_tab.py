@@ -232,24 +232,22 @@ data.load(filename='PP.sqlite', using='sqlite3',
                    param=model.p, index=model.A)
 instance = model.create(data)
 # @:db2
+print("HERE")
 instance.pprint()
 # --------------------------------------------------
-try:
-    import pyodbc
-    # @db3:
+# @db3:
+if False:
     model = AbstractModel()
     data = DataPortal()
     model.A = Set()
     model.p = Param(model.A)
-    data.load(filename="Driver={MySQL};Database=Pyomo;Server=localhost;User=pyomo;",
-            using='pyodbc',
+    data.load(filename="Driver={MySQL ODBC 5.2 UNICODE Driver}; Database=Pyomo; Server=localhost; User=pyomo;",
+            using='pypyodbc',
             query="SELECT A,PP FROM PPtable",
             param=model.p, index=model.A)
     instance = model.create(data)
     # @:db3
     instance.pprint()
-except:
-    pass
 # --------------------------------------------------
 # @json1:
 model = AbstractModel()
