@@ -42,18 +42,18 @@ model.xinit[2] = 10.0
 model.xinit[3] = 1.0
 
 def xinit(model,i):
-	return model.xinit[i]
+    return model.xinit[i]
 model.x = Var(RangeSet(1,3),initialize=xinit)
 
 def t(model,i):
-	return 0.1*i
+    return 0.1*i
 model.t = Param(RangeSet(1,model.M),initialize=t)
-	
+    
 def f_rule(model):
-	return sum((exp(-model.t[i]*model.x[1])-exp(-model.t[i]*model.x[2])-model.x[3]\
-	*exp(-model.t[i])+model.x[3]*exp(-i))**2 for i in range(1,model.M+1))
+    return sum((exp(-model.t[i]*model.x[1])-exp(-model.t[i]*model.x[2])-model.x[3]\
+    *exp(-model.t[i])+model.x[3]*exp(-i))**2 for i in range(1,model.M+1))
 model.f = Objective(rule=f_rule)
 
 def cons1(model):
-	return model.x[3]==1.0
+    return model.x[3]==1.0
 model.cons1 = Constraint(rule=cons1)

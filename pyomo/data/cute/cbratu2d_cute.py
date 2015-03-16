@@ -46,23 +46,23 @@ model.x = Var(RangeSet(1,p),RangeSet(1,p),initialize=0.0)
 model.f = Objective(expr=0.0)
 
 def con1(model,i,j):
-	return (4*model.u[i,j]-model.u[i+1,j]-model.u[i-1,j]-model.u[i,j+1]-\
-	model.u[i,j-1]-c*exp(model.u[i,j])*cos(model.x[i,j])) == 0
+    return (4*model.u[i,j]-model.u[i+1,j]-model.u[i-1,j]-model.u[i,j+1]-\
+    model.u[i,j-1]-c*exp(model.u[i,j])*cos(model.x[i,j])) == 0
 model.cons1 = Constraint(RangeSet(2,p-1),RangeSet(2,p-1),rule=con1)
 
 def con2(model,i,j):
-	return (4*model.x[i,j]-model.x[i+1,j]-model.x[i-1,j]-model.x[i,j+1]-\
-	model.x[i,j-1]-c*exp(model.u[i,j])*sin(model.x[i,j])) == 0
+    return (4*model.x[i,j]-model.x[i+1,j]-model.x[i-1,j]-model.x[i,j+1]-\
+    model.x[i,j-1]-c*exp(model.u[i,j])*sin(model.x[i,j])) == 0
 model.cons2 = Constraint(RangeSet(2,p-1),RangeSet(2,p-1),rule=con2)
 
 for j in range(1,p+1):
-	model.u[1,j].fix(0.0)
-	model.u[p,j].fix(0.0)
-	model.x[1,j].fix(0.0)
-	model.x[p,j].fix(0.0)
+    model.u[1,j].fix(0.0)
+    model.u[p,j].fix(0.0)
+    model.x[1,j].fix(0.0)
+    model.x[p,j].fix(0.0)
 
 for i in range(2,p):
-	model.u[i,p].fix(0.0)
-	model.u[i,1].fix(0.0)
-	model.x[i,p].fix(0.0)
-	model.x[i,1].fix(0.0)
+    model.u[i,p].fix(0.0)
+    model.u[i,1].fix(0.0)
+    model.x[i,p].fix(0.0)
+    model.x[i,1].fix(0.0)

@@ -33,14 +33,14 @@ model.x1 = Var()
 model.x2 = Var()
 
 def f(model):
-	return 0
+    return 0
 model.f = Objective(rule=f)
 
-	
+    
 def con1(model):
-	return ((model.x1-model.x2*model.x2) * (model.x1-sin(model.x2))) == 0
+    return ((model.x1-model.x2*model.x2) * (model.x1-sin(model.x2))) == 0
 model.cons1 = Constraint(rule=con1)
 
 def con2(model):
-	return (((cos(model.x2))-model.x1) * (model.x2-cos(model.x1))) == 0
+    return (((cos(model.x2))-model.x1) * (model.x2-cos(model.x1))) == 0
 model.cons2 = Constraint(rule=con2)

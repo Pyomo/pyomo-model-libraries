@@ -46,21 +46,21 @@ mass = tmass/(N+1)
 mg = mass*gamma
 
 def x(model,i):
-	return i*length/(N+1)
+    return i*length/(N+1)
 model.x = Var(RangeSet(0,N+1),initialize=x)
 
 def y(model,i):
-	return 0.0
+    return 0.0
 model.y = Var(RangeSet(0,N+1),initialize=y)
 
 model.z = Var(RangeSet(0,N+1),initialize=0.0)
 
 def f_rule(model):
-	return mg*model.y[0]/2.0 + sum(mg*model.y[i] for i in range(1,N+1)) + mg*model.y[N+1]/2.0
+    return mg*model.y[0]/2.0 + sum(mg*model.y[i] for i in range(1,N+1)) + mg*model.y[N+1]/2.0
 model.f = Objective(rule=f_rule)
 
 def con1(model,i):
-	return (model.x[i]-model.x[i-1])**2 + (model.y[i]-model.y[i-1])**2 + (model.x[i]-model.z[i-1])**2 == bl**2
+    return (model.x[i]-model.x[i-1])**2 + (model.y[i]-model.y[i-1])**2 + (model.x[i]-model.z[i-1])**2 == bl**2
 model.cons1 = Constraint(RangeSet(1,N+1),rule=con1)
 
 model.x[0] = 0.0

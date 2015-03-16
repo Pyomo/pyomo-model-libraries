@@ -8,7 +8,7 @@
 #  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 #
-#	Taken from cute suite. Formulated in Pyomo by Logan Barnes and Gabe Hackebeil.
+#   Taken from cute suite. Formulated in Pyomo by Logan Barnes and Gabe Hackebeil.
 
 from pyomo.core import *
 model = AbstractModel()
@@ -20,7 +20,7 @@ X_init[3] = 0.04
 X_init[4] = 2.0
 
 def X_init_rule(model,i):
-	return X_init[i]
+    return X_init[i]
 
 model.N = RangeSet(1,4)
 model.M = RangeSet(1,19)
@@ -63,9 +63,9 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def obj_rule(model):
-	return sum((model.y_cal[i] - model.y_obs[i])**2 for i in model.M)
+    return sum((model.y_cal[i] - model.y_obs[i])**2 for i in model.M)
 model.obj = Objective(rule=obj_rule, sense=minimize)
-	
+    
 def cons1(model):
-	return model.x[3] + (1-model.x[3])*model.x[4] >= 0
+    return model.x[3] + (1-model.x[3])*model.x[4] >= 0
 model.constr1 = Constraint(rule=cons1)

@@ -48,23 +48,23 @@ model.x[5] = 4.0
 model.x[6] = 3.0
 
 def f_rule(model):
-	sum1 = 0.0	
-	for i in model.SS:	
-		sum1 +=(-exp(-0.1*i)+5*exp(-i)-3*exp(-0.4*i)+model.x[3]*exp(-0.1*i*model.x[1])\
-		-model.x[4]*exp(-0.1*i*model.x[2])+model.x[6]*exp(-0.1*i*model.x[5]))**2
-	return sum1
+    sum1 = 0.0  
+    for i in model.SS:  
+        sum1 +=(-exp(-0.1*i)+5*exp(-i)-3*exp(-0.4*i)+model.x[3]*exp(-0.1*i*model.x[1])\
+        -model.x[4]*exp(-0.1*i*model.x[2])+model.x[6]*exp(-0.1*i*model.x[5]))**2
+    return sum1
 model.f = Objective(rule=f_rule)
-	
+    
 def cons1(model):
-	return model.x[3]==1
+    return model.x[3]==1
 model.cons1 = Constraint(rule=cons1)
 
 def cons2(model):
-	return model.x[5]==4
+    return model.x[5]==4
 model.cons2 = Constraint(rule=cons2)
 
 def cons3(model):
-	return model.x[6]==3
+    return model.x[6]==3
 model.cons3 = Constraint(rule=cons3)
 
 

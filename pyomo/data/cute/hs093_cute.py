@@ -8,7 +8,7 @@
 #  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 #
-#	Taken from H&S. Formulated in pyomo by Logan Barnes and Gabe Hackebeil.
+#   Taken from H&S. Formulated in pyomo by Logan Barnes and Gabe Hackebeil.
 
 from pyomo.core import *
 model = ConcreteModel()
@@ -27,12 +27,12 @@ model.obj = Objective(expr=0.0204*model.x[1]*model.x[4]*(model.x[1] + model.x[2]
   0.0437*model.x[2]*model.x[3]*model.x[6]**2*(model.x[1] + 1.57*model.x[2] + model.x[4]))
  
 def prod(model):
-	expr = 1.0
-	for j in model.N:
-		expr *= model.x[j]
-	return expr
+    expr = 1.0
+    for j in model.N:
+        expr *= model.x[j]
+    return expr
 
 model.constr1 = Constraint(expr=0.001*prod(model)>=2.07)
 model.constr2 = Constraint(expr=0.00062*model.x[1]*model.x[4]*model.x[5]**2\
-								*(model.x[1] + model.x[2] + model.x[3])\
-								+ 0.00058*model.x[2]*model.x[3]*model.x[6]**2*(model.x[1] + 1.57*model.x[2] + model.x[4])<= 1)
+                                *(model.x[1] + model.x[2] + model.x[3])\
+                                + 0.00058*model.x[2]*model.x[3]*model.x[6]**2*(model.x[1] + 1.57*model.x[2] + model.x[4])<= 1)

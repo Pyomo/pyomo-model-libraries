@@ -41,23 +41,23 @@ model.N = RangeSet(1,n)
 
 
 def x_init_rule(model,i):
-	if i == 1:
-		return  -3.0
-	elif i == 2:
-		return -1.0
-	elif i == 3:
-		return -3.0
-	elif i == 4:
-		return -1.0
-	else: 
-		return -2.0
+    if i == 1:
+        return  -3.0
+    elif i == 2:
+        return -1.0
+    elif i == 3:
+        return -3.0
+    elif i == 4:
+        return -1.0
+    else: 
+        return -2.0
 model.x = Var(model.N,initialize=x_init_rule)
 
 def f(model):
-	return	1.0+sum(100*(model.x[2*i]-model.x[2*i-1]**2)**2 +\
-	(1.0-model.x[2*i-1])**2 +90*(model.x[2*i+2]-model.x[2*i+1]**2)**2 +\
-	(1.0-model.x[2*i+1])**2 +\
-	10*(model.x[2*i]+model.x[2*i+2]-2.0)**2 +\
-	(model.x[2*i]-model.x[2*i+2])**2/10 for i in range(1,int(ns)+1))
+    return  1.0+sum(100*(model.x[2*i]-model.x[2*i-1]**2)**2 +\
+    (1.0-model.x[2*i-1])**2 +90*(model.x[2*i+2]-model.x[2*i+1]**2)**2 +\
+    (1.0-model.x[2*i+1])**2 +\
+    10*(model.x[2*i]+model.x[2*i+2]-2.0)**2 +\
+    (model.x[2*i]-model.x[2*i+2])**2/10 for i in range(1,int(ns)+1))
 model.f = Objective(rule=f)
-	
+    

@@ -58,17 +58,17 @@ model.x[2,0] = 0.0
 model.x[2,0].fixed = True
 
 def f_rule(model):
-	return sum(1000*(-(model.x[1,value(model.TO[t])]+model.x[2,value(model.TO[t])])*model.k[1]+model.x[1,value(model.TO[t])]+\
-	model.x[2,value(model.TO[t])]+model.U[value(model.TO[t])]*model.k[1]-model.oc_init[t])**2 for t in range(1,int(NO)+1))
+    return sum(1000*(-(model.x[1,value(model.TO[t])]+model.x[2,value(model.TO[t])])*model.k[1]+model.x[1,value(model.TO[t])]+\
+    model.x[2,value(model.TO[t])]+model.U[value(model.TO[t])]*model.k[1]-model.oc_init[t])**2 for t in range(1,int(NO)+1))
 model.f = Objective(rule=f_rule)
 
 def cons1_rule(model,t):
-	return 1000*(H*(model.k[3]+model.k[4])*model.x[1,t]- H*model.k[5]*model.x[2,t] -\
-	H*model.U[t]*model.k[2] + model.x[1,t+1] - model.x[1,t]) == 0
+    return 1000*(H*(model.k[3]+model.k[4])*model.x[1,t]- H*model.k[5]*model.x[2,t] -\
+    H*model.U[t]*model.k[2] + model.x[1,t+1] - model.x[1,t]) == 0
 model.cons1 = Constraint(RangeSet(0,int(NT)-1),rule=cons1_rule)
 
 def cons2_rule(model,t):
-	return 1000*(H*model.k[5]*model.x[2,t] - H*model.k[4]*model.x[1,t] + model.x[2,t+1] - model.x[2,t]) == 0
+    return 1000*(H*model.k[5]*model.x[2,t] - H*model.k[4]*model.x[1,t] + model.x[2,t+1] - model.x[2,t]) == 0
 model.cons2 = Constraint(RangeSet(0,int(NT)-1),rule=cons2_rule)
 
 

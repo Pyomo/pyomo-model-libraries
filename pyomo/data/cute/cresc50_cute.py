@@ -46,18 +46,18 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f(model):
-	return (model.d+model.r)**2*acos(-( (model.a*model.d)**2 - (model.a*model.d+model.r)**2 +\
-	(model.d+model.r)**2)/(2*(model.d+model.r)*model.a*model.d))\
-	-(model.a*model.d+model.r)**2*acos(( (model.a*model.d)**2+ (model.a*model.d+model.r)**2 -\
-	(model.d+model.r)**2)/(2*(model.a*model.d+model.r)*model.a*model.d))\
-	+(model.d+model.r)*model.a*model.d*sin(acos(-( (model.a*model.d)**2 - \
-	(model.a*model.d+model.r)**2 +(model.d+model.r)**2)/(2*(model.d+model.r)*model.a*model.d)))
+    return (model.d+model.r)**2*acos(-( (model.a*model.d)**2 - (model.a*model.d+model.r)**2 +\
+    (model.d+model.r)**2)/(2*(model.d+model.r)*model.a*model.d))\
+    -(model.a*model.d+model.r)**2*acos(( (model.a*model.d)**2+ (model.a*model.d+model.r)**2 -\
+    (model.d+model.r)**2)/(2*(model.a*model.d+model.r)*model.a*model.d))\
+    +(model.d+model.r)*model.a*model.d*sin(acos(-( (model.a*model.d)**2 - \
+    (model.a*model.d+model.r)**2 +(model.d+model.r)**2)/(2*(model.d+model.r)*model.a*model.d)))
 model.f = Objective(rule=f)
-	
+    
 def con1(model,i):
-	return (model.v1+model.a*model.d*cos(model.t)-model.x[i])**2 + \
-	(model.w1+model.a*model.d*sin(model.t)-model.y[i])**2 - (model.d+model.r)**2<= 0.0
+    return (model.v1+model.a*model.d*cos(model.t)-model.x[i])**2 + \
+    (model.w1+model.a*model.d*sin(model.t)-model.y[i])**2 - (model.d+model.r)**2<= 0.0
 def con2(model,i):
-	return (model.v1-model.x[i])**2 + (model.w1-model.y[i])**2 - (model.a*model.d+model.r)**2 >= 0.0
+    return (model.v1-model.x[i])**2 + (model.w1-model.y[i])**2 - (model.a*model.d+model.r)**2 >= 0.0
 model.cons1 = Constraint(RangeSet(1,np),rule=con1)
 model.cons2 = Constraint(RangeSet(1,np),rule=con2)

@@ -11,13 +11,13 @@
 # Formulated in pyomo by Logan Barnes and Gabe Hackebeil.
 #
 # Taken from:
-# hs87.mod	LOR2-RN-11-24
+# hs87.mod  LOR2-RN-11-24
 # Original AMPL coding by Elena Bobrovnikova (summer 1996 at Bell Labs).
 
 # The problem given here is stated in the notation of Hock & Schittkowski,
 # but is corrected to conform to the problem as stated in
-#	D. M. Himmelblau, Applied Nonlinear Programming,
-#	McGraw-Hill, 1972, pp. 413-414
+#   D. M. Himmelblau, Applied Nonlinear Programming,
+#   McGraw-Hill, 1972, pp. 413-414
 # except that jump-discontinuities in the objective function are
 # omitted by stating it as the sum of two piecewise-linear terms.
 # Errors in the problem statement by Hock & Schittkowski are noted in
@@ -87,31 +87,31 @@ model.x6 = 0.5
 model.obj = Objective(expr=model.z1 + model.z2)
 
 def f1(model,x):
-	if x == 0:
-		return 0.0
-	elif x == 300:
-		return 300*30.0
-	elif x == 400:
-		return 30.0*300.0+31.0*100.0
+    if x == 0:
+        return 0.0
+    elif x == 300:
+        return 300*30.0
+    elif x == 400:
+        return 30.0*300.0+31.0*100.0
 
 def f2(model,x):
-	if x == 0:
-		return 0.0
-	elif x == 100:
-		return 28.0*100.0
-	elif x == 200:
-		return 28.0*100.0+29*100.0
-	elif x == 1000:
-		return 28.0*100.0+29*100.0+30.0*800
+    if x == 0:
+        return 0.0
+    elif x == 100:
+        return 28.0*100.0
+    elif x == 200:
+        return 28.0*100.0+29*100.0
+    elif x == 1000:
+        return 28.0*100.0+29*100.0+30.0*800
 
 model.piecew1 = Piecewise(model.z1,model.x1,pw_constr_type='LB',pw_pts=[0.0,model.lim1,400.0],f_rule=f1)
 model.piecew2 = Piecewise(model.z2,model.x2,pw_constr_type='LB',pw_pts=[0.0,model.lim2,model.lim3,1000.0],f_rule=f2)
 
 model.e1 = Constraint(expr = model.x1 == 300 - model.x3*model.x4*cos(model.b - model.x6)/model.a\
-	 + model.c*model.x3**2*model.d/model.a)
+     + model.c*model.x3**2*model.d/model.a)
 model.e2 = Constraint(expr = model.x2 == -model.x3*model.x4*cos(model.b + model.x6)/model.a\
-	 + model.c*model.x4**2*model.d/model.a)
+     + model.c*model.x4**2*model.d/model.a)
 model.e3 = Constraint(expr = model.x5 == -model.x3*model.x4*sin(model.b + model.x6)/model.a\
-	 + model.c*model.x4**2*model.e/model.a)
+     + model.c*model.x4**2*model.e/model.a)
 model.e4 = Constraint(expr = 200 - model.x3*model.x4*sin(model.b - model.x6)/model.a\
-	 + model.c*model.x3**2*model.e/model.a == 0)
+     + model.c*model.x3**2*model.e/model.a == 0)

@@ -10,7 +10,7 @@
 #
 #  Formulated in pyomo by Logan Barnes. Taken from:
 
-# hs116.mod	LQR2-MN-13-41
+# hs116.mod LQR2-MN-13-41
 # Original AMPL coding by Elena Bobrovnikova (summer 1996 at Bell Labs).
 
 # 3-stage membrane separation

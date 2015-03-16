@@ -37,12 +37,12 @@ N = 100
 model.x = Var(RangeSet(1,N),initialize=1.0/N)
 
 def f_rule(model):
-	return 0
+    return 0
 model.f = Objective(rule=f_rule)
 
 def cons1_rule(model,i):
-	return i*(cos(model.x[i])+sin(model.x[i])) + sum(cos(model.x[j]) for j in range(1,N+1)) - (N+i) == 0
+    return i*(cos(model.x[i])+sin(model.x[i])) + sum(cos(model.x[j]) for j in range(1,N+1)) - (N+i) == 0
 model.cons = Constraint(RangeSet(1,N),rule=cons1_rule)
-	
-	
-	
+    
+    
+    

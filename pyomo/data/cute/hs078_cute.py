@@ -8,7 +8,7 @@
 #  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 #
-#	Taken from cute suite. Formulated in pyomo by Logan Barnes.
+#   Taken from cute suite. Formulated in pyomo by Logan Barnes.
 
 from pyomo.core import *
 model = ConcreteModel()
@@ -21,10 +21,10 @@ model.x[4] = -1
 model.x[5] = -1
 
 def obj_rule(model):
-	expr = 1.0
-	for i in model.N:
-		expr *= model.x[i]
-	return expr
+    expr = 1.0
+    for i in model.N:
+        expr *= model.x[i]
+    return expr
 model.obj = Objective(rule=obj_rule)
 
 model.constr1 = Constraint(expr = sum(model.x[j]**2 for j in model.N) == 10)

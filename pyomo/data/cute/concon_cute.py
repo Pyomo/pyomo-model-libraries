@@ -48,32 +48,32 @@ model.q4 = Var(initialize=-100.0)
 model.f4 = Var(bounds=(None,400.0),initialize=1000.0)
 
 def f(model):
-	return - model.p1 - model.p2 - model.p3 - model.p4 - model.p5 - model.p6 - model.p7
+    return - model.p1 - model.p2 - model.p3 - model.p4 - model.p5 - model.p6 - model.p7
 model.f = Objective(rule=f)
 
 def pan1(model):
-	return model.p1 * (abs(model.p1))-model.p2 * (abs (model.p2))  - 0.597053452*model.q1 * (abs(model.q1)) **0.8539 == 0
+    return model.p1 * (abs(model.p1))-model.p2 * (abs (model.p2))  - 0.597053452*model.q1 * (abs(model.q1)) **0.8539 == 0
 def pan2(model):
-	return model.p3 * (abs(model.p3)) - model.p4 * (abs(model.p4))  - 0.597053452*model.q2 * (abs(model.q2))**0.8539 == 0
+    return model.p3 * (abs(model.p3)) - model.p4 * (abs(model.p4))  - 0.597053452*model.q2 * (abs(model.q2))**0.8539 == 0
 def pan3(model):
-	return model.p4 * (abs(model.p4))  - model.p5 * (abs(model.p5))  - 0.597053452*model.q3 * (abs(model.q3)) **0.8539 == 0
+    return model.p4 * (abs(model.p4))  - model.p5 * (abs(model.p5))  - 0.597053452*model.q3 * (abs(model.q3)) **0.8539 == 0
 def pan4(model):
-	return model.p6 * (abs(model.p6))  - model.p7 * (abs(model.p7))  - 0.597053452*model.q4 * (abs(model.q4)) **0.8539 == 0
+    return model.p6 * (abs(model.p6))  - model.p7 * (abs(model.p7))  - 0.597053452*model.q4 * (abs(model.q4)) **0.8539 == 0
 def m1(model):
-	return model.q1 - model.f3 == 0
+    return model.q1 - model.f3 == 0
 def m2(model):
-	return -model.q1 + model.f1 == 0
+    return -model.q1 + model.f1 == 0
 def m3(model):
-	return model.q2 - model.f1 == 0
+    return model.q2 - model.f1 == 0
 def m4(model):
-	return -model.q2 + model.q3 + 1000.0 == 0
+    return -model.q2 + model.q3 + 1000.0 == 0
 def m5(model):
-	return -model.q3 - model.f2 == 0
+    return -model.q3 - model.f2 == 0
 def m6(model):
-	return model.q4 + model.f2 == 0
+    return model.q4 + model.f2 == 0
 def m7(model):
-	return -model.q4 - model.f4 == 0
-	
+    return -model.q4 - model.f4 == 0
+    
 model.pan1 = Constraint(rule=pan1)
 model.pan2 = Constraint(rule=pan2)
 model.pan3 = Constraint(rule=pan3)

@@ -45,6 +45,6 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def obj_rule(model):
-	return - sum(model.c[i]*\
-	exp(-sum(model.a[i,j]*(model.x[j]-model.p[i,j])**2 for j in range(1,7))) for i in range(1,5))
+    return - sum(model.c[i]*\
+    exp(-sum(model.a[i,j]*(model.x[j]-model.p[i,j])**2 for j in range(1,7))) for i in range(1,5))
 model.obj = Objective(rule=obj_rule)

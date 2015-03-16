@@ -8,7 +8,7 @@
 #  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 #
-#	Taken from cute suite. Formulated in Pyomo by Logan Barnes and Gabriel Hackebeil.
+#   Taken from cute suite. Formulated in Pyomo by Logan Barnes and Gabriel Hackebeil.
 
 from pyomo.core import *
 model = ConcreteModel()
@@ -22,20 +22,20 @@ model.a  = Param(model.M,mutable=True)
 model.x1 = 1745.0
 model.x2 = 12000.0
 model.x3 = 110.0
-model.a[1]=	   0.0
-model.a[2]=	   0.0
-model.a[3]=	  85.0
-model.a[4]=	  90.0
-model.a[5]=	   3.0
-model.a[6]=	   0.01
-model.a[7]=	 145.0
-model.a[8]=	5000.0
-model.a[9]=	2000.0
-model.a[10]=	  93.0
-model.a[11]=	  95.0
-model.a[12]=	  12.0
-model.a[13]=	   4.0
-model.a[14]=	 162.0
+model.a[1]=    0.0
+model.a[2]=    0.0
+model.a[3]=   85.0
+model.a[4]=   90.0
+model.a[5]=    3.0
+model.a[6]=    0.01
+model.a[7]=  145.0
+model.a[8]= 5000.0
+model.a[9]= 2000.0
+model.a[10]=      93.0
+model.a[11]=      95.0
+model.a[12]=      12.0
+model.a[13]=       4.0
+model.a[14]=     162.0
 
 model.obj = Objective(expr =-(0.063*model.y[2]*model.y[5] - 5.04*model.x1 - 3.36*model.y[3] - 0.035*model.x2 - 10*model.x3))
 

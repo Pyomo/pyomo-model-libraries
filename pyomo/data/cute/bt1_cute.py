@@ -43,11 +43,11 @@ model.x = Var(RangeSet(1,2))
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
-	
+    
 def f_rule(model):
-	return 100*model.x[1]**2+100*model.x[2]**2-model.x[1]-100
+    return 100*model.x[1]**2+100*model.x[2]**2-model.x[1]-100
 model.f = Objective(rule=f_rule)
 
 def con1(model):
-	return model.x[1]**2+model.x[2]**2-1.0 == 0
+    return model.x[1]**2+model.x[2]**2-1.0 == 0
 model.cons1 = Constraint(rule=con1)

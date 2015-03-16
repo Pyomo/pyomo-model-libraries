@@ -44,7 +44,7 @@ model.N = 3
 model.x_init = Param(RangeSet(1,model.N))
 
 def x(model,i):
-	return model.x_init[i]
+    return model.x_init[i]
 model.x = Var(RangeSet(1,model.N),initialize=x)
 
 # For Pyomo testing,
@@ -55,14 +55,14 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f_rule(model):
-	return 1000 - model.x[1]**2 - model.x[3]**2 - 2*model.x[2]**2 - model.x[1]*model.x[2] -\
-		model.x[1]*model.x[3]
+    return 1000 - model.x[1]**2 - model.x[3]**2 - 2*model.x[2]**2 - model.x[1]*model.x[2] -\
+        model.x[1]*model.x[3]
 model.f = Objective(rule=f_rule)
 
 def con1(model):
-	return -25 + model.x[1]**2 + model.x[2]**2 + model.x[3]**2 == 0
+    return -25 + model.x[1]**2 + model.x[2]**2 + model.x[3]**2 == 0
 model.cons1 = Constraint(rule=con1)
 
 def con2(model):
-	return 8*model.x[1]+14*model.x[2]+7*model.x[3] - 56 == 0
+    return 8*model.x[1]+14*model.x[2]+7*model.x[3] - 56 == 0
 model.cons2 = Constraint(rule=con2)

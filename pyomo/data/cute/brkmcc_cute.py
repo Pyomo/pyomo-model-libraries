@@ -37,6 +37,6 @@ model = ConcreteModel()
 
 model.x = Var(RangeSet(1,2),initialize=2.0)
 def f_rule(model):
-	return (model.x[1]-2)**2 + (model.x[2]-1)**2 + (1/(1-0.25*model.x[1]**2-\
-	model.x[2]**2))/25 + 5*(model.x[1]-2*model.x[2]+1)**2
+    return (model.x[1]-2)**2 + (model.x[2]-1)**2 + (1/(1-0.25*model.x[1]**2-\
+    model.x[2]**2))/25 + 5*(model.x[1]-2*model.x[2]+1)**2
 model.f = Objective(rule=f_rule)

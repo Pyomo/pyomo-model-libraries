@@ -42,10 +42,10 @@ mu = 1
 model.x = Var(RangeSet(1,N), initialize=-1)
 
 def j_init(model,i):
-	return [j for j in range(1,N+1) if (j != i) and (max(1,i-ml) <= j) and (j <= min(N,i+mu))]
+    return [j for j in range(1,N+1) if (j != i) and (max(1,i-ml) <= j) and (j <= min(N,i+mu))]
 model.J = Set(RangeSet(1,N),initialize=j_init)
 
 def f_rule(model):
-	return sum((model.x[i]*(2+5*model.x[i]**2) + 1 -\
-	sum(model.x[j]*(1+model.x[j]) for j in model.J[i]))**2 for i in range(1,N+1))
+    return sum((model.x[i]*(2+5*model.x[i]**2) + 1 -\
+    sum(model.x[j]*(1+model.x[j]) for j in model.J[i]))**2 for i in range(1,N+1))
 model.f = Objective(rule=f_rule)

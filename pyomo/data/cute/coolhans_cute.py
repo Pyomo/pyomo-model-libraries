@@ -57,8 +57,8 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
 def f(model):
     return 0.0
 model.f = Objective(rule=f)
-	
+    
 def con1(model,i,j):
     return (model.AXX[i,j] + model.BX[i,j] + model.C[i,j]) == 0
 model.matrix = Constraint(model.N,model.N,rule=con1)
-	
+    

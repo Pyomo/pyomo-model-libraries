@@ -39,7 +39,7 @@ model.S = RangeSet(1,model.ndp)
 model.SS = RangeSet(2,model.ndp-1)
 
 def x_init(model,i):
-	return ((i-1)*model.h)*((i-1)*model.h-1)
+    return ((i-1)*model.h)*((i-1)*model.h-1)
 model.x = Var(model.S,initialize=x_init)
 
 model.x[1] = 0
@@ -47,9 +47,9 @@ model.x[1].fixed = True
 model.x[model.ndp].fixed = True
 
 def f(model):
-	return 0
+    return 0
 model.f = Objective(rule=f)
 
 def cons(model,i):
-	return (-model.x[i-1]+2*model.x[i]-model.x[i+1]+0.5*model.h**2*(model.x[i]+i*model.h+1)**3 ) == 0
+    return (-model.x[i-1]+2*model.x[i]-model.x[i+1]+0.5*model.h**2*(model.x[i]+i*model.h+1)**3 ) == 0
 model.cons = Constraint(model.SS,rule=cons)

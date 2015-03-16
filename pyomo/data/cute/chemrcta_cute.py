@@ -56,31 +56,31 @@ model.t = Var(RangeSet(1,n),initialize=1.0,bounds=(0.0000001,None))
 model.u = Var(RangeSet(1,n),initialize=1.0,bounds=(0.0,None))
 
 def f(model):
-	return 0
+    return 0
 model.f = Objective(rule=f)
 
 def con1(model):
-	return (cu1*model.u[2]-model.u[1]+h*pem) == 0
+    return (cu1*model.u[2]-model.u[1]+h*pem) == 0
 model.cons1 = Constraint(rule=con1)
 
 def con2(model):
-	return (ct1*model.t[2]-model.t[1]+h*peh) == 0
+    return (ct1*model.t[2]-model.t[1]+h*peh) == 0
 model.cons2 = Constraint(rule=con2)
 
 def con3(model,i):
-	return (-d*model.u[i]*exp(gamma-gamma/model.t[i])+(cui1)*model.u[i-1] + cui*model.u[i] + model.u[i+1]/(h**2*pem)) == 0
+    return (-d*model.u[i]*exp(gamma-gamma/model.t[i])+(cui1)*model.u[i-1] + cui*model.u[i] + model.u[i+1]/(h**2*pem)) == 0
 model.cons3 = Constraint(RangeSet(2,n-1),rule=con3)
 
 def con4(model,i):
-	return (b*d*model.u[i]*exp(gamma-gamma/model.t[i])+(cti1)*model.t[i-1] + cti*model.t[i] +\
-	model.t[i+1]/(h**2*peh)) == 0
+    return (b*d*model.u[i]*exp(gamma-gamma/model.t[i])+(cti1)*model.t[i-1] + cti*model.t[i] +\
+    model.t[i+1]/(h**2*peh)) == 0
 model.cons4 = Constraint(RangeSet(2,n-1),rule=con4)
 
 def con5(model):
-	return (model.u[n]-model.u[n-1]) == 0
+    return (model.u[n]-model.u[n-1]) == 0
 model.cons5 = Constraint(rule=con5)
 
 def con6(model):
-	return (model.t[n]-model.t[n-1]) == 0
+    return (model.t[n]-model.t[n-1]) == 0
 model.cons6 = Constraint(rule=con6)
 

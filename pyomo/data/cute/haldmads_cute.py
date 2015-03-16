@@ -32,18 +32,18 @@ from pyomo.core import *
 model = ConcreteModel()
 
 def y_rule(model,i):
-	return -1.0+0.1*(i-1)
+    return -1.0+0.1*(i-1)
 model.y = Param(RangeSet(1,21),initialize=y_rule)
 
 def ey_rule(model,i):
-	return exp(model.y[i])
+    return exp(model.y[i])
 model.ey = Param(RangeSet(1,21),initialize=ey_rule)
 
 def x_init_rule(model,i):
-	if i==1:
-		return 0.5
-	else:
-		return 0.0
+    if i==1:
+        return 0.5
+    else:
+        return 0.0
 model.x = Var(RangeSet(1,5),initialize=x_init_rule)
 
 model.u = Var(initialize=0.0)
@@ -51,11 +51,11 @@ model.u = Var(initialize=0.0)
 model.f = Objective(expr=model.u)
 
 def cons1_rule(model,i):
-	return (model.x[1]+model.y[i]*model.x[2])/(1.0+model.x[3]*model.y[i]+\
-	model.x[4]*model.y[i]**2+model.x[5]*model.y[i]**3)-model.u <= model.ey[i]
+    return (model.x[1]+model.y[i]*model.x[2])/(1.0+model.x[3]*model.y[i]+\
+    model.x[4]*model.y[i]**2+model.x[5]*model.y[i]**3)-model.u <= model.ey[i]
 model.cons1 = Constraint(RangeSet(1,21),rule=cons1_rule)
 
 def cons2_rule(model,i):
-	return -(model.x[1]+model.y[i]*model.x[2])/(1.0+model.x[3]*model.y[i]+model.x[4]*model.y[i]**2+\
-	model.x[5]*model.y[i]**3)-model.u <= -model.ey[i]
+    return -(model.x[1]+model.y[i]*model.x[2])/(1.0+model.x[3]*model.y[i]+model.x[4]*model.y[i]**2+\
+    model.x[5]*model.y[i]**3)-model.u <= -model.ey[i]
 model.cons2 = Constraint(RangeSet(1,21),rule=cons2_rule)

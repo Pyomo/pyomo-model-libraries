@@ -40,15 +40,15 @@ model.x = Var(RangeSet(1,5),initialize=2.0)
 
 
 def f_rule(model):
-	return (model.x[1]-1.0)**2 + (model.x[1]-model.x[2])**2 + (model.x[3]-1.0)**2 +\
-	(model.x[4]-1.0)**4 + (model.x[5]-1.0)**6
+    return (model.x[1]-1.0)**2 + (model.x[1]-model.x[2])**2 + (model.x[3]-1.0)**2 +\
+    (model.x[4]-1.0)**4 + (model.x[5]-1.0)**6
 model.f = Objective(rule=f_rule)
 
 def con1(model):
-	return model.x[4]*model.x[1]**2 + sin(model.x[4]-model.x[5]) == 2*(2.0)**0.5
-	
+    return model.x[4]*model.x[1]**2 + sin(model.x[4]-model.x[5]) == 2*(2.0)**0.5
+    
 def con2(model):
-	return model.x[3]**4*model.x[2]**2 + model.x[2] == 8+(2.0)**0.5
+    return model.x[3]**4*model.x[2]**2 + model.x[2] == 8+(2.0)**0.5
 
 model.cons1 = Constraint(rule=con1)
 model.cons2 = Constraint(rule=con2)

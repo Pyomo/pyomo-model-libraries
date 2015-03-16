@@ -41,12 +41,12 @@ ngs = n-1
 model.x = Var(RangeSet(1,n))
 
 def f_rule(model):
-	return sum(((5.0-model.x[i+1])*model.x[i+1]**2+model.x[i]-2*model.x[i+1]-13.0)**2 for i in range(1,ngs+1))+\
-	sum(((1.0+model.x[i+1])*model.x[i+1]**2+model.x[i]-14*model.x[i+1]-29.0)**2 for i in range(1,ngs+1))
+    return sum(((5.0-model.x[i+1])*model.x[i+1]**2+model.x[i]-2*model.x[i+1]-13.0)**2 for i in range(1,ngs+1))+\
+    sum(((1.0+model.x[i+1])*model.x[i+1]**2+model.x[i]-14*model.x[i+1]-29.0)**2 for i in range(1,ngs+1))
 model.f = Objective(rule=f_rule)
 
 model.x[1] = 0.5
 model.x[2] = -2.0
 
 for i in range(3,n+1):
-	model.x[i] = 0.0
+    model.x[i] = 0.0

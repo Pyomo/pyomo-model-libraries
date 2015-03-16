@@ -37,17 +37,17 @@ model = AbstractModel()
 R = 51.0
 
 def T_rule(model,i):
-	return 5*(i-1)/(R-1)
+    return 5*(i-1)/(R-1)
 model.T = Param(RangeSet(1,R),initialize=T_rule,mutable=True)
 
 def ET_rule(model,i):
-	return exp(model.T[i])
+    return exp(model.T[i])
 model.ET = Param(RangeSet(1,R),initialize=ET_rule)
 
 model.pinit = Param(RangeSet(0,2))
 
 def P_init(model,i):
-	return model.pinit[i]
+    return model.pinit[i]
 model.P = Var(RangeSet(0,2),initialize=P_init)
 
 model.Q = Var(RangeSet(1,2),initialize=0.0)
@@ -60,17 +60,17 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f_rule(model):
-	return sum((\
-	(model.P[0]+model.P[1]*model.T[i]+model.P[2]*model.T[i]**2)/\
-	(model.ET[i]*(1+model.Q[1]*(model.T[i]-5)+model.Q[2]*(model.T[i]-5)**2))\
-	-1 )**2 for i in range(1,int(R)+1))
+    return sum((\
+    (model.P[0]+model.P[1]*model.T[i]+model.P[2]*model.T[i]**2)/\
+    (model.ET[i]*(1+model.Q[1]*(model.T[i]-5)+model.Q[2]*(model.T[i]-5)**2))\
+    -1 )**2 for i in range(1,int(R)+1))
 model.f = Objective(rule=f_rule)
 
 def cons1(model,i):
-	return model.P[0]+model.P[1]*model.T[i]+model.P[2]*model.T[i]**2-(model.T[i]-5)*model.ET[i]*model.Q[1]-\
-		(model.T[i]-5)**2*model.ET[i]*model.Q[2]-model.ET[i]>= 0
+    return model.P[0]+model.P[1]*model.T[i]+model.P[2]*model.T[i]**2-(model.T[i]-5)*model.ET[i]*model.Q[1]-\
+        (model.T[i]-5)**2*model.ET[i]*model.Q[2]-model.ET[i]>= 0
 model.cons1 = Constraint(RangeSet(1,R),rule=cons1)
 
 def cons2(model,i):
-	return (model.T[i]-5)*model.Q[1] + (model.T[i]-5)**2*model.Q[2]+0.99999 >= 0
+    return (model.T[i]-5)*model.Q[1] + (model.T[i]-5)**2*model.Q[2]+0.99999 >= 0
 model.cons2 = Constraint(RangeSet(1,R),rule=cons2)

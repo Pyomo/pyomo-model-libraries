@@ -38,25 +38,25 @@ model.x = Var(RangeSet(1,2),initialize=2.0)
 model.z = Var(initialize=2.0)
 
 def f(model):
-	return model.z
+    return model.z
 model.f = Objective(rule=f)
 
 def con1(model):
-	return model.z+5*model.x[1]-model.x[2] >= 0
+    return model.z+5*model.x[1]-model.x[2] >= 0
 model.cons1 = Constraint(rule=con1)
 
 def con2(model):
-	return model.z-4*model.x[2]-model.x[1]**2-model.x[2]**2 >= 0
+    return model.z-4*model.x[2]-model.x[1]**2-model.x[2]**2 >= 0
 model.cons2 = Constraint(rule=con2)
 
 def con3(model):
-	return model.z-5*model.x[1]-model.x[2] >= 0
+    return model.z-5*model.x[1]-model.x[2] >= 0
 model.cons3 = Constraint(rule=con3)
 
 def con4(model):
-	return model.x[1]+model.x[2]+10.0 <= 0
+    return model.x[1]+model.x[2]+10.0 <= 0
 model.cons4 = Constraint(rule=con4)
 
 def con5(model):
-	return 2*model.x[1]**2-model.x[2]**2+4.0 <= 0
+    return 2*model.x[1]**2-model.x[2]**2+4.0 <= 0
 model.cons5 = Constraint(rule=con5)

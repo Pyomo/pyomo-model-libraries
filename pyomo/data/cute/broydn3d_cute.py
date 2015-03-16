@@ -40,17 +40,17 @@ kappa2 = 1.0
 model.x = Var(RangeSet(1,N),initialize=-1.0)
 
 def f_rule(model):
-	return 0
+    return 0
 model.f = Objective(rule=f_rule)
 
 def con1(model):
-	return (-2*model.x[2]+kappa2+(3-kappa1*model.x[1])*model.x[1]) == 0
+    return (-2*model.x[2]+kappa2+(3-kappa1*model.x[1])*model.x[1]) == 0
 model.cons1 = Constraint(rule=con1)
 
 def con2(model,i):
-	return (-model.x[i-1]-2*model.x[i+1]+kappa2+(3-kappa1*model.x[i])*model.x[i]) == 0
+    return (-model.x[i-1]-2*model.x[i+1]+kappa2+(3-kappa1*model.x[i])*model.x[i]) == 0
 model.cons2 = Constraint(RangeSet(2,N-1),rule=con2)
 
 def con3(model):
-	return (-model.x[N-1]+kappa2+(3-kappa1*model.x[N])*model.x[N]) == 0
+    return (-model.x[N-1]+kappa2+(3-kappa1*model.x[N])*model.x[N]) == 0
 model.cons3 = Constraint(rule=con3)

@@ -38,6 +38,6 @@ model.N = 2
 model.x = Var(RangeSet(1,model.N),initialize=1.0)
 
 def f(model):
-	return(-1.5+model.x[1]*(1.0-model.x[2]))**2 + (-2.25+model.x[1]*(1.0-model.x[2]**2))**2 + (-2.625+model.x[1]*(1.0-model.x[2]**3))**2
+    return(-1.5+model.x[1]*(1.0-model.x[2]))**2 + (-2.25+model.x[1]*(1.0-model.x[2]**2))**2 + (-2.625+model.x[1]*(1.0-model.x[2]**3))**2
 model.f = Objective(rule=f)
-	
+    

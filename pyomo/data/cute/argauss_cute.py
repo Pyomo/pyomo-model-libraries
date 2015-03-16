@@ -38,7 +38,7 @@ x_init[2] = 1
 x_init[3] = 0
 
 def x_init_rule(model,i):
-	return x_init[i]
+    return x_init[i]
 model.x = Var(RangeSet(1,3),initialize = x_init_rule)
 model.rhs = Param(RangeSet(1,15))
 
@@ -50,10 +50,10 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f_rule(model):
-	return 0
+    return 0
 model.f = Objective(rule=f_rule)
 
 def cons_rule(model,i):
-	return (model.x[1]*exp(-0.5*model.x[2]*(0.5*(8-i)-model.x[3])**2) == model.rhs[i])
+    return (model.x[1]*exp(-0.5*model.x[2]*(0.5*(8-i)-model.x[3])**2) == model.rhs[i])
 model.cons = Constraint(RangeSet(1,15),rule=cons_rule)
 

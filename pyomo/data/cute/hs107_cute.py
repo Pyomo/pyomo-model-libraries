@@ -8,7 +8,7 @@
 #  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 #
-#	Taken from H&S. Formulated in pyomo by Logan Barnes and Gabe Hackebeil.
+#   Taken from H&S. Formulated in pyomo by Logan Barnes and Gabe Hackebeil.
 
 from pyomo.core import *
 model = ConcreteModel()
@@ -47,17 +47,17 @@ model.y6 = Expression(initialize=_y6)
 model.obj = Objective(expr=3000*model.x[1]+1000*model.x[1]**3+2000*model.x[2]+666.667*model.x[2]**3)
 
 model.c1 = Constraint(expr=0.4-model.x[1]+2*c*model.x[5]**2-model.x[5]*model.x[6]\
-	*(d*model.y1+c*model.y2)-model.x[5]*model.x[7]*(d*model.y3+c*model.y4)==0)
+    *(d*model.y1+c*model.y2)-model.x[5]*model.x[7]*(d*model.y3+c*model.y4)==0)
 model.c2 = Constraint(expr=0.4-model.x[2]+2*c*model.x[6]**2+model.x[5]*model.x[6]\
-	*(d*model.y1-c*model.y2)+model.x[6]*model.x[7]*(d*model.y5-c*model.y6)==0)
+    *(d*model.y1-c*model.y2)+model.x[6]*model.x[7]*(d*model.y5-c*model.y6)==0)
 model.c3 = Constraint(expr=0.8+2*c*model.x[7]**2+model.x[5]*model.x[7]*(d*model.y3\
-	-c*model.y4)-model.x[6]*model.x[7]*(d*model.y5+c*model.y6)==0)
+    -c*model.y4)-model.x[6]*model.x[7]*(d*model.y5+c*model.y6)==0)
 model.c4 = Constraint(expr=0.2-model.x[3]+2*d*model.x[5]**2+model.x[5]*model.x[6]\
-	*(c*model.y1-d*model.y2)+model.x[5]*model.x[7]*(c*model.y3-d*model.y4)==0)
+    *(c*model.y1-d*model.y2)+model.x[5]*model.x[7]*(c*model.y3-d*model.y4)==0)
 model.c5 = Constraint(expr=0.2-model.x[4]+2*d*model.x[6]**2-model.x[5]*model.x[6]\
-	*(c*model.y1+d*model.y2)-model.x[6]*model.x[7]*(c*model.y5+d*model.y6)==0)
+    *(c*model.y1+d*model.y2)-model.x[6]*model.x[7]*(c*model.y5+d*model.y6)==0)
 model.c6 = Constraint(expr=-.337+2*d*model.x[7]**2-model.x[5]*model.x[7]\
-	*(c*model.y3+d*model.y4)+model.x[6]*model.x[7]*(c*model.y5-d*model.y6)==0)
+    *(c*model.y3+d*model.y4)+model.x[6]*model.x[7]*(c*model.y5-d*model.y6)==0)
 model.c7 = Constraint(expr=model.x[1]>=0)
 model.c8 = Constraint(expr=model.x[2]>=0)
 model.c9 = Constraint(expr=model.x[5]>=.90909)

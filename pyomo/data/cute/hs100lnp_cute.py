@@ -49,9 +49,9 @@ model.x[6] = 1.0
 model.x[7] = 1.0
 
 model.obj = Objective(expr=(model.x[1]-10)**2 + 5.0*(model.x[2]-12)**2 + model.x[3]**4\
-	 + 3.0*(model.x[4]-11)**2 + 10.0*model.x[5]**6 + 7.0*model.x[6]**2 + model.x[7]**4\
-	 - 4.0*model.x[6]*model.x[7] - 10.0*model.x[6] - 8.0*model.x[7])
-	 
+     + 3.0*(model.x[4]-11)**2 + 10.0*model.x[5]**6 + 7.0*model.x[6]**2 + model.x[7]**4\
+     - 4.0*model.x[6]*model.x[7] - 10.0*model.x[6] - 8.0*model.x[7])
+     
 model.constr1 = Constraint(expr=2*model.x[1]**2 + 3*model.x[2]**4 + model.x[3] + 4*model.x[4]**2 + 5*model.x[5] == 127.0)
 model.constr4 = Constraint(expr=-4*model.x[1]**2 - model.x[2]**2 + 3*model.x[1]*model.x[2]\
- 		-2*model.x[3]**2 - 5*model.x[6] + 11*model.x[7] == 0)
+        -2*model.x[3]**2 - 5*model.x[6] + 11*model.x[7] == 0)

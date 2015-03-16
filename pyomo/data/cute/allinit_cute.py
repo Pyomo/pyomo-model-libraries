@@ -33,9 +33,9 @@ model = ConcreteModel()
 
 model.x = Var(RangeSet(1,4))
 
-model.f = Objective (expr=	model.x[3]-1 +	model.x[1]**2+model.x[2]**2 + (model.x[3]+model.x[4])**2 +	sin(model.x[3])**2 + model.x[1]**2*model.x[2]**2 + model.x[4]-3 +\
-	sin(model.x[3])**2 +	(model.x[4]-1)**2 +(model.x[2]**2)**2+(model.x[3]**2 + (model.x[4]+model.x[1])**2)**2 +\
-	(model.x[1]-4 + sin(model.x[4])**2 + model.x[2]**2*model.x[3]**2)**2 +sin(model.x[4])**4)
+model.f = Objective (expr=  model.x[3]-1 +  model.x[1]**2+model.x[2]**2 + (model.x[3]+model.x[4])**2 +  sin(model.x[3])**2 + model.x[1]**2*model.x[2]**2 + model.x[4]-3 +\
+    sin(model.x[3])**2 +    (model.x[4]-1)**2 +(model.x[2]**2)**2+(model.x[3]**2 + (model.x[4]+model.x[1])**2)**2 +\
+    (model.x[1]-4 + sin(model.x[4])**2 + model.x[2]**2*model.x[3]**2)**2 +sin(model.x[4])**4)
 
 
 model.cons1 = Constraint(expr=model.x[2]>=1)

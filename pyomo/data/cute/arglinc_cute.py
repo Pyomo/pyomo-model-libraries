@@ -42,7 +42,7 @@ model.x = Var(RangeSet(1,model.N), initialize=1.0)
 #2 + sum {i in 2..M-1} (sum {j in 2..N-1} x[j]*j*(i-1) - 1.0)^2
 
 def f_rule(model):
-	#return sum((sum(model.x[j]*j*(i-1)for j in range(2,model.N)))-1.0)**2 for i in range(2,model.M))
-	return 2 + sum((sum(model.x[j]*j*(i-1)for j in range(2,model.N))-1.0)**2 for i in range(2,model.M))
+    #return sum((sum(model.x[j]*j*(i-1)for j in range(2,model.N)))-1.0)**2 for i in range(2,model.M))
+    return 2 + sum((sum(model.x[j]*j*(i-1)for j in range(2,model.N))-1.0)**2 for i in range(2,model.M))
 model.f = Objective(rule=f_rule) 
 

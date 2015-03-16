@@ -37,13 +37,13 @@ model = ConcreteModel()
 model.x = Var(RangeSet(1,2),initialize=0.5)
 
 def f_rule(model):
-	return 0
+    return 0
 model.f = Objective(rule=f_rule)
-	
+    
 def cons_rule(model):
-	return (model.x[1]-0.1136*(model.x[1]+3.0*model.x[2])*(1-model.x[1])) == 0
+    return (model.x[1]-0.1136*(model.x[1]+3.0*model.x[2])*(1-model.x[1])) == 0
 model.cons = Constraint(rule=cons_rule)
 
 def cons2_rule(model):
-	return (model.x[2]+7.5*(2.0*model.x[1]-model.x[2])*(1-model.x[2])) == 0
+    return (model.x[2]+7.5*(2.0*model.x[1]-model.x[2])*(1-model.x[2])) == 0
 model.cons2 = Constraint(rule=cons2_rule)

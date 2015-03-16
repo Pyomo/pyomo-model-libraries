@@ -37,29 +37,29 @@ model = ConcreteModel()
 model.x = Var(RangeSet(1,4),bounds=(0,5),initialize=0)
 
 def f_rule(model):
-	return (-model.x[1]*model.x[3]-model.x[2]*model.x[4])
+    return (-model.x[1]*model.x[3]-model.x[2]*model.x[4])
 model.f = Objective(rule=f_rule)
 
 def con1(model):
-	return 0 <= model.x[1]+model.x[2] -2.5 <= 5.0
+    return 0 <= model.x[1]+model.x[2] -2.5 <= 5.0
 
 def con2(model):
-	return 0 <= model.x[1]+model.x[3] -2.5 <= 5.0
+    return 0 <= model.x[1]+model.x[3] -2.5 <= 5.0
 
 def con3(model):
-	return 0 <= model.x[1]+model.x[4] -2.5 <= 5.0
+    return 0 <= model.x[1]+model.x[4] -2.5 <= 5.0
 
 def con4(model):
-	return 0 <= model.x[2]+model.x[3] -2.0 <= 5.0
-	
+    return 0 <= model.x[2]+model.x[3] -2.0 <= 5.0
+    
 def con5(model):
-	return 0 <= model.x[2]+model.x[4] -2.0 <= 5.0
-	
+    return 0 <= model.x[2]+model.x[4] -2.0 <= 5.0
+    
 def con6(model):
-	return 0 <= model.x[3]+model.x[4] -1.5 <= 5.0
-	
+    return 0 <= model.x[3]+model.x[4] -1.5 <= 5.0
+    
 def con7(model):
-	return model.x[1]+model.x[2]+model.x[3]+model.x[4]-5.0 >= 0
+    return model.x[1]+model.x[2]+model.x[3]+model.x[4]-5.0 >= 0
 
 model.cons1 = Constraint(rule=con1)
 model.cons2 = Constraint(rule=con2)

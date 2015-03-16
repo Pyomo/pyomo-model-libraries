@@ -40,6 +40,6 @@ N = 2000
 model.x = Var(RangeSet(1,N),initialize=0.0)
 
 def f_rule(model):
-	return sum((model.x[i]-2)**4 + (model.x[i]*model.x[i+1]-2*model.x[i+1])**2 +\
-	(model.x[i+1]+1)**2 for i in range(1,N)) + 16
+    return sum((model.x[i]-2)**4 + (model.x[i]*model.x[i+1]-2*model.x[i+1])**2 +\
+    (model.x[i+1]+1)**2 for i in range(1,N)) + 16
 model.f = Objective(rule=f_rule)

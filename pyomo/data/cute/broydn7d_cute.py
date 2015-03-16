@@ -40,10 +40,10 @@ N = 1000
 model.x = Var(RangeSet(1,N),initialize=1.0)
 
 def f_rule(model):
-	return (abs(-2*model.x[2]+1+(3-2*model.x[1])*model.x[1]))**(7/3.0) +\
-	sum((abs(1-model.x[i-1]-2*model.x[i+1]+(3-2*model.x[i])*model.x[i]))**(7/3.0) for i in range(2,N))+\
-	(abs(-model.x[N-1]+1 +(3-2*model.x[N])*model.x[N]))**(7/3.0) +\
-	sum((abs(model.x[i]+model.x[i+N/2]))**(7/3.0) for i in range(1,int(N/2)+1))
+    return (abs(-2*model.x[2]+1+(3-2*model.x[1])*model.x[1]))**(7/3.0) +\
+    sum((abs(1-model.x[i-1]-2*model.x[i+1]+(3-2*model.x[i])*model.x[i]))**(7/3.0) for i in range(2,N))+\
+    (abs(-model.x[N-1]+1 +(3-2*model.x[N])*model.x[N]))**(7/3.0) +\
+    sum((abs(model.x[i]+model.x[i+N/2]))**(7/3.0) for i in range(1,int(N/2)+1))
 model.f = Objective(rule=f_rule)
 
 

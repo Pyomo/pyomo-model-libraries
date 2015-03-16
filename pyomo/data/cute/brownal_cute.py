@@ -20,7 +20,7 @@
 # granted, provided that the above copyright notice appear in all
 # copies and that the copyright notice and this
 # permission notice appear in all supporting documentation.                     
-		
+        
 #   Source: Problem 27 in
 #   J.J. More', B.S. Garbow and K.E. Hillstrom,
 #   "Testing Unconstrained Optimization Software",
@@ -39,10 +39,10 @@ N = 10
 model.x = Var(RangeSet(1,N),initialize = 0.5)
 
 def f_rule(model):
-	expr = 1.0
-	for j in range(1,N+1):
-		expr *= model.x[j]
-	expr -= 1.0
-	return sum((model.x[i]+sum(model.x[j] for j in range(1,N+1)) - (N+1))**2 for i in range(1,N))+expr**2
+    expr = 1.0
+    for j in range(1,N+1):
+        expr *= model.x[j]
+    expr -= 1.0
+    return sum((model.x[i]+sum(model.x[j] for j in range(1,N+1)) - (N+1))**2 for i in range(1,N))+expr**2
 model.f = Objective(rule=f_rule)
-	
+    

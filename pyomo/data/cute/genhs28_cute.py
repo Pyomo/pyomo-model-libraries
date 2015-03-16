@@ -38,16 +38,16 @@ model = ConcreteModel()
 N=10
 
 def x_init_rule(model,i):
-	if i==1:
-		return -4.0
-	else:
-		return 1.0
+    if i==1:
+        return -4.0
+    else:
+        return 1.0
 model.x = Var(RangeSet(1,N),initialize=x_init_rule)
 
 def f_rule(model):
-	return sum ((model.x[i]+model.x[i+1])**2 for i in range(1,N))
+    return sum ((model.x[i]+model.x[i+1])**2 for i in range(1,N))
 model.f = Objective(rule=f_rule)
-	
+    
 def cons_rule(model,i):
-	return -1.0+model.x[i]+2*model.x[i+1]+3*model.x[i+2] == 0
+    return -1.0+model.x[i]+2*model.x[i+1]+3*model.x[i+2] == 0
 model.cons = Constraint(RangeSet(1,N-2),rule=cons_rule)

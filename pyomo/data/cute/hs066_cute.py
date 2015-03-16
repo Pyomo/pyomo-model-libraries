@@ -8,7 +8,7 @@
 #  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 #
-#	Taken from cute suite. Formulated in Pyomo by Logan Barnes.
+#   Taken from cute suite. Formulated in Pyomo by Logan Barnes.
 
 from pyomo.core import *
 model = ConcreteModel()

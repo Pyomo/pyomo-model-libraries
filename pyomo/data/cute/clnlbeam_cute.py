@@ -39,26 +39,26 @@ alpha = 350.0
 h = 1.0/ni
 
 def t_init(model,i):
-	return 0.05*cos(i*h)
+    return 0.05*cos(i*h)
 model.t = Var(RangeSet(0,ni),initialize=t_init,bounds=(-1.0,1.0))
 
 def x_init(model,i):
-	return 0.05*cos(i*h)
+    return 0.05*cos(i*h)
 model.x = Var(RangeSet(0,ni),initialize=x_init,bounds=(-0.05,0.05))
 
 model.u = Var(RangeSet(0,ni))
 
 def f(model):
-	return sum((0.5*h*(model.u[i+1]**2 + model.u[i]**2) + 0.5*alpha*h*(cos(model.t[i+1]) +\
-	cos(model.t[i])))for i in range(0,ni))
+    return sum((0.5*h*(model.u[i+1]**2 + model.u[i]**2) + 0.5*alpha*h*(cos(model.t[i+1]) +\
+    cos(model.t[i])))for i in range(0,ni))
 model.f = Objective(rule=f)
 
 def con1(model,i):
-	return model.x[i+1] - model.x[i] - 0.5*h*(sin(model.t[i+1]) + sin(model.t[i]))== 0
+    return model.x[i+1] - model.x[i] - 0.5*h*(sin(model.t[i+1]) + sin(model.t[i]))== 0
 model.cons1 = Constraint(RangeSet(0,ni-1),rule=con1)
 
 def con2(model,i):
-	return model.t[i+1] - model.t[i] - 0.5*h*model.u[i+1] - 0.5*h*model.u[i] == 0
+    return model.t[i+1] - model.t[i] - 0.5*h*model.u[i+1] - 0.5*h*model.u[i] == 0
 model.cons2 = Constraint(RangeSet(0,ni-1),rule=con2)
 
 model.x[0] = 0.0

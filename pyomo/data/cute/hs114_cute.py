@@ -10,7 +10,7 @@
 #
 #  Formulated in pyomo by Logan Barnes and Gabe Hackebeil. Taken from:
 
-# hs114.mod	QOR2-MY-10-31
+# hs114.mod QOR2-MY-10-31
 # Original AMPL coding by Elena Bobrovnikova (summer 1996 at Bell Labs).
 
 # Alkylation process

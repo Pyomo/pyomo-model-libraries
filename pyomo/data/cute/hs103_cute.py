@@ -26,7 +26,7 @@ model.l[6] = 0.1
 model.l[7] = 0.01
 
 def x_bound_rule(model,j):
-	return(value(model.l[j]),10.0)
+    return(value(model.l[j]),10.0)
 model.x = Var(model.N,bounds=x_bound_rule,initialize=6.0)
 
 model.obj = Objective(expr=10.0*model.x[1]*model.x[4]**2*model.x[7]**a/(model.x[2]*model.x[6]**3)+15.0*model.x[3]\

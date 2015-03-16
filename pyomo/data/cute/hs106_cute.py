@@ -8,7 +8,7 @@
 #  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 #
-#	Taken from H&S. Formulated in pyomo by Logan Barnes and Gabe Hackebeil.
+#   Taken from H&S. Formulated in pyomo by Logan Barnes and Gabe Hackebeil.
 
 from pyomo.core import *
 model = ConcreteModel()
@@ -45,9 +45,9 @@ model.c5 = Constraint(expr=model.x[2] * model.x[7] - f * model.x[5] - model.x[2]
 model.c6 = Constraint(expr=model.x[3] * model.x[8] - g - model.x[3] * model.x[5] + h * model.x[5] >= 0)
 model.c7 = Constraint(expr=100 <= model.x[1] <= 10000)
 def cons8(model,i):
-	return 1000 <= model.x[i] <= 10000
+    return 1000 <= model.x[i] <= 10000
 model.c8 = Constraint(model.M,rule=cons8)
 def cons9(model,i):
-	return 10 <= model.x[i] <= 1000
+    return 10 <= model.x[i] <= 1000
 model.c9 = Constraint(model.L,rule=cons9)
-	
+    

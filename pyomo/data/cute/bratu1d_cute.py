@@ -39,17 +39,17 @@ L = -3.4
 h = 1.0/(N+1.0)
 
 def x(model,i):
-	if (i==0) or (i==N+1):
-		return 0.0
-	else:
-		return -0.1*h*(i**2)
+    if (i==0) or (i==N+1):
+        return 0.0
+    else:
+        return -0.1*h*(i**2)
 model.x = Var(RangeSet(0,N+1),initialize=x)
 
 def f_rule(model):
-	return 2*L*h*(exp(model.x[1])-exp(model.x[0]))/(model.x[1]-model.x[0])\
-	+ sum (2.0*model.x[i]**2/h for i in range(1,N+1))\
-	- sum (2.0*model.x[i]*model.x[i-1]/h for i in range(1,N+1))\
-	+ sum (2.0*L*h*(exp(model.x[i+1])-exp(model.x[i]))/(model.x[i+1]-model.x[i]) for i in range(1,N+1)) 
+    return 2*L*h*(exp(model.x[1])-exp(model.x[0]))/(model.x[1]-model.x[0])\
+    + sum (2.0*model.x[i]**2/h for i in range(1,N+1))\
+    - sum (2.0*model.x[i]*model.x[i-1]/h for i in range(1,N+1))\
+    + sum (2.0*L*h*(exp(model.x[i+1])-exp(model.x[i]))/(model.x[i+1]-model.x[i]) for i in range(1,N+1)) 
 model.f = Objective(rule=f_rule)
 
 model.x[0] = 0.0

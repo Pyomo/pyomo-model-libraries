@@ -37,6 +37,6 @@ model.x2 = Var(initialize=-7)
 
 
 def f_rule(model):
-	return sin(7*model.x1)**2*cos(7*model.x2)**2*hlength +\
-	cslope*sqrt(0.01+(model.x1-model.x2)**2) + cslope*sqrt(0.01+model.x1**2)
+    return sin(7*model.x1)**2*cos(7*model.x2)**2*hlength +\
+    cslope*sqrt(0.01+(model.x1-model.x2)**2) + cslope*sqrt(0.01+model.x1**2)
 model.f = Objective(rule=f_rule)

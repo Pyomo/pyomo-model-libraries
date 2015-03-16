@@ -33,5 +33,5 @@ N=4
 model.x = Var(RangeSet(1,N),bounds=(0.0000001,None),initialize=0.1)
 
 def f_rule(model):
-	return (model.x[1]-1)**2 + sum((model.x[i-1]-(model.x[i])**0.5)**2 for i in range(2,N+1))
+    return (model.x[1]-1)**2 + sum((model.x[i-1]-(model.x[i])**0.5)**2 for i in range(2,N+1))
 model.f = Objective(rule=f_rule)

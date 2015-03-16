@@ -47,9 +47,9 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f_obj_rule(model):
-	return sum((model.x[i]-model.x[j])**2+(model.y[i]-model.y[j])**2 for i in range(1,model.N) for j in range(i+1,model.N+1))
+    return sum((model.x[i]-model.x[j])**2+(model.y[i]-model.y[j])**2 for i in range(1,model.N) for j in range(i+1,model.N+1))
 model.f = Objective(rule=f_obj_rule)
 
 def cons1_rule(model,i):
-	return (model.x[i]-model.cx[i])**2 + (model.y[i]-model.cy[i])**2 - model.r[i] <= 0
+    return (model.x[i]-model.cx[i])**2 + (model.y[i]-model.cy[i])**2 - model.r[i] <= 0
 model.cons1 = Constraint(RangeSet(1,42),rule=cons1_rule)

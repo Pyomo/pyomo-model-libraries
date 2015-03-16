@@ -50,18 +50,18 @@ model.tph = Var(bounds=(0.0,None),initialize=0.5)
 model.ipm = Var(bounds=(0.0,None),initialize=0.5)
 
 def f(model):
-	return -model.tph
+    return -model.tph
 model.f = Objective(rule=f)
 
 def con1(model):
-	return 117.370892*model.tph/(model.wid*model.thick)-model.ipm == 0.0
+    return 117.370892*model.tph/(model.wid*model.thick)-model.ipm == 0.0
 def con2(model):
-	return model.thick**2*model.ipm/48.0-model.len == 0.0;
+    return model.thick**2*model.ipm/48.0-model.len == 0.0;
 def con3(model):
-	return model.wid/model.thick <= maxaspr
+    return model.wid/model.thick <= maxaspr
 def con4(model):
-	return 0.0 <= model.thick*model.wid - minarea <= maxarea-minarea
-	
+    return 0.0 <= model.thick*model.wid - minarea <= maxarea-minarea
+    
 model.cons1 = Constraint(rule=con1)
 model.cons2 = Constraint(rule=con2)
 model.cons3 = Constraint(rule=con3)

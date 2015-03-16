@@ -40,26 +40,26 @@ model.s = RangeSet(1,model.N)
 
 model.xinit = {}
 model.xinit[1] = 1
-model.xinit[2]	= 2
-model.xinit[3]	= 1
-model.xinit[4]	= 1
-model.xinit[5]	= 4
-model.xinit[6]	= 3
+model.xinit[2]  = 2
+model.xinit[3]  = 1
+model.xinit[4]  = 1
+model.xinit[5]  = 4
+model.xinit[6]  = 3
 
 def x_init(model,i):
-	return model.xinit[i]
+    return model.xinit[i]
 model.x = Var(model.s,initialize=x_init)
 
 def f_rule(model):
-	return sum((-exp(-0.1*i)+5*exp(-i)-3*exp(-0.4*i)\
-	+ model.x[3]*exp(-0.1*i*model.x[1]) - model.x[4]*exp(-0.1*i*model.x[2]) +\
-	model.x[6]*exp(-0.1*i*model.x[5]))**2 for i in range(1,model.M+1))
+    return sum((-exp(-0.1*i)+5*exp(-i)-3*exp(-0.4*i)\
+    + model.x[3]*exp(-0.1*i*model.x[1]) - model.x[4]*exp(-0.1*i*model.x[2]) +\
+    model.x[6]*exp(-0.1*i*model.x[5]))**2 for i in range(1,model.M+1))
 model.f = Objective(rule=f_rule)
 
 
 
-	
-	
-	
-	
-	
+    
+    
+    
+    
+    

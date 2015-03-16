@@ -44,13 +44,13 @@ model.x = Var(RangeSet(1,p),RangeSet(1,p),initialize=0.0)
 
 
 def f(model):
-	return sum(hp2*(model.x[i,j]-model.x[i,j-1])**2+\
-	0.5*(model.x[i,j]-model.x[i-1,j])**2+\
-	(model.x[i,j]-model.x[i,j-1])**4+\
-	(model.x[i,j]-model.x[i-1,j])**4 for i in range(2,p+1) for j in range(2,p+1)) +\
-	(wr*model.x[p,p]+wl*model.x[p,1])
+    return sum(hp2*(model.x[i,j]-model.x[i,j-1])**2+\
+    0.5*(model.x[i,j]-model.x[i-1,j])**2+\
+    (model.x[i,j]-model.x[i,j-1])**4+\
+    (model.x[i,j]-model.x[i-1,j])**4 for i in range(2,p+1) for j in range(2,p+1)) +\
+    (wr*model.x[p,p]+wl*model.x[p,1])
 model.f = Objective(rule=f)
 
 for j in range(1,p+1):
-	model.x[1,j] = 0.0
-	model.x[1,j].fixed = True
+    model.x[1,j] = 0.0
+    model.x[1,j].fixed = True

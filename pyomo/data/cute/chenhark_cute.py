@@ -37,23 +37,23 @@ nfree = 500
 ndegen = 200
 
 def x_p_init(model,i):
-	if i<=0:
-		return 0.0
-	elif i>nfree:
-		return 0.0
-	else:
-		return 1.0
+    if i<=0:
+        return 0.0
+    elif i>nfree:
+        return 0.0
+    else:
+        return 1.0
 model.x_p = Param(RangeSet(-1,n+2),initialize=x_p_init)
 
 def x_init(model,i):
-	return 0.5
+    return 0.5
 model.x = Var(RangeSet(1,n),initialize=x_init,bounds=(0.0,None))
 
 def f(model):
-	return sum(0.5*(model.x[i+1]+model.x[i-1] - 2*model.x[i])**2 for i in range(2,n)) +\
-	0.5*model.x[1]**2+0.5*(2*model.x[1] - model.x[2])**2 +0.5*(2*model.x[n] - model.x[n-1])**2 +\
-	0.5*(model.x[n])**2 +sum(model.x[i]*(-6*model.x_p[i] + \
-	4*model.x_p[i+1] + 4*model.x_p[i-1] -model.x_p[i+2] - model.x_p[i-2])for i in range(1,nfree+ndegen+1)) +\
-	sum(model.x[i]*(-6*model.x_p[i] + 4*model.x_p[i+1] + 4*model.x_p[i-1] -\
+    return sum(0.5*(model.x[i+1]+model.x[i-1] - 2*model.x[i])**2 for i in range(2,n)) +\
+    0.5*model.x[1]**2+0.5*(2*model.x[1] - model.x[2])**2 +0.5*(2*model.x[n] - model.x[n-1])**2 +\
+    0.5*(model.x[n])**2 +sum(model.x[i]*(-6*model.x_p[i] + \
+    4*model.x_p[i+1] + 4*model.x_p[i-1] -model.x_p[i+2] - model.x_p[i-2])for i in range(1,nfree+ndegen+1)) +\
+    sum(model.x[i]*(-6*model.x_p[i] + 4*model.x_p[i+1] + 4*model.x_p[i-1] -\
    model.x_p[i+2] - model.x_p[i-2] + 1)for i in range(nfree+ndegen+1,n+1))
 model.f = Objective(rule=f)

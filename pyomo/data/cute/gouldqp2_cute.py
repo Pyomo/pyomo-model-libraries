@@ -38,29 +38,29 @@ model = ConcreteModel()
 K = 350
 
 def alpha_rule(model,i):
-	if i>1:
-		return 1.0+1.01**i
-	else:
-		return 2.0
+    if i>1:
+        return 1.0+1.01**i
+    else:
+        return 2.0
 model.alpha = Param(RangeSet(1,K+1),initialize=alpha_rule)
 
 def knot_init_rule(model,i):
-	return model.alpha[i]
+    return model.alpha[i]
 def knot_bounds_rule(model,i):
-	return (model.alpha[i],model.alpha[i+1])
+    return (model.alpha[i],model.alpha[i+1])
 model.knot = Var(RangeSet(1,K),initialize=knot_init_rule,bounds=knot_bounds_rule)
 
 def space_init_rule(model,i):
-	return model.alpha[i+1]-model.alpha[i]
+    return model.alpha[i+1]-model.alpha[i]
 def space_bounds_rule(model,i):
-	return (0.4*(model.alpha[i+2]-model.alpha[i]),0.6*(model.alpha[i+2]-model.alpha[i]))
+    return (0.4*(model.alpha[i+2]-model.alpha[i]),0.6*(model.alpha[i+2]-model.alpha[i]))
 model.space = Var(RangeSet(1,K-1),initialize=space_init_rule,bounds=space_bounds_rule)
 
 def f_rule(model):
-	return sum (.5*(model.space[i+1]-model.space[i])**2 for i in range(1,K-1))
+    return sum (.5*(model.space[i+1]-model.space[i])**2 for i in range(1,K-1))
 model.f = Objective(rule=f_rule)
 
 def cons1_rule(model,i):
-	return model.space[i]-model.knot[i+1]+model.knot[i] == 0
+    return model.space[i]-model.knot[i+1]+model.knot[i] == 0
 model.cons1 = Constraint(RangeSet(1,K-1),rule=cons1_rule)
 

@@ -38,7 +38,7 @@ model = AbstractModel()
 model.xinit = Param(RangeSet(1,2))
 
 def x(model,i):
-	return model.xinit[i]
+    return model.xinit[i]
 model.x = Var(RangeSet(1,2),initialize=x)
 
 # For Pyomo testing,
@@ -49,5 +49,5 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f(model):
-	return (0.01*model.x[1]-0.03)**2 -model.x[1]+model.x[2]+exp(20*(model.x[1]-model.x[2]))
+    return (0.01*model.x[1]-0.03)**2 -model.x[1]+model.x[2]+exp(20*(model.x[1]-model.x[2]))
 model.f = Objective(rule=f)

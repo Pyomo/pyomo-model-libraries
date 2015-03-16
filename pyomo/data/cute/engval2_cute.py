@@ -37,7 +37,7 @@ model = AbstractModel()
 model.x_init = Param(RangeSet(1,3))
 
 def x_init_rule(model,i):
-	return model.x_init[i]
+    return model.x_init[i]
 model.x = Var(RangeSet(1,3),initialize= x_init_rule)
 
 # For Pyomo testing,
@@ -48,9 +48,9 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f_rule(model):
-	return (model.x[1]**2+model.x[2]**2+model.x[3]**2-1)**2\
-	+ (model.x[1]**2+model.x[2]**2+(model.x[3]-2)**2-1)**2\
-	+ (model.x[1]+model.x[2]+model.x[3]-1)**2\
-	+ (model.x[1]+model.x[2]-model.x[3]+1)**2\
-	+ (3*model.x[2]**2+model.x[1]**3+(5*model.x[3]-model.x[1]+1)**2-36)**2
+    return (model.x[1]**2+model.x[2]**2+model.x[3]**2-1)**2\
+    + (model.x[1]**2+model.x[2]**2+(model.x[3]-2)**2-1)**2\
+    + (model.x[1]+model.x[2]+model.x[3]-1)**2\
+    + (model.x[1]+model.x[2]-model.x[3]+1)**2\
+    + (3*model.x[2]**2+model.x[1]**3+(5*model.x[3]-model.x[1]+1)**2-36)**2
 model.f = Objective(rule=f_rule)

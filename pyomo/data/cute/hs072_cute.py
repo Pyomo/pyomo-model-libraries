@@ -8,7 +8,7 @@
 #  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 #
-#	Taken from cute suite. Formulated in Pyomo by Logan Barnes.
+#   Taken from cute suite. Formulated in Pyomo by Logan Barnes.
 
 from pyomo.core import *
 model = AbstractModel()
@@ -26,13 +26,13 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def obj_rule(model):
-	return 1 + sum(model.x[j] for j in model.M)
+    return 1 + sum(model.x[j] for j in model.M)
 model.obj = Objective(rule=obj_rule, sense=minimize)
 
 def cons_rule(model,i):
-	return sum((model.a[i,j]/model.x[j]) for j in model.M) <= model.b[i]
+    return sum((model.a[i,j]/model.x[j]) for j in model.M) <= model.b[i]
 model.constr = Constraint(model.N,rule=cons_rule)
 
 def ub_rule(model,j):
-	return model.x[j] <= (5 - j) * 1.0e5
+    return model.x[j] <= (5 - j) * 1.0e5
 model.ub = Constraint(model.M,rule=ub_rule) 

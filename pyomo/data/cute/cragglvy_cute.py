@@ -40,16 +40,16 @@ m = 2499
 n = 2*m+2
 
 def x(model,i):
-	if i==1:
-		return 1.0
-	else:
-		return 2.0
+    if i==1:
+        return 1.0
+    else:
+        return 2.0
 model.x = Var(RangeSet(1,n),initialize=x)
 
 def f(model):
-	return sum((exp(model.x[2*i-1])-model.x[2*i])**4 +\
-	100*(model.x[2*i]-model.x[2*i+1])**6 +\
-	(tan(model.x[2*i+1]-model.x[2*i+2])+model.x[2*i+1]-model.x[2*i+2])**4 +\
-	(model.x[2*i-1])**8 +\
-	(model.x[2*i+2]-1.0)**2 for i in range(1,m+1))
+    return sum((exp(model.x[2*i-1])-model.x[2*i])**4 +\
+    100*(model.x[2*i]-model.x[2*i+1])**6 +\
+    (tan(model.x[2*i+1]-model.x[2*i+2])+model.x[2*i+1]-model.x[2*i+2])**4 +\
+    (model.x[2*i-1])**8 +\
+    (model.x[2*i+2]-1.0)**2 for i in range(1,m+1))
 model.f = Objective(rule=f)

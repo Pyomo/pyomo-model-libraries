@@ -39,18 +39,18 @@ model = ConcreteModel()
 model.x = Var(RangeSet(1,5), initialize=2.0)
 
 def f(model):
-	return (model.x[1]-1.0)**2 + (model.x[1]-model.x[2])**2 +\
-	(model.x[2]-model.x[3])**2 + (model.x[3]-model.x[4])**4 + (model.x[4]-model.x[5])**4
+    return (model.x[1]-1.0)**2 + (model.x[1]-model.x[2])**2 +\
+    (model.x[2]-model.x[3])**2 + (model.x[3]-model.x[4])**4 + (model.x[4]-model.x[5])**4
 model.f = Objective(rule=f)
 
 def con1(model):
-	return model.x[1]+model.x[2]**2+model.x[3]**3 == -2+(18.0)**0.5
+    return model.x[1]+model.x[2]**2+model.x[3]**3 == -2+(18.0)**0.5
 model.cons1 = Constraint(rule=con1)
 
 def con2(model):
-	return model.x[2]+model.x[4]-model.x[3]**2 == -2+(8.0)**0.5
+    return model.x[2]+model.x[4]-model.x[3]**2 == -2+(8.0)**0.5
 model.cons2 = Constraint(rule=con2)
 
 def con3(model):
-	return model.x[1]-model.x[5] == 2.0
+    return model.x[1]-model.x[5] == 2.0
 model.cons3 = Constraint(rule=con3)

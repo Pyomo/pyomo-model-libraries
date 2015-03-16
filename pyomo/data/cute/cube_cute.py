@@ -39,7 +39,7 @@ N = 2
 model.xinit = Param(RangeSet(1,2))
 
 def x(model,i):
-	return model.xinit[i]
+    return model.xinit[i]
 model.x = Var(RangeSet(1,2),initialize=x) 
 
 # For Pyomo testing,
@@ -48,7 +48,7 @@ model.x = Var(RangeSet(1,2),initialize=x)
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
-	
+    
 def f(model):
-	return (model.x[1]-1.0)**2+sum(100*(model.x[i]-model.x[i-1]**3)**2 for i in range(2,N+1))
+    return (model.x[1]-1.0)**2+sum(100*(model.x[i]-model.x[i-1]**3)**2 for i in range(2,N+1))
 model.f = Objective(rule=f)

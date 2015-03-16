@@ -40,7 +40,7 @@ model.ngs = 4998
 model.x = Var(RangeSet(1,model.N),initialize=1.0)
 
 def f_rule(model):
-	return sum((model.x[i]+model.x[i+1])*exp((model.x[i]+model.x[i+1])*(-model.x[i+2]))for i in range(1,model.ngs+1))
+    return sum((model.x[i]+model.x[i+1])*exp((model.x[i]+model.x[i+1])*(-model.x[i+2]))for i in range(1,model.ngs+1))
 model.f = Objective(rule=f_rule)
 
 

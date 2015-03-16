@@ -37,20 +37,20 @@ from pyomo.core import *
 model = ConcreteModel()
 
 def x(model,i):
-	if i<=3:
-		return 1.0
-	else:
-		return 0.0
+    if i<=3:
+        return 1.0
+    else:
+        return 0.0
 model.x = Var(RangeSet(1,5),initialize=x)
 
 def f_rule(model):
-	return model.x[1]**2+model.x[2]**2+model.x[3]**2
+    return model.x[1]**2+model.x[2]**2+model.x[3]**2
 model.f = Objective(rule=f_rule)
 
 def con1(model):
-	return model.x[1]-1-model.x[4]**2+model.x[2]**2 == 0
+    return model.x[1]-1-model.x[4]**2+model.x[2]**2 == 0
 model.cons1 = Constraint(rule=con1)
 
 def con2(model):
-	return -1+model.x[1]**2+model.x[2]**2-model.x[5]**2 == 0
+    return -1+model.x[1]**2+model.x[2]**2-model.x[5]**2 == 0
 model.cons2 = Constraint(rule=con2)

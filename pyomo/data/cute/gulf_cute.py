@@ -35,11 +35,11 @@ N=3
 M=99
 
 def t_param_rule(model,i):
-	return i/100.0
+    return i/100.0
 model.t = Param(RangeSet(1,M),initialize=t_param_rule) 
 
 def y_param_rule(model,i):
-	return 25+ (-50*log(value(model.t[i])))**(2.0/3.0)
+    return 25+ (-50*log(value(model.t[i])))**(2.0/3.0)
 model.y = Param(RangeSet(1,M),initialize = y_param_rule)
 
 model.x = Var(RangeSet(1,N))
@@ -53,7 +53,7 @@ model.x[3] = 0.15;
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
-	
+    
 def f_rule(model):
-	return sum((exp(abs(model.y[i]-model.x[2])**model.x[3]/(-model.x[1]))-model.t[i])**2 for i in range(1,M+1))
+    return sum((exp(abs(model.y[i]-model.x[2])**model.x[3]/(-model.x[1]))-model.t[i])**2 for i in range(1,M+1))
 model.f = Objective(rule=f_rule)

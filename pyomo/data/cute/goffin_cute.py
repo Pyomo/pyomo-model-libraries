@@ -37,7 +37,7 @@ ri = 50
 t = -25.5 + (50)
 
 def x_init_rule(model,j):
-	return -25.5+j
+    return -25.5+j
 model.x = Var(RangeSet(1,ri),initialize=x_init_rule)
 
 model.u = Var() 
@@ -45,5 +45,5 @@ model.u = Var()
 model.obj = Objective(expr=model.u)
 
 def f_rule(model,i):
-	return model.u >= 50*model.x[i] - summation(model.x)
+    return model.u >= 50*model.x[i] - summation(model.x)
 model.f = Constraint(RangeSet(1,ri),rule=f_rule)

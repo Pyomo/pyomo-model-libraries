@@ -9,7 +9,7 @@
 #  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 #
-#	Taken from H&S. Formulated in pyomo by Logan Barnes.
+#   Taken from H&S. Formulated in pyomo by Logan Barnes.
 
 from pyomo.core import *
 model = ConcreteModel()

@@ -42,7 +42,7 @@ model = AbstractModel()
 model.xinit = Param(RangeSet(1,3))
 
 def x(model,i):
-	return model.xinit[i]
+    return model.xinit[i]
 model.x = Var(RangeSet(1,3),initialize=x)
 
 # For Pyomo testing,
@@ -53,14 +53,14 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f_rule(model):
-	return model.x[1]-model.x[2]+model.x[2]**3
+    return model.x[1]-model.x[2]+model.x[2]**3
 model.f = Objective(rule=f_rule)
 
 def con1(model):
-	return -25+model.x[1]**2+model.x[2]**2+model.x[3]**2 == 0
+    return -25+model.x[1]**2+model.x[2]**2+model.x[3]**2 == 0
 model.cons1 = Constraint(rule=con1)
 
 def con2(model):
-	return model.x[1]+model.x[2]+model.x[3]-1 == 0
+    return model.x[1]+model.x[2]+model.x[3]-1 == 0
 model.cons2 = Constraint(rule=con2)
 
