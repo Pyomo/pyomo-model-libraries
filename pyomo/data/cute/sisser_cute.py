@@ -35,7 +35,7 @@
 
 #   classification OUR2-AN-2-0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.N = RangeSet(1,2)

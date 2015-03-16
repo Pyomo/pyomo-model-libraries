@@ -24,7 +24,7 @@
 
 #   classification LQI2-RN-65-59
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 Flow_init = {1:5.797, 2:5.797, 3:9.997, 4:9.997, 5:16.076, 6:4.8, 7:0.766, \

@@ -32,7 +32,7 @@
 
 #   classification SXR2-RN-8-0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 X_init = {}

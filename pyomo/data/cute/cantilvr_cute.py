@@ -29,7 +29,7 @@
 
 #   classification LOR2-MN-5-1
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.S = RangeSet(1,5)

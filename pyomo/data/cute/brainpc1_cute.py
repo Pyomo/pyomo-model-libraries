@@ -29,7 +29,7 @@
 
 #   classification SOR2-MY-6907-6900
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 NS = 2.0

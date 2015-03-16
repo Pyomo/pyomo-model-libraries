@@ -23,7 +23,7 @@
 
 #   classification QLR2-AN-8-10
 
-from pyomo.core import * 
+from pyomo.environ import *
 model = AbstractModel()
 
 model.a = Param(RangeSet(1,8))

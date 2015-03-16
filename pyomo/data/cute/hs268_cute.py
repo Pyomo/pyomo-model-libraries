@@ -34,7 +34,7 @@
 
 #   classification QLR2-AN-5-5
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 model.N = RangeSet(1,5)
 model.D = Param(model.N,model.N)

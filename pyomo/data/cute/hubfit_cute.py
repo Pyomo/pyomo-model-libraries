@@ -32,7 +32,7 @@
 
 #   classification OLR2-AN-2-1
 
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.core.base.expr import Expr_if
 
 model = AbstractModel()

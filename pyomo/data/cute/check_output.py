@@ -8,7 +8,7 @@ tests = ['aljazzaf','arwhead','avion2','bard','bdqrtic','biggs5','blockqp2','boo
 print len(tests)
 
 for name in tests:
-    os.system("ipopt %s.test.nl >new.out" %(name))
+    os.system("ipopt %s.ampl.nl >new.out" %(name))
     os.system("ipopt %s.pyomo.nl >old.out" %(name))
     print name
     raw_input()

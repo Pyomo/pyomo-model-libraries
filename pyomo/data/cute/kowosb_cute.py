@@ -30,7 +30,7 @@
 
 #   classification SUR2-MN-4-0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 N = 4
 M = 11

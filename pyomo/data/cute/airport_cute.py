@@ -29,7 +29,7 @@
 
 #   classification SQR2-MN-84-42
 
-from pyomo.core import *
+from pyomo.environ import *
 model=AbstractModel()
 
 model.N = 42

@@ -31,7 +31,7 @@
 #   SIF input: Ph. Toint, Nov 1993.
 
 #   classification  LQR2-AN-3-3
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 model.N = RangeSet(1,2)
 model.xinit = Param(model.N)

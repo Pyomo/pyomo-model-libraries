@@ -31,7 +31,7 @@
 
 #   classification OLR2-AN-5-102
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 R = 51.0

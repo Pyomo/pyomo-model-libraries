@@ -10,7 +10,7 @@
 #
 #   Taken from cute suite. Formulated in pyomo by Logan Barnes.
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 model.N = RangeSet(1,5)
 model.M = RangeSet(1,21)

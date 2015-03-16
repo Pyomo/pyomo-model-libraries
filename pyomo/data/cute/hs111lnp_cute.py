@@ -34,7 +34,7 @@
 
 #   classification OOR2-AN-10-3
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 model.N = RangeSet(1,10)
 model.x = Var(model.N,initialize=-2.3)

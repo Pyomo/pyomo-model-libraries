@@ -30,7 +30,7 @@
 
 #   classification LQR2-AN-3-2
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.S = RangeSet(1,3)

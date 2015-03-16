@@ -33,7 +33,7 @@
 
 #   classification OUR2-AN-V-0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 M =1000

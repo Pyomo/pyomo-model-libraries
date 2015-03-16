@@ -25,7 +25,7 @@
 # Objective nonconvex
 # Nonlinear constraints
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 n = 10
 model.I = RangeSet(1,n)

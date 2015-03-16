@@ -29,7 +29,7 @@
 
 #   classification SBR2-RN-4-0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.M = RangeSet(1,31)

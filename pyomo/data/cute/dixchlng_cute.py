@@ -29,7 +29,7 @@
 
 #   classification SOR2-AN-10-5
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.S = RangeSet(1,10)

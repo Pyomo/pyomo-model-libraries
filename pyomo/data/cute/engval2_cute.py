@@ -31,7 +31,7 @@
 
 #   classification SUR2-AN-3-0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.x_init = Param(RangeSet(1,3))

@@ -12,7 +12,7 @@
 #
 #  Taken from CUTE models
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 n = 4
 model.N = RangeSet(1,30)

@@ -33,7 +33,7 @@
 #   SIF input: Ph. Toint, Dec 1989.
 
 #   classification QUR2-AN-V-0
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.N = Param()

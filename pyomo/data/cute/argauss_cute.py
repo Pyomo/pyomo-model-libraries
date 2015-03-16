@@ -29,7 +29,7 @@
 #   SIF input: Ph. Toint, Dec 1989.
 
 #   classification NOR2-AN-3-15
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 x_init =  {}

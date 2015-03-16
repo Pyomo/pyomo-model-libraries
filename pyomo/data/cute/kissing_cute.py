@@ -69,7 +69,7 @@
 
 #   classification LQR2-RN-V-V
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 np   = 42
 mdim = 3

@@ -12,7 +12,7 @@
 #
 #  Take from CUTE test models
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 PI = 4 * atan(1)
 model.I = RangeSet(1,235)

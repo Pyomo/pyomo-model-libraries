@@ -33,7 +33,7 @@
 
 #   classification OQR2-AN-5-3
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.x_init = Param(RangeSet(1,5))

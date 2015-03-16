@@ -28,7 +28,7 @@
 
 #   classification OBR2-AN-6-0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.c = Param(RangeSet(1,4))

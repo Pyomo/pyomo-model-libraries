@@ -33,7 +33,7 @@
 
 #   classification QQR2-AN-5-3
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.xinit = Param(RangeSet(1,5))

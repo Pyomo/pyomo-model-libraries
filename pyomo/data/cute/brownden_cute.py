@@ -33,7 +33,7 @@
 #   classification SUR2-AN-4-0
 
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.M = Param(initialize=20)

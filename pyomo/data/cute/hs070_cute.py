@@ -10,7 +10,7 @@
 #
 #   Taken from cute suite. Formulated in Pyomo by Logan Barnes and Gabe Hackebeil.
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 X_init = {}

@@ -28,7 +28,7 @@
 
 #   classification NQR2-RN-9-9
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.N = RangeSet(1,3)

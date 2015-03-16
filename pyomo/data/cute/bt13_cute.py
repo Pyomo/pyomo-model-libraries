@@ -37,7 +37,7 @@
 
 #   classification LQR2-AY-5-1
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.N = Param()

@@ -31,7 +31,7 @@
 
 #   classification SLR2-MN-19-8
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.S = RangeSet(1,19)

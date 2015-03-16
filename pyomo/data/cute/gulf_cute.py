@@ -28,7 +28,7 @@
 
 #   classification SUR2-MN-3-0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = ConcreteModel()
 
 N=3

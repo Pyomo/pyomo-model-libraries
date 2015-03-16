@@ -10,7 +10,7 @@
 #
 #   Taken from H&S. Formulated in pyomo by Logan Barnes and Gabe Hackebeil.
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 model.N = RangeSet(1,8)
 model.M = RangeSet(1,7)

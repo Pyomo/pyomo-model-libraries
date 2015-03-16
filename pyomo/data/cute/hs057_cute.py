@@ -14,7 +14,7 @@ x_init = {}
 x_init[1] = 0.42
 x_init[2] = 5.0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 model.N = RangeSet(1,44)
 model.M = RangeSet(1,2)

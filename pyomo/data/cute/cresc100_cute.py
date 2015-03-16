@@ -24,7 +24,7 @@
 
 #   classification OOR2-MY-6-200
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.np = Param(initialize=100)

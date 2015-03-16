@@ -28,7 +28,7 @@
 
 #   classification SUR2-AN-V-0
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 
 model.N = Param(initialize=50)

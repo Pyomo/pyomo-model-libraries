@@ -10,7 +10,7 @@
 #
 #  Formulated in pyomo by Logan Barnes.
 
-from pyomo.core import *
+from pyomo.environ import *
 model = AbstractModel()
 model.N = RangeSet(1,10)
 model.x = Var(model.N,bounds=(.000001,None),initialize=0.1)
