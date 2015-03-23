@@ -146,4 +146,65 @@ print(model.p.dim())        # 1
 print(model.q.dim())        # 2
 # @:indexed4
 
+# --------------------------------------------------
+# @numvalue1:
+model = ConcreteModel()
+# A single parameter is a subclass of NumericValue 
+model.p = Param(initialize=3)   
 
+model.p + 2             # Calls __add__
+model.p - 2             # Calls __sub__
+model.p * 2             # Calls __mul__
+model.p / 2             # Calls __div__ or __truediv__
+model.p ** 2            # Calls __pow__
+
+2 + model.p             # Calls __radd__
+2 - model.p             # Calls __rsub__
+2 * model.p             # Calls __rmul__
+2 / model.p             # Calls __rdiv__ or __rtruediv__
+2 ** model.p            # Calls __rpow__
+
+e = model.p
+e += 2                  # Calls __iadd__
+e -= 2                  # Calls __isub__
+e *= 2                  # Calls __imul__
+e /= 2                  # Calls __idiv__ or __itruediv__
+e **= 2                 # Calls __ipow__
+
++ model.p               # Calls __pos__
+- model.p               # Calls __neg__
+# @:numvalue1
+
+# --------------------------------------------------
+# @numvalue2:
+model = ConcreteModel()
+# A single parameter is a subclass of NumericConstant 
+model.p = Param(initialize=-3)
+
+abs(model.p)            # Calls __abs__
+float(model.p)          # Calls __float__
+int(model.p)            # Calls __int__
+
+# Special methods for NumericConstant objects
+if model.p:             # Calls __nonzero__ in test
+    pass
+model.p()               # Calls __call__
+# @:numvalue2
+
+# --------------------------------------------------
+# @numvalue3:
+model = ConcreteModel()
+model.p = Param()
+model.x = Var()
+
+print(model.p.polynomial_degree())      # 0
+print(model.x.polynomial_degree())      # 1
+e = model.x*model.p
+print(e.polynomial_degree())            # 1
+e = model.x*model.x
+print(e.polynomial_degree())            # 2
+e = model.x ** 2
+print(e.polynomial_degree())            # 2
+e = sin(model.x)
+print(e.polynomial_degree())            # None
+# @:numvalue3
