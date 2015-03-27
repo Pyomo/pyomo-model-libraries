@@ -1,10 +1,8 @@
-import pyomo.environ
 from pyomo.core import *
 
+def create_model(N):
+    model = ConcreteModel()
 
-model = ConcreteModel()
-
-def f(model, N):
     model.A = RangeSet(N)
     model.x = Var(model.A)
 
@@ -16,5 +14,6 @@ def f(model, N):
     model.c = Constraint(model.A)
 
     return model
-   
-model = f(model, 1000000)
+
+def pyomo_create_model(options=None, model_options=None):
+    return create_model(1000000)

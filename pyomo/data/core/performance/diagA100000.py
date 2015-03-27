@@ -1,11 +1,9 @@
-import pyomo.environ
 from pyomo.core import *
 
+def create_model(N):
+    model = ConcreteModel()
 
-model = ConcreteModel()
-
-def f(model, N):
-    for i in xrange(1,N+1):    
+    for i in xrange(1,N+1):
         setattr(model, 'x'+str(i), Var())
 
     expr=sum(i*getattr(model, 'x'+str(i)) for i in xrange(1,N+1))
@@ -15,5 +13,6 @@ def f(model, N):
         setattr(model, 'c'+str(i), Constraint(expr = (N-i+1)*getattr(model, 'x'+str(i)) >= N))
 
     return model
-   
-model = f(model, 100000) 
+
+def pyomo_create_model(options=None, model_options=None):
+    return create_model(100000)
