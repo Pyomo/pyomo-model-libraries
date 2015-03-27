@@ -13,7 +13,7 @@ def f(file):
     for line in INPUT:
         if line[0] == '#' and '@' in line:
             continue
-        print >>OUTPUT, line,
+        OUTPUT.write(line+"\n")
     INPUT.close()
     OUTPUT.close()
     #if not os.path.exists(base+'/'+prefix+'.txt'):
