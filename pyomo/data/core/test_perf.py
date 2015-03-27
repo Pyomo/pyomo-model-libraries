@@ -3,13 +3,11 @@
 #
 
 import os
-import sys
+import gc
 from os.path import abspath, dirname
 currdir = dirname(abspath(__file__))+os.sep
 datadir = os.path.normpath(currdir+'../../../../pyomo/examples/pyomo/p-median/')+os.sep
 
-import re
-import glob
 import pyutilib.th as unittest
 import pyomo.scripting.convert
 import pyomo.scripting.pyomo_command as main
@@ -17,6 +15,20 @@ import pyomo.opt
 import pyomo.environ
 
 solver = pyomo.opt.load_solvers('cplex')
+
+def tearDownModule():
+    gc.collect()
+    for name in ['AbstractModel','ConcreteModel']:
+        try:
+            os.remove(currdir+name+'_backrefs.png')
+        except OSError:
+            pass
+    try:
+        import objgraph
+        for name in ['AbstractModel','ConcreteModel']:
+            objgraph.show_backrefs(objgraph.by_type(name),filename=currdir+name+'_backrefs.png')
+    except ImportError:
+        pass
 
 @unittest.category('performance')
 class Test(unittest.TestCase):
@@ -69,7 +81,6 @@ class Test4(Test):
 def nl_test(self, name):
     fname = currdir+name+'.nl'
     root = name.split('_')[-1]
-    #print >>sys.stderr, fname
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
@@ -86,7 +97,6 @@ def nl_test(self, name):
 def lp_test(self, name):
     fname = currdir+name+'.lp'
     root = name.split('_')[-1]
-    #print >>sys.stderr, fname
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
