@@ -17,11 +17,12 @@ def x_bounds(m, i):
 model.x = Var(A, bounds=x_bounds)
 
 def obj_rule(model):
-    return sum(h[i] * (1 - (1/d[i])**2) * model.x[i] for i in A)
+    return sum(h[i]*(1 - (1/d[i])**2) * model.x[i] for i in A)
 
 model.z = Objective(rule=obj_rule, sense=maximize)
 
-model.budgetconstr = Constraint(expr = sum(c[i] * model.x[i] for i in A) <= b)
+model.budgetconstr = \
+     Constraint(expr = sum(c[i] * model.x[i] for i in A) <= b)
 
 from pyomo.opt import SolverFactory
 opt = SolverFactory('glpk')

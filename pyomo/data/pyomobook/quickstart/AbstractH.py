@@ -1,4 +1,4 @@
-# AbstractH.py - Implement model (H) from the Pyomo book
+# AbstractH.py - Implement model (H) 
 from pyomo.environ import *
 
 model = AbstractModel()
@@ -17,7 +17,8 @@ def xbounds_rule(model, i):
 model.x = Var(model.A, bounds=xbounds_rule)
 
 def obj_rule(model):
-    return sum(model.h[i] * (model.x[i] - (model.x[i]/model.d[i])**2) for i in model.A)
+    return sum(model.h[i] * (model.x[i] - \
+    (model.x[i]/model.d[i])**2) for i in model.A)
 
 model.z = Objective(rule=obj_rule, sense=maximize)
 

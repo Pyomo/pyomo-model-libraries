@@ -1,4 +1,4 @@
-# AbstractHLinear.py - Implement a simple linear version of (H)
+# AbstractHLinear.py - A simple linear version of (H)
 from pyomo.environ import *
 
 model = AbstractModel()
@@ -17,7 +17,8 @@ def xbounds_rule(model, i):
 model.x = Var(model.A, bounds=xbounds_rule)
 
 def obj_rule(model):
-    return sum(model.h[i] * (1 - (1/model.d[i])**2) * model.x[i] for i in model.A)
+    return sum(model.h[i] * \
+    (1 - (1/model.d[i])**2) * model.x[i] for i in model.A)
 
 model.z = Objective(rule=obj_rule, sense=maximize)
 
