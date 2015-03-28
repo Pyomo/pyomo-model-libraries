@@ -110,15 +110,15 @@ class TestBlockPerformance(unittest.TestCase,
                            TestComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
-        self._setUpClass(Block)
+        self._setUpClass(Block, **{'rule': lambda b,i: b})
 
     def test_all_blocks(self):
         cnt = 0
         for block in self.model.all_blocks():
             cnt += 1
         self.assertTrue(cnt > 0)
-        self.assertEqual(cnt + 1,
-                         len(self.model.test_component))
+        self.assertEqual(cnt,
+                         len(self.model.test_component) + 1)
 
 if __name__ == "__main__":
     unittest.main()
