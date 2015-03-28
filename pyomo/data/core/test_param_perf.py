@@ -99,7 +99,7 @@ def plot_results(page_title, results):
     plt.xticks(xt, [' '] * len(xt))
 
     plt.legend((p1[0],p2[0]),
-               ('Consruction','Access All'),4)
+               ('Consruction','Access All'),loc=4)
 
     plt.savefig(_pdf_out,format='pdf')
 
