@@ -1,4 +1,4 @@
-# ConcreteHLinear.py - Linear (H)
+# ConcHLinScript.py - Linear (H) as a script
 from pyomo.environ import *
 
 model = ConcreteModel()
@@ -22,3 +22,12 @@ def obj_rule(model):
 model.z = Objective(rule=obj_rule, sense=maximize)
 
 model.budgetconstr = Constraint(expr = sum(c[i] * model.x[i] for i in A) <= b)
+
+from pyomo.opt import SolverFactory
+opt = SolverFactory('glpk')
+
+instance = model.create()
+results = opt.solve(instance)
+instance.load(results)
+instance.pprint()
+
