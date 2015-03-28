@@ -30,6 +30,7 @@ class TestComponentPerformanceBase(object):
         for cdata in self.model.\
             all_component_data.itervalues(self.model.test_component.type()):
             cnt += 1
+        self.assertTrue(cnt > 0)
         if self.model.test_component.type() in (Set, Var):
             self.assertEqual(cnt,
                              len(self.model.test_component) + 1)
@@ -110,6 +111,14 @@ class TestBlockPerformance(unittest.TestCase,
     @classmethod
     def setUpClass(self):
         self._setUpClass(Block)
+
+    def test_all_blocks(self):
+        cnt = 0
+        for block in self.model.all_blocks():
+            cnt += 1
+        self.assertTrue(cnt > 0)
+        self.assertEqual(cnt + 1,
+                         len(self.model.test_component))
 
 if __name__ == "__main__":
     unittest.main()
