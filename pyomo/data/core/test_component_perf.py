@@ -14,7 +14,7 @@ from pyomo.core import (ConcreteModel,
                         Objective,
                         Reals)
 
-class TestComponentPerformanceBase(object):
+class ComponentPerformanceBase(object):
 
     @classmethod
     def _setUpClass(self, ctype, **kwds):
@@ -40,7 +40,7 @@ class TestComponentPerformanceBase(object):
 
 @unittest.category('performance')
 class TestMutableParamPerformance(unittest.TestCase,
-                                  TestComponentPerformanceBase):
+                                  ComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
         self._setUpClass(Param,
@@ -50,7 +50,7 @@ class TestMutableParamPerformance(unittest.TestCase,
 
 @unittest.category('performance')
 class TestParamPerformance(unittest.TestCase,
-                           TestComponentPerformanceBase):
+                           ComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
         self._setUpClass(Param,
@@ -60,14 +60,14 @@ class TestParamPerformance(unittest.TestCase,
 
 @unittest.category('performance')
 class TestVarPerformance(unittest.TestCase,
-                         TestComponentPerformanceBase):
+                         ComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
         self._setUpClass(Var, **{'initialize':1.0})
 
 @unittest.category('performance')
 class TestVarMultiDomainPerformance(unittest.TestCase,
-                                    TestComponentPerformanceBase):
+                                    ComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
         self._setUpClass(Var,
@@ -75,7 +75,7 @@ class TestVarMultiDomainPerformance(unittest.TestCase,
 
 @unittest.category('performance')
 class TestExpressionPerformance(unittest.TestCase,
-                                    TestComponentPerformanceBase):
+                                    ComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
         self._setUpClass(Expression,
@@ -83,7 +83,7 @@ class TestExpressionPerformance(unittest.TestCase,
 
 @unittest.category('performance')
 class TestConstraintPerformance(unittest.TestCase,
-                                    TestComponentPerformanceBase):
+                                    ComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
         self._setUpClass(Constraint,
@@ -91,7 +91,7 @@ class TestConstraintPerformance(unittest.TestCase,
 
 @unittest.category('performance')
 class TestObjectivePerformance(unittest.TestCase,
-                               TestComponentPerformanceBase):
+                               ComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
         self._setUpClass(Objective,
@@ -99,7 +99,7 @@ class TestObjectivePerformance(unittest.TestCase,
 
 @unittest.category('performance')
 class TestSetPerformance(unittest.TestCase,
-                         TestComponentPerformanceBase):
+                         ComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
         self._setUpClass(Set,
@@ -107,7 +107,7 @@ class TestSetPerformance(unittest.TestCase,
 
 @unittest.category('performance')
 class TestBlockPerformance(unittest.TestCase,
-                           TestComponentPerformanceBase):
+                           ComponentPerformanceBase):
     @classmethod
     def setUpClass(self):
         self._setUpClass(Block, **{'rule': lambda b,i: b})
