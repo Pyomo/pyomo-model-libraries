@@ -1,4 +1,5 @@
 from pyomo.core import *
+from six.moves import xrange
 
 def create_model(N):
     model = ConcreteModel()
