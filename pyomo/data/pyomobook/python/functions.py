@@ -8,9 +8,9 @@ def Apply(f, a):
     return r
  
 def SqifOdd(x):
-    # if x is odd, 2*(x/2) is not x
+    # if x is odd, 2*trunc(x/2) is not x
     # due to integer divide of x/2
-    if 2*(x/2) == x:
+    if 2*int(x/2) == x:
         return x
     else:
         return x*x
