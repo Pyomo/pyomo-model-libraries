@@ -84,7 +84,7 @@ def nl_test(self, name):
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
-    res = pyomo.scripting.convert.pyomo2nl(['--output',fname]+options)
+    res = pyomo.scripting.convert.pyomo2nl(['--output',fname,'-c']+options)
     if not os.path.exists(fname):
         raise ValueError("Missing file %s generated in test2" % fname)
     os.remove(fname)
@@ -100,7 +100,7 @@ def lp_test(self, name):
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
-    res = pyomo.scripting.convert.pyomo2lp(['--output',fname]+options)
+    res = pyomo.scripting.convert.pyomo2lp(['--output',fname,'-c']+options)
     if not os.path.exists(fname):
         raise ValueError("Missing file %s generated in test2" % fname)
     os.remove(fname)
@@ -115,7 +115,7 @@ def lp_with_cplex_solve_test(self, name):
     options = self.get_options(name)
     if os.path.exists(datadir+root+'.dat'):
         options.append(datadir+root+'.dat')
-    res=main.run(['--solver=cplex'] + options)
+    res=main.run(['--solver=cplex','-c'] + options)
     if res.errorcode:
         raise ValueError("pyomo returned nonzero return code (%s)" % res.errorcode)
     if not res.retval.local.max_memory is None:
