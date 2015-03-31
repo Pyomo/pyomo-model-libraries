@@ -18,7 +18,7 @@ model.x = Var(model.A, bounds=xbounds_rule)
 
 def obj_rule(model):
     return sum(model.h[i] * \
-    (1 - (1/model.d[i])**2) * model.x[i] for i in model.A)
+    (1 - model.u[i]/model.d[i]**2) * model.x[i] for i in model.A)
 
 model.z = Objective(rule=obj_rule, sense=maximize)
 
