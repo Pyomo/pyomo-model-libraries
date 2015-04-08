@@ -15,15 +15,33 @@ from pyomo.core import (ConcreteModel,
                         Reals)
 
 class ComponentPerformanceBase(object):
-
     @classmethod
-    def _setUpClass(self, ctype, **kwds):
+    def _create_model(self, ctype, **kwds):
         self.model = ConcreteModel()
         self.model.x = Var()
         self.model.index = Set(initialize=sorted(range(1000000)))
         self.model.del_component('test_component')
         self.model.test_component = \
             ctype(self.model.index, **kwds)
+
+    @classmethod
+    def setUp(self):
+        if self.model is None:
+            self._setup()
+
+    @classmethod
+    def setUpClass(self):
+        self.model = None
+
+    @classmethod
+    def tearDownClass(self):
+        self.model = None
+
+    def test_0_setup(self):
+        # Needed so that the time to set up the model is not included in
+        # the subsequent performance tests.  This test is named so that
+        # it should appear first in the set of tests run by this test class
+        pass
 
     def test_iteration(self):
         cnt = 0
@@ -39,78 +57,68 @@ class ComponentPerformanceBase(object):
                              len(self.model.test_component))
 
 @unittest.category('performance')
-class TestMutableParamPerformance(unittest.TestCase,
-                                  ComponentPerformanceBase):
+class TestMutableParamPerformance(ComponentPerformanceBase, unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self._setUpClass(Param,
+    def _setup(self):
+        self._create_model(Param,
                          **{'initialize_as_dense':True,
                             'initialize':1.0,
                             'mutable':True})
 
 @unittest.category('performance')
-class TestParamPerformance(unittest.TestCase,
-                           ComponentPerformanceBase):
+class TestParamPerformance(ComponentPerformanceBase, unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self._setUpClass(Param,
+    def _setup(self):
+        self._create_model(Param,
                          **{'initialize_as_dense':True,
                             'initialize':1.0,
                             'mutable':False})
 
 @unittest.category('performance')
-class TestVarPerformance(unittest.TestCase,
-                         ComponentPerformanceBase):
-    @classmethod
-    def setUpClass(self):
-        self._setUpClass(Var, **{'initialize':1.0})
+class TestVarPerformance(ComponentPerformanceBase, unittest.TestCase):
+    def _setup(self):
+        self._create_model(Var, **{'initialize':1.0})
 
 @unittest.category('performance')
-class TestVarMultiDomainPerformance(unittest.TestCase,
-                                    ComponentPerformanceBase):
+class TestVarMultiDomainPerformance(ComponentPerformanceBase, unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self._setUpClass(Var,
+    def _setup(self):
+        self._create_model(Var,
                          **{'domain': lambda m,i: Reals})
 
 @unittest.category('performance')
-class TestExpressionPerformance(unittest.TestCase,
-                                    ComponentPerformanceBase):
+class TestExpressionPerformance(ComponentPerformanceBase, unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self._setUpClass(Expression,
+    def _setup(self):
+        self._create_model(Expression,
                          **{'initialize': 1.0})
 
 @unittest.category('performance')
-class TestConstraintPerformance(unittest.TestCase,
-                                    ComponentPerformanceBase):
+class TestConstraintPerformance(ComponentPerformanceBase, unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self._setUpClass(Constraint,
+    def _setup(self):
+        self._create_model(Constraint,
                          **{'rule': lambda m,i: 1 <= m.x <= 2})
 
 @unittest.category('performance')
-class TestObjectivePerformance(unittest.TestCase,
-                               ComponentPerformanceBase):
+class TestObjectivePerformance(ComponentPerformanceBase, unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self._setUpClass(Objective,
+    def _setup(self):
+        self._create_model(Objective,
                          **{'rule': lambda m,i: m.x})
 
 @unittest.category('performance')
-class TestSetPerformance(unittest.TestCase,
-                         ComponentPerformanceBase):
+class TestSetPerformance(ComponentPerformanceBase, unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self._setUpClass(Set,
+    def _setup(self):
+        self._create_model(Set,
                          **{'initialize': [1,2,3]})
 
 @unittest.category('performance')
-class TestBlockPerformance(unittest.TestCase,
-                           ComponentPerformanceBase):
+class TestBlockPerformance(ComponentPerformanceBase, unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self._setUpClass(Block, **{'rule': lambda b,i: b})
+    def _setup(self):
+        self._create_model(Block, **{'rule': lambda b,i: b})
 
     def test_all_blocks(self):
         cnt = 0
