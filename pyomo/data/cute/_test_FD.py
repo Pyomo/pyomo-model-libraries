@@ -48,7 +48,7 @@ def fd_test(self, name):
     instance = pyutilib.misc.import_file(currdir+name+'_cute.py').model
 
     pvals = {}
-    for obj in instance.componentdata_objects(Objective, active=True):
+    for obj in instance.component_data_objects(Objective, active=True):
         fname = obj.cname(True)
         pvals[fname] = obj
         break

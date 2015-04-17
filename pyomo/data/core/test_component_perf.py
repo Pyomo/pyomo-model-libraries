@@ -45,7 +45,7 @@ class ComponentPerformanceBase(object):
 
     def test_iteration(self):
         cnt = 0
-        for cdata in self.model.componentdata_objects(self.model.test_component.type()):
+        for cdata in self.model.component_data_objects(self.model.test_component.type()):
             cnt += 1
         self.assertTrue(cnt > 0)
         if self.model.test_component.type() in (Set, Var):
@@ -121,7 +121,7 @@ class TestBlockPerformance(ComponentPerformanceBase, unittest.TestCase):
 
     def test_block_iteration(self):
         cnt = 0
-        for block in self.model.blockdata_objects():
+        for block in self.model.block_data_objects():
             cnt += 1
         self.assertTrue(cnt > 0)
         self.assertEqual(cnt,
