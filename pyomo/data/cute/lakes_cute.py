@@ -433,4 +433,4 @@ model.consv6_4 = Constraint(expr=-v6_4 + 0.009510223490252021*t6_4 - 550.11 == 0
 
 # Initialize constraint duals to 1.0
 model.dual = Suffix(direction=Suffix.EXPORT)
-model.dual.update((constraint,1) for constraint in model.active_component_data.itervalues(Constraint))
+model.dual.update((constraint,1) for constraint in model.componentdata_objects(Constraint, active=True))

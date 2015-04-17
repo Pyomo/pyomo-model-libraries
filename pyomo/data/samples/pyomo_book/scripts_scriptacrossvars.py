@@ -11,7 +11,7 @@ for index in instance.x:
     print instance.x[index], instance.x[index].value
 
 from pyomo.core import Var
-for var in instance.active_components(Var):
+for var in instance.component_objects(Var, active=True):
     print "Variable",var
     obj = getattr(instance, var)
     for index in obj:

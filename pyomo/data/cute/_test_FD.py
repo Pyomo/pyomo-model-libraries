@@ -48,13 +48,10 @@ def fd_test(self, name):
     instance = pyutilib.misc.import_file(currdir+name+'_cute.py').model
 
     pvals = {}
-    for obj in active_components_data(instance,Objective):
+    for obj in instance.componentdata_objects(Objective, active=True):
         fname = obj.cname(True)
         pvals[fname] = obj
         break
-    #for cname, con in instance.active_components(Constraint).iteritems():
-        #for key in con.keys():
-            #pvals[cname, key] = con[key]()
     #
     S = pyomo.openopt.Pyomo2FuncDesigner(instance)
     oval = S.f(S.initial_point)

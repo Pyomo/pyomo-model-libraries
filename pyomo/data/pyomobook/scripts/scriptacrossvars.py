@@ -10,7 +10,7 @@ instance.load(results)
 
 # @loop1:
 from pyomo.core import Var
-for name, var in instance.active_components(Var).iteritems():
+for name, var in instance.component_iteritems(Var, active=True):
     for key in var:
         print("%s %s %s" % (name, key, str(var[key].value)))
 # @:loop1
@@ -22,7 +22,7 @@ for index in instance.x:
 
 # @loop3:
 from pyomo.core import Var
-for var in instance.active_components(Var):
+for var in instance.component_objects(Var, active=True):
     print("Variable "+str(var))
     obj = getattr(instance, var)
     for index in obj:

@@ -24,7 +24,7 @@ instance.load(results)
 # display all duals
 print "Duals"
 from pyomo.core import Constraint
-for c in instance.active_components(Constraint):
+for c in instance.component_objects(Constraint, active=True):
     print "   Constraint",c
     cobject = getattr(instance, c)
     for index in cobject:
