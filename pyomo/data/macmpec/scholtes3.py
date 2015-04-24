@@ -7,8 +7,7 @@
 # Number of variables:   2 slack
 # Number of constraints: 0
 
-import pyomo.environ
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.mpec import *
 
 
@@ -20,4 +19,3 @@ model.x = Var([1,2], within=NonNegativeReals, initialize=0.0001)
 model.objf = Objective(expr=0.5*( (model.x[1] - 1)**2 + (model.x[2] - 1)**2 ))
 
 model.LCP = Complementarity(expr=complements(0 <= model.x[1], model.x[2] >= 0))
-

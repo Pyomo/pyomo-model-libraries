@@ -24,6 +24,92 @@ bard3m.py
 pyomo solve --solver=mpec_nlp bard3m.py
 value: -12.6787
 
+df1.py
+pyomo solve --solver=mpec_nlp df1.py
+value: 0.0
+
+jr1.py
+pyomo solve --solver=mpec_nlp jr1.py
+value: 0.5
+
+jr2.py
+pyomo solve --solver=mpec_nlp jr2.py
+value: 0.5
+
+kth1.py
+pyomo solve --solver=mpec_nlp kth1.py
+value: 0.0
+pyomo solve --solver=mpec_lg kth1.py
+value: 0.0
+
+kth2.py
+pyomo solve --solver=mpec_nlp kth2.py
+value: 0.0
+
+kth3.py
+pyomo solve --solver=mpec_nlp kth3.py
+value: 0.5
+
+nash1.py
+pyomo solve --solver=mpec_nlp nash1.py
+value: 0.0000
+
+ralph1.py
+pyomo solve --solver=mpec_lg ralph1.py
+value: 0.0
+pyomo solve --solver=mpec_nlp ralph1.py
+value: -0.0003
+
+ralph2.py
+pyomo solve --solver=mpec_nlp ralph2.py
+value: 0.0
+
+scale1.py
+pyomo solve --solver=mpec_nlp scale1.py
+value: 1.0000
+
+scale2.py
+pyomo solve --solver=mpec_nlp scale2.py
+value: 1.0000
+
+scale3.py
+pyomo solve --solver=mpec_nlp scale3.py
+value: 1.0000
+
+scale4.py
+pyomo solve --solver=mpec_nlp scale4.py
+value: 0.9978
+
+scale5.py
+pyomo solve --solver=mpec_nlp scale5.py
+value: 100.0000
+
+scholtes1.py
+pyomo solve --solver=mpec_nlp scholtes1.py
+value: 2.0
+
+scholtes2.py
+pyomo solve --solver=mpec_nlp scholtes2.py
+value: 15.0
+
+scholtes3.py
+pyomo solve --solver=mpec_nlp --solver-options="epsilon_initial=0.1" scholtes3.py
+value: 0.5
+
+scholtes4.py
+pyomo solve --solver=mpec_nlp scholtes4.py
+value: -0.00076
+pyomo solve --solver=mpec_lg scholtes4.py
+value: 0.0
+
+scholtes5.py
+pyomo solve --solver=mpec_nlp scholtes5.py
+value: 1.0
+
+stackelberg1.py
+pyomo solve --solver=mpec_nlp stackelberg1.py
+value: -3266.66
+
 ------------
 Failed Tests
 ------------

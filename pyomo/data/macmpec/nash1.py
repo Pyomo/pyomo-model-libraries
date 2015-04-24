@@ -9,14 +9,13 @@
 # Number of variables:  6 + 2 slacks
 # Number of constraints: 4
 
-import pyomo.environ
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.mpec import *
 
 
 model = ConcreteModel()
 
-model.x = Var([1,2], bounds=(0,10))
+model.x = Var([1,2], bounds=(0,10), initialize={1:0.0, 2:0.0})
 model.y = Var([1,2])
 model.l = Var([1,2], within=NonNegativeReals)   # Multipliers
 

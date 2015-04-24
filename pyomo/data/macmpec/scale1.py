@@ -1,8 +1,6 @@
 # scale1.py
-# QLR-AY-LCP-2-0-1
 #
-import pyomo.environ
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.mpec import *
 
 a = 100

@@ -9,9 +9,8 @@
 # Number of variables:   3
 # Number of constraints: 2
 
-import pyomo.environ
-from pyomo.core import *
-from pyomo.mpec import Complementarity
+from pyomo.environ import *
+from pyomo.mpec import *
 
 
 model = ConcreteModel()

@@ -11,8 +11,7 @@
 # Number of variables:   35
 # Number of constraints: 28 + 1
 
-import pyomo.environ
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.mpec import *
 
 

@@ -26,8 +26,8 @@ model.c1 = Constraint(expr=model.x[1] + model.x[2] + model.y[1] - 2*model.y[2] -
 model.F1 = Constraint(expr=0 == 2*model.y[1] - 2*model.x[1] + 40 - (model.l[1] - 2*model.l[3]))
 model.F2 = Constraint(expr=0 == 2*model.y[2] - 2*model.x[2] + 40 - (model.l[2] - 2*model.l[4]))
 
-model.m1 = Complementarity(expr=complements(-10 <= model.y[1] <= 20, model.l[1]))
-model.m2 = Complementarity(expr=complements(-10 <= model.y[2] <= 20, model.l[2]))
-model.g5 = Complementarity(expr=complements(0 <= model.x[1] - 2*model.y[1] - 10, model.l[3] >= 0))
-model.g6 = Complementarity(expr=complements(0 <= model.x[2] - 2*model.y[2] - 10, model.l[4] >= 0))
+model.m1 = Complementarity(expr=complements(-10 <=                model.y[1]      <= 20,   model.l[1]))
+model.m2 = Complementarity(expr=complements(-10 <=                model.y[2]      <= 20,   model.l[2]))
+model.g5 = Complementarity(expr=complements(  0 <= model.x[1] - 2*model.y[1] - 10,         model.l[3] >= 0))
+model.g6 = Complementarity(expr=complements(  0 <= model.x[2] - 2*model.y[2] - 10,         model.l[4] >= 0))
 

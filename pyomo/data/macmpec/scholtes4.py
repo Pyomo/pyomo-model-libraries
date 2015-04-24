@@ -7,8 +7,7 @@
 # Number of variables:   3 slack
 # Number of constraints: 2
 
-import pyomo.environ
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.mpec import *
 
 
@@ -18,7 +17,7 @@ z_init = {1:0, 2:1}
 model.z = Var([1,2], within=NonNegativeReals, initialize=z_init)
 model.z3 = Var(initialize=0)
 
-objf = Objective(expr=model.z[1] + model.z[2] - model.z3)
+model.objf = Objective(expr=model.z[1] + model.z[2] - model.z3)
 
 model.lin1 = Constraint(expr=-4 * model.z[1] + model.z3 <= 0)
 

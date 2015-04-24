@@ -28,6 +28,6 @@ m1  1   -1
 m2  1   -1
 m3  1   -1;
 
-fix{i in m} H[i,'y1','y2'] := 0.0;   
-fix{i in m} H[i,'y2','y1'] := 0.0;
+#fix{i in m} H[i,'y1','y2'] := 0.0;   
+#fix{i in m} H[i,'y2','y1'] := 0.0;
 
