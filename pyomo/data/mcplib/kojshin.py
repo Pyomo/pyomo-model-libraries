@@ -12,25 +12,28 @@
 from pyomo.environ import *
 from pyomo.mpec import *
 
-model = AbstractModel()
+model = ConcreteModel()
 
-model.Rn = Rangeset(1,4)
-model.initpoint = RangeSet(1,8)
+model.Rn = RangeSet(1,4)
 
-model.x = Var(model.Rn)
-model.sx = Var([1,2], initialize={1:1, 2:4})
+model.x = Var(model.Rn, initialize=10)
+
+def sx_rule(model, j):
+    return model.x[j]*model.x[j]
+model.sx = Expression([1,2], rule=sx_rule)
 
 def f_rule(model, j):
     if j == 1: 
         rhs = 3*model.sx[1]+2*model.x[1]*model.x[2]+2*model.sx[2]+model.x[3]+3*model.x[4]-6
-	elif j == 2:
+    elif j == 2:
         rhs = 2*model.sx[1]+model.x[1]+model.sx[2]+10*model.x[3]+2*model.x[4]-2
-	elif j == 3:
+    elif j == 3:
         rhs = 3*model.sx[1]+model.x[1]*model.x[2]+2*model.sx[2]+2*model.x[3]+9*model.x[4]-9
     elif j == 4:
-	    rhs = model.sx[1]+3*model.sx[2]+2*model.x[3]+3*model.x[4]-3
+        rhs = model.sx[1]+3*model.sx[2]+2*model.x[3]+3*model.x[4]-3
     return complements( 0 <= model.x[j], rhs)
 model.f = Complementarity(model.Rn, rule=f_rule)
 
-model.xinit = Param(model.Rn, model.initpoint, within=NonNegativeReals)
+#model.initpoint = RangeSet(1,8)
+#model.xinit = Param(model.Rn, model.initpoint, within=NonNegativeReals)
 

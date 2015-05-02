@@ -37,14 +37,14 @@ model.b = Param(model.subjects)
 # average cost for producing j
 model.c = Param(model.brands)
 def DU_init(model, i, j):
-    return -model.chi * 
-                (model.v[i] * 
-                 sum((model.x[j,k]-model.y[i,k])**2 for k in model.ingred) + 
+    return -model.chi * \
+                (model.v[i] * \
+                 sum((model.x[j,k]-model.y[i,k])**2 for k in model.ingred) + \
                  model.b[i])
 model.DU = Param(model.subjects, model.brands, initialize=DU_init)
 
 model.p_lo = Param(model.brands, default=model.c)
-model.p_up = Param(model.brands, default=Infinity)
+model.p_up = Param(model.brands, default=None)
 
 model.p = Param(model.brands, initialize=lambda model,i:model.c[j] + .01)
 

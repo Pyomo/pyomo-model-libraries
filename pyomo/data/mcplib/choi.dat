@@ -1,4 +1,3 @@
-data;
 param chi := 3;
 param K := 1;
 param M := 30;

@@ -25,18 +25,18 @@ model.c = Param(model.Rn)
 model.beta = Param(model.Rn)
 model.L = Param(model.Rn, initialize=10)
 
-mode.q = Var(model.Rn, within=NonNegativeReals) # production vector
+model.q = Var(model.Rn, within=NonNegativeReals) # production vector
 
 def Q_init(model):
     return sum(model.q[i] for i in model.Rn)
-model.Q = Param(initialize=Q_init)
+model.Q = Var(initialize=Q_init)
 
 def divQ_init(model):
     return (5000.0/model.Q)**(1/model.gamma)
 model.divQ = Var(initialize=divQ_init)
 
 # delf - p - q(I)*delp
-def feas_rule(model, i)
+def feas_rule(model, i):
     return complements(
 	        model.q[i],
 	        0 <= model.c[i] + (model.L[i] * model.q[i])**(1/model.beta[i]) - 
