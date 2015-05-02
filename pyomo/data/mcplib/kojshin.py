@@ -31,7 +31,7 @@ def f_rule(model, j):
         rhs = 3*model.sx[1]+model.x[1]*model.x[2]+2*model.sx[2]+2*model.x[3]+9*model.x[4]-9
     elif j == 4:
         rhs = model.sx[1]+3*model.sx[2]+2*model.x[3]+3*model.x[4]-3
-    return complements( 0 <= model.x[j], rhs)
+    return complements( 0 <= model.x[j], 0 <= rhs)
 model.f = Complementarity(model.Rn, rule=f_rule)
 
 #model.initpoint = RangeSet(1,8)
