@@ -21,7 +21,7 @@ model.c = Param(model.N)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def obj_rule(model):
     return sum(model.x[j]*(model.c[j] + log(model.x[j]/sum(model.x[k] for k in model.N))) for j in model.N)

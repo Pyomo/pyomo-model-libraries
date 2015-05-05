@@ -66,7 +66,7 @@ if __name__ == '__main__':
     #
     # Execute this when running this script interactively
     #
-    instance = model.create()
+    instance = model
     S = Pyomo2FuncDesigner(instance)
     #
     r = S.minimize(S.f, S.initial_point, solver='ralg', contol=1e-7, gtol=1e-7, maxFunEvals=1e7, maxIter=1e7, iprint=50)

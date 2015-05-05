@@ -52,7 +52,7 @@ model.u = Param(model.m)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f_rule(model):
     return sum((model.y[i]-model.x[1]*(model.u[i]**2+model.u[i]*model.x[2])/(model.u[i]**2+model.u[i]*model.x[3]+model.x[4]))**2 for i in model.m)

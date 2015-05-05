@@ -6,5 +6,5 @@ model = AbstractModel()
 model.A = Set(ordered=True)
 # @:decl1
 
-instance = model.create('set_options.dat')
+instance = model.create_instance('set_options.dat')
 instance.pprint()

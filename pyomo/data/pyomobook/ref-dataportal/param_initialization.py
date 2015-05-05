@@ -19,5 +19,4 @@ def c(model):
 model.c = Param([1,2,3], initialize=c)
 # @:decl3
 
-instance = model.create()
-instance.pprint(verbose=True)
+model.pprint(verbose=True)

@@ -38,5 +38,4 @@ H_init[4] = [3,5,7]
 model.H = Set([2,3,4],initialize=H_init)
 # @:decl6
 
-instance = model.create()
-instance.pprint(verbose=True)
+model.pprint(verbose=True)

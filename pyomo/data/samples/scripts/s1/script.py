@@ -6,7 +6,7 @@ import pyomo.environ
 import knapsack
 #
 # Create the model instance
-instance = knapsack.model.create("knapsack.dat")
+instance = knapsack.model.create_instance("knapsack.dat")
 #
 # Setup the optimizer
 opt = pyomo.opt.SolverFactory("glpk")

@@ -20,5 +20,5 @@ model.C = Set()
 model.T = Param(model.A, model.C)
 # @:decl3
 
-instance = model.create('param_declaration.dat')
+instance = model.create_instance('param_declaration.dat')
 instance.pprint()

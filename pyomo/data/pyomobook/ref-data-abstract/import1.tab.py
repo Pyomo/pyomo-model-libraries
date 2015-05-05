@@ -5,7 +5,7 @@ model = AbstractModel()
 model.A = Set(initialize=['A1', 'A2', 'A3', 'A4'])
 model.Y = Param(model.A)
 
-instance = model.create('import1.tab.dat')
+instance = model.create_instance('import1.tab.dat')
 
 print('Y')
 keys = instance.Y.keys()

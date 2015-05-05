@@ -33,5 +33,5 @@ def G_validate(model, value):
 model.G = Set([1,2,3], validate=G_validate)
 # @:decl6
 
-instance = model.create('set_validation.dat')
+instance = model.create_instance('set_validation.dat')
 instance.pprint(verbose=True)

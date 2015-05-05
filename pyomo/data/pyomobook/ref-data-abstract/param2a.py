@@ -7,7 +7,7 @@ model.A = Set()
 model.B = Param(model.A)
 # @:decl
 
-instance = model.create('param2a.dat')
+instance = model.create_instance('param2a.dat')
 
 keys = instance.B.keys()
 for key in sorted(keys):

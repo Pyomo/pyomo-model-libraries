@@ -43,7 +43,7 @@ model.m = Var(model.A, initialize=g)
 # @:decl6
 
 
-model = model.create('var_declaration.dat')
+model = model.create_instance('var_declaration.dat')
 
 # @decl7a:
 model.za = 8.5

@@ -57,7 +57,7 @@ model.hipi = Param(model.SPi)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def cost(model):
     exp = 2.28*model.Prod[1] + 2.28*model.Prod[2] + 2.28*model.Prod[3] + 1.68*model.Prod[4] + 1.68*model.Prod[5] + 1.68*model.Prod[6]

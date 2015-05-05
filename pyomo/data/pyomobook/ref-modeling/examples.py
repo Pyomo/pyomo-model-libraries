@@ -13,7 +13,7 @@ model.d = Constraint(model.A, rule=d_rule)
 # @:indexed1
 data = DataPortal()
 data['A'] = {None: set([1,2,3])}
-instance = model.create(data)
+instance = model.create_instance(data)
 instance.pprint()
 
 # --------------------------------------------------

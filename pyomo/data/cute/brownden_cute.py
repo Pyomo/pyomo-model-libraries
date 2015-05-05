@@ -56,7 +56,7 @@ model.t = Param(model.St, initialize=Sti)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f(model):
     expa = sum ([( (model.x[1]+model.t[i]*model.x[2]-exp(value(model.t[i])))**2 \

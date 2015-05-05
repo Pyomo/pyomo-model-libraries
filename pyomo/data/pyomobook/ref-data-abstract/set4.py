@@ -6,6 +6,6 @@ model = AbstractModel()
 model.A = Set(dimen=2)
 # @:decl
 
-instance = model.create('set4.dat')
+instance = model.create_instance('set4.dat')
 
 print(sorted(list(instance.A.data())))

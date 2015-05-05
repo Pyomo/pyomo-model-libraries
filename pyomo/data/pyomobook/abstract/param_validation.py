@@ -19,5 +19,5 @@ def X_validate(model, value, i):
 model.X = Param(model.A, validate=X_validate)
 # @:decl3
 
-instance = model.create('param_validation.dat')
+instance = model.create_instance('param_validation.dat')
 instance.pprint()

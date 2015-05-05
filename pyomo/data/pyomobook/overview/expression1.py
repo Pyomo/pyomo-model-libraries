@@ -8,7 +8,7 @@ def _e(m,i):
   return m.x*i
 model.e = Expression([1,2,3],initialize=_e)
 
-instance = model.create()
+instance = model.create_instance()
 
 print value(instance.e[1]) # -> 1.0
 print instance.e[1]()      # -> 1.0

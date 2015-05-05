@@ -4,7 +4,7 @@ from abstract5 import model
 
 model.pprint()
 
-instance = model.create('abstract5.dat')
+instance = model.create_instance('abstract5.dat')
 instance.pprint()
 
 opt = SolverFactory("glpk")

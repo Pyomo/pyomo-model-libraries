@@ -5,7 +5,7 @@ model = AbstractModel()
 model.A = Set()
 model.Y = Param(model.A)
 
-instance = model.create('import2.tab.dat')
+instance = model.create_instance('import2.tab.dat')
 
 print('A '+str(sorted(list(instance.A.data()))))
 print('Y')

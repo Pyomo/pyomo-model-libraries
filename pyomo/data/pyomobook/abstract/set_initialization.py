@@ -127,5 +127,5 @@ def Floor_Room_init(model):
 model.Floor_Room = Set(dimen=2, initialize=Floor_Room_init)
 # @:decl14
 
-instance = model.create()
+instance = model.create_instance()
 instance.pprint(verbose=True)

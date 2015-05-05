@@ -8,7 +8,7 @@ model.Z = Set(dimen=3)
 model.Y = Param(model.Z)
 
 try:
-    instance = model.create('ABCD7.dat')
+    instance = model.create_instance('ABCD7.dat')
 except pyutilib.common.ApplicationError, e:
     print("ERROR "+str(e))
     sys.exit(1)

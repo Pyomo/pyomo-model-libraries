@@ -6,7 +6,7 @@ model.A = Set()
 model.B = Set()
 model.C = Set()
 
-instance = model.create('set1.dat')
+instance = model.create_instance('set1.dat')
 
 print(sorted(list(instance.A.data())))
 print(sorted((instance.B.data())))

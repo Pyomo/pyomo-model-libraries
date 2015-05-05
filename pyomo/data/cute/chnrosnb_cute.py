@@ -46,7 +46,7 @@ model.x = Var(RangeSet(1,n),initialize=-1.0)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f(model):
     return sum((model.x[i-1]-model.x[i]**2)**2*16*model.alph[i]**2 +(model.x[i]-1.0)**2 for i in range(2,n+1))

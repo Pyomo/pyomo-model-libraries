@@ -22,6 +22,6 @@ model.MyObjective = Objective(rule=MyObjectiveRule,
                                           sense=maximize)
 # @:all
 
-instance = model.create()
+instance = model.create_instance()
 
 instance.pprint()

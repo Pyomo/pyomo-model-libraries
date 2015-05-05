@@ -34,5 +34,5 @@ model.v = Param(D_index, model.B, initialize=1.0)
 # @:decl3b
 
 
-instance = model.create()
+instance = model.create_instance()
 instance.pprint()

@@ -50,7 +50,7 @@ model.k = Var(RangeSet(1,NP),bounds=(0,None), initialize=0.001)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 model.x[1,0] = 0.0
 model.x[1,0].fixed = True

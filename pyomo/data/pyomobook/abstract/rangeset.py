@@ -18,5 +18,5 @@ model.C = RangeSet(5,10)
 model.D = RangeSet(2.5,11,1.5)
 # @:decl4
 
-instance = model.create()
+instance = model.create_instance()
 instance.pprint(verbose=True)

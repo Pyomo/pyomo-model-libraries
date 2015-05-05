@@ -47,7 +47,7 @@ model.D = Var(bounds=(.00001,None),initialize=1.0)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def palmer(model):
     return sum( (model.Y[m] - (model.A*(model.X[m]**2) + model.B / (model.C \

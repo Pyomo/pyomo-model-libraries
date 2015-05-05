@@ -4,6 +4,6 @@ model = AbstractModel()
 
 model.Z = Set(dimen=4)
 
-instance = model.create('ABCD1.dat')
+instance = model.create_instance('ABCD1.dat')
 
 print(sorted(list(instance.Z.data())))

@@ -8,7 +8,7 @@ model.U = Param(model.I,model.A)
 # BUG:  This should cause an error
 #model.U = Param(model.A,model.I)
 
-instance = model.create('import7.tab.dat')
+instance = model.create_instance('import7.tab.dat')
 
 print('I '+str(sorted(list(instance.I.data()))))
 print('A '+str(sorted(list(instance.A.data()))))

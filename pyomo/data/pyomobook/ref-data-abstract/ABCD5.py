@@ -8,7 +8,7 @@ model.Y = Param(model.Z)
 model.W = Param(model.Z)
 # @:decl
 
-instance = model.create('ABCD5.dat')
+instance = model.create_instance('ABCD5.dat')
 
 print('Z '+str(sorted(list(instance.Z.data()))))
 print('Y')

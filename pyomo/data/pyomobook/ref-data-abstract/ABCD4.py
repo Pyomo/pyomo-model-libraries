@@ -5,7 +5,7 @@ model = AbstractModel()
 model.Z = Set(dimen=3)
 model.Y = Param(model.Z)
 
-instance = model.create('ABCD4.dat')
+instance = model.create_instance('ABCD4.dat')
 
 print('Z '+str(sorted(list(instance.Z.data()))))
 print('Y')

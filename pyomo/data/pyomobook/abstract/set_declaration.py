@@ -45,5 +45,5 @@ model.D2 = Set(model.K2)
 # @:decl7
 
 
-instance = model.create('set_declaration.dat')
+instance = model.create_instance('set_declaration.dat')
 instance.pprint(verbose=True)

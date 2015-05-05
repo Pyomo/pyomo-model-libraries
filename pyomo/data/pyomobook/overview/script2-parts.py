@@ -5,7 +5,7 @@ from abstract5 import model
 model.pprint()
 
 # @create:
-instance = model.create('abstract5.dat')
+instance = model.create_instance('abstract5.dat')
 instance.pprint()
 # @:create
 

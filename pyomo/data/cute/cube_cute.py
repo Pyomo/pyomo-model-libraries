@@ -47,7 +47,7 @@ model.x = Var(RangeSet(1,2),initialize=x)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
     
 def f(model):
     return (model.x[1]-1.0)**2+sum(100*(model.x[i]-model.x[i-1]**3)**2 for i in range(2,N+1))

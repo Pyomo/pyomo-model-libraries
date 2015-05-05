@@ -6,6 +6,6 @@ model = AbstractModel()
 model.z = Param()
 # @:decl
 
-instance = model.create('ex.dat')
+instance = model.create_instance('ex.dat')
 
 print(value(instance.z))

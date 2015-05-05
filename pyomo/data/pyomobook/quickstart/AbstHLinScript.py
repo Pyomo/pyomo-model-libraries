@@ -29,7 +29,7 @@ model.budgetconstr = Constraint(rule=budget_rule)
 from pyomo.opt import SolverFactory
 opt = SolverFactory('glpk')
 
-instance = model.create("AbstractH.dat")
+instance = model.create_instance("AbstractH.dat")
 results = opt.solve(instance)
 instance.load(results)
 instance.pprint()

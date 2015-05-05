@@ -1,8 +1,8 @@
 # ConcHLinScript.py - Linear (H) as a script
 from pyomo.environ import *
 
-model = ConcreteModel()
-model.name = "Linear (H)"
+instance = ConcreteModel()
+instance.name = "Linear (H)"
 
 A = ['I_C_Scoops', 'Peanuts']
 h = {'I_C_Scoops': 1, 'Peanuts': 0.1}
@@ -14,20 +14,19 @@ u = {'I_C_Scoops': 100, 'Peanuts': 40.6}
 def x_bounds(m, i):
     return (0,u[i])
 
-model.x = Var(A, bounds=x_bounds)
+instance.x = Var(A, bounds=x_bounds)
 
-def obj_rule(model):
-    return sum(h[i]*(1 - u[i]/d[i]**2) * model.x[i] for i in A)
+def obj_rule(instance):
+    return sum(h[i]*(1 - u[i]/d[i]**2) * instance.x[i] for i in A)
 
-model.z = Objective(rule=obj_rule, sense=maximize)
+instance.z = Objective(rule=obj_rule, sense=maximize)
 
-model.budgetconstr = \
-     Constraint(expr = sum(c[i] * model.x[i] for i in A) <= b)
+instance.budgetconstr = \
+     Constraint(expr = sum(c[i] * instance.x[i] for i in A) <= b)
 
 from pyomo.opt import SolverFactory
 opt = SolverFactory('glpk')
 
-instance = model.create()
 results = opt.solve(instance)
 instance.load(results)
 instance.pprint()

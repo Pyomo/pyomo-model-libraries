@@ -70,5 +70,5 @@ if numpy_available:
     model.V = Param(model.C, initialize=V_rule)
 # @:decl7
 
-instance = model.create()
+instance = model.create_instance()
 instance.pprint()

@@ -7,7 +7,7 @@ model.A = Set()
 model.B = Param(model.A)
 # @:decl
 
-instance = model.create('param4.dat')
+instance = model.create_instance('param4.dat')
 
 print('B')
 keys = instance.B.keys()

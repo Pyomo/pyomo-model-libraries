@@ -43,7 +43,7 @@ model.SS = RangeSet(2,model.N)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
 def f(model):
     sum1 = sum ([(model.x[i-1]-16*value(model.alpha[i])**2*model.x[i]**2)**2 for i in model.SS])

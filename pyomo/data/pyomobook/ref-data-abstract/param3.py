@@ -9,7 +9,7 @@ model.C = Param(model.A)
 model.D = Param(model.A)
 # @:decl
 
-instance = model.create('param3.dat')
+instance = model.create_instance('param3.dat')
 
 print('B')
 keys = instance.B.keys()
