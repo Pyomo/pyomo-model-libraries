@@ -15,11 +15,12 @@ opt = pyomo.opt.SolverFactory("glpk")
 results = opt.solve(instance, suffixes=['.*'])
 #
 # Update the results, to use the same labels as the model
-transformed_results = instance.update_results(results)
+#
+instance.solutions.store(results)
 #
 # Print the results
 i = 0
-for sol in transformed_results.solution:
+for sol in results.solution:
     print("Solution "+str(i))
     #
     print(sorted(sol.variable.keys()))
@@ -39,5 +40,5 @@ for sol in transformed_results.solution:
 # An alternate way to print just the constraint duals
 print("")
 print("Dual Values")
-for con in sorted(transformed_results.solution(0).constraint.keys()):
-    print(str(con)+' '+str(transformed_results.solution(0).constraint[con]["Dual"]))
+for con in sorted(results.solution(0).constraint.keys()):
+    print(str(con)+' '+str(results.solution(0).constraint[con]["Dual"]))
