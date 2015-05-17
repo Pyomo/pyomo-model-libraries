@@ -32,9 +32,7 @@ Solution:
   Status: optimal
   Objective: 
     Z: 
-      Id: 0
       Value: -20
   Variable: 
     z:
-      Id: 2
       Value: 5

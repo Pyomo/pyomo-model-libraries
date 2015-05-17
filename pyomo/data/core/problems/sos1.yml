@@ -39,24 +39,17 @@ Solution:
   Status: optimal
   Objective: 
     obj: 
-      Id: 0
       Value: 9
   Variable: 
     Fx[1]:
-      Id: 0
       Value: 6.5
     Fx[2]:
-      Id: 1
       Value: 2.5
     x[1]:
-      Id: 2
       Value: 2.5
     y[1,2]:
-      Id: 4
       Value: 1
     x[2]:
-      Id: 5
       Value: 1.5
     y[2,1]:
-      Id: 6
       Value: 1

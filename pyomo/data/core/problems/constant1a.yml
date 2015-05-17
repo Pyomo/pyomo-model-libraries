@@ -32,13 +32,10 @@ Solution:
   Status: optimal
   Objective: 
     o: 
-      Id: 0
       Value: 0
   Variable: 
     x:
-      Id: 0
       Value: 2
     y:
-      Id: 1
       Value: 1
   Constraint: No nonzero values

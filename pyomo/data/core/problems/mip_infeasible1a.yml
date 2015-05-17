@@ -31,6 +31,5 @@ Solution:
 - Status: infeasible
   Objective: 
     o: 
-      Id: 0
       Value: 0
   Variable: No nonzero values

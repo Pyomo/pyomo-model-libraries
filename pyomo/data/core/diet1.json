@@ -27,7 +27,6 @@
             "Status": "optimal", 
             "Objective": {
                 "Total_Cost": {
-                    "Id": 0, 
                     "Value": 2.81
                 }
             }, 
