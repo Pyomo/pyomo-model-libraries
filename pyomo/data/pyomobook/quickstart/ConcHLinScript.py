@@ -27,7 +27,8 @@ instance.budgetconstr = \
 from pyomo.opt import SolverFactory
 opt = SolverFactory('glpk')
 
-results = opt.solve(instance)
-instance.load(results)
-instance.pprint()
+instance = model.create_instance("AbstractH.dat")
+results = opt.solve(instance) # solves and copies results to instance
+
+instance.display()
 
