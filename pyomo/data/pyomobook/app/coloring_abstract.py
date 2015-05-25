@@ -1,5 +1,5 @@
 # Python import statement
-from pyomo.core import *
+from pyomo.environ import *
 
 # Create a Pyomo model object
 model = AbstractModel()
