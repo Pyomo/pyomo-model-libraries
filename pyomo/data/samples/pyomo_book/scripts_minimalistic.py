@@ -1,4 +1,4 @@
-from pyomo.core import *
+from pyomo.environ import *
 from pyomo.opt import SolverFactory, SolverManagerFactory
 
 from DiseaseEstimation import model

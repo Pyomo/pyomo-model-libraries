@@ -1,4 +1,4 @@
-from pyomo.opt import SolverFactory
+from pyomo.environ import SolverFactory
 from DiseaseEstimation import model
 
 model.pprint()

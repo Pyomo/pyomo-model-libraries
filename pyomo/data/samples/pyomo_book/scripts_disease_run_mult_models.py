@@ -1,4 +1,4 @@
-from pyomo.core import *
+from pyomo.environ import *
 from pyutilib.misc import Options
 from DiseaseEasy import model as easy_model
 from DiseaseHard import model as hard_model

@@ -1,4 +1,4 @@
-from pyomo.opt import SolverFactory
+from pyomo.environ import SolverFactory
 from abstract5 import model
 
 model.pprint()

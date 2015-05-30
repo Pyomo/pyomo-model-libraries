@@ -1,4 +1,4 @@
-from pyomo.core import *
+from pyomo.environ import *
 from pyutilib.misc import Options
 from sudoku import create_sudoku_model
 

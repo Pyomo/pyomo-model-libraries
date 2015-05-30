@@ -1,4 +1,4 @@
-from pyomo.core import *
+from pyomo.environ import *
 
 # This python file defines a function to create a
 # model for the sudoku problem

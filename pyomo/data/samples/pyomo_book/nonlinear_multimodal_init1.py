@@ -1,4 +1,4 @@
-from pyomo.core import *
+from pyomo.environ import *
 from math import pi
 
 model = ConcreteModel()

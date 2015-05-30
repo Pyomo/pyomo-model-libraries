@@ -1,5 +1,5 @@
 # Mimic the pyomo script
-from pyomo.core import *
+from pyomo.environ import *
 from pyutilib.misc import Options
 
 # set high level options that mimic pyomo comand line

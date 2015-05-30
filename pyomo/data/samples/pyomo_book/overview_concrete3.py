@@ -1,4 +1,4 @@
-from pyomo.core import *
+from pyomo.environ import *
 
 N = [1,2]
 c = {1:1, 2:2}
