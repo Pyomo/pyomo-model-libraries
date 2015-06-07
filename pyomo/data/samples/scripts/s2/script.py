@@ -16,7 +16,7 @@ results = opt.solve(instance, suffixes=['.*'])
 #
 # Update the results, to use the same labels as the model
 #
-instance.solutions.store(results)
+instance.solutions.store_to(results)
 #
 # Print the results
 i = 0

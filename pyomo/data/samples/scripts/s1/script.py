@@ -13,7 +13,7 @@ opt = pyomo.opt.SolverFactory("glpk")
 #
 # Optimize
 results = opt.solve(instance,symbolic_solver_labels=True)
-instance.solutions.store(results)
+instance.solutions.store_to(results)
 #
 # Write the output
 results.write(num=1)
