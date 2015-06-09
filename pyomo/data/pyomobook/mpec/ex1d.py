@@ -9,7 +9,8 @@ model = ConcreteModel()
 
 model.x = Var( range(1,n+1) )
 
-model.f = Objective( expr=sum(i*(model.x[i]-1)**2 for i in range(1,n+1)) )
+model.f = Objective(expr=sum(i*(model.x[i]-1)**2 
+                    for i in range(1,n+1)) )
 
 def compl_(model, i):
     if i == n:
