@@ -4,8 +4,8 @@ model = AbstractModel()
 
 # @decl1:
 model.A = Set()
-model.A.add(1,4,9)
 # @:decl1
+model.A.add(1,4,9)
 
 # @decl2:
 model.B = Set(initialize=[2,3,4])
