@@ -90,4 +90,22 @@ except:
 # @:decl7b
 logging.disable(logging.NOTSET)
 
+# @clist1:
+model.c1 = ConstraintList()
+model.c1.add(expr=model.x[2] -   model.x[1] <= 7.5)
+model.c1.add(expr=model.x[2] - 2*model.x[1] <= 7.5)
+print(value(model.c1[1].body))      #  0.0
+print(value(model.c1[2].body))      # -1.0
+# @:clist1
+
+# @clist2:
+def c2_rule(model):
+    yield model.x[2] -   model.x[1] <= 7.5
+    yield model.x[2] - 2*model.x[1] <= 7.5
+    yield ConstraintList.End
+model.c2 = ConstraintList(rule=c2_rule)
+print(value(model.c2[1].body))      #  0.0
+print(value(model.c2[2].body))      # -1.0
+# @:clist2
+
 model.display()

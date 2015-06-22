@@ -24,10 +24,6 @@ model.e = Objective(expr=model.x[1], sense=maximize)
 # @decl5:
 model.f = Objective(expr=model.x[1] + 2*model.x[2])
 
-def TheObjective(model):
-    return model.x[1] + 2*model.x[2]
-model.g = Objective(rule=TheObjective)
-
 def gg_rule(model):
     return model.x[1] + 2*model.x[2]
 model.gg = Objective(rule=gg_rule)
@@ -38,6 +34,14 @@ def h_rule(model, i):
     return i*model.x[1] + i*i*model.x[2]
 model.h = Objective([1, 2, 3, 4], rule=h_rule)
 # @:decl6
+
+# @decl6a:
+def hh_rule(model, i):
+    if i == 3:
+        return Objective.Skip
+    return i*model.x[1] + i*i*model.x[2]
+model.hh = Objective([1, 2, 3, 4], rule=hh_rule)
+# @:decl6a
 
 # @decl7:
 def m_rule(model):
@@ -65,5 +69,31 @@ if p > 0.5:
 else:
     model.p = Objective(expr=model.x[1] + 3*model.x[2])
 # @:decl9
+
+# @value:
+model.o = Objective(expr=model.x[1] + 2*model.x[2])
+print(model.o.value)        # None
+print(value(model.o))       # 3
+print(model.o())            # 3
+print(model.o.value)        # 3
+# @:value
+
+# @olist1:
+model.r = ObjectiveList()
+model.r.add(expr=model.x[1] + 2*model.x[2])
+model.r.add(expr=model.x[1] + 3*model.x[2])
+print(value(model.r[1]))    # 3
+print(value(model.r[2]))    # 4
+# @:olist1
+
+# @olist2:
+def rr_rule(model):
+    yield model.x[1] + 2*model.x[2]
+    yield model.x[1] + 3*model.x[2]
+    yield ObjectiveList.End
+model.rr = ObjectiveList(rule=rr_rule)
+print(value(model.rr[1]))    # 3
+print(value(model.rr[2]))    # 4
+# @:olist2
 
 model.display()

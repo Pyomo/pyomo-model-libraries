@@ -1,6 +1,14 @@
 WARNING: No construction rule or expression specified for objective 'a'
 WARNING: No construction rule or expression specified for objective 'b'
 WARNING: No construction rule or expression specified for objective 'c'
+None
+3.0
+3.0
+3.0
+3.0
+4.0
+3.0
+4.0
 Model unknown
 
   Variables:
@@ -25,9 +33,6 @@ Model unknown
     f : Size=1, Index=None, Active=True
         Key  : Active : Value
         None :   True :   3.0
-    g : Size=1, Index=None, Active=True
-        Key  : Active : Value
-        None :   True :   3.0
     gg : Size=1, Index=None, Active=True
         Key  : Active : Value
         None :   True :   3.0
@@ -36,6 +41,11 @@ Model unknown
           1 :   True :   2.0
           2 :   True :   6.0
           3 :   True :  12.0
+          4 :   True :  20.0
+    hh : Size=3, Index=hh_index, Active=True
+        Key : Active : Value
+          1 :   True :   2.0
+          2 :   True :   6.0
           4 :   True :  20.0
     m : Size=1, Index=None, Active=True
         Key  : Active : Value
@@ -46,6 +56,17 @@ Model unknown
     p : Size=1, Index=None, Active=True
         Key  : Active : Value
         None :   True :   3.0
+    o : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :   3.0
+    r : Size=2, Index=r_index, Active=True
+        Key : Active : Value
+          1 :   True :   3.0
+          2 :   True :   4.0
+    rr : Size=2, Index=rr_index, Active=True
+        Key : Active : Value
+          1 :   True :   3.0
+          2 :   True :   4.0
 
   Constraints:
     None

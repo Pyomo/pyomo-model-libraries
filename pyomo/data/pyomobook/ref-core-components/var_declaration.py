@@ -13,6 +13,12 @@ model.r = Var(domain=Reals)
 model.w = Var(within=Boolean)
 # @:decl2
 
+# @decl2a:
+def s_domain(model, i):
+    return IntegerInterval(bounds=(i,i+1))
+model.s = Var(model.A, domain=s_domain)
+# @:decl2a
+
 # @decl3:
 B = [1.5, 2.5, 3.5]
 model.u = Var(B)
@@ -42,8 +48,30 @@ def g(model, i):
 model.m = Var(model.A, initialize=g)
 # @:decl6
 
-
 model = model.create_instance('var_declaration.dat')
+# @decl13:
+model.Za = Var(within=NonNegativeReals)
+model.Zb = Var(model.A)
+model.Zc = Var(model.A)
+
+Za_values = {None: 9}
+model.Za.set_values(Za_values)
+Zb_values = {1:1, 2:4, 3:9}
+model.Zb.set_values(Zb_values)
+Zc_values = {1:2, 2:2, 3:2}
+model.Zc.set_values(Zc_values)
+# @:decl13
+
+
+# @decl12:
+model.v = VarList(within=Integers)
+v = model.v.add()
+model.v[1].setlb(1)
+model.v[1].setub(3)
+v = model.v.add()
+v.setlb(5)
+v.setub(7)
+# @:decl12
 
 # @decl7a:
 model.za = 8.5
@@ -79,4 +107,5 @@ print(model.za.lb)           # 0
 print(model.za.ub)           # None
 print(model.zb[2].fixed)     # False
 # @:decl11
+
 model.pprint()
