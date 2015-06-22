@@ -109,3 +109,25 @@ print(value(model.c2[2].body))      # -1.0
 # @:clist2
 
 model.display()
+
+
+# @slack:
+model = ConcreteModel()
+model.x = Var(initialize=1.0)
+model.y = Var(initialize=1.0)
+
+model.c1 = Constraint(expr=        model.y - model.x <= 7.5)
+model.c2 = Constraint(expr=-2.5 <= model.y - model.x)
+model.c3 = Constraint(expr=-3.0 <= model.y - model.x <= 7.0)
+
+print(value(model.c1.body))     #  0.0
+
+print(model.c1.lslack())        # -inf
+print(model.c1.uslack())        #  7.5
+print(model.c2.lslack())        # -2.5
+print(model.c2.uslack())        #  inf
+print(model.c3.lslack())        # -3.0
+print(model.c3.uslack())        #  7.0
+# @:slack
+
+model.display()
