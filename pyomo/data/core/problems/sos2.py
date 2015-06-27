@@ -30,7 +30,7 @@ model.obj = Objective(expr=summation(model.Fx), sense=maximize)
 model.constraint1 = Constraint(INDEX_SET,rule=constraint1_rule)
 model.constraint2 = Constraint(INDEX_SET,rule=constraint2_rule)
 model.constraint3 = Constraint(INDEX_SET,rule=constraint3_rule)
-model.SOS_set_constraint = SOSConstraint(INDEX_SET, var=model.y, set=model.SOS_indices, sos=2)
+model.SOS_set_constraint = SOSConstraint(INDEX_SET, var=model.y, index=model.SOS_indices, sos=2)
 
 #Fix the answer for testing purposes
 model.set_answer_constraint1 = Constraint(expr= model.x[1] == 2.5)
