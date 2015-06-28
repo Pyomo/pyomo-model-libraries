@@ -4,12 +4,14 @@ from pyomo.environ import *
 model = ConcreteModel()
 model.name = "(H)"
 
+# @data:
 A = ['I_C_Scoops', 'Peanuts']
 h = {'I_C_Scoops': 1, 'Peanuts': 0.1}
 d = {'I_C_Scoops': 5, 'Peanuts': 27}
 c = {'I_C_Scoops': 3.14, 'Peanuts': 0.2718}
 b = 12 
 u = {'I_C_Scoops': 100, 'Peanuts': 40.6}
+# @:data
 
 def x_bounds(m, i):
     return (0,u[i])
