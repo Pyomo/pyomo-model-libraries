@@ -37,15 +37,15 @@ model.x = Var(model.N,initialize=x_init_rule)
 
 def _a(model,i):
     return (model.x[1]/model.x[6]) * exp(-(model.y[i] - model.x[3])**2 / (2 * model.x[6]**2))
-model.a = Expression(model.I,initialize=_a)
+model.a = Expression(model.I, rule=_a)
 
 def _b(model,i):
     return (model.x[2]/model.x[7]) * exp(-(model.y[i] - model.x[4])**2 / (2 * model.x[7]**2))
-model.b = Expression(model.I,initialize=_b)
+model.b = Expression(model.I, rule=_b)
 
 def _c(model,i):
     return ((1 - model.x[2] - model.x[1]) / model.x[8]) * exp(-(model.y[i] - model.x[5])**2 / (2 * model.x[8]**2))
-model.c = Expression(model.I,initialize=_c)
+model.c = Expression(model.I, rule=_c)
 
 # For Pyomo testing,
 # generate the ConcreteModel version

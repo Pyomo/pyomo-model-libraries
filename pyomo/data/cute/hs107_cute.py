@@ -27,22 +27,22 @@ model.x[8] = 0.0
 
 def _y1(model):
     return sin(model.x[8])
-model.y1 = Expression(initialize=_y1)
+model.y1 = Expression(rule=_y1)
 def _y2(model):
     return cos(model.x[8])
-model.y2 = Expression(initialize=_y2)
+model.y2 = Expression(rule=_y2)
 def _y3(model):
     return sin(model.x[9])
-model.y3 = Expression(initialize=_y3)
+model.y3 = Expression(rule=_y3)
 def _y4(model):
     return cos(model.x[9])
-model.y4 = Expression(initialize=_y4)
+model.y4 = Expression(rule=_y4)
 def _y5(model):
     return sin(model.x[8] - model.x[9])
-model.y5 = Expression(initialize=_y5)
+model.y5 = Expression(rule=_y5)
 def _y6(model):
     return cos(model.x[8] - model.x[9])
-model.y6 = Expression(initialize=_y6)
+model.y6 = Expression(rule=_y6)
 
 model.obj = Objective(expr=3000*model.x[1]+1000*model.x[1]**3+2000*model.x[2]+666.667*model.x[2]**3)
 

@@ -67,7 +67,7 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
 
 def _AX(model,i):
     return sum(model.A[i,j]*model.X[j] for j in model.N)
-model.AX = Expression(model.M,initialize=_AX)
+model.AX = Expression(model.M, rule=_AX)
 model.P1 = Expression(initialize=(-0.727*model.X[2]*model.X[3])+(8.39*model.X[3]*model.X[4])-(684.4*model.X[4]*model.X[5])+(63.5*model.X[4]*model.X[2]))
 model.P2 = Expression(initialize=(0.949*model.X[1]*model.X[3])+(0.173*model.X[1]*model.X[5]))
 model.P3 = Expression(initialize=(-0.716*model.X[1]*model.X[2])-(1.578*model.X[1]*model.X[4])+(1.132*model.X[4]*model.X[2]))

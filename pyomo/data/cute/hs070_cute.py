@@ -37,7 +37,7 @@ model.x = Var(RangeSet(1,4),bounds=x_bounds_rule,initialize=X_init_rule)
 
 def _b(model):
     return model.x[3] + (1-model.x[3])*model.x[4];
-model.b = Expression(initialize=_b)
+model.b = Expression(rule=_b)
 
 def _y_cal(model,i):
     return (1 + 1.0/(12*model.x[2])) \
@@ -53,7 +53,7 @@ def _y_cal(model,i):
                (1-model.x[3])*(model.b/model.x[4])**model.x[1]*(model.x[1]/6.2832)**0.5 * (model.c[i]/7.658)**(model.x[1]-1) \
                * exp(model.x[1] - model.b*model.c[i]*model.x[1]/(7.658*model.x[4])) \
            );
-model.y_cal = Expression(model.M,initialize=_y_cal)
+model.y_cal = Expression(model.M, rule=_y_cal)
 
 # For Pyomo testing,
 # generate the ConcreteModel version

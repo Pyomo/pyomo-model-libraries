@@ -41,11 +41,11 @@ model.X = Var(model.N,model.N,initialize=0.0)
 
 def _AXX(model,i,j):
     return sum(sum(model.A[i,k]*model.X[k,m] for k in range(1,4)) *model.X[m,j] for m in range(1,4))
-model.AXX = Expression(model.N,model.N,initialize=_AXX)
+model.AXX = Expression(model.N, model.N, rule=_AXX)
 
 def _BX(model,i,j):
     return sum(model.B[i,k]*model.X[k,j] for k in range(1,4))
-model.BX = Expression(model.N,model.N,initialize=_BX)
+model.BX = Expression(model.N, model.N, rule=_BX)
 
 # For Pyomo testing,
 # generate the ConcreteModel version

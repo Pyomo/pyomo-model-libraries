@@ -54,16 +54,16 @@ model.obj = Objective(rule=obj_rule,sense=minimize)
 
 def _G1(model):
     return 35.82 - 0.222*model.x[10] - b*model.x[9]
-model.G1 = Expression(initialize=_G1)
+model.G1 = Expression(rule=_G1)
 def _G2(model):
     return -133 + 3*model.x[7] - a*model.x[10]
-model.G2 = Expression(initialize=_G2)
+model.G2 = Expression(rule=_G2)
 def _G5(model):
     return 1.12*model.x[1] + .13167*model.x[1]*model.x[8] - .00667*model.x[1]*model.x[8]**2 - a*model.x[4]
-model.G5 = Expression(initialize=_G5)
+model.G5 = Expression(rule=_G5)
 def _G6(model):
     return 57.425 + 1.098*model.x[8] - .038*model.x[8]**2 + .325*model.x[6] - a*model.x[7]
-model.G6 = Expression(initialize=_G6)
+model.G6 = Expression(rule=_G6)
 
 def cons1_rule(model):
     return model.G1 >= 0 
