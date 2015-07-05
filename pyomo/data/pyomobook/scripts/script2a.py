@@ -4,7 +4,7 @@ from concrete1 import model
 
 model.pprint()
 
-instance = model.create()
+instance = model
 instance.pprint()
 
 # @cmd:

@@ -8,7 +8,7 @@ from pyomo.opt import SolverFactory
 from multimodal import model
 
 opt = SolverFactory("ipopt")
-instance = model.create()
+instance = model
 
 instance.y = 3.5
 instance.x = 3.5

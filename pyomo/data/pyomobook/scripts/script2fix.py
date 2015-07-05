@@ -10,7 +10,7 @@ sys.path.remove(currdir)
 
 #opt = SolverFactory("coliny", solver='sco:ps') # TODO - remove when ipopt is working...
 opt = SolverFactory("ipopt")
-instance = model.create()
+instance = model
 
 # @value:
 instance.y = 3.5

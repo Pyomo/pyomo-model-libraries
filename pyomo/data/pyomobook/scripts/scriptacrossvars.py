@@ -2,7 +2,7 @@ import pyomo.environ
 from pyomo.opt import SolverFactory
 from concrete2 import model
 
-instance = model.create()
+instance = model
 
 opt = SolverFactory("glpk")
 results = opt.solve(instance)

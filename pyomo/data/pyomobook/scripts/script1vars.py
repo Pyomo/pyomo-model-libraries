@@ -6,12 +6,12 @@ from concrete2 import model as model2
 opt = SolverFactory("glpk")
 
 # @load1:
-instance1 = model1.create()
+instance1 = model1
 results1 = opt.solve(instance1)
 instance1.load(results1)
 # @:load1
 
-instance2 = model2.create()
+instance2 = model2
 results2 = opt.solve(instance2)
 instance2.load(results2)
 
