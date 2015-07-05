@@ -55,5 +55,5 @@ model.o6 = Objective(expr=
                 summation(model.x, model.y, index=model.M))
 # @:o6
 
-instance = model.create()
+instance = model
 model.pprint()

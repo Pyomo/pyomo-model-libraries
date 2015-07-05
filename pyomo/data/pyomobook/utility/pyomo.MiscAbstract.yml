@@ -48,4 +48,4 @@ Solution:
       Value: 4
     x[1,3]:
       Value: 1
-  Constraint: No nonzero values
+  Constraint: No values
