@@ -4,9 +4,7 @@ from pyomo.core import *
 model = ConcreteModel()
 
 model.x = Var(initialize=1.0, bounds=(0,1))
-
 model.y = Var(initialize=3.0, bounds=(2,4))
-
 model.o = Objective(expr=model.x+model.y)
 # @:Model
 
