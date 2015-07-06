@@ -95,6 +95,7 @@ Solver:
       Number of bounded subproblems: 0
       Number of created subproblems: 0
   Error rc: 0
+  Time: 0.00878381729126
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
@@ -103,12 +104,11 @@ Solution:
   number of solutions displayed: 1
 - Gap: 0.0
   Status: feasible
-  Objective: 
-    x1: 
-      Id: 0
+  Message: None
+  Objective:
+    obj:
       Value: 0.8
-  Variable: 
-    x5:
-      Id: 1
+  Variable:
+    x[2]:
       Value: 0.4
-  Constraint: No nonzero values
+  Constraint: No values

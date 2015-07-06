@@ -6,12 +6,8 @@ from os.path import dirname, abspath
 
 # @preprocess:
 def pyomo_preprocess(options=None):
-    print("Here are some of the options that were specified:")
-    print("  debug: %s" % str(options['debug']))
-    print("  keepfiles: %s" % str(options['keepfiles']))
-    print("  model_file: %s" % str(options['model_file']))
-    print("  results_format: %s" % str(options['results_format']))
-    print("  solver: %s" % str(options['solver']))
+    print("Here are the options that were provided:")
+    print(options.display())
 # @:preprocess
 
 # @create_model:
@@ -31,7 +27,7 @@ def pyomo_create_dataportal(options=None, model=None):
 
 # @print_model:
 def pyomo_print_model(options=None, model=None):
-    if options.debug:
+    if options['runtime']['logging']:
         model.pprint()
 # @:print_model
 
@@ -45,7 +41,7 @@ def pyomo_modify_instance(options=None, model=None,
 
 # @print_instance:
 def pyomo_print_instance(options=None, instance=None):
-    if options.debug:
+    if options['runtime']['logging']:
         instance.pprint()
 # @:print_instance
 
@@ -73,6 +69,6 @@ def pyomo_save_results(options=None, instance=None,
 # @postprocess:
 def pyomo_postprocess(options=None, instance=None,
                                             results=None):
-    instance.load(results, allow_consistent_values_for_fixed_vars=True)
+    instance.solutions.load_from(results, allow_consistent_values_for_fixed_vars=True)
     print("Solution found with value "+str(instance.obj.value))
 # @:postprocess

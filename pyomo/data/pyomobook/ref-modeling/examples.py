@@ -1,5 +1,6 @@
 from pyomo.environ import *
 
+print("indexed1")
 # --------------------------------------------------
 # @indexed1:
 model = AbstractModel()
@@ -16,6 +17,7 @@ data['A'] = {None: set([1,2,3])}
 instance = model.create_instance(data)
 instance.pprint()
 
+print("active1")
 # --------------------------------------------------
 # @active1:
 model = ConcreteModel()
@@ -48,6 +50,7 @@ print(model.e.active)          # True
 print(model.e[1].active)       # False
 # @:active1
 
+print("blocks1")
 # --------------------------------------------------
 # @blocks1:
 model = ConcreteModel()
@@ -58,6 +61,7 @@ model.b.y = Var()
 # @:blocks1
 model.pprint()
 
+print("nested1")
 # --------------------------------------------------
 # @nested1:
 model = ConcreteModel()
@@ -69,6 +73,7 @@ print(model.b.x.cname(True))                    # 'x.b'
 print(model.b.x.cname(fully_qualified=True))    # 'x.b'
 # @:nested1
 
+print("special1")
 # --------------------------------------------------
 # @special1:
 model = ConcreteModel()
@@ -92,6 +97,7 @@ print(model.p[1])                   # 1
 print(model.q[1])                   # 1
 # @:special1
 
+print("indexed2")
 # --------------------------------------------------
 # @indexed2:
 model = ConcreteModel()
@@ -111,6 +117,7 @@ print(model.p.values())             # [1,3]
 print(model.q.values())             # [1,0,3]
 # @:indexed2
 
+print("indexed3")
 # --------------------------------------------------
 # @indexed3:
 model = ConcreteModel()
@@ -130,6 +137,7 @@ print(list(model.p.itervalues()))   # [1,3]
 print(list(model.q.itervalues()))   # [1,0,3]
 # @:indexed3
 
+print("indexed4")
 # --------------------------------------------------
 # @indexed4:
 model = ConcreteModel()
@@ -146,6 +154,7 @@ print(model.p.dim())        # 1
 print(model.q.dim())        # 2
 # @:indexed4
 
+print("numvalue1")
 # --------------------------------------------------
 # @numvalue1:
 model = ConcreteModel()
@@ -175,6 +184,7 @@ e **= 2                 # Calls __ipow__
 - model.p               # Calls __neg__
 # @:numvalue1
 
+print("numvalue2")
 # --------------------------------------------------
 # @numvalue2:
 model = ConcreteModel()
@@ -182,8 +192,6 @@ model = ConcreteModel()
 model.p = Param(initialize=-3)
 
 abs(model.p)            # Calls __abs__
-float(model.p)          # Calls __float__
-int(model.p)            # Calls __int__
 
 # Special methods for NumericConstant objects
 if model.p:             # Calls __nonzero__ in test
@@ -191,6 +199,8 @@ if model.p:             # Calls __nonzero__ in test
 model.p()               # Calls __call__
 # @:numvalue2
 
+print("numvalue3")
+# --------------------------------------------------
 # --------------------------------------------------
 # @numvalue3:
 model = ConcreteModel()

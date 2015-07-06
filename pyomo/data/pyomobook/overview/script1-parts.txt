@@ -20,6 +20,8 @@
         None :   2.0 : 2*x_1 + 5*x_2 :  +Inf :   True
 
 5 Declarations: x_1 x_2 obj con1 con2
+WARNING: DEPRECATION WARNING: the Model.create() method is deprecated.  Call Model.create_instance() if to create a concrete model from an abstract model.  You do not need to call Model.create() for a concrete model.
+WARNING: DEPRECATION WARNING: Cannot call Model.create_instance() on a concrete model.
 2 Var Declarations
     x_1 : Size=1, Index=None, Domain=NonNegativeReals
         Key  : Lower : Value : Upper : Initial : Fixed : Stale
@@ -68,20 +70,10 @@ Solver:
       Number of bounded subproblems: 0
       Number of created subproblems: 0
   Error rc: 0
+  Time: 0.00968194007874
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
 Solution: 
-- number of solutions: 1
-  number of solutions displayed: 1
-- Gap: 0.0
-  Status: feasible
-  Objective: 
-    x1: 
-      Id: 0
-      Value: 0.8
-  Variable: 
-    x5:
-      Id: 1
-      Value: 0.4
-  Constraint: No nonzero values
+- number of solutions: 0
+  number of solutions displayed: 0

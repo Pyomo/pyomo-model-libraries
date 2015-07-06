@@ -68,12 +68,13 @@ def check_skip(tfname_, name):
     return False
 
 
-def filter(str):
-    if str.startswith('Function'):
+def filter(line):
+    line.strip()
+    if line.startswith('Function'):
         return True
-    if 'Status: optimal' in str or 'Status: feasible' in str:
+    if 'Status: optimal' in line or 'Status: feasible' in line:
         return True
-    status = str.startswith('Time') or str.startswith('[') or 'with format cpxlp' in str or 'usermodel = <module' in str or str.startswith('File') or str.startswith('Total execution time=')
+    status = 'Time:' in line or line.startswith('[') or 'with format cpxlp' in line or 'usermodel = <module' in line or line.startswith('File') or 'execution time=' in line
     return status
 
 for fname in glob.glob('*'):

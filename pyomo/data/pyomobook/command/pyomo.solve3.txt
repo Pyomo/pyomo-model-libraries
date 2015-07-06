@@ -37,6 +37,7 @@ Solver:
       Number of bounded subproblems: 0
       Number of created subproblems: 0
   Error rc: 0
+  Time: 0.00719594955444
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
@@ -45,19 +46,17 @@ Solution:
   number of solutions displayed: 1
 - Gap: 0.0
   Status: feasible
-  Objective: 
-    obj: 
-      Id: 0
+  Message: None
+  Objective:
+    obj:
       Value: 0.8
-  Variable: 
-    x[1]:
-      Id: 0
-      Rc: 0.2
-      Value: 0
+  Variable:
     x[2]:
-      Id: 1
       Rc: 0
       Value: 0.4
-  Constraint: 
+    x[1]:
+      Rc: 0.2
+      Value: 0
+  Constraint:
     con2:
       Dual: 0.4

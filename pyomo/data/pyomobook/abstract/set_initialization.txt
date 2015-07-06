@@ -7,8 +7,8 @@
         [(1, 4), (9, 16)]
     D : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=(1, 9)
         [1, 4, 9]
-    E : Dim=0, Dimen=1, Size=0, Domain=None, Ordered=False, Bounds=(None, None)
-        []
+    E : Dim=0, Dimen=1, Size=2, Domain=None, Ordered=False, Bounds=(2, 4)
+        [2, 4]
     F : Dim=1, Dimen=1, Size=9, Domain=None, ArraySize=3, Ordered=False, Bounds=None
         Key : Members
           2 : [1, 3, 5]

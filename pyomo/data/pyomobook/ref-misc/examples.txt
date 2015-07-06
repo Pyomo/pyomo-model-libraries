@@ -1,17 +1,10 @@
 
 *** suffix1 ***
-WARNING: DEPRECATION WARNING: Suffix.setDirection is replaced  with Suffix.set_direction.
-WARNING: DEPRECATION WARNING: Suffix.setDatatype is replaced  with Suffix.set_datatype.
-WARNING: DEPRECATION WARNING: Suffix.setValue is replaced  with Suffix.set_value.
-WARNING: DEPRECATION WARNING: Suffix.setValue is replaced  with Suffix.set_value.
 2.0
-WARNING: DEPRECATION WARNING: Suffix.setValue is replaced  with Suffix.set_value.
-WARNING: DEPRECATION WARNING: Suffix.setValue is replaced  with Suffix.set_value.
 None
 3.0
 4.0
 3.0
-WARNING: DEPRECATION WARNING: Suffix.setValue is replaced  with Suffix.set_value.
 5.0
 3.0
 4.0
@@ -40,18 +33,10 @@ WARNING: DEPRECATION WARNING: Suffix.setValue is replaced  with Suffix.set_value
         y[3] :   3.0
 
 4 Declarations: x y_index y foo
-WARNING: DEPRECATION WARNING: Suffix.clearValue is replaced  with Suffix.clear_value.
-WARNING: DEPRECATION WARNING: Suffix.clearValue is replaced  with Suffix.clear_value.
 None
 3.0
 4.0
 None
-WARNING: DEPRECATION WARNING: Suffix.setDirection is replaced  with Suffix.set_direction.
-WARNING: DEPRECATION WARNING: Suffix.setDatatype is replaced  with Suffix.set_datatype.
-WARNING: DEPRECATION WARNING: Suffix.setDirection is replaced  with Suffix.set_direction.
-WARNING: DEPRECATION WARNING: Suffix.setDatatype is replaced  with Suffix.set_datatype.
-WARNING: DEPRECATION WARNING: Suffix.setDirection is replaced  with Suffix.set_direction.
-WARNING: DEPRECATION WARNING: Suffix.setDatatype is replaced  with Suffix.set_datatype.
 3 Suffix Declarations
     dual : Direction=Suffix.IMPORT_EXPORT, Datatype=Suffix.FLOAT
         Key : Value
@@ -61,11 +46,6 @@ WARNING: DEPRECATION WARNING: Suffix.setDatatype is replaced  with Suffix.set_da
         Key : Value
 
 3 Declarations: priority dual junk
-WARNING: DEPRECATION WARNING: Suffix.setDirection is replaced  with Suffix.set_direction.
-WARNING: DEPRECATION WARNING: Suffix.setDatatype is replaced  with Suffix.set_datatype.
-WARNING: DEPRECATION WARNING: Suffix.updateValues is replaced  with Suffix.update_values.
-WARNING: DEPRECATION WARNING: Suffix.setValue is replaced  with Suffix.set_value.
-WARNING: DEPRECATION WARNING: Suffix.setValue is replaced  with Suffix.set_value.
 2.0
 3.0
 1 Var Declarations
@@ -81,8 +61,6 @@ WARNING: DEPRECATION WARNING: Suffix.setValue is replaced  with Suffix.set_value
         Not constructed
 
 3 Declarations: x c foo
-WARNING: DEPRECATION WARNING: Suffix.setDirection is replaced  with Suffix.set_direction.
-WARNING: DEPRECATION WARNING: Suffix.setDatatype is replaced  with Suffix.set_datatype.
 1.0
 1.0
 -1.0

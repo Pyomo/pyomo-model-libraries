@@ -10,7 +10,7 @@ model.wParm = Param(within=PositiveIntegers, default = 4)
 model.aVar  = Var(within=NonNegativeReals)
 
 def MyConstraintRule(model):
-    if float(model.pParm) / float(model.wParm) > 0.6:
+    if float(value(model.pParm)) / float(value(model.wParm)) > 0.6:
         return model.aVar / model.wParm <= 0.9
     else:
         return model.aVar / model.wParm <= 0.8

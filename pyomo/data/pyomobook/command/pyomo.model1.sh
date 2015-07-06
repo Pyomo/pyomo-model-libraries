@@ -2,5 +2,5 @@
 
 cd ../overview
 # @cmd:
-pyomo solve --instance-only concrete1.py
+pyomo convert --format=lp concrete1.py
 # @:cmd

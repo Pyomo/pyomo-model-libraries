@@ -85,11 +85,6 @@ model.za = 8.5
 model.zb[2] = 7
 # @:decl7
 
-# @decl8:
-print(float(model.za))       # 8.5
-print(float(model.zb[2]))    # 7.0
-# @:decl8
-
 # @decl9:
 print(value(model.za))       # 8.5
 print(value(model.zb[2]))    # 7

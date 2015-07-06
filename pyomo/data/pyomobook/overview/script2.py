@@ -9,5 +9,6 @@ instance.pprint()
 
 opt = SolverFactory("glpk")
 results = opt.solve(instance)
+instance.solutions.store_to(results)
 
 results.write()

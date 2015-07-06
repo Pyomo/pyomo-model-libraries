@@ -1,7 +1,7 @@
 [    0.00] Setting up Pyomo environment
 [    0.00] Applying Pyomo preprocessing actions
 [    0.00] Creating model
-[    0.02] Applying solver
+[    0.03] Applying solver
 [    0.05] Processing results
     Number of solutions: 1
     Solution Information
@@ -37,6 +37,7 @@ Solver:
       Number of bounded subproblems: 0
       Number of created subproblems: 0
   Error rc: 0
+  Time: 0.00908493995667
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
@@ -45,12 +46,11 @@ Solution:
   number of solutions displayed: 1
 - Gap: 0.0
   Status: feasible
-  Objective: 
-    obj: 
-      Id: 0
-      Value: 8.0
-  Variable: 
+  Message: None
+  Objective:
+    obj:
+      Value: 8
+  Variable:
     x[4]:
-      Id: 1
       Value: 0.4
-  Constraint: No nonzero values
+  Constraint: No values

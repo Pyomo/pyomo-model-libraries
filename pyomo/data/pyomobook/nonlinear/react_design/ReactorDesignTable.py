@@ -40,17 +40,23 @@ model.cd_bal = Constraint(expr=(0 == -model.sv * model.cd \
 # setup the solver options
 data = PyomoAPIData()
 data.options = Options()
-data.options.solver = 'ipopt'
+data.options.runtime = Options()
+data.options.solvers = [Options()]
+data.options.solvers[0]['solver_name'] = 'ipopt'
+data.options.solvers[0]['suffixes'] = []
+data.options.solvers[0]['options'] = Options()
+data.options.postsolve = Options()
+data.options.model = Options()
 data.options.quiet = True
 
 # run the sequence of square problems
-instance = model.create()
+instance = model
 instance.sv.fixed = True
 sv_values = [1.0 + v * 0.05 for v in range(1, 20)]
 print("   %s %s" % (str('sv'.rjust(10)), str('cb'.rjust(10))))
 for sv_value in sv_values:
     instance.sv = sv_value
     output = pyomo.scripting.util.apply_optimizer(data, instance=instance)
-    instance.load(output.results)
+    #instance.load(output.results)
     print("    %s %s" %(str(instance.sv.value).rjust(10),\
         str(instance.cb.value).rjust(15)))

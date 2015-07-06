@@ -1,14 +1,9 @@
-Loading scenario and instance data
-Time to construct scenario instances=0.11 seconds
 Creating extensive form binding instance
-Time to construct extensive form instance=0.00 seconds
-Time to create the extensive form=0.11 seconds
 Queuing extensive form solve
 Waiting for extensive form solve
-Time to solve and load results for the extensive form=0.02 seconds
 
 ***********************************************************************************************
->>>THE EXPECTED SUM OF THE STAGE COST VARIABLES=-108390.00000959999<<<
+>>>THE EXPECTED SUM OF THE STAGE COST VARIABLES=-108390.00001<<<
 ***********************************************************************************************
 
 Extensive form solution:
@@ -34,7 +29,7 @@ Tree Nodes:
 	Stage=SecondStage
 	Parent=RootNode
 	Variables: 
-		QuantityPurchased[CORN]=48.0000000000001
+		QuantityPurchased[CORN]=48.0
 		QuantitySubQuotaSold[SUGAR_BEETS]=4000.0
 		QuantitySubQuotaSold[WHEAT]=140.0
 
@@ -49,7 +44,6 @@ Tree Nodes:
 
 Extensive form costs:
 Scenario Tree Costs
-***CAUTION***: Assumes full (or nearly so) convergence of scenario solutions at each node in the scenario tree - computed costs are invalid otherwise
 ----------------------------------------------------
 Tree Nodes:
 
@@ -131,4 +125,6 @@ Scenarios:
 	Total scenario cost=-48820.0000
 
 ----------------------------------------------------
-Total execution time=0.13 seconds
+
+Total EF execution time=0.07 seconds
+

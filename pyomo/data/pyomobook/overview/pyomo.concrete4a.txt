@@ -2,15 +2,15 @@
 [    0.00] Applying Pyomo preprocessing actions
 [    0.00] Creating model
 [    0.00] Applying solver
-[    0.03] Processing results
+[    0.02] Processing results
     Number of solutions: 1
     Solution Information
       Gap: 0.0
       Status: feasible
       Function Value: 0.8
     Solver results file: results.yml
-[    0.03] Applying Pyomo postprocessing actions
-[    0.03] Pyomo Finished
+[    0.02] Applying Pyomo postprocessing actions
+[    0.02] Pyomo Finished
 # ==========================================================
 # = Solver Results                                         =
 # ==========================================================
@@ -37,6 +37,7 @@ Solver:
       Number of bounded subproblems: 0
       Number of created subproblems: 0
   Error rc: 0
+  Time: 0.00815200805664
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
@@ -45,12 +46,11 @@ Solution:
   number of solutions displayed: 1
 - Gap: 0.0
   Status: feasible
-  Objective: 
-    obj: 
-      Id: 0
+  Message: None
+  Objective:
+    obj:
       Value: 0.8
-  Variable: 
+  Variable:
     x[2]:
-      Id: 1
       Value: 0.4
-  Constraint: No nonzero values
+  Constraint: No values

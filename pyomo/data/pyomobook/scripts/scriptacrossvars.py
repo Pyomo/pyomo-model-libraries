@@ -6,13 +6,12 @@ instance = model
 
 opt = SolverFactory("glpk")
 results = opt.solve(instance)
-instance.load(results)
+#instance.load(results)
 
 # @loop1:
 from pyomo.core import Var
-for name, var in instance.component_iteritems(Var, active=True):
-    for key in var:
-        print("%s %s %s" % (name, key, str(var[key].value)))
+for (name, key), var in instance.component_data_iterindex(Var, active=True):
+    print("%s %s %s" % (name, key, str(var.value)))
 # @:loop1
 
 # @loop2:
@@ -24,7 +23,6 @@ for index in instance.x:
 from pyomo.core import Var
 for var in instance.component_objects(Var, active=True):
     print("Variable "+str(var))
-    obj = getattr(instance, var)
-    for index in obj:
-        print("%s %s" % (str(obj[index]), str(obj[index].value)))
+    for index in var:
+        print("%s %s" % (str(var[index]), str(var[index].value)))
 # @:loop3
