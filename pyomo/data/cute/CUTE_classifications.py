@@ -11,7 +11,7 @@ expensive_models = []
 asl_skipped_models = []
 baseline_skipped_models = []
 
-if sys.version_info.major == 3:
+if sys.version_info[0] == 3:
     # These models use to many explicit opertions in a single
     # expression and crash the interpreter resulting in a message like
     # "RuntimeError: maximum recursion depth exceeded during compilation"
