@@ -11,8 +11,12 @@ expensive_models = []
 asl_skipped_models = []
 baseline_skipped_models = []
 
-
-
+if sys.version_info.major == 3:
+    # These models use to many explicit opertions in a single
+    # expression and crash the interpreter resulting in a message like
+    # "RuntimeError: maximum recursion depth exceeded during compilation"
+    asl_skipped_models.append('aug3dc')
+    asl_skipped_models.append('aug3dcqp')
 
 # Smoke Models ( pyomo construct time < 0.5s )
 smoke_models.extend([\
