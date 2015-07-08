@@ -46,8 +46,9 @@ def pyomo_baseline_test(self, name):
                 '--skip-canonical-repn',
                 currdir+name+'_cute.py'])
 
-    # Check that the pyomo nl file matches its own baseline    
-    self.assertFileEqualsBaseline(currdir+name+'.test.nl', currdir+name+'.pyomo.nl', tolerance=(1e-8, False))
+    # Check that the pyomo nl file matches its own baseline
+    self.assertFileEqualsBaseline(
+        currdir+name+'.test.nl', currdir+name+'.pyomo.nl', tolerance=(1e-8, False))
 
 for name in CUTE.smoke_models:
     SmokeBaselineTests.add_fn_test(fn=pyomo_baseline_test, name=name)

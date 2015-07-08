@@ -46,9 +46,9 @@ ExpensiveASLTests = unittest.category('expensive')(ExpensiveASLTests)
 
 """
 The following test calls the asl_test executable to generate JSON
-files corresponding to both the AMPL-generated nl file and the 
-Pyomo-generated nl file. The JSON files are then diffed using
-the pyutilib.th test class method assertMatchesJsonBaseline()
+files corresponding to both the AMPL-generated nl file and the
+Pyomo-generated nl file. The JSON files are then diffed using the
+pyutilib.th test class method assertMatchesJsonBaseline()
 """
 @unittest.nottest
 def pyomo_asl_test(self, name):
@@ -78,14 +78,19 @@ def pyomo_asl_test(self, name):
         pass
 
     # obtain the nl file summary information for comparison with ampl
-    p = pyutilib.subprocess.run('asl_test '+currdir+name+'.test.nl rows='+currdir+name+'.test.row cols='+currdir+name+'.test.col')
+    p = pyutilib.subprocess.run(
+        'asl_test '+currdir+name+'.test.nl rows='
+        +currdir+name+'.test.row cols='+currdir+name+'.test.col')
     self.assertTrue(p[0] == 0, msg=p[1])
     os.rename(currdir+'stub.json',currdir+'stub.test.json')
     # obtain the nl file summary information for comparison with pyomo
-    p = pyutilib.subprocess.run('asl_test '+currdir+name+'.ampl.nl rows='+currdir+name+'.ampl.row cols='+currdir+name+'.ampl.col')
+    p = pyutilib.subprocess.run(
+        'asl_test '+currdir+name+'.ampl.nl rows='
+        +currdir+name+'.ampl.row cols='+currdir+name+'.ampl.col')
     self.assertTrue(p[0] == 0, msg=p[1])
     try:
-        self.assertMatchesJsonBaseline(currdir+'stub.test.json', currdir+'stub.json', tolerance=1e-6)
+        self.assertMatchesJsonBaseline(
+            currdir+'stub.test.json', currdir+'stub.json', tolerance=1e-6)
     except AssertionError:
         # Make sure this is not a simple case of Pyomo/AMPL moving
         # constants in the constraint body to the upper/lower bound
@@ -105,19 +110,21 @@ def pyomo_asl_test(self, name):
         f = open(currdir+'stub.test.json','w')
         json.dump(pyomo_res,f,indent=2)
         f.close()
-        self.assertMatchesJsonBaseline(currdir+'stub.test.json', currdir+'stub.json', tolerance=1e-6)
-        # If the json files match at this point, it is almost entirely certain that
-        # the difference had to do with one of AMPL or Pyomo moving constraint body 
-        # from the body to the constraint bounds
+        self.assertMatchesJsonBaseline(
+            currdir+'stub.test.json', currdir+'stub.json', tolerance=1e-6)
+        # If the json files match at this point, it is almost entirely
+        # certain that the difference had to do with one of AMPL or
+        # Pyomo moving constraint body from the body to the constraint
+        # bounds
         warnings.warn('asl comparison was relaxed for model '+name)
     os.remove(currdir+'stub.json')
-    
+
     # delete temporary test files
     os.remove(currdir+name+'.test.col')
     os.remove(currdir+name+'.test.row')
     os.remove(currdir+name+'.test.nl')
     ##########################################
-    
+
 for name in CUTE.smoke_models:
     SmokeASLTests.add_fn_test(fn=pyomo_asl_test, name=name)
 for name in CUTE.moderate_models:
