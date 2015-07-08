@@ -75,6 +75,7 @@ class TestParamPerformance(ComponentPerformanceBase, unittest.TestCase):
 
 @unittest.category('performance')
 class TestVarPerformance(ComponentPerformanceBase, unittest.TestCase):
+    @classmethod
     def _setup(self):
         self._create_model(Var, **{'initialize':1.0})
 
