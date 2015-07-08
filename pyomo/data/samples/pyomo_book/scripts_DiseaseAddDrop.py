@@ -49,9 +49,6 @@ options.quiet = True
 # disable the hard constraints
 instance.InfDynamics.deactivate()
 
-# preprocess the instance to remove the disabled constraints
-instance.preprocess()
-
 # solve the problem with the easy constraints
 print "*** Solving the \"easy\" problem"
 results, opt = scripting.util.apply_optimizer(options, instance)
@@ -67,9 +64,6 @@ print
 # disable the easy constraints
 instance.InfDynamics.activate()
 instance.EasierInfDynamics.deactivate()
-
-# preprocess the instance to remove the constraints
-instance.preprocess()
 
 # solve the problem with the hard constraints
 print "*** Solving the \"hard\" problem"

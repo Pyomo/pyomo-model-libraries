@@ -12,7 +12,6 @@ instance = model.create()
 instance.y = 3.5
 instance.x = 3.5
 instance.y.fixed = True
-instance.preprocess()
 
 results = opt.solve(instance)
 instance.load(results)
@@ -23,7 +22,6 @@ print "First   x was", instance.x.value, \
 
 instance.x.fixed = True
 instance.y.fixed = False
-instance.preprocess()
 
 results = opt.solve(instance)
 instance.load(results)
@@ -33,7 +31,6 @@ print "Next    x was", instance.x.value, \
 
 instance.x.fixed = False
 instance.y.fixed = True
-instance.preprocess()
 
 results = opt.solve(instance)
 instance.load(results)

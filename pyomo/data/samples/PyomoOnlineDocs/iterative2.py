@@ -32,6 +32,6 @@ if instance.x[2] == 0:
 else:
     instance.x[2] = 0
 instance.x[2].fixed = True
-instance.preprocess()
+
 results = opt.solve(instance)
 print(results)

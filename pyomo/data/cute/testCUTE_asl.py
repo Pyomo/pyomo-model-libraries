@@ -63,7 +63,6 @@ def pyomo_asl_test(self, name):
         return
     self.pyomo(['--output='+currdir+name+'.test.nl',
                 '--symbolic-solver-labels',
-                '--skip-canonical-repn',
                 currdir+name+'_cute.py'])
 
     # compare AMPL and Pyomo nl file structure

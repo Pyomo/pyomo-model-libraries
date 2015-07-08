@@ -35,7 +35,6 @@ instance1 = model.create()
 instance2 = model.create()
 instance2.x[1] = 1
 instance2.x[1].fixed = True
-instance2.preprocess()
 
 # send them to the solver(s)
 action_handle = solver_manager.queue(instance1, opt=optsolver, warmstart=False, tee=True, verbose=False)

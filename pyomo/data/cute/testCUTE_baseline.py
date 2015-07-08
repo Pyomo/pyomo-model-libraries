@@ -43,7 +43,6 @@ def pyomo_baseline_test(self, name):
         return
 
     self.pyomo(['--output='+currdir+name+'.test.nl',
-                '--skip-canonical-repn',
                 currdir+name+'_cute.py'])
 
     # Check that the pyomo nl file matches its own baseline

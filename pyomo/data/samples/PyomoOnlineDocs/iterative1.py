@@ -35,6 +35,5 @@ for i in range(5):
             expr += (1-instance.x[j])
     instance.c.add( expr >= 1 )
 
-    instance.preprocess()
     results = opt.solve(instance)
     print(results)

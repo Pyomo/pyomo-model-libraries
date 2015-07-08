@@ -54,7 +54,6 @@ model = create(4)
 # @:all
 print('"')
 
-model.preprocess()
 instance = model
 opt = SolverFactory('glpk')
 results = opt.solve(instance)

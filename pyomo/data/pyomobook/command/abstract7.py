@@ -36,7 +36,6 @@ def pyomo_modify_instance(options=None, model=None,
                                         instance=None):
     instance.x[1].value = 0.0
     instance.x[1].fixed = True
-    instance.preprocess()
 # @:modify_instance
 
 # @print_instance:

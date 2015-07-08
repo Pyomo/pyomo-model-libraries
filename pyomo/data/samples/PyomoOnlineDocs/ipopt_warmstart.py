@@ -38,9 +38,6 @@ model.ipopt_zU_in = Suffix(direction=Suffix.EXPORT)
 model.dual = Suffix(direction=Suffix.IMPORT_EXPORT)
 ###
 
-# Build the expression trees for the model objectives and constraints
-model.preprocess()
-
 ### Send the model to ipopt and collect the solution
 print("")
 print("INITIAL SOLVE")

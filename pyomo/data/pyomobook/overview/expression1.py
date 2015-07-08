@@ -16,8 +16,6 @@ print instance.e[1].value  # -> a pyomo expression object
 
 # Change the underlying expression
 instance.e[1].value = instance.x**2
-# This requires re-preprocessing
-instance.preprocess()
 
 #... solve
 #... load results
