@@ -16,7 +16,9 @@ if sys.version_info[0] == 3:
     # expression and crash the interpreter resulting in a message like
     # "RuntimeError: maximum recursion depth exceeded during compilation"
     asl_skipped_models.append('aug3dc')
+    baseline_skipped_models.append('aug3dc')
     asl_skipped_models.append('aug3dcqp')
+    baseline_skipped_models.append('aug3dcqp')
 
 # Smoke Models ( pyomo construct time < 0.5s )
 smoke_models.extend([\
