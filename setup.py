@@ -39,7 +39,7 @@ from setuptools import setup
 packages = _find_packages('pyomo')
 
 setup(name='pyomo.data',
-      version='2.0',
+      version='2.2',
       maintainer='William E. Hart',
       maintainer_email='wehart@sandia.gov',
       url = 'https://software.sandia.gov/svn/public/pyomo/pyomo.data',
