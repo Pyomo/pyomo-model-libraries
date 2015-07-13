@@ -44,7 +44,7 @@ print("INITIAL SOLVE")
 results = opt.solve(model,keepfiles=keepfiles,tee=stream_solver)
 # load the results (including any values for previously declared
 # IMPORT / IMPORT_EXPORT Suffix components)
-model.load(results)
+model.solutions.load_from(results)
 ###
 
 ### Set Ipopt options for warm-start
@@ -68,6 +68,6 @@ print("WARM-STARTED SOLVE")
 results = opt.solve(model,keepfiles=keepfiles,tee=stream_solver)
 # load the results (including any values for previously declared
 # IMPORT / IMPORT_EXPORT Suffix components)
-model.load(results)
+model.solutions.load_from(results)
 ###
 
