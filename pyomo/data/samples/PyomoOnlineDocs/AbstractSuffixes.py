@@ -12,6 +12,6 @@ def foo_rule(m):
 model.foo = Suffix(rule=foo_rule)
 
 # instantiate the model
-inst = model.create()
+inst = model.create_instance()
 for i in inst.I:
-    print i, inst.foo[inst.x[i]]
+    print (i, inst.foo[inst.x[i]])
