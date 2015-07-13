@@ -19,9 +19,9 @@ model.o = Objective(rule=o_rule)
 model.c = ConstraintList()
 
 # Create a model instance and optimize
-instance = model.create()
+instance = model.create_instance()
 results = opt.solve(instance)
-instance.load(results)
+instance.solutions.load_from(results)
 
 if instance.x[2].value == 0:
     print("The second index has a zero")

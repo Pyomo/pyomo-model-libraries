@@ -4,8 +4,7 @@ from pyomo.environ import *
 from pyomo.opt import SolverFactory
 
 # Create a solver
-#opt = SolverFactory('glpk')
-opt = SolverFactory('cplex')
+opt = SolverFactory('glpk')
 
 #
 # A simple model with binary variables and

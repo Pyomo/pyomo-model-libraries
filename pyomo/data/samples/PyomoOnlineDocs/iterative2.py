@@ -19,13 +19,13 @@ model.o = Objective(rule=o_rule)
 model.c = ConstraintList()
 
 # Create a model instance and optimize
-instance = model.create()
+instance = model.create_instance()
 results = opt.solve(instance)
 print(results)
 
 # "flip" the value of x[2] (it is binary)
 # then solve again
-instance.load(results)
+instance.solutions.load_from(results)
 
 if instance.x[2] == 0:
     instance.x[2] = 1
