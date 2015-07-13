@@ -4,7 +4,8 @@ from pyomo.environ import *
 from pyomo.opt import SolverFactory
 
 # Create a solver
-opt = SolverFactory('glpk')
+#opt = SolverFactory('glpk')
+opt = SolverFactory('cplex')
 
 #
 # A simple model with binary variables and
@@ -19,13 +20,13 @@ model.o = Objective(rule=o_rule)
 model.c = ConstraintList()
 
 # Create a model instance and optimize
-instance = model.create()
+instance = model.create_instance()
 results = opt.solve(instance)
 print(results)
 
 # Iterate to eliminate the previously found solution
 for i in range(5):
-    instance.load(results)
+    instance.solutions.load_from(results)
 
     expr = 0
     for j in instance.x:
