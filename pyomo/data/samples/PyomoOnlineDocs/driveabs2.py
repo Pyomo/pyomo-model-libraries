@@ -10,7 +10,7 @@ opt = SolverFactory('cplex')
 from abstract2 import model
 
 # Create a model instance and optimize
-instance = model.create('abstract2.dat')
+instance = model.create_instance('abstract2.dat')
 
 # Create a 'dual' suffix component on the instance
 # so the solver plugin will know which suffixes to collect
@@ -19,18 +19,18 @@ instance.dual = Suffix(direction=Suffix.IMPORT)
 results = opt.solve(instance)
 
 # get the results back into the instance for easy access
-instance.load(results)
+#instance.load(results)
 
 # display all duals
-print "Duals"
+print ("Duals")
 from pyomo.core import Constraint
 for c in instance.component_objects(Constraint, active=True):
-    print "   Constraint",c
-    cobject = getattr(instance, c)
+    print ("   Constraint",c)
+    cobject = getattr(instance, str(c))
     for index in cobject:
-        print "      ", index, instance.dual[cobject[index]]
+        print ("      ", index, instance.dual[cobject[index]])
 
-# access (display, this case) one dual
-print "Dual for Film=", instance.dual[instance.AxbConstraint['Film']]
+# access one dual
+print ("Dual for Film=", instance.dual[instance.AxbConstraint['Film']])
 
 
