@@ -72,11 +72,9 @@ def LimitAmountSold_rule(model, i):
 model.LimitAmountSold = Constraint(model.CROPS, rule=LimitAmountSold_rule)
 
 def EnforceQuotas_rule(model, i):
-    print ("i",i)
-    for j in model.CROPS:
-        print (j)
     return (0.0, model.QuantitySubQuotaSold[i], model.PriceQuota[i])
-model.EnforceQuotas = Constraint(model.CROPS, EnforceQuotas_rule)
+
+model.EnforceQuotas = Constraint(model.CROPS, rule=EnforceQuotas_rule)
 
 #
 # Stage-specific cost computations
