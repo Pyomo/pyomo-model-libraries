@@ -18,9 +18,6 @@ instance.dual = Suffix(direction=Suffix.IMPORT)
 
 results = opt.solve(instance)
 
-# get the results back into the instance for easy access
-#instance.load(results)
-
 # display all duals
 print ("Duals")
 from pyomo.core import Constraint
