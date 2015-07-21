@@ -17,6 +17,7 @@ instance = model.create_instance('abstract2.dat')
 instance.dual = Suffix(direction=Suffix.IMPORT)
 
 results = opt.solve(instance)
+# also puts the results back into the instance for easy access
 
 # display all duals
 print ("Duals")
