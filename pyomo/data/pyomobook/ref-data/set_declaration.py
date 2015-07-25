@@ -28,7 +28,7 @@ model.J = model.A ^ model.B    # set exclusive-or
 # @decl4:
 model.K = model.A * model.B
 # @:decl4
-# Removing this component, which we're going to readd again
+# Removing this component, which we're going to read again
 model.del_component('K')
 
 # @decl5:
@@ -43,7 +43,6 @@ model.DFirst = Set(model.A, model.B)
 model.DSecond = Set(model.K)
 model.D2 = Set(model.K2)
 # @:decl7
-
 
 instance = model.create_instance('set_declaration.dat')
 instance.pprint(verbose=True)
