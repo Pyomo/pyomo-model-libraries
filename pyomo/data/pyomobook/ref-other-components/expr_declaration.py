@@ -8,7 +8,7 @@ model.e = Expression(initialize=0)
 model.o = Objective(expr=1.0+model.e)
 
 print(value(model.o))   # 1.0
-model.e.value = 1.0
+model.e.set_value(1.0)
 print(value(model.o))   # 2.0
 # @:decl1
 

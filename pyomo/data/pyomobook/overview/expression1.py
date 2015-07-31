@@ -12,10 +12,10 @@ instance = model.create_instance()
 
 print value(instance.e[1]) # -> 1.0
 print instance.e[1]()      # -> 1.0
-print instance.e[1].value  # -> a pyomo expression object
+print instance.e[1].expr  # -> a pyomo expression object
 
 # Change the underlying expression
-instance.e[1].value = instance.x**2
+instance.e[1].set_value(instance.x**2)
 
 #... solve
 #... load results
