@@ -76,8 +76,6 @@ v.setub(7)
 # @decl7a:
 model.za = 8.5
 print(model.za.value)        # 8.5
-model.za.reset()
-print(model.za.value)        # 9
 # @:decl7a
 
 # @decl7:
@@ -97,7 +95,6 @@ print(len(model.zb))         # 3
 
 # @decl11:
 print(model.zb[2].value)     # 7
-print(model.zb[2].initial)   # 4
 print(model.za.lb)           # 0
 print(model.za.ub)           # None
 print(model.zb[2].fixed)     # False
