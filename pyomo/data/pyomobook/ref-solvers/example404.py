@@ -19,16 +19,8 @@ solver.options.seed=1357908642
 results = solver.solve(model)
 
 # Rerun GLPK with a new seed solver option
-# This overrides the solver.options values
-results = solver.solve(model, tee=True, options={'seed':1234567890})
-
-# Rerun GLPK with another new seed solver option
 # This does NOT override the solver.options values
-results = solver.solve(model, tee=True, solver_options={'seed':1020304})
-
-# Do we think this should work?
-# It doesn't right now
-results = solver.solve(model, tee=True, seed=13579)
+results = solver.solve(model, tee=True, options={'seed':1234567890})
 # @:load
 print(solver.options.seed)
 

@@ -1,0 +1,12 @@
+Model unknown
+
+  Variables:
+    x : Size=1, Index=None, Domain=NonNegativeReals
+        Key  : Lower : Value : Upper : Initial : Fixed : Stale
+        None :     0 :   1.0 :  None :    None : False : False
+
+  Objectives:
+    None
+
+  Constraints:
+    None
