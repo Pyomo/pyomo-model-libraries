@@ -36,7 +36,8 @@ solvers:
     solver name: glpk
     io format: null
     manager: serial
-    pyro manager hostname: null
+    pyro host: null
+    pyro port: null
     options:
     options string: null
     suffixes: []
