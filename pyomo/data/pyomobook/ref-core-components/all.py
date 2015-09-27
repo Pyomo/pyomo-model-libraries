@@ -105,8 +105,6 @@ model.y = Var(model.A, model.B, initialize=True)
 model.vlist1 = VarList()
 
 # SOSConstraint
-for k in model.y:
-  print(k)
 model.sset1 = SOSConstraint(var=model.y, sos=1)
 model.sset2 = SOSConstraint(model.A, model.B, var=model.y, sos=1)
 
