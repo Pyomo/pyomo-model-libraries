@@ -19,7 +19,7 @@
         Not constructed
 
 1 Objective Declarations
-    obj : Size=0, Index=None, Active=True, Sense=minimize
+    obj : Size=0, Index=None, Active=True
         Not constructed
 
 1 Constraint Declarations
@@ -53,14 +53,14 @@
 
 1 Var Declarations
     x : Size=2, Index=N, Domain=NonNegativeReals
-        Key : Lower : Value : Upper : Initial : Fixed : Stale
-          1 :     0 :  None :  None :    None : False :  True
-          2 :     0 :  None :  None :    None : False :  True
+        Key : Lower : Value : Upper : Fixed : Stale
+          1 :     0 :  None :  None : False :  True
+          2 :     0 :  None :  None : False :  True
 
 1 Objective Declarations
-    obj : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True : x[1] + 2*x[2]
+    obj : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : x[1] + 2*x[2]
 
 1 Constraint Declarations
     con : Size=2, Index=M, Active=True
@@ -95,7 +95,7 @@ Solver:
       Number of bounded subproblems: 0
       Number of created subproblems: 0
   Error rc: 0
-  Time: 0.00888705253601
+  Time: 0.00901198387146
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------

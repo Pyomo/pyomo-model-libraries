@@ -1,5 +1,4 @@
-import pyomo.environ
-from pyomo.core import *
+from pyomo.environ import *
 
 model = ConcreteModel()
 model.x_1 = Var(within=NonNegativeIntegers)

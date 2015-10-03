@@ -35,4 +35,14 @@ model.v = Var(D_index, model.B, initialize=1.0)
 
 
 instance = model.create_instance()
+for i in instance.z.index_set():
+    instance.z[i]
+for i in instance.y.index_set():
+    instance.y[i]
+for i in instance.x.index_set():
+    instance.x[i]
+for i in instance.v.index_set():
+    instance.v[i]
+for i in instance.w.index_set():
+    instance.w[i]
 instance.pprint()

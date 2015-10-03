@@ -8,13 +8,13 @@
 
 1 Var Declarations
     aVar : Size=1, Index=None, Domain=NonNegativeReals
-        Key  : Lower : Value : Upper : Initial : Fixed : Stale
-        None :     0 :  None :  None :    None : False :  True
+        Key  : Lower : Value : Upper : Fixed : Stale
+        None :     0 :  None :  None : False :  True
 
 1 Objective Declarations
-    MyObjective : Size=1, Index=None, Active=True, Sense=maximize
-        Key  : Active : Expression
-        None :   True : 4 * aVar
+    MyObjective : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : maximize : 4 * aVar
 
 1 Constraint Declarations
     MyConstraint : Size=1, Index=None, Active=True

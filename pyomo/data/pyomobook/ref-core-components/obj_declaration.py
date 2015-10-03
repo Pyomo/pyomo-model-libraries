@@ -72,10 +72,8 @@ else:
 
 # @value:
 model.o = Objective(expr=model.x[1] + 2*model.x[2])
-print(model.o.value)        # None
 print(value(model.o))       # 3
 print(model.o())            # 3
-print(model.o.value)        # 3
 # @:value
 
 # @olist1:

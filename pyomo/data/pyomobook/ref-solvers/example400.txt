@@ -30,4 +30,3 @@ Solution:
     y:
       Value: 0.4
   Constraint: No values
-

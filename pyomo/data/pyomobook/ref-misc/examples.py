@@ -5,7 +5,7 @@ print('*** suffix1 ***')
 # @suffix1:
 model = ConcreteModel()
 model.x = Var()
-model.y = Var([1,2,3])
+model.y = Var([1,2,3], dense=True)
 model.foo = Suffix()
 # @:suffix1
 # @suffix1a:
@@ -90,7 +90,7 @@ del foo_rule
 # @suffix4:
 model = ConcreteModel()
 model.x = Var()
-model.y = Var([1,2,3])
+model.y = Var([1,2,3], dense=True)
 model.foo = Suffix()
 
 # Assign a suffix value of 1.0 to model.x

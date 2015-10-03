@@ -3,3 +3,33 @@
 [    0.00] Creating model
 Model written to file 'concrete1.lp'
 [    0.00] Pyomo Finished
+4,6c4,6
+< x3:
+< +1 x1
+< +2 x2
+---
+> x1:
+> +1 x4
+> +2 x5
+10,12c10,12
+< c_l_x4_:
+< +3 x1
+< +4 x2
+---
+> c_l_x2_:
+> +3 x4
+> +4 x5
+15,17c15,17
+< c_l_x5_:
+< +2 x1
+< +5 x2
+---
+> c_l_x3_:
+> +2 x4
+> +5 x5
+24,25c24,25
+<    0 <= x1 <= +inf
+<    0 <= x2 <= +inf
+---
+>    0 <= x4 <= +inf
+>    0 <= x5 <= +inf

@@ -38,7 +38,7 @@ model.b = Var(model.A, bounds=f)
 
 # @decl5:
 model.za = Var(initialize=9, within=NonNegativeReals)
-model.zb = Var(model.A, initialize={1:1, 2:4, 3:9})
+model.zb = Var(model.A, initialize={1:1, 2:4, 3:9}, dense=True)
 model.zc = Var(model.A, initialize=2)
 # @:decl5
 
@@ -99,5 +99,22 @@ print(model.za.lb)           # 0
 print(model.za.ub)           # None
 print(model.zb[2].fixed)     # False
 # @:decl11
+
+for i in model.b.index_set():
+    model.b[i]
+for i in model.m.index_set():
+    model.m[i]
+for i in model.r.index_set():
+    model.r[i]
+for i in model.s.index_set():
+    model.s[i]
+for i in model.t.index_set():
+    model.t[i]
+for i in model.u.index_set():
+    model.u[i]
+for i in model.zb.index_set():
+    model.zb[i]
+for i in model.zc.index_set():
+    model.zc[i]
 
 model.pprint()

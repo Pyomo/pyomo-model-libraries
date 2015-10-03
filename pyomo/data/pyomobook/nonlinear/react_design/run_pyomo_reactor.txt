@@ -76,20 +76,20 @@ Model unknown
 
   Variables:
     sv : Size=1, Index=None, Domain=PositiveReals
-        Key  : Lower : Value         : Upper : Initial : Fixed : Stale
-        None :     0 : 1.34381176107 :  None :     1.0 : False : False
+        Key  : Lower : Value         : Upper : Fixed : Stale
+        None :     0 : 1.34381176107 :  None : False : False
     ca : Size=1, Index=None, Domain=PositiveReals
-        Key  : Lower : Value         : Upper : Initial : Fixed : Stale
-        None :     0 : 3874.25886723 :  None :  5000.0 : False : False
+        Key  : Lower : Value         : Upper : Fixed : Stale
+        None :     0 : 3874.25886723 :  None : False : False
     cb : Size=1, Index=None, Domain=PositiveReals
-        Key  : Lower : Value         : Upper : Initial : Fixed : Stale
-        None :     0 : 1072.43720011 :  None :  2000.0 : False : False
+        Key  : Lower : Value         : Upper : Fixed : Stale
+        None :     0 : 1072.43720011 :  None : False : False
     cc : Size=1, Index=None, Domain=PositiveReals
-        Key  : Lower : Value         : Upper : Initial : Fixed : Stale
-        None :     0 : 1330.09353341 :  None :  2000.0 : False : False
+        Key  : Lower : Value         : Upper : Fixed : Stale
+        None :     0 : 1330.09353341 :  None : False : False
     cd : Size=1, Index=None, Domain=PositiveReals
-        Key  : Lower : Value         : Upper : Initial : Fixed : Stale
-        None :     0 : 1861.60519963 :  None :  1000.0 : False : False
+        Key  : Lower : Value         : Upper : Fixed : Stale
+        None :     0 : 1861.60519963 :  None : False : False
 
   Objectives:
     obj : Size=1, Index=None, Active=True
@@ -110,5 +110,5 @@ Model unknown
         Key  : Lower : Body               : Upper
         None :   0.0 : -4.54747350886e-13 :   0.0
 
-[    0.06] Applying Pyomo postprocessing actions
-[    0.06] Pyomo Finished
+[    0.07] Applying Pyomo postprocessing actions
+[    0.07] Pyomo Finished

@@ -1,10 +1,9 @@
 from pyomo.environ import *
 from simple import model
 
-import logging
-
-logger = logging.getLogger('pyomo.opt')
-logger.setLevel(50)
+#import logging
+#logger = logging.getLogger('pyomo.opt')
+#logger.setLevel(50)
 
 # @load:
 solver = SolverFactory('glpk')
@@ -20,7 +19,7 @@ results = solver.solve(model)
 
 # Rerun GLPK with a new seed solver option
 # This does NOT override the solver.options values
-results = solver.solve(model, tee=True, options={'seed':1234567890})
+results = solver.solve(model, options={'seed':1234567890})
 # @:load
 print(solver.options.seed)
 

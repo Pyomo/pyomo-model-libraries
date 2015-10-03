@@ -1,8 +1,3 @@
-WARNING: No construction rule or expression specified for objective 'a'
-WARNING: No construction rule or expression specified for objective 'b'
-WARNING: No construction rule or expression specified for objective 'c'
-None
-3.0
 3.0
 3.0
 3.0
@@ -13,9 +8,9 @@ Model unknown
 
   Variables:
     x : Size=2, Index=x_index, Domain=Reals
-        Key : Lower : Value : Upper : Initial : Fixed : Stale
-          1 :  None :   1.0 :  None :     1.0 : False : False
-          2 :  None :   1.0 :  None :     1.0 : False : False
+        Key : Lower : Value : Upper : Fixed : Stale
+          1 :  None :   1.0 :  None : False : False
+          2 :  None :   1.0 :  None : False : False
 
   Objectives:
     a : Size=0, Index=None, Active=True

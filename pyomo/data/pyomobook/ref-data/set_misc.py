@@ -30,9 +30,6 @@ model.A = Set(initialize=[1,2,3])
 # Test is an element is in the set
 print(1 in model.A)         # True
 
-# Test if a set is a subset of the set
-print([1,2] in model.A)     # True
-
 # Test if sets are equal
 print([1,2] == model.A)     # False
 

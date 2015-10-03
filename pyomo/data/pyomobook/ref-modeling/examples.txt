@@ -5,13 +5,13 @@ indexed1
 
 1 Var Declarations
     x : Size=1, Index=None, Domain=Reals
-        Key  : Lower : Value : Upper : Initial : Fixed : Stale
-        None :  None :  None :  None :    None : False :  True
+        Key  : Lower : Value : Upper : Fixed : Stale
+        None :  None :  None :  None : False :  True
 
 1 Objective Declarations
-    o : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True :          x
+    o : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize :          x
 
 2 Constraint Declarations
     c : Size=1, Index=None, Active=True
@@ -37,18 +37,18 @@ False
 blocks1
 1 Var Declarations
     x : Size=1, Index=None, Domain=Reals
-        Key  : Lower : Value : Upper : Initial : Fixed : Stale
-        None :  None :  None :  None :    None : False :  True
+        Key  : Lower : Value : Upper : Fixed : Stale
+        None :  None :  None :  None : False :  True
 
 1 Block Declarations
     b : Active=True
         2 Var Declarations
             x : Size=1, Index=None, Domain=Reals
-                Key  : Lower : Value : Upper : Initial : Fixed : Stale
-                None :  None :  None :  None :    None : False :  True
+                Key  : Lower : Value : Upper : Fixed : Stale
+                None :  None :  None :  None : False :  True
             y : Size=1, Index=None, Domain=Reals
-                Key  : Lower : Value : Upper : Initial : Fixed : Stale
-                None :  None :  None :  None :    None : False :  True
+                Key  : Lower : Value : Upper : Fixed : Stale
+                None :  None :  None :  None : False :  True
 
         2 Declarations: x y
 

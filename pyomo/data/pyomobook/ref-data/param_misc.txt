@@ -11,15 +11,15 @@
 
 1 Var Declarations
     x : Size=3, Index=A, Domain=NonNegativeReals
-        Key : Lower : Value : Upper : Initial : Fixed : Stale
-          1 :     0 :  None :  None :    None : False :  True
-          2 :     0 :  None :  None :    None : False :  True
-          3 :     0 :  None :  None :    None : False :  True
+        Key : Lower : Value : Upper : Fixed : Stale
+          1 :     0 :  None :  None : False :  True
+          2 :     0 :  None :  None : False :  True
+          3 :     0 :  None :  None : False :  True
 
 1 Objective Declarations
-    o : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True : x[1] + 4*x[2] + 9*x[3]
+    o : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : x[1] + 4*x[2] + 9*x[3]
 
 4 Declarations: A p x o
 1 Set Declarations
@@ -35,14 +35,14 @@
 
 1 Var Declarations
     x : Size=3, Index=A, Domain=NonNegativeReals
-        Key : Lower : Value : Upper : Initial : Fixed : Stale
-          1 :     0 :  None :  None :    None : False :  True
-          2 :     0 :  None :  None :    None : False :  True
-          3 :     0 :  None :  None :    None : False :  True
+        Key : Lower : Value : Upper : Fixed : Stale
+          1 :     0 :  None :  None : False :  True
+          2 :     0 :  None :  None : False :  True
+          3 :     0 :  None :  None : False :  True
 
 1 Objective Declarations
-    o : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True : p[1] * x[1] + p[2] * x[2] + p[3] * x[3]
+    o : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : p[1] * x[1] + p[2] * x[2] + p[3] * x[3]
 
 4 Declarations: A p x o

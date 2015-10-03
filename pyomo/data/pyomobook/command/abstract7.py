@@ -1,5 +1,4 @@
-import pyomo.environ
-from pyomo.core import *
+from pyomo.environ import *
 import pickle
 import sys
 from os.path import dirname, abspath
@@ -69,5 +68,5 @@ def pyomo_save_results(options=None, instance=None,
 def pyomo_postprocess(options=None, instance=None,
                                             results=None):
     instance.solutions.load_from(results, allow_consistent_values_for_fixed_vars=True)
-    print("Solution found with value "+str(instance.obj.value))
+    print("Solution found with value "+str(value(instance.obj)))
 # @:postprocess

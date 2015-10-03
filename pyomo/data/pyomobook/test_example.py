@@ -70,6 +70,10 @@ def check_skip(tfname_, name):
 
 def filter(line):
     line.strip()
+    if line.startswith('password:') or line.startswith('http:') or line.startswith('Job '):
+        return True
+    if line.startswith('Importing module'):
+        return True
     if line.startswith('Function'):
         return True
     if 'Status: optimal' in line or 'Status: feasible' in line:

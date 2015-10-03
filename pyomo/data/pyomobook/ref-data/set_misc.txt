@@ -6,7 +6,6 @@
 [1]
 [1, 2]
 True
-True
 False
 True
 True

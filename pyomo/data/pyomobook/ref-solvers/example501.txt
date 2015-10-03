@@ -2,8 +2,8 @@ Model unknown
 
   Variables:
     x : Size=1, Index=None, Domain=NonNegativeReals
-        Key  : Lower : Value : Upper : Initial : Fixed : Stale
-        None :     0 :   1.0 :  None :    None : False : False
+        Key  : Lower : Value : Upper : Fixed : Stale
+        None :     0 :   1.0 :  None : False : False
 
   Objectives:
     None

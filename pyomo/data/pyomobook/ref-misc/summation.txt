@@ -13,39 +13,39 @@
 
 3 Var Declarations
     x : Size=3, Index=N, Domain=NonNegativeReals
-        Key : Lower : Value : Upper : Initial : Fixed : Stale
-          1 :     0 :  None :  None :    None : False :  True
-          2 :     0 :  None :  None :    None : False :  True
-          3 :     0 :  None :  None :    None : False :  True
+        Key : Lower : Value : Upper : Fixed : Stale
+          1 :     0 :  None :  None : False :  True
+          2 :     0 :  None :  None : False :  True
+          3 :     0 :  None :  None : False :  True
     y : Size=3, Index=N, Domain=NonNegativeReals
-        Key : Lower : Value : Upper : Initial : Fixed : Stale
-          1 :     0 :  None :  None :    None : False :  True
-          2 :     0 :  None :  None :    None : False :  True
-          3 :     0 :  None :  None :    None : False :  True
+        Key : Lower : Value : Upper : Fixed : Stale
+          1 :     0 :  None :  None : False :  True
+          2 :     0 :  None :  None : False :  True
+          3 :     0 :  None :  None : False :  True
     z : Size=2, Index=M, Domain=NonNegativeReals
-        Key : Lower : Value : Upper : Initial : Fixed : Stale
-          1 :     0 :  None :  None :    None : False :  True
-          3 :     0 :  None :  None :    None : False :  True
+        Key : Lower : Value : Upper : Fixed : Stale
+          1 :     0 :  None :  None : False :  True
+          3 :     0 :  None :  None : False :  True
 
 6 Objective Declarations
-    o1 : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True : x[1] + 3.1*x[2] + 4.5*x[3]
-    o2 : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True : x[1] / y[1] + x[2] / y[2] + x[3] / y[3]
-    o3 : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True : x[1] / y[1] + 0.3225806451612903 * x[2] / y[2] + 0.2222222222222222 * x[3] / y[3]
-    o4 : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True : x[1] * z[1] + 0.2222222222222222 * x[3] * z[3]
-    o5 : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True : 1 / ( x[1] * z[1] ) + 1 / ( x[3] * z[3] )
-    o6 : Size=1, Index=None, Active=True, Sense=minimize
-        Key  : Active : Expression
-        None :   True : x[1] * y[1] + x[3] * y[3]
+    o1 : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : x[1] + 3.1*x[2] + 4.5*x[3]
+    o2 : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : x[1] / y[1] + x[2] / y[2] + x[3] / y[3]
+    o3 : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : x[1] / y[1] + 0.322580645161 * x[2] / y[2] + 0.222222222222 * x[3] / y[3]
+    o4 : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : x[1] * z[1] + 0.222222222222 * x[3] * z[3]
+    o5 : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : 1 / ( x[1] * z[1] ) + 1 / ( x[3] * z[3] )
+    o6 : Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : x[1] * y[1] + x[3] * y[3]
 
 2 Constraint Declarations
     c1 : Size=1, Index=None, Active=True
