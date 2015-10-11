@@ -121,13 +121,23 @@
         [1, 2, 3, 4, 5]
 
 1 Var Declarations
-    x : Size=0, Index=x_index, Domain=Reals
+    x : Size=5, Index=x_index, Domain=Reals
         Key : Lower : Value : Upper : Fixed : Stale
+          1 :  None :  None :  None : False :  True
+          2 :  None :  None :  None : False :  True
+          3 :  None :  None :  None : False :  True
+          4 :  None :  None :  None : False :  True
+          5 :  None :  None :  None : False :  True
 
 1 SOSConstraint Declarations
    c : 	Size=1 
 		Type=1
 		Weight : Variable
+		1 : x[1]
+		2 : x[2]
+		3 : x[3]
+		4 : x[4]
+		5 : x[5]
 
 3 Declarations: x_index x c
 ***** decl7 

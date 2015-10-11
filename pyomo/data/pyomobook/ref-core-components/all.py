@@ -100,12 +100,13 @@ model.sub2 = SubModel(model.A, model.B)
 # Var
 model.x = Var()
 model.y = Var(model.A, model.B, initialize=True)
+model.z = Var(model.A, model.B, initialize=True)
 
 # VarList
 model.vlist1 = VarList()
 
 # SOSConstraint
 model.sset1 = SOSConstraint(var=model.y, sos=1)
-model.sset2 = SOSConstraint(model.A, model.B, var=model.y, sos=1)
+model.sset2 = SOSConstraint(model.A, model.B, var=model.z, sos=1)
 
 model.pprint()

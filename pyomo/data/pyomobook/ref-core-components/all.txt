@@ -1,4 +1,4 @@
-19 Set Declarations
+20 Set Declarations
     A : Dim=0, Dimen=1, Size=2, Domain=None, Ordered=False, Bounds=(1, 2)
         [1, 2]
     B : Dim=0, Dimen=1, Size=2, Domain=None, Ordered=False, Bounds=(3, 4)
@@ -37,6 +37,8 @@
         []
     y_index : Dim=0, Dimen=2, Size=4, Domain=None, Ordered=False, Bounds=None
         Virtual
+    z_index : Dim=0, Dimen=2, Size=4, Domain=None, Ordered=False, Bounds=None
+        Virtual
 
 2 Param Declarations
     a : Size=1, Index=None, Domain=Any, Default=None, Mutable=False
@@ -45,13 +47,19 @@
     b : Size=0, Index=b_index, Domain=Any, Default=None, Mutable=False
         Key : Value
 
-3 Var Declarations
+4 Var Declarations
     vlist1 : Size=0, Index=vlist1_index, Domain=Reals
         Key : Lower : Value : Upper : Fixed : Stale
     x : Size=1, Index=None, Domain=Reals
         Key  : Lower : Value : Upper : Fixed : Stale
         None :  None :  None :  None : False :  True
-    y : Size=0, Index=y_index, Domain=Reals
+    y : Size=4, Index=y_index, Domain=Reals
+        Key    : Lower : Value : Upper : Fixed : Stale
+        (1, 3) :  None :  True :  None : False : False
+        (1, 4) :  None :  True :  None : False : False
+        (2, 3) :  None :  True :  None : False : False
+        (2, 4) :  None :  True :  None : False : False
+    z : Size=0, Index=z_index, Domain=Reals
         Key : Lower : Value : Upper : Fixed : Stale
 
 2 Expression Declarations
@@ -81,6 +89,10 @@
    sset1 : 	Size=1 
 		Type=1
 		Weight : Variable
+		1 : y[1,3]
+		2 : y[2,3]
+		3 : y[2,4]
+		4 : y[1,4]
    sset2 : 	Size=0 	Index= sset2_index
 
 2 Block Declarations
@@ -123,4 +135,4 @@
 
         1 Declarations: _index
 
-47 Declarations: A B C_index C b1 b2_index b2 ba1 ba2_index ba2 bc1 bc2_index bc2 comp1 comp2_index comp2 complist_index complist c1 c2_index c2 clist1_index clist1 disjunct1 disjunct2_index disjunct2 expr1 expr2_index expr2 o1 o2_index o2 olist1_index olist1 a b_index b sub1 sub2 x y_index y vlist1_index vlist1 sset1 sset2_index sset2
+49 Declarations: A B C_index C b1 b2_index b2 ba1 ba2_index ba2 bc1 bc2_index bc2 comp1 comp2_index comp2 complist_index complist c1 c2_index c2 clist1_index clist1 disjunct1 disjunct2_index disjunct2 expr1 expr2_index expr2 o1 o2_index o2 olist1_index olist1 a b_index b sub1 sub2 x y_index y z_index z vlist1_index vlist1 sset1 sset2_index sset2
