@@ -2,5 +2,5 @@
 
 # @cmd:
 runph --model-directory=models \
-        --instance-directory=scenariodata 
+        --instance-directory=scenariodata --default-rho=1
 # @:cmd
