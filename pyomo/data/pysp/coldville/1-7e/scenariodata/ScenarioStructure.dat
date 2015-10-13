@@ -30,7 +30,7 @@ set StageVariables[SecondStage] := WinterMaterialPurchase[*]
                                    SalvagedMaterial[*]
                                    TruckdayUsedinMethod[*] ;
 
-param StageCostVariable := FirstStage FirstStageCost
-                           SecondStage SecondStageCost ;
+param StageCost := FirstStage FirstStageCost
+                   SecondStage SecondStageCost ;
 
 #param ScenarioBasedData := False ;
