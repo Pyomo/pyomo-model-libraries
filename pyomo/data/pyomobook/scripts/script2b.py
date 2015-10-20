@@ -12,7 +12,7 @@ instance = model
 #options.debug=1
 #options.expansion_factor = 2
 # @cmd:
-opt = SolverFactory('coliny', solver='sco:ps')
+opt = SolverFactory('asl:coliny', solver='sco:ps')
 print(opt.options)
 # @:cmd
 #opt.keepfiles = True
