@@ -1,5 +1,5 @@
 from pyomo.environ import *
-from pyutilib.misc import Options
+from pyomo.opt import SolverFactory
 
 model = AbstractModel()
 
@@ -40,35 +40,34 @@ def _Data(model, i):
     return model.P_REP_CASES[i] == model.I[i]+model.eps_I[i]
 model.Data = Constraint(model.S_SI, rule=_Data)
 
-instance = model.create('DiseaseEstimation.dat');
-
-options = Options()
-options.solver = 'ipopt'
-options.quiet = True
+instance = model.create_instance('DiseaseEstimation.dat');
 
 # disable the hard constraints
 instance.InfDynamics.deactivate()
 
 # solve the problem with the easy constraints
-print "*** Solving the \"easy\" problem"
-results, opt = scripting.util.apply_optimizer(options, instance)
+print("*** Solving the \"easy\" problem")
+with SolverFactory("ipopt") as solver:
+    solver.solve(instance)
 
-# load the results so that they become the initial conditions 
-# for the more difficult solve
-instance.load(results)
-print "beta from easy problem: " + str(instance.beta.value)
-print "alpha from easy problem: " + str(instance.alpha.value)
-print
+print("beta for easy problem: %s" % (instance.beta.value))
+print("alpha for easy problem: %s" % (instance.alpha.value))
+print("")
 
-# enable the hard constraints and 
-# disable the easy constraints
+# enable the hard constraints and disable the easy
+# constraints
 instance.InfDynamics.activate()
 instance.EasierInfDynamics.deactivate()
 
-# solve the problem with the hard constraints
-print "*** Solving the \"hard\" problem"
-results, opt = scripting.util.apply_optimizer(options, instance)
-instance.load(results)
-print "beta from hard problem: " + str(instance.beta.value)
-print "alpha from hard problem: " + str(instance.alpha.value)
+# alpha does not appear in the easy problem
+# so we must initialize it here
+instance.alpha = 1.0
 
+# solve the problem with the hard constraints using the
+# current solution as the initial starting point for the
+# solver
+print("*** Solving the \"hard\" problem")
+with SolverFactory("ipopt") as solver:
+    solver.solve(instance)
+print("beta for hard problem: %s" % (instance.beta.value))
+print("alpha for hard problem: %s" % (instance.alpha.value))

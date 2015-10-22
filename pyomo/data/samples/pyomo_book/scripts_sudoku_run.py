@@ -1,6 +1,8 @@
-from pyomo.environ import *
-from pyutilib.misc import Options
-from sudoku import create_sudoku_model
+from pyomo.opt import (SolverFactory,
+                       TerminationCondition)
+from sudoku import (create_sudoku_model,
+                    print_solution,
+                    add_integer_cut)
 
 # define the board
 board = [(1,1,5),(1,2,3),(1,5,7), \
@@ -13,46 +15,21 @@ board = [(1,1,5),(1,2,3),(1,5,7), \
          (8,4,4),(8,5,1),(8,6,9),(8,9,5), \
          (9,5,8),(9,8,7),(9,9,9)]
 
-# create the empty list of cuts to start
-cut_on = []
-cut_off = []
+model = create_sudoku_model(board)
 
-done = False
-while (not done):
-    model = create_sudoku_model(cut_on, cut_off, board)
-    instance = model.create()
-    
-    options = Options()
-    options.solver = 'glpk'
-    options.quiet = True
-    #options.tee = True
+solution_count = 0
+while 1:
 
-    results, opt = scripting.util.apply_optimizer(options, instance)
-    instance.load(results)
+    with SolverFactory("glpk") as opt:
+        results = opt.solve(model)
+        if results.solver.termination_condition != \
+           TerminationCondition.optimal:
+            print("All board solutions have been found")
+            break
 
-    if str(results.Solution.Status) != 'optimal':
-        break
+    solution_count += 1
 
-    # add cuts
-    new_cut_on = []
-    new_cut_off = []
-    for r in instance.ROWS:
-        for c in instance.COLS:
-            for v in instance.VALUES:
-                # check if the binary variable is on or off
-                # note, it may not be exactly 1
-                if value(instance.y[r,c,v]) >= 0.5:
-                    new_cut_on.append((r,c,v))
-                else:
-                    new_cut_off.append((r,c,v))
+    add_integer_cut(model)
 
-    cut_on.append(new_cut_on)
-    cut_off.append(new_cut_off)
-
-    print "Solution #" + str(len(cut_on))
-    for i in range(1,10):
-        for j in range(1,10):
-            for v in range(1,10):
-                if value(instance.y[i,j,v]) >= 0.5:
-                    print v, " ",
-        print
+    print("Solution #%d" % (solution_count))
+    print_solution(model)

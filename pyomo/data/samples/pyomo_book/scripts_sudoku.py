@@ -1,10 +1,7 @@
 from pyomo.environ import *
 
-# This python file defines a function to create a
-# model for the sudoku problem
-
-# create a standard python dict for the map from
-# subsq to (row,col) numbers
+# create a standard python dict for mapping subsquares to
+# the list (row,col) entries
 subsq_to_row_col = dict()
 
 subsq_to_row_col[1] = [(i,j) for i in range(1,4) for j in range(1,4)]
@@ -19,63 +16,76 @@ subsq_to_row_col[7] = [(i,j) for i in range(7,10) for j in range(1,4)]
 subsq_to_row_col[8] = [(i,j) for i in range(7,10) for j in range(4,7)]
 subsq_to_row_col[9] = [(i,j) for i in range(7,10) for j in range(7,10)]
 
-# use this function to create the sudoku model defining a list
-# of integer cuts. Entry i in cut_on lists all the (r,c,v) tuples
-# where y[r,c,v] was 1. Entry i in cut_off lists the ones that were 0
-# The input board is a list of the fixed numbers in the board in
-# (r,c,v) tuples
-def create_sudoku_model( cut_on, cut_off, board ):
+# creates the sudoku model for a 10x10 board, where the
+# input board is a list of fixed numbers specified in
+# (row, col, val) tuples.
+def create_sudoku_model(board):
 
     model = ConcreteModel()
+
+    # store the starting board for the model
+    model.board = board
 
     # create sets for rows columns and squares
     model.ROWS = RangeSet(1,9)
     model.COLS = RangeSet(1,9)
     model.SUBSQUARES = RangeSet(1,9)
     model.VALUES = RangeSet(1,9)
-    model.CUTS = RangeSet(1,len(cut_on))
 
     # create the binary variables to define the values
-    def _y_rule(model, r, c, v):
-        if (r,c,v) in board:
-            model.y[r,c,v].fixed = True
-            return 1
-        return 0
-    model.y = Var(model.ROWS, model.COLS, model.VALUES, initialize=_y_rule, within=Binary)
+    model.y = Var(model.ROWS, model.COLS, model.VALUES, within=Binary)
+
+    # fix variables based on the current board
+    for (r,c,v) in board:
+        model.y[r,c,v].fix(1)
 
     # create the objective - this is a feasibility problem
     # so we just make it a constant
-    def _Obj(model):
-        return 1
-    model.obj = Objective(rule=_Obj)
+    model.obj = Objective(expr= 1.0)
 
     # exactly one number in each row
-    def _RowCon(model, i, v):
-        return sum(model.y[i,c,v] for c in range(1,10)) == 1
+    def _RowCon(model, r, v):
+        return sum(model.y[r,c,v] for c in model.COLS) == 1
     model.RowCon = Constraint(model.ROWS, model.VALUES, rule=_RowCon)
 
     # exactly one nubmer in each column
-    def _ColCon(model, j, v):
-        return sum(model.y[r,j,v] for r in range(1,10)) == 1
+    def _ColCon(model, c, v):
+        return sum(model.y[r,c,v] for r in model.ROWS) == 1
     model.ColCon = Constraint(model.COLS, model.VALUES, rule=_ColCon)
 
     # exactly one number in each subsquare
-    def _SubSqCon(model, b, v):
-        return sum(model.y[t[0],t[1],v] for t in subsq_to_row_col[b]) == 1
+    def _SubSqCon(model, s, v):
+        return sum(model.y[r,c,v] for (r,c) in subsq_to_row_col[s]) == 1
     model.SubSqCon = Constraint(model.SUBSQUARES, model.VALUES, rule=_SubSqCon)
 
     # exactly one number in each cell
-    def _ValueCon(model, i, j):
-        return sum(model.y[i, j, v] for v in range(1,10)) == 1
+    def _ValueCon(model, r, c):
+        return sum(model.y[r,c,v] for v in model.VALUES) == 1
     model.ValueCon = Constraint(model.ROWS, model.COLS, rule=_ValueCon)
 
-    # integer cuts to prune previous solutions
-    def _IntCuts(model, i):
-        return sum( (1.0-model.y[r,c,v]) for (r,c,v) in cut_on[i-1] ) + \
-            sum ( model.y[r,c,v] for (r,c,v) in cut_off[i-1] ) \
-            >= 1
-#    if (len(cut_on) > 0):
-#        model.IntCuts = Constraint(model.CUTS, rule=_IntCuts)
-    model.IntCuts = Constraint(model.CUTS, rule=_IntCuts)
-
     return model
+
+# use this function to add a new integer cut to the model.
+def add_integer_cut(model):
+    if not hasattr(model, "IntegerCuts"):
+        model.IntegerCuts = ConstraintList()
+
+    cut_expr = 0.0
+    for r in model.ROWS:
+        for c in model.COLS:
+            for v in model.VALUES:
+                if not model.y[r,c,v].fixed:
+                    # check if the binary variable is on or off
+                    # note, it may not be exactly 1
+                    if value(model.y[r,c,v]) >= 0.5:
+                        cut_expr += (1.0 - model.y[r,c,v])
+                    else:
+                        cut_expr += model.y[r,c,v]
+    model.IntegerCuts.add(cut_expr >= 1)
+
+# prints the current solution stored in the model
+def print_solution(model):
+    for r in model.ROWS:
+        print('   '.join(str(v) for c in model.COLS
+                         for v in model.VALUES
+                         if value(model.y[r,c,v]) >= 0.5))

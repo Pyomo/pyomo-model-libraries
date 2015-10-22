@@ -1,12 +1,12 @@
-from pyomo.environ import SolverFactory
+from pyomo.opt import SolverFactory
 from DiseaseEstimation import model
 
-model.pprint()
+# create the instance
+instance = model.create_instance('DiseaseEstimation.dat')
 
-instance = model.create('DiseaseEstimation.dat')
+# create the solver and solve
+with SolverFactory("ipopt") as solver:
+    solver.solve(instance)
+
+# report results
 instance.pprint()
-
-opt = SolverFactory("ipopt")
-results = opt.solve(instance)
-
-results.write()
