@@ -3,6 +3,7 @@ from pyomo.opt import (SolverFactory,
 from sudoku import (create_sudoku_model,
                     print_solution,
                     add_integer_cut)
+from sudoku_pyro_utils import tighten_variable_bounds
 
 # define the board
 board = [(1,1,5),(1,2,3),(1,5,7), \
@@ -16,6 +17,15 @@ board = [(1,1,5),(1,2,3),(1,5,7), \
          (9,5,8),(9,8,7),(9,9,9)]
 
 model = create_sudoku_model(board)
+
+free, fixed = tighten_variable_bounds(model)
+print("Model as %s fixed variables and %s free variables"
+            % (fixed, free))
+if free == 0:
+    print("All variables have been fixed")
+    print("Solution #1:")
+    print_solution(model)
+    exit(0)
 
 solution_count = 0
 while 1:

@@ -7,35 +7,34 @@
 
 # Python imports
 # @imports:
-import sys
 from pyutilib.misc import import_file
+from pyomo.environ import *
 from pyomo.opt.base import SolverFactory
 from pyomo.opt.parallel import SolverManagerFactory
 from pyomo.opt.parallel.manager import solve_all_instances
-from pyomo.core import *
 # @:imports
 
 # @block1:
 # initialize the master instance.
 mstr_mdl = import_file("master.py").model
-mstr_inst = mstr_mdl.create("master.dat")
+mstr_inst = mstr_mdl.create_instance("master.dat")
 
 # initialize the sub-problem instances.
 sb_mdl = import_file("subproblem.py").model
-sub_insts = [] # a Python list
-sub_insts.append(sb_mdl.create(name="Base Sub-Problem", \
-                               filename="base_subproblem.dat"))
-sub_insts.append(sb_mdl.create(name="Low Sub-Problem", \
-                               filename="low_subproblem.dat"))
-sub_insts.append(sb_mdl.create(name="High Sub-Problem", \
-                               filename="high_subproblem.dat"))
+sub_insts = []
+sub_insts.append(sb_mdl.create_instance(
+    name="Base Sub-Problem",
+    filename="base_subproblem.dat"))
+sub_insts.append(sb_mdl.create_instance(
+    name="Low Sub-Problem",
+    filename="low_subproblem.dat"))
+sub_insts.append(sb_mdl.create_instance(
+    name="High Sub-Problem",
+    filename="high_subproblem.dat"))
 # @:block1
 
 # @block2:
-# initialize the solver / solver manager.
-if SolverFactory('cplex') is None:
-    print "A CPLEX solver is not available on this machine."
-    sys.exit(1)
+# initialize the solver manager.
 solver_manager = SolverManagerFactory("serial")  #serial
 #solver_manager = SolverManagerFactory("pyro")   #parallel
 # @:block2
@@ -43,72 +42,91 @@ solver_manager = SolverManagerFactory("serial")  #serial
 # miscellaneous initialization.
 mstr_inst.Min_Stage2_Profit = float("Inf")
 
-GAP = float("Inf")
-
-max_iterations = 50 
-
+gap = float("Inf")
+max_iterations = 50
 # the main benders loop.
-for i in xsequence(max_iterations):
+for i in range(1, max_iterations+1):
 
-   print "\nIteration=",i
+    print("\nIteration=%d" % (i))
 
-   # solve the subproblems.
-   solve_all_instances(solver_manager, 'cplex', sub_insts, suffixes=['rc', 'dual'])
-   for instance in sub_insts:
-      print "Profit for scenario="+instance.name+" is "+str(instance.Exp_Stage2_Profit())      
-   print ""
-          
-   # if not converged, add store the pricing information from the sub-problem solutions in the master.
+    # solve the subproblems.
+    solve_all_instances(solver_manager,
+                        'cplex',
+                        sub_insts,
+                        suffixes=['rc','dual'])
+    for instance in sub_insts:
+        print("Profit for scenario=%s is %f"
+              % (instance.name, instance.Exp_Stage2_Profit()))
+    print("")
+
+    # if not converged, add store the pricing information
+    # from the sub-problem solutions in the master.
 # @block3:
-   mstr_inst.CUTS.add(i)
-   for s in xsequence(len(sub_insts)):
-      inst = sub_insts[s-1]
-      for t in mstr_inst.TWOPLUSWEEKS:
-         mstr_inst.time_price[t, s, i] = inst.Time[t].dual
-      for p in mstr_inst.PROD:
-         mstr_inst.bal2_price[p, s, i] = inst.Balance2[p].dual
-      for p in mstr_inst.PROD:
-         for t in mstr_inst.TWOPLUSWEEKS:
-            mstr_inst.sell_lim_price[p, t, s, i] = inst.Sell[p, t].getattrvalue("urc")
+    mstr_inst.CUTS.add(i)
+    for s, inst in enumerate(sub_insts, 1):
+        for t in mstr_inst.TWOPLUSWEEKS:
+            mstr_inst.time_price[t,s,i] = \
+                inst.dual[inst.Time[t]]
+        for p in mstr_inst.PROD:
+            mstr_inst.bal2_price[p,s,i] = \
+                inst.dual[inst.Balance2[p]]
+            for t in mstr_inst.TWOPLUSWEEKS:
+                mstr_inst.sell_lim_price[p,t,s,i] = \
+                    inst.urc[inst.Sell[p,t]]
 # @:block3
 
-   # add the master cut.
+    # add the master cut.
 # @block4:
-   cut = sum([mstr_inst.time_price[t, s, i] * mstr_inst.avail[t] for t in mstr_inst.TWOPLUSWEEKS for s in mstr_inst.SCEN]) + \
-         sum([mstr_inst.bal2_price[p, s, i] * (-mstr_inst.Inv1[p]) for p in mstr_inst.PROD for s in mstr_inst.SCEN]) + \
-         sum([mstr_inst.sell_lim_price[p, t, s, i] * mstr_inst.market[p, t] for p in mstr_inst.PROD for t in mstr_inst.TWOPLUSWEEKS for s in mstr_inst.SCEN]) - \
-         mstr_inst.Min_Stage2_Profit
-   mstr_inst.Cut_Defn.add(i, (0.0, cut, None))
+    cut = sum((mstr_inst.time_price[t,s,i] * \
+                mstr_inst.avail[t])
+               for t in mstr_inst.TWOPLUSWEEKS
+               for s in mstr_inst.SCEN)
+    cut += sum((mstr_inst.bal2_price[p,s,i] * \
+                 (-mstr_inst.Inv1[p]))
+                for p in mstr_inst.PROD
+                for s in mstr_inst.SCEN)
+    cut += sum((mstr_inst.sell_lim_price[p,t,s,i] * \
+                mstr_inst.market[p,t])
+               for p in mstr_inst.PROD
+               for t in mstr_inst.TWOPLUSWEEKS
+               for s in mstr_inst.SCEN)
+    mstr_inst.Cut_Defn.add(mstr_inst.Min_Stage2_Profit <= cut)
 # @:block4
-      
-   # compute expected second-stage profit
-   Exp_Stage2_Profit = sum([sub_insts[s-1].Exp_Stage2_Profit() for s in xsequence(mstr_inst.NUMSCEN())])
-   print "Expected Stage2 Profit=",Exp_Stage2_Profit
-   print ""
 
-   newGAP = mstr_inst.Min_Stage2_Profit.value - Exp_Stage2_Profit
-   print "New gap=",newGAP,"\n"
+    # compute expected second-stage profit
+    Exp_Stage2_Profit = sum(inst.Exp_Stage2_Profit()
+                            for inst in sub_insts)
+    print("Expected Stage2 Profit=%f" % (Exp_Stage2_Profit))
+    print("")
 
-   if newGAP > 0.00001:
-      GAP = min(GAP, newGAP)
-   else:
-      break
+    newgap = (mstr_inst.Min_Stage2_Profit.value -
+              Exp_Stage2_Profit)
+    print("New gap=%f" % (newgap))
 
-   # re-solve the master and update the subproblem inv1 values.
-   solve_all_instances(solver_manager, 'cplex', [mstr_inst])
+    if newgap > 0.00001:
+        gap = min(gap, newgap)
+    else:
+        print("Benders converged!")
+        break
 
-   print "Master expected profit="+str(mstr_inst.Expected_Profit())
+    # re-solve the master and update the subproblem inv1
+    # values.
+    solve_all_instances(solver_manager, 'cplex', [mstr_inst])
 
-   for instance in sub_insts:
-      for p in mstr_inst.PROD:
-         # the master inventory values might be slightly
-         # less than 0 (within tolerance); threshold here.
-         instance.inv1[p] = max(mstr_inst.Inv1[p](),0.0)
+    print("Master expected profit=%f"
+          % (mstr_inst.Expected_Profit()))
 
-print "Benders converged!"
+    for instance in sub_insts:
+        for p in mstr_inst.PROD:
+            # the master inventory values might be slightly
+            # less than 0 (within tolerance); threshold here.
+            instance.inv1[p] = max(mstr_inst.Inv1[p](),0.0)
+else:
+    # this gets executed when the loop above does not break
+    print("Maximum Iterations Exceeded")
 
-print "\nConverged master solution values:"
-for p in mstr_inst.PROD:
-   print "Make1["+p+"]="+str(mstr_inst.Make1[p]())
-   print "Sell1["+p+"]="+str(mstr_inst.Sell1[p]())   
-   print "Inv1["+p+"]="+str(mstr_inst.Inv1[p]())
+print("\nMaster solution values:")
+for p in sorted(mstr_inst.PROD):
+    print("Make1[%s]=%f" % (p, mstr_inst.Make1[p]()))
+    print("Sell1[%s]=%f" % (p, mstr_inst.Sell1[p]()))
+    print("Inv1[%s]=%f" % (p, mstr_inst.Inv1[p]()))

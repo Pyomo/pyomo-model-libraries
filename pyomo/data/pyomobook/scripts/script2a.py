@@ -1,15 +1,11 @@
-import pyomo.environ
 from pyomo.opt import SolverFactory
-from concrete1 import model
+from concrete1 import model as instance
 
-model.pprint()
-
-instance = model
 instance.pprint()
 
 # @cmd:
-opt = SolverFactory('ipopt')
+solver = SolverFactory('ipopt')
 # @:cmd
-results = opt.solve(instance)
+results = solver.solve(instance)
 
-results.write()
+instance.pprint()

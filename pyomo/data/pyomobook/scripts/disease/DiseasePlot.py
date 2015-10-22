@@ -1,5 +1,4 @@
-from pyomo.core import *
-from pyutilib.misc import Options
+from pyomo.environ import *
 
 model = AbstractModel()
 
@@ -35,18 +34,12 @@ def _Data(model, i):
 model.Data = Constraint(model.S_SI, rule=_Data)
 
 # @script:
-instance = model.create('DiseaseEstimation.dat');
+instance = model.create_instance('DiseaseEstimation.dat');
 
-options = Options()
-options.solver = 'ipopt'
-options.quiet = True
+with SolverFactory("ipopt") as solver:
+    solver.solve(instance)
 
-# solve the problem
-results, opt = scripting.util.apply_optimizer(options, 
-                                                instance)
-
-# load the results to plot the solution
-instance.load(results)
+# plot the solution
 est_incidence = []
 act_incidence = []
 for i in instance.S_SI:
@@ -54,7 +47,6 @@ for i in instance.S_SI:
     act_incidence.append(value(instance.P_REP_CASES[i]))
 
 import matplotlib.pyplot as plt
-
 plt.plot(est_incidence)
 plt.plot(act_incidence, 'o')
 plt.show()

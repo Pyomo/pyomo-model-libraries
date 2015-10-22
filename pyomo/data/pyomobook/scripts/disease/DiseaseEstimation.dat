@@ -1,8 +1,6 @@
-param num_SI := 26 ;
-
 param P_POP := 300.000000;
 
-param P_REP_CASES :=
+param: S_SI: P_REP_CASES :=
   1  1.000000
   2  2.000000
   3  4.000000
@@ -30,4 +28,3 @@ param P_REP_CASES :=
   25  0.000000
   26  0.000000
 ;
-

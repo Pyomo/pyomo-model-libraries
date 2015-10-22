@@ -1,41 +1,39 @@
-import sys
-import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/nonlinear/multimodal/')
-
-# @all:
-import pyomo.environ
+from pyomo.environ import *
 from pyomo.opt import SolverFactory
-from multimodal import model
+from math import pi
 
-opt = SolverFactory("ipopt")
-instance = model
+model = ConcreteModel()
 
-instance.y = 3.5
-instance.x = 3.5
-instance.y.fixed = True
+model.x = Var(bounds=(0,4))
+model.y = Var(bounds=(0,4))
 
-results = opt.solve(instance)
-instance.load(results)
+model.obj = Objective(expr= \
+    (2 - cos(pi*model.x) - cos(pi*model.y)) * \
+    (model.x**2) * (model.y**2))
 
-xval = instance.x.value
-print("First   x was "+str(instance.x.value)+\
-        " and y was "+str(instance.y.value))
+model.y.fix(3.5)
+model.x.value = 3.5
 
-instance.x.fixed = True
-instance.y.fixed = False
+with SolverFactory("ipopt") as solver:
+    solver.solve(model)
 
-results = opt.solve(instance)
-instance.load(results)
+print("First   x was %f and y was %f"
+      % (model.x.value, model.y.value))
 
-print("Next    x was "+str(instance.x.value)+\
-        " and y was "+str(instance.y.value))
+model.x.fixed = True
+model.y.fixed = False
 
-instance.x.fixed = False
-instance.y.fixed = True
+with SolverFactory("ipopt") as solver:
+    solver.solve(model)
 
-results = opt.solve(instance)
-instance.load(results)
+print("Next    x was %f and y was %f"
+      % (model.x.value, model.y.value))
 
-print("Finally x was "+str(instance.x.value)+\
-        " and y was "+str(instance.y.value))
-# @:all
+model.x.fixed = False
+model.y.fixed = True
+
+with SolverFactory("ipopt") as solver:
+    solver.solve(model)
+
+print("Finally x was %f and y was %f"
+      % (model.x.value, model.y.value))

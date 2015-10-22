@@ -1,5 +1,5 @@
-from pyomo.core import *
-from pyutilib.misc import Options
+from pyomo.environ import *
+from pyomo.opt import SolverFactory
 from math import pi
 
 model = ConcreteModel()
@@ -7,26 +7,18 @@ model = ConcreteModel()
 model.x = Var(bounds=(0,4))
 model.y = Var(bounds=(0,4))
 
-def multimodal(m):
-    return (2-cos(pi*m.x)-cos(pi*m.y)) * (m.x**2) * (m.y**2)
-model.obj = Objective(rule=multimodal, sense=minimize)
+model.obj = Objective(expr= \
+    (2 - cos(pi*model.x) - cos(pi*model.y)) * \
+    (model.x**2) * (model.y**2))
 
-instance = model.create();
+with SolverFactory("ipopt") as solver:
+    model.x, model.y = 0.25, 0.25
+    print("x0=%s, y0=%s" % (model.x.value, model.y.value))
+    solver.solve(model)
+    print("x*=%s, y*=%s" % (model.x.value, model.y.value))
+    print("")
 
-options = Options()
-options.solver = 'ipopt'
-options.quiet = True
-
-instance.x = 0.25
-instance.y = 0.25
-print "x0=", instance.x.value, " y0=", instance.y.value,
-results, opt = scripting.util.apply_optimizer(options, instance)
-instance.load(results)
-print "x*=", instance.x.value, " y*=", instance.y.value
-
-instance.x = 2.5
-instance.y = 2.5
-print "x0=", instance.x.value, " y0=", instance.y.value,
-results, opt = scripting.util.apply_optimizer(options, instance)
-instance.load(results)
-print "x*=", instance.x.value, " y*=", instance.y.value
+    model.x, model.y = 2.5, 2.5
+    print("x0=%s, y0=%s" % (model.x.value, model.y.value))
+    solver.solve(model)
+    print("x*=%s, y*=%s" % (model.x.value, model.y.value))

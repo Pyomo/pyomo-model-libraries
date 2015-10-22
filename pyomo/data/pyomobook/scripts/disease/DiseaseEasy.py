@@ -10,7 +10,6 @@ model.P_POP = Param()
 model.I = Var(model.S_SI, bounds=(0,model.P_POP), initialize=1)
 model.S = Var(model.S_SI, bounds=(0,model.P_POP), initialize=300)
 model.beta = Var(bounds=(0.05, 70))
-model.alpha = Var(bounds=(0.5, 1.5))
 model.eps_I = Var(model.S_SI, initialize=0.0)
 
 def _objective(model):

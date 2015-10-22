@@ -1,78 +1,88 @@
-from pyomo.core import *
-from pyutilib.misc import Options
+from pyomo.environ import *
+from pyomo.opt import SolverFactory
+from collections import namedtuple
 from math import pi
+import numpy
 
 model = ConcreteModel()
 
-model.x = Var(bounds=(2,4))
-model.y = Var(bounds=(2,4))
+model.x = Var(bounds=(0,4))
+model.y = Var(bounds=(0,4))
 
-def multimodal(m):
-    return (2-cos(pi*m.x)-cos(pi*m.y)) * (m.x**2) * (m.y**2)
-model.obj = Objective(rule=multimodal, sense=minimize)
+model.obj = Objective(expr= \
+    (2 - cos(pi*model.x) - cos(pi*model.y)) * \
+    (model.x**2) * (model.y**2))
 
-instance = model.create();
+# store attributes of a solution
+Solution = namedtuple('Solution',
+                      ['xinit','yinit',
+                       'xsol','ysol',
+                       'objective'])
 
-options = Options()
-options.solver = 'ipopt'
-options.quiet = True
+# define a new class keep track of
+# all unique solutions
+class SolutionPool(object):
 
-# define a new class to store, compare, and print potential solutions
-class Solution(object):
-    def __init__(self, xinit, yinit, xsol, ysol, objsol):
-        self.xinit = xinit
-        self.yinit = yinit
-        self.xsol = xsol
-        self.ysol = ysol
-        self.objsol = objsol
+    def __init__(self, tol=1e-6):
+        self.tol = tol
+        self.unique_solns = []
 
-    def is_different(self, soln_obj, tol):
-        if (abs(self.xsol - soln_obj.xsol) > tol or abs(self.ysol-soln_obj.ysol) > tol):
+    def update(self, xinit, yinit, model):
+
+        candidate_soln = Solution(xinit, yinit,
+                                  model.x.value, model.y.value,
+                                  model.obj())
+
+        # loop through the current list of unique solutions
+        # and see if the candidate solution is new
+        for soln in self.unique_solns:
+            if not self.is_different(soln, candidate_soln):
+                # candidate_soln is already in the list
+                break
+        else:
+            # this gets executed with the for-loop
+            # does not break
+            self.unique_solns.append(candidate_soln)
+
+    def is_different(self, soln1, soln2):
+        if (abs(soln1.xsol - soln2.xsol) > self.tol) or \
+           (abs(soln1.ysol - soln2.ysol) > self.tol):
             return True
         return False
 
     def pprint(self):
-        print 'x0=', self.xinit, 'y0=', self.yinit,
-        print 'x*=', self.xsol, 'y*=', self.ysol,
-        print 'obj*=', self.objsol
+        print("SolutionPool (size=%s):"
+              % (len(self.unique_solns)))
+        for i, soln in enumerate(self.unique_solns, 1):
+            print(" - solution%d" % (i))
+            print("\tx0=%f, y0=%f" % (soln.xinit, soln.yinit))
+            print("\tx*=%f, y*=%f" % (soln.xsol, soln.ysol))
+            print("\tobjective=%f" % (soln.objective))
 
 # setup the grid of starting points
-N=8
-step = 0.25
-xinit = [2 + i*step for i in range(0,N+1)]
-yinit = [2 + i*step for i in range(0,N+1)]
+xgrid = numpy.arange(2, 4.25, 0.25)
+ygrid = numpy.linspace(2, 4, 8)
 
 # loop through all the starting points and add
-# unique solns to the list
-unique_solns = list()
-for i in range(0, N):
-    for j in range(0,N):
-        # initialize at the current grid point and solve the problem
-        instance.x = xinit[i]
-        instance.y = yinit[j]
-        results, opt = scripting.util.apply_optimizer(options, instance)
-        instance.load(results)
-        
-        # create a Solution object for the candidate solution
-        candidate_soln = Solution(xinit[i], yinit[j], instance.x.value, instance.y.value, 0.0)
+# solutions to the solution pool
+solution_pool = SolutionPool(tol=1e-3)
+cnt = 0
+for xinit in xgrid:
+    for yinit in ygrid:
+        # initialize at the current grid point
+        # and solve the problem
+        model.x = xinit
+        model.y = yinit
 
-        soln_is_unique = True
-        # loop through the current list of unique solutions
-        # and see if the candidate solution is new
-        for soln in unique_solns:
-            if (soln.is_different(candidate_soln, 1e-3) == False):
-                # soln is already in the list
-                soln_is_unique = False
-                break
+        with SolverFactory("ipopt") as solver:
+            solver.solve(model)
 
-        if soln_is_unique:
-            unique_solns.append(candidate_soln)
+        solution_pool.update(xinit, yinit, model)
+        cnt += 1
 
     # print progress
-    print 'Percent Complete:', float(i+1)/N*100, '%'
+    print("Percent Complete: %s%%"
+          % (round(float(cnt)/(len(xgrid)*len(ygrid))*100)))
 
 # print out the unique solutions
-print
-print "*** Unique Solutions Found ***"
-for soln in unique_solns:
-    soln.pprint()
+solution_pool.pprint()

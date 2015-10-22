@@ -1,28 +1,34 @@
-import pyomo.environ
-from pyomo.opt import SolverFactory
-from concrete2 import model
+from pyomo.environ import *
 
-instance = model
+model = ConcreteModel()
+model.s = Set(initialize=[1,2,3])
+model.x = Var()
+model.y = Var(model.s)
 
-opt = SolverFactory("glpk")
-results = opt.solve(instance)
-#instance.load(results)
+# simulate a solve
+model.x.value = 10
+model.y[1].value = 1
+model.y[2].value = 2
+model.y[3].value = 3
 
 # @loop1:
 from pyomo.core import Var
-for (name, key), var in instance.component_data_iterindex(Var, active=True):
-    print("%s %s %s" % (name, key, str(var.value)))
+print("\nLoop By Variable Objects")
+for var in model.component_data_objects(Var):
+    print("%s: %f" % (var, var()))
 # @:loop1
 
 # @loop2:
-for index in instance.x:
-    print("%s %s" % (str(instance.x[index]), str(instance.x[index].value)))
+print("\nLoop Over Indexed Variable:")
+for index in model.y:
+    print("%s %s" % (model.y[index], model.y[index]()))
 # @:loop2
 
 # @loop3:
 from pyomo.core import Var
-for var in instance.component_objects(Var, active=True):
-    print("Variable "+str(var))
-    for index in var:
-        print("%s %s" % (str(var[index]), str(var[index].value)))
+print("\nLoop by Variable Containers")
+for var_container in model.component_objects(Var):
+    print(var_container)
+    for index in var_container:
+        print(" -%s: %f" % (index, var_container[index]()))
 # @:loop3
