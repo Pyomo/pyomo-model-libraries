@@ -52,7 +52,7 @@ class CustomPyroWorker(TaskWorker):
 
 if __name__ == "__main__":
 
-    # spawn the task worker daemon, which worker will attempt
-    # to connect to a 'dispatch_srvr' process that has
-    # registered itself through a 'pyomo_ns' process
+    # spawn the task worker daemon, which will attempt to
+    # connect to a 'dispatch_srvr' process that has
+    # registered itself with a 'pyomo_ns' process
     TaskWorkerServer(CustomPyroWorker, host="127.0.0.1")
