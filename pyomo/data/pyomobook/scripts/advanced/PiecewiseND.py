@@ -48,7 +48,7 @@ def BuildPiecewiseND(xvars, zvar, tri, zvals):
                         integers specifying the D+1 indices
                         of the points vector that define
                         each simplex of the triangulation.
-        zvals: An (npoints, 1) shaped array listing the the
+        zvals: An (npoints, 1) shaped array listing the
                value of the piecewise function at each of
                coordinates in the triangulation points
                array.
