@@ -5,13 +5,13 @@ import scipy
 
 model = ConcreteModel()
 
-# Load previously defined cost and rhs array using numpy
+# load previously defined cost and rhs array using numpy
 model.c = numpy.loadtxt('numpy_datac.txt').tolist()
 model.n = len(model.c)
 model.b = numpy.loadtxt('numpy_datab.txt').tolist()
 model.m = len(model.b)
 
-# Generate a random sparse constraint matrix in
+# generate a random sparse constraint matrix in
 # Compressed Sparse Row storage format using scipy
 model.A = scipy.sparse.rand(
     model.m, model.n, density=0.5, format='csr')
@@ -19,7 +19,7 @@ model.A_data = model.A.data.tolist()
 model.A_indices = model.A.indices.tolist()
 model.A_indptr = model.A.indptr.tolist()
 
-# Define Pyomo variable, constraint, and objective objects
+# define the Pyomo optimization objects
 model.rows = RangeSet(0, model.m-1)
 model.cols = RangeSet(0, model.n-1)
 model.x = Var(model.cols, within=NonNegativeReals)
@@ -40,7 +40,7 @@ model.con = Constraint(model.rows, rule=_con_rule)
 # solve the model
 with SolverFactory("glpk") as opt:
     results = opt.solve(model)
-    # Check that the solver reports
+    # check that the solver reports
     # solution optimality
     success = False
     if (results.solver.termination_condition ==

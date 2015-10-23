@@ -7,8 +7,8 @@ from pyomo.core import (Block,
 
 def generate_delaunay(variables, num=10):
     """
-    Generate a Delaunay triangulation of the d-dimensional
-    bounded variable domain given a list of d Pyomo
+    Generate a Delaunay triangulation of the D-dimensional
+    bounded variable domain given a (D, 1) array of Pyomo
     variables. The number of grid points to generate for
     each variable is set by the optional keyword argument
     'num' (default=10).
@@ -22,7 +22,7 @@ def generate_delaunay(variables, num=10):
     for v in variables:
         linegrids.append(numpy.linspace(v.lb, v.ub, num))
     # generates a meshgrid and then flattens and transposes
-    # the meshgrid into an (npoints, d) array of
+    # the meshgrid into an (npoints, D) shaped array of
     # coordinates
     points = numpy.vstack(numpy.meshgrid(*linegrids)).\
              reshape(len(variables),-1).T
@@ -30,32 +30,32 @@ def generate_delaunay(variables, num=10):
 
 def BuildPiecewiseND(xvars, zvar, tri, zvals):
     """
-    Builds constraints defining an ndim dimensional
+    Builds constraints defining a D-dimensional
     piecewise representation of the given triangulation.
 
     Args:
-        xvars: A (ndim, 1) array of Pyomo variable objects
+        xvars: A (D, 1) array of Pyomo variable objects
                representing the inputs of the piecewise
                function.
-        zvar: The variable defining the output of the
-              piecewise function.
-        tri: A triangulation object representation a
-             discretization of the input variable
-             domain. Required attributes:
-           - points: (npoints, N) array representing the
-                     N-dimensional coordinates of the
-                     discretization point.
-           - simplices: (nsimplices, ndim+1) array
-                        representing the indices of the
-                        points array defining the simplices
-                        of the triangulation.
-        zvals: A (npoints, 1) array of values representing
-               the output of the piecewise function at the
-               given triangulation points.
+        zvar: A Pyomo variable object set equal to the
+              output of the piecewise function.
+        tri: A triangulation over the discretized
+             variable domain. Required attributes:
+           - points: An (npoints, D) shaped array listing the
+                     D-dimensional coordinates of the
+                     discretization points.
+           - simplices: An (nsimplices, D+1) shaped array of
+                        integers specifying the D+1 indices
+                        of the points vector that define
+                        each simplex of the triangulation.
+        zvals: An (npoints, 1) shaped array listing the the
+               value of the piecewise function at each of
+               coordinates in the triangulation points
+               array.
 
     Returns:
-        A Pyomo Block object containing variable and
-        constraint objects defining the piecewise function.
+        A Pyomo Block object containing variables and
+        constraints that define the piecewise function.
     """
 
     b = Block(concrete=True)
@@ -86,7 +86,7 @@ def BuildPiecewiseND(xvars, zvar, tri, zvals):
     b.convex_c = Constraint(expr=\
         sum(b.lmda[v] for v in b.vertices) == 1)
 
-    # Generate a map from vertex index to simplex index,
+    # generate a map from vertex index to simplex index,
     # which avoids an n^2 lookup when generating the
     # constraint
     vertex_to_simplex = [[] for v in b.vertices]

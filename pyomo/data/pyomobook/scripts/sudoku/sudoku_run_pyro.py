@@ -19,7 +19,7 @@ board = [(1,1,5),(1,2,3),(1,5,7), \
 model = create_sudoku_model(board)
 
 free, fixed = tighten_variable_bounds(model)
-print("Model as %s fixed variables and %s free variables"
+print("Model has %s fixed variables and %s free variables"
             % (fixed, free))
 if free == 0:
     print("All variables have been fixed")

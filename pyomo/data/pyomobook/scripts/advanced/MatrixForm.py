@@ -8,11 +8,13 @@ from pyomo.environ import (Var,
 from pyomo.repn.canonical_repn import \
     generate_canonical_repn
 
-def to_matrix_form(instance):
+def to_matrix_form(model):
     """
-    Converts a linear Pyomo instance into matrix form.
+    Converts a concrete Pyomo model with a linear objective
+    and linear constraints into matrix form.
+
     Args:
-        instance: A constructed Pyomo model.
+        model: A concrete Pyomo model.
 
     Returns:
         Objects that define the following LP representation:
@@ -38,7 +40,7 @@ def to_matrix_form(instance):
         returned:
 
           vartocol: maps model variable objects to their
-                    integer column index in the A
+                    integer column index in the A     
                     matrix. E.g.,
                        vartocol[model.x[5]] # -> 0
           contorow: maps model constraint objects to their
@@ -58,7 +60,7 @@ def to_matrix_form(instance):
     sortOrder = (SortComponents.indices |
                  SortComponents.alphabetical)
     all_blocks = [_b for _b in
-                  instance.block_data_objects(
+                  model.block_data_objects(
                       active=True,
                       sort=sortOrder)]
     VarSymbolToVarObject = []

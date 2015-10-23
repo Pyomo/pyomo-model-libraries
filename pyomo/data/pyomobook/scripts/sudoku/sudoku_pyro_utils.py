@@ -7,7 +7,7 @@ def tighten_variable_bounds(model):
     # will transmit tasks to workers
     client = pyutilib.pyro.Client(host='127.0.0.1')
 
-    # or each variable not already fixed, transmit a task to
+    # for each variable not already fixed, transmit a task to
     # check for tighter bounds based on feasibility
     task_count = 0
     for r in model.ROWS:
@@ -40,7 +40,7 @@ def tighten_variable_bounds(model):
     print("Bounds Tightening Fixed %s Variables"
           % (fixed_count))
 
-    # Compute and return counts for the total number of
+    # compute and return counts for the total number of
     # fixed and free variables
     total_fixed, total_free = 0, 0
     for var in model.component_data_objects(Var):

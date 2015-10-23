@@ -27,13 +27,13 @@ model = ConcreteModel()
 model.x = Var(bounds=(-5, 5))
 model.y = Var(bounds=(-5, 5))
 
-# Create nonlinear components
+# create nonlinear components
 model.nonlinear = Block()
 model.nonlinear.obj = Objective(expr=f(model.x, model.y))
 model.nonlinear.con = Constraint(expr= \
     g(model.x, model.y) == f(model.x, model.y))
 
-# Create linearized components
+# create linearized components
 tri = generate_delaunay([model.x, model.y], num=25)
 xarray, yarray = np.transpose(tri.points)
 fvals = f(xarray, yarray, package=np)
