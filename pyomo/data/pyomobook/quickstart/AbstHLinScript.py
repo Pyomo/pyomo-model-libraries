@@ -27,7 +27,6 @@ def budget_rule(model):
 model.budgetconstr = Constraint(rule=budget_rule)
 
 # @tail:
-from pyomo.opt import SolverFactory
 opt = SolverFactory('glpk')
 
 instance = model.create_instance("AbstractH.dat")

@@ -17,12 +17,11 @@ def xbounds_rule(model, i):
 model.x = Var(model.A, bounds=xbounds_rule)
 
 def obj_rule(model):
-    return sum(model.h[i] * (model.x[i] - \
-    (model.x[i]/model.d[i])**2) for i in model.A)
-
+    return sum(model.h[i] * \
+               (model.x[i] - (model.x[i]/model.d[i])**2) \
+               for i in model.A)
 model.z = Objective(rule=obj_rule, sense=maximize)
 
 def budget_rule(model):
     return summation(model.c, model.x) <= model.b
-
 model.budgetconstr = Constraint(rule=budget_rule)

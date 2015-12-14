@@ -25,7 +25,6 @@ instance.budgetconstr = \
      Constraint(expr = sum(c[i] * instance.x[i] for i in A) <= b)
 
 # @tail:
-from pyomo.opt import SolverFactory
 opt = SolverFactory('glpk')
 
 results = opt.solve(instance) # solves and updates instance
