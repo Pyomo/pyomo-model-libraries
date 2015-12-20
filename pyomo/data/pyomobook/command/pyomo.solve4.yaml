@@ -1,0 +1,5 @@
+# pyomo.solve4.yaml
+model:
+  filename: concrete1.py
+solvers:
+  - solver name: glpk
