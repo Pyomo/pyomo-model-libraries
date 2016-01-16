@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # @cmd:
-pyomo solve pyomo.solve4.yaml
+pyomo solve concrete1.yaml
 # @:cmd
 cat results.yml
