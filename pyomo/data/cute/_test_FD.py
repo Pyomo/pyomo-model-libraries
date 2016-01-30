@@ -21,11 +21,11 @@ try:
 except:
     pass
 
-@unittest.category('smoke','nightly','expensive')
+@unittest.category('expensive')
 class ExpensiveTests(unittest.TestCase):
     pass
 
-@unittest.category('smoke')
+@unittest.category('smoke', 'nightly', 'expensive')
 class SmokeTests(unittest.TestCase):
     pass
 
