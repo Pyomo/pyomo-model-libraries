@@ -34,10 +34,8 @@
 from pyomo.core import *
 model = AbstractModel()
 
-model.x = Var()
-model.x.setlb(0.0)
-model.y = Var()
-model.y.setlb(0.0)
+model.x = Var(bounds=(0.0,None))
+model.y = Var(bounds=(0.0,None))
 
 def f(model):
     return (model.x-model.y)**2

@@ -28,201 +28,152 @@
 from pyomo.core import *
 model = AbstractModel()
 
-model.SR = Var(initialize=27.452)
-model.SR.setlb(10)
-model.SR.setub(150)
+model.SR = Var(initialize=27.452,
+               bounds=(10,150))
 
-model.LR = Var(initialize=1.5000)
-model.LR.setlb(0)
-model.LR.setub(10)
+model.LR = Var(initialize=1.5000,
+               bounds=(0,10))
 
-model.PK = Var(initialize=10.000)
-model.PK.setlb(0)
-model.PK.setub(10)
+model.PK = Var(initialize=10.000,
+               bounds=(0,10))
 
-model.EF = Var(initialize=0.000)
-model.EF.setlb(0)
-model.EF.setub(5)
+model.EF = Var(initialize=0.000,
+               bounds=(0,5))
 
-model.SX = Var(initialize=19.217)
-model.SX.setlb(7)
-model.SX.setub(120)
+model.SX = Var(initialize=19.217,
+               bounds=(7,120))
 
-model.LX = Var(initialize=1.5000)
-model.LX.setlb(1.5)
-model.LX.setub(8)
+model.LX = Var(initialize=1.5000,
+               bounds=(1.5,8))
 
-model.SD = Var(initialize=3.5688)
-model.SD.setlb(2)
-model.SD.setub(20)
+model.SD = Var(initialize=3.5688,
+               bounds=(2,20))
 
-model.SK = Var(initialize=4.0696)
-model.SK.setlb(2)
-model.SK.setub(30)
+model.SK = Var(initialize=4.0696,
+               bounds=(2,30))
 
-model.ST = Var(initialize=34.315)
-model.ST.setlb(30)
-model.ST.setub(500)
+model.ST = Var(initialize=34.315,
+               bounds=(30,500))
 
-model.SF = Var(initialize=88.025)
-model.SF.setlb(20)
-model.SF.setub(200)
+model.SF = Var(initialize=88.025,
+               bounds=(20,200))
 
-model.LF = Var(initialize=5.1306)
-model.LF.setlb(0.01)
-model.LF.setub(20)
+model.LF = Var(initialize=5.1306,
+               bounds=(0.01,20))
 
-model.AM = Var(initialize=0.0000)
-model.AM.setlb(0)
-model.AM.setub(10)
+model.AM = Var(initialize=0.0000,
+               bounds=(0,10))
 
-model.CA = Var(initialize=-0.14809)
-model.CA.setlb(-0.2)
-model.CA.setub(-0.001)
+model.CA = Var(initialize=-0.14809,
+               bounds=(-0.2,-0.001))
 
-model.CB = Var(initialize=0.75980)
-model.CB.setlb(0.1)
-model.CB.setub(2)
+model.CB = Var(initialize=0.75980,
+               bounds=(0.1,2))
 
-model.SO = Var(initialize=0.0000)
-model.SO.setlb(0)
-model.SO.setub(1)
+model.SO = Var(initialize=0.0000,
+               bounds=(0,1))
 
-model.SS = Var(initialize=0.0000)
-model.SS.setlb(0)
-model.SS.setub(2)
+model.SS = Var(initialize=0.0000,
+               bounds=(0,2))
 
-model.IMPDER = Var(initialize=114.7)
-model.IMPDER.setlb(100)
-model.IMPDER.setub(1000)
+model.IMPDER = Var(initialize=114.7,
+                   bounds=(100,1000))
 
-model.IMPK = Var(initialize=500.00)
-model.IMPK.setlb(500)
-model.IMPK.setub(5000)
+model.IMPK = Var(initialize=500.00,
+                 bounds=(500,5000))
 
-model.IMPFUS = Var(initialize=1760.5)
-model.IMPFUS.setlb(500)
-model.IMPFUS.setub(5000)
+model.IMPFUS = Var(initialize=1760.5,
+                   bounds=(500,5000))
 
-model.QI = Var(initialize=2325.6)
-model.QI.setlb(1000)
-model.QI.setub(20000)
+model.QI = Var(initialize=2325.6,
+               bounds=(1000,20000))
 
-model.PT = Var(initialize=5.6788)
-model.PT.setlb(2)
-model.PT.setub(30)
+model.PT = Var(initialize=5.6788,
+               bounds=(2,30))
 
-model.MV = Var(initialize=14197.0)
-model.MV.setlb(2000)
-model.MV.setub(20000)
+model.MV = Var(initialize=14197.0,
+               bounds=(2000,20000))
 
-model.MC = Var(initialize=12589.0)
-model.MC.setlb(3000)
-model.MC.setub(30000)
+model.MC = Var(initialize=12589.0,
+               bounds=(3000,30000))
 
-model.MD = Var(initialize=28394.0)
-model.MD.setlb(5000)
-model.MD.setub(50000)
+model.MD = Var(initialize=28394.0,
+               bounds=(5000,50000))
 
-model.PD = Var(initialize=0.2000)
-model.PD.setlb(0.2)
-model.PD.setub(0.8)
+model.PD = Var(initialize=0.2000,
+               bounds=(0.2,0.8))
 
-model.NS = Var(initialize=1.0000)
-model.NS.setlb(1)
-model.NS.setub(5)
+model.NS = Var(initialize=1.0000,
+               bounds=(1,5))
 
-model.VS = Var(initialize=0.0000)
-model.VS.setlb(0)
-model.VS.setub(20)
+model.VS = Var(initialize=0.0000,
+               bounds=(0,20))
 
-model.CR = Var(initialize=100.00)
-model.CR.setlb(100)
-model.CR.setub(400)
+model.CR = Var(initialize=100.00,
+               bounds=(100,400))
 
-model.PM = Var(initialize=15.000)
-model.PM.setlb(4)
-model.PM.setub(15)
+model.PM = Var(initialize=15.000,
+               bounds=(4,15))
 
-model.DV = Var(initialize=0.0000)
-model.DV.setlb(0)
-model.DV.setub(10)
+model.DV = Var(initialize=0.0000,
+               bounds=(0,10))
 
-model.MZ = Var(initialize=500.00)
-model.MZ.setlb(500)
-model.MZ.setub(10000)
+model.MZ = Var(initialize=500.00,
+               bounds=(500,10000))
 
-model.VN = Var(initialize=10.000)
-model.VN.setlb(10)
-model.VN.setub(50)
+model.VN = Var(initialize=10.000,
+               bounds=(10,50))
 
-model.QV = Var(initialize=814.90)
-model.QV.setlb(250)
-model.QV.setub(5000)
+model.QV = Var(initialize=814.90,
+               bounds=(250,5000))
 
-model.QF = Var(initialize=3140.5)
-model.QF.setlb(750)
-model.QF.setub(15000)
+model.QF = Var(initialize=3140.5,
+               bounds=(750,15000))
 
-model.IMPTRAIN = Var(initialize=1945.0)
-model.IMPTRAIN.setlb(250)
-model.IMPTRAIN.setub(3000)
+model.IMPTRAIN = Var(initialize=1945.0,
+                     bounds=(250,3000))
 
-model.IMPMOT = Var(initialize=190.85)
-model.IMPMOT.setlb(10)
-model.IMPMOT.setub(5000)
+model.IMPMOT = Var(initialize=190.85,
+                   bounds=(10,5000))
 
-model.IMPNMOT = Var(initialize=35.000)
-model.IMPNMOT.setlb(35)
-model.IMPNMOT.setub(70)
+model.IMPNMOT = Var(initialize=35.000,
+                    bounds=(35,70))
 
-model.IMPPET = Var(initialize=100.00)
-model.IMPPET.setlb(100)
-model.IMPPET.setub(3000)
+model.IMPPET = Var(initialize=100.00,
+                   bounds=(100,3000))
 
-model.IMPPIL = Var(initialize=200.00)
-model.IMPPIL.setlb(200)
-model.IMPPIL.setub(400)
+model.IMPPIL = Var(initialize=200.00,
+                   bounds=(200,400))
 
-model.IMPCAN = Var(initialize=120.00)
-model.IMPCAN.setlb(120)
-model.IMPCAN.setub(240)
+model.IMPCAN = Var(initialize=120.00,
+                   bounds=(120,240))
 
-model.IMPSNA = Var(initialize=700.00)
-model.IMPSNA.setlb(700)
-model.IMPSNA.setub(1900)
+model.IMPSNA = Var(initialize=700.00,
+                   bounds=(700,1900))
 
-model.MS = Var(initialize=1000.0)
-model.MS.setlb(100)
-model.MS.setub(1000)
+model.MS = Var(initialize=1000.0,
+               bounds=(100,1000))
 
-model.EL = Var(initialize=4.9367)
-model.EL.setlb(2)
-model.EL.setub(20)
+model.EL = Var(initialize=4.9367,
+               bounds=(2,20))
 
-model.DE = Var(initialize=0.0000)
-model.DE.setlb(0)
-model.DE.setub(1)
+model.DE = Var(initialize=0.0000,
+               bounds=(0,1))
 
-model.DS = Var(initialize=0.0000)
-model.DS.setlb(0)
-model.DS.setub(2)
+model.DS = Var(initialize=0.0000,
+               bounds=(0,2))
 
-model.IMPVOIL = Var(initialize=5000.0)
-model.IMPVOIL.setlb(500)
-model.IMPVOIL.setub(5000)
+model.IMPVOIL = Var(initialize=5000.0,
+                    bounds=(500,5000))
 
-model.NM = Var(initialize=1.0)
-model.NM.setlb(1)
-model.NM.setub(2)
+model.NM = Var(initialize=1.0,
+               bounds=(1,2))
 
-model.NP = Var(initialize=1.0)
-model.NP.setlb(1)
-model.NP.setub(2)
+model.NP = Var(initialize=1.0,
+               bounds=(1,2))
 
-model.NG = Var(initialize=1.0)
-model.NG.setlb(1)
-model.NG.setub(2)
+model.NG = Var(initialize=1.0,
+               bounds=(1,2))
 
 def f(model):
     expr = (model.SK - 0.01*model.PK*model.SR)**2 \

@@ -35,12 +35,8 @@
 from pyomo.core import *
 model = AbstractModel()
 model.x1 = Var()
-model.x2 = Var()
-model.x2.setlb(-1.0)
-model.x2.setub(1.0)
-model.x3 = Var()
-model.x3.setlb(1.0)
-model.x3.setub(2.0)
+model.x2 = Var(bounds=(-1.0,1.0))
+model.x3 = Var(bounds=(1.0,2.0))
 
 def obj(m):
     return (m.x1**2 + (m.x2*m.x3)**4 + m.x1*m.x3 + m.x2*sin(m.x1+m.x3) + m.x2)
