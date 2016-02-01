@@ -21,7 +21,7 @@ model.c = ConstraintList()
 # Create a model instance and optimize
 instance = model.create_instance()
 results = opt.solve(instance)
-print(results)
+instance.display()
 
 # "flip" the value of x[2] (it is binary)
 # then solve again
@@ -34,4 +34,5 @@ else:
 instance.x[2].fixed = True
 
 results = opt.solve(instance)
-print(results)
+instance.display()
+
