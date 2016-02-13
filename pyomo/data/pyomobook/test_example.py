@@ -91,6 +91,7 @@ for fname in glob.glob('*'):
     globals()[tfname_] = Test = type(tfname_, (unittest.TestCase,), {})
     Test = globals()[tfname_]
     #class Test(unittest.TestCase): pass
+    Test = unittest.category("book")(Test)
     
     #
     for file in list(glob.glob(fname+'/*.py')) + list(glob.glob(fname+'/*/*.py')):
