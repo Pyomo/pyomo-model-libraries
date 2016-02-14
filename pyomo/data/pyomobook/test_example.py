@@ -87,7 +87,7 @@ for fname in glob.glob(os.path.join(currdir,'*')):
 
     # Declare an empty TestCase class
     fname_ = fname.replace('-','_')
-    tfname_ = 'Test_'+fname_
+    tfname_ = 'Test_'+fname_.split("pyomobook"+os.sep)[1]
     Test = globals()[tfname_] = type(tfname_, (unittest.TestCase,), {})
     #Test = globals()[tfname_]
     #class Test(unittest.TestCase): pass
