@@ -81,15 +81,15 @@ def filter(line):
     status = 'Time:' in line or line.startswith('[') or 'with format cpxlp' in line or 'usermodel = <module' in line or line.startswith('File') or 'execution time=' in line
     return status
 
-for fname in glob.glob('*'):
+for fname in glob.glob(os.path.join(currdir,'*')):
     if not os.path.isdir(fname):
         continue
 
     # Declare an empty TestCase class
     fname_ = fname.replace('-','_')
     tfname_ = 'Test_'+fname_
-    globals()[tfname_] = Test = type(tfname_, (unittest.TestCase,), {})
-    Test = globals()[tfname_]
+    Test = globals()[tfname_] = type(tfname_, (unittest.TestCase,), {})
+    #Test = globals()[tfname_]
     #class Test(unittest.TestCase): pass
     Test = unittest.category("book")(Test)
     
