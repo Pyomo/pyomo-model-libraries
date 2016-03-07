@@ -51,19 +51,26 @@ model.constr9 = Constraint(expr=model.y[4] == 98000.0*model.x3/(model.y[2]*model
 
 model.y[2] = 1.6*value(model.x1)
 while (1):
-    y2old = value(model.y[2])
-    model.y[3] = value(1.22*model.y[2] - model.x1)
-    model.y[6] = value((model.x2+model.y[3])/model.x1)
-    model.y[2] = value(0.01*model.x1*(112.0 + 13.167*model.y[6] - 0.6667*model.y[6]**2))
-    if abs(y2old - value(model.y[2])) < 0.001:
+    y2old = model.y[2].value
+    model.y[3] = 1.22 * model.y[2].value - model.x1.value
+    model.y[6] = (model.x2.value + model.y[3].value) / model.x1.value
+    model.y[2] = 0.01 * model.x1.value * \
+                 (112.0 + \
+                  13.167 * model.y[6].value - \
+                  0.6667 * model.y[6].value**2)
+    if abs(y2old - model.y[2].value) < 0.001:
         break
 
 model.y[4] = 93.0
 while (1):
-    y4old = value(model.y[4])
-    model.y[5] = value(86.35 + 1.098*model.y[6] - 0.038*model.y[6]**2 + 0.325*(model.y[4]-89))
-    model.y[8] = value(3*model.y[5] - 133)
-    model.y[7] = value(35.82 - 0.222*model.y[8])
-    model.y[4] = value(98000.0*model.x3/(model.y[2]*model.y[7] + 1000*model.x3))
-    if abs(y4old-value(model.y[4])) < 0.001:
+    y4old = model.y[4].value
+    model.y[5] = 86.35 + \
+                 1.098 * model.y[6].value - \
+                 0.038 * model.y[6].value**2 + \
+                 0.325 * (model.y[4].value - 89)
+    model.y[8] = 3 * model.y[5].value - 133
+    model.y[7] = 35.82 - 0.222 * model.y[8].value
+    model.y[4] = 98000.0 * model.x3.value / \
+                 (model.y[2].value * model.y[7].value + 1000 * model.x3.value)
+    if abs(y4old - model.y[4].value) < 0.001:
         break
