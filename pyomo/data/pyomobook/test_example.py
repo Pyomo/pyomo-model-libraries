@@ -96,7 +96,7 @@ for fname in glob.glob(os.path.join(currdir,'*')):
     Test = globals()[tfname_] = type(tfname_, (unittest.TestCase,), {})
     Test = unittest.category("book")(Test)
     Test2 = globals()[tfname2_] = type(tfname2_, (unittest.TestCase,), {})
-    Test2 = unittest.category("book")(Test2)
+    Test2 = unittest.category("book2")(Test2)
     
     #
     for file in list(glob.glob(fname+'/*.py')) + list(glob.glob(fname+'/*/*.py')):
