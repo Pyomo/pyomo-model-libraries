@@ -87,11 +87,16 @@ for fname in glob.glob(os.path.join(currdir,'*')):
 
     # Declare an empty TestCase class
     fname_ = fname.replace('-','_')
-    tfname_ = 'Test_'+fname_.split("pyomobook"+os.sep)[1]
+    if 'pyomobook' in fname_:
+        tfname_ = 'Test_'+fname_.split("pyomobook"+os.sep)[1]
+        tfname2_ = 'Test2_'+fname_.split("pyomobook"+os.sep)[1]
+    else:
+        tfname_ = 'Test_'+fname_.split("examples"+os.sep)[1]
+        tfname2_ = 'Test2_'+fname_.split("examples"+os.sep)[1]
     Test = globals()[tfname_] = type(tfname_, (unittest.TestCase,), {})
-    #Test = globals()[tfname_]
-    #class Test(unittest.TestCase): pass
     Test = unittest.category("book")(Test)
+    Test2 = globals()[tfname2_] = type(tfname2_, (unittest.TestCase,), {})
+    Test2 = unittest.category("book")(Test2)
     
     #
     for file in list(glob.glob(fname+'/*.py')) + list(glob.glob(fname+'/*/*.py')):
@@ -100,17 +105,20 @@ for fname in glob.glob(os.path.join(currdir,'*')):
         name='.'.join(bname.split('.')[:-1])
         tname = os.path.basename(os.path.dirname(dir_))+'_'+name
         #
-        forceskip = check_skip(tfname_, 'test_'+tname.replace('.','_'))
-        #
         suffix = None
-        for suffix_ in ['.txt', '.yml']:
+        for suffix_ in ['.txt', '.yml', '.txt2', '.yml2']:
             if os.path.exists(dir_+name+suffix_):
                 suffix = suffix_
                 break
         #
         if not suffix is None:
             os.chdir(dir_)
-            Test.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, tolerance=1e-7, forceskip=forceskip)
+            if suffix_ in ['.txt2', '.yml2']:
+                forceskip = check_skip(tfname2_, 'test_'+tname.replace('.','_'))
+                Test2.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, tolerance=1e-7, forceskip=forceskip)
+            else:
+                forceskip = check_skip(tfname_, 'test_'+tname.replace('.','_'))
+                Test.add_baseline_test(cmd='cd %s; %s %s' % (dir_, sys.executable, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, tolerance=1e-7, forceskip=forceskip)
             os.chdir(currdir)
 
     #
@@ -120,17 +128,21 @@ for fname in glob.glob(os.path.join(currdir,'*')):
         name='.'.join(bname.split('.')[:-1])
         tname = os.path.basename(os.path.dirname(dir_))+'_'+name
         #
-        forceskip = check_skip(tfname_, 'test_'+tname.replace('.','_'))
         #
         suffix = None
-        for suffix_ in ['.txt', '.yml']:
+        for suffix_ in ['.txt', '.yml', '.txt2', '.yml2']:
             if os.path.exists(dir_+name+suffix_):
                 suffix = suffix_
                 break
         #
         if not suffix is None:
             os.chdir(dir_)
-            Test.add_baseline_test(cmd='cd %s; %s' % (dir_, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, forceskip=forceskip)
+            if suffix_ in ['.txt2', '.yml2']:
+                forceskip = check_skip(tfname2_, 'test_'+tname.replace('.','_'))
+                Test2.add_baseline_test(cmd='cd %s; %s' % (dir_, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, forceskip=forceskip)
+            else:
+                forceskip = check_skip(tfname_, 'test_'+tname.replace('.','_'))
+                Test.add_baseline_test(cmd='cd %s; %s' % (dir_, os.path.abspath(bname)),  baseline=dir_+name+suffix, name=tname, filter=filter, forceskip=forceskip)
             os.chdir(currdir)
     #
     Test = None

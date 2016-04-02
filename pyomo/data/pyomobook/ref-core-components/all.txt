@@ -59,8 +59,12 @@
         (1, 4) :  None :  True :  None : False : False
         (2, 3) :  None :  True :  None : False : False
         (2, 4) :  None :  True :  None : False : False
-    z : Size=0, Index=z_index, Domain=Reals
-        Key : Lower : Value : Upper : Fixed : Stale
+    z : Size=4, Index=z_index, Domain=Reals
+        Key    : Lower : Value : Upper : Fixed : Stale
+        (1, 3) :  None :  True :  None : False : False
+        (1, 4) :  None :  True :  None : False : False
+        (2, 3) :  None :  True :  None : False : False
+        (2, 4) :  None :  True :  None : False : False
 
 2 Expression Declarations
     expr1 : Size=1, Index=None
@@ -96,8 +100,9 @@
    sset2 : 	Size=0 	Index= sset2_index
 
 2 Block Declarations
-    b1 : Active=True
+    b1 : Size=1, Index=None, Active=True
         0 Declarations: 
+    b2 : Size=0, Index=b2_index, Active=True
 
 2 BuildAction Declarations
     ba1 : Size=0, Index=None, Active=True
@@ -117,18 +122,19 @@
         Key : Arg0 : Arg1 : Active
 
 2 Disjunct Declarations
-    disjunct1 : Active=True
+    disjunct1 : Size=1, Index=None, Active=True
         1 Var Declarations
             indicator_var : Size=1, Index=None, Domain=Binary
                 Key  : Lower : Value : Upper : Fixed : Stale
                 None :     0 :  None :     1 : False :  True
 
         1 Declarations: indicator_var
+    disjunct2 : Size=0, Index=disjunct2_index, Active=True
 
 2 SubModel Declarations
-    sub1 : Active=True
+    sub1 : Size=1, Index=None, Active=True
         0 Declarations: 
-    sub2 : Active=True
+    sub2 : Size=1, Index=None, Active=True
         1 Set Declarations
             _index : Dim=0, Dimen=2, Size=4, Domain=None, Ordered=False, Bounds=None
                 Virtual

@@ -79,10 +79,12 @@
         [1, 2, 3, 4, 5]
 
 1 Var Declarations
-    x : Size=3, Index=x_index, Domain=Reals
+    x : Size=5, Index=x_index, Domain=Reals
         Key : Lower : Value : Upper : Fixed : Stale
           1 :  None :  None :  None : False :  True
+          2 :  None :  None :  None : False :  True
           3 :  None :  None :  None : False :  True
+          4 :  None :  None :  None : False :  True
           5 :  None :  None :  None : False :  True
 
 1 SOSConstraint Declarations
@@ -100,10 +102,12 @@
         [1, 2, 3, 4, 5]
 
 1 Var Declarations
-    x : Size=3, Index=x_index, Domain=Reals
+    x : Size=5, Index=x_index, Domain=Reals
         Key : Lower : Value : Upper : Fixed : Stale
           1 :  None :  None :  None : False :  True
+          2 :  None :  None :  None : False :  True
           3 :  None :  None :  None : False :  True
+          4 :  None :  None :  None : False :  True
           5 :  None :  None :  None : False :  True
 
 1 SOSConstraint Declarations

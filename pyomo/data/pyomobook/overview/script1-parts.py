@@ -7,13 +7,13 @@ model.pprint()
 # @:pprint
 
 # @create:
-instance = model.create()
-instance.pprint()
+#instance = model.create()
+#instance.pprint()
 # @:create
 
 # @opt:
 opt = SolverFactory("glpk")
-results = opt.solve(instance)
+results = opt.solve(model)
 # @:opt
 
 # @write:

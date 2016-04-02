@@ -41,7 +41,7 @@ blocks1
         None :  None :  None :  None : False :  True
 
 1 Block Declarations
-    b : Active=True
+    b : Size=1, Index=None, Active=True
         2 Var Declarations
             x : Size=1, Index=None, Domain=Reals
                 Key  : Lower : Value : Upper : Fixed : Stale

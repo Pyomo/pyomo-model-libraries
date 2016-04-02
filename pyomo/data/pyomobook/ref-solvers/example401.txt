@@ -12,7 +12,7 @@ Solver:
   Termination condition: optimal
   Id: 0
   Error rc: 0
-  Time: 0.025857925415
+  Time: 0.0274360179901
 Solution: 
 - number of solutions: 1
   number of solutions displayed: 1
@@ -23,9 +23,9 @@ Solution:
     obj:
       Value: 0.799999994967
   Variable:
-    y:
-      Value: 0.399999996288
     x:
       Value: 2.391332152e-09
+    y:
+      Value: 0.399999996288
   Constraint: No values
 

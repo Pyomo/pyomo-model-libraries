@@ -30,5 +30,5 @@ print("\nLoop by Variable Containers")
 for var_container in model.component_objects(Var):
     print(var_container)
     for index in var_container:
-        print(" -%s: %f" % (index, var_container[index]()))
+        print("  %s: %f" % (index, var_container[index]()))
 # @:loop3

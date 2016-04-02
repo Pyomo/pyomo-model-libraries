@@ -9,8 +9,8 @@
       Status: optimal
       Function Value: 0.799999994967
     Solver results file: results.yml
-[    0.03] Applying Pyomo postprocessing actions
-[    0.03] Pyomo Finished
+[    0.04] Applying Pyomo postprocessing actions
+[    0.04] Pyomo Finished
 # ==========================================================
 # = Solver Results                                         =
 # ==========================================================
@@ -33,7 +33,7 @@ Solver:
   Termination condition: optimal
   Id: 0
   Error rc: 0
-  Time: 0.0253429412842
+  Time: 0.0270380973816
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
@@ -47,8 +47,8 @@ Solution:
     obj:
       Value: 0.799999994967
   Variable:
-    y:
-      Value: 0.399999996288
     x:
       Value: 2.391332152e-09
+    y:
+      Value: 0.399999996288
   Constraint: No values
