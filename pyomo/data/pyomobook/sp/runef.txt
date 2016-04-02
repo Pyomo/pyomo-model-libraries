@@ -1,16 +1,12 @@
 Importing module=/Users/wehart/home/wehart/papers/2013/pyomo-book/trunk/examples/sp/models/ReferenceModel.py
 Module successfully loaded
-Constructing scenario tree instances
-Linking instances into scenario tree
-Creating extensive form instance
-Queuing extensive form solve
-Waiting for extensive form solve
-Done with extensive form solve - loading results
-Storing solution in scenario tree
 
-***********************************************************************************************
->>>THE EXPECTED SUM OF THE STAGE COST VARIABLES=-108390.00001<<<
-***********************************************************************************************
+Initializing extensive form algorithm for stochastic programming problems.
+EF solve completed and solution status is feasible
+EF solve termination condition is optimal
+EF objective: -108390.00001
+EF gap:            0.00000
+EF bound:     -108390.00001
 
 Extensive form solution:
 ----------------------------------------------------
