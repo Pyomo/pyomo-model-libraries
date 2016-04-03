@@ -23,9 +23,10 @@ from pyomo.data.cute import CUTE_classifications as CUTE
 
 currdir = dirname(abspath(__file__))+os.sep
 
-has_asl_test = False
-if os.system('asl_test -v') == 0:
-    has_asl_test = True
+# https://github.com/ghackebeil/gjh_asl_json
+has_gjh_asl_json = False
+if os.system('gjh_asl_json -v') == 0:
+    has_gjh_asl_json = True
 
 class Tests(unittest.TestCase):
 
@@ -44,19 +45,20 @@ class ExpensiveASLTests(Tests):
         Tests.__init__(self, *args, **kwds)
 ExpensiveASLTests = unittest.category('expensive')(ExpensiveASLTests)
 
-"""
-The following test calls the asl_test executable to generate JSON
-files corresponding to both the AMPL-generated nl file and the
-Pyomo-generated nl file. The JSON files are then diffed using the
-pyutilib.th test class method assertMatchesJsonBaseline()
-"""
+#
+# The following test calls the gjh_asl_json executable to
+# generate JSON files corresponding to both the
+# AMPL-generated nl file and the Pyomo-generated nl
+# file. The JSON files are then diffed using the pyutilib.th
+# test class method assertMatchesJsonBaseline()
+#
 @unittest.nottest
 def pyomo_asl_test(self, name):
     if name in CUTE.asl_skipped_models:
         self.skipTest('Ignoring test '+name)
         return
-    if has_asl_test is False:
-        self.skipTest('asl_test executable not available')
+    if not has_gjh_asl_json:
+        self.skipTest("'gjh_asl_json' executable not available")
         return
     if has_json is False:
         self.skipTest('JSON module not available')
@@ -68,55 +70,59 @@ def pyomo_asl_test(self, name):
     # compare AMPL and Pyomo nl file structure
     #########################################
     try:
-        os.remove(currdir+'stub.json')
+        os.remove(currdir+name+'.ampl.json')
     except Exception:
         pass
     try:
-        os.remove(currdir+'stub.test.json')
+        os.remove(currdir+name+'.test.json')
     except Exception:
         pass
 
     # obtain the nl file summary information for comparison with ampl
     p = pyutilib.subprocess.run(
-        'asl_test '+currdir+name+'.test.nl rows='
+        'gjh_asl_json '+currdir+name+'.test.nl rows='
         +currdir+name+'.test.row cols='+currdir+name+'.test.col')
     self.assertTrue(p[0] == 0, msg=p[1])
-    os.rename(currdir+'stub.json',currdir+'stub.test.json')
+
     # obtain the nl file summary information for comparison with pyomo
     p = pyutilib.subprocess.run(
-        'asl_test '+currdir+name+'.ampl.nl rows='
+        'gjh_asl_json '+currdir+name+'.ampl.nl rows='
         +currdir+name+'.ampl.row cols='+currdir+name+'.ampl.col')
     self.assertTrue(p[0] == 0, msg=p[1])
     try:
         self.assertMatchesJsonBaseline(
-            currdir+'stub.test.json', currdir+'stub.json', tolerance=1e-6)
+            currdir+name+'.test.json',
+            currdir+name+'.ampl.json',
+            tolerance=1e-6)
     except AssertionError:
         # Make sure this is not a simple case of Pyomo/AMPL moving
         # constants in the constraint body to the upper/lower bound
-        f = open(currdir+'stub.json','r')
+        f = open(currdir+name+'.ampl.json','r')
         ampl_res = json.load(f)
         f.close()
-        f = open(currdir+'stub.test.json','r')
+        f = open(currdir+name+'.test.json','r')
         pyomo_res = json.load(f)
         f.close()
         del ampl_res["constraint bounds"]
         del pyomo_res["constraint bounds"]
         del ampl_res["initial evaluations"]["constraints"]
         del pyomo_res["initial evaluations"]["constraints"]
-        f = open(currdir+'stub.json','w')
+        f = open(currdir+name+'.ampl.json','w')
         json.dump(ampl_res,f,indent=2)
         f.close()
-        f = open(currdir+'stub.test.json','w')
+        f = open(currdir+name+'.test.json','w')
         json.dump(pyomo_res,f,indent=2)
         f.close()
         self.assertMatchesJsonBaseline(
-            currdir+'stub.test.json', currdir+'stub.json', tolerance=1e-6)
-        # If the json files match at this point, it is almost entirely
-        # certain that the difference had to do with one of AMPL or
-        # Pyomo moving constraint body from the body to the constraint
-        # bounds
+            currdir+name+'.test.json',
+            currdir+name+'.ampl.json',
+            tolerance=1e-6)
+        # If the json files match at this point, it is
+        # almost entirely certain that the difference had to
+        # do with one of AMPL or Pyomo moving a fixed part
+        # of the constraint body from the body to the bounds
         warnings.warn('asl comparison was relaxed for model '+name)
-    os.remove(currdir+'stub.json')
+    os.remove(currdir+name+'.ampl.json')
 
     # delete temporary test files
     os.remove(currdir+name+'.test.col')
