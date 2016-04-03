@@ -38,7 +38,7 @@ model.x = Var(model.N)
 model.x[1] = 0.0
 model.x[2] = 1.0
 
-model.obj = Objective(expr=0)
+model.f = Objective(expr=0)
 
 model.cons1 = Constraint(expr=model.x[1]*model.x[2]-1.0==0)
 model.cons2 = Constraint(expr=model.x[1]**2+model.x[2]**2-4.0==0)

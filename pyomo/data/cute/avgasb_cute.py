@@ -1,11 +1,11 @@
 #  _________________________________________________________________________
-#                                                                           
-#  Pyomo: Python Optimization Modeling Objects                           
-#  Copyright (c) 2010 Sandia Corporation.                                   
-#  This software is distributed under the BSD License.                      
-#  Under the terms of Contract DE-AC04-94AL85000 with Sandia Corporation,   
-#  the U.S. Government retains certain rights in this software.             
-#  For more information, see the Pyomo README.txt file.                     
+#
+#  Pyomo: Python Optimization Modeling Objects
+#  Copyright (c) 2010 Sandia Corporation.
+#  This software is distributed under the BSD License.
+#  Under the terms of Contract DE-AC04-94AL85000 with Sandia Corporation,
+#  the U.S. Government retains certain rights in this software.
+#  For more information, see the Pyomo README.txt file.
 #  _________________________________________________________________________
 
 # Formulated in Pyomo by Juan Lopez and Gabe Hackebeil
@@ -19,7 +19,7 @@
 # its documentation for any purpose and without fee is hereby
 # granted, provided that the above copyright notice appear in all
 # copies and that the copyright notice and this
-# permission notice appear in all supporting documentation.                     
+# permission notice appear in all supporting documentation.
 
 #   classification QLR2-AN-8-10
 
@@ -39,11 +39,11 @@ import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
     model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
 
-def f_rule(model):
+def obj_rule(model):
     return (sum(model.a[j]*model.x[j]**2 for j in range(1,9)))+\
     (sum(model.b[j]*model.x[j]*model.x[j+1] for j in range(1,8)))+\
     (sum(model.c[j]*model.x[j] for j in range(2,9)))
-model.f = Objective(rule=f_rule)
+model.obj = Objective(rule=obj_rule)
 
 def con1(model,j):
     return model.x[2*j-1]+model.x[2*j]<=1.0

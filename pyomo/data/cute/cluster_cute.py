@@ -32,11 +32,10 @@ model = ConcreteModel()
 model.x1 = Var()
 model.x2 = Var()
 
-def f(model):
+def obj_rule(model):
     return 0
-model.f = Objective(rule=f)
+model.obj = Objective(rule=obj_rule)
 
-    
 def con1(model):
     return ((model.x1-model.x2*model.x2) * (model.x1-sin(model.x2))) == 0
 model.cons1 = Constraint(rule=con1)

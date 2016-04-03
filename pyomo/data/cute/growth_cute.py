@@ -32,7 +32,7 @@ model.u1 = Var(initialize=100.0)
 model.u2 = Var()
 model.u3 = Var()
 
-def f_rule(model):
+def obj_rule(model):
     return (model.u1 * (8.0**(model.u2+(log(8.0))*model.u3)) - 8.0)**2 +\
     (model.u1 * (9.0**(model.u2+(log(9.0))*model.u3)) - \
     8.4305)**2 + (model.u1 * (10.0**(model.u2+(log(10.0))*model.u3)) - 9.5294)**2 + (model.u1 * \
@@ -45,4 +45,4 @@ def f_rule(model):
     (18.0**(model.u2+(log(18.0))*model.u3)) - 20.4569)**2 + \
     (model.u1 * (20.0**(model.u2+(log(20.0))*model.u3)) -\
     24.25)**2 + (model.u1 * (25.0**(model.u2+(log(25.0))*model.u3)) - 32.9863)**2
-model.f = Objective(rule=f_rule)
+model.obj = Objective(rule=obj_rule)

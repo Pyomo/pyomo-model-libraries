@@ -47,9 +47,9 @@ model.f3 = Var(initialize=1000.0)
 model.q4 = Var(initialize=-100.0)
 model.f4 = Var(bounds=(None,400.0),initialize=1000.0)
 
-def f(model):
+def obj_rule(model):
     return - model.p1 - model.p2 - model.p3 - model.p4 - model.p5 - model.p6 - model.p7
-model.f = Objective(rule=f)
+model.obj = Objective(rule=obj_rule)
 
 def pan1(model):
     return model.p1 * (abs(model.p1))-model.p2 * (abs (model.p2))  - 0.597053452*model.q1 * (abs(model.q1)) **0.8539 == 0
