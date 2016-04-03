@@ -6,7 +6,9 @@
  2.2
 -------------------------------------------------------------------------------
 
-- Next release.
+- Reorganized book tests following changes in the book organization
+- Updates to CUTE tests to match AMPL
+- Updates to samples to track changes in Pyomo.
 
 -------------------------------------------------------------------------------
  2.1
