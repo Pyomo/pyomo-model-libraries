@@ -51,13 +51,13 @@ model.c = Param(initialize=1)
 def ub_init(model, i, j):
     if 1 <= i <= model.M and 1 <= j <= model.N:
 	    return (sin(9.2*(model.xlo+model.dx*i))*sin(9.3*(model.ylo+j*model.dy)))**2 + 0.2
-model.ub = Param(model.Y, model.X, initialize=ub_init, within=AnyWithNone)
+model.ub = Param(model.Y, model.X, initialize=ub_init, within=Any)
 
 def lb_init(model, i, j):
     if 1 <= i <= model.M and 1 <= j <= model.N:
         return (sin(9.2*(model.xlo+model.dx*i))*sin(9.3*(model.ylo+j*model.dy)))**3
     return 0
-model.lb = Param(model.Y, model.X, initialize=lb_init, within=AnyWithNone)
+model.lb = Param(model.Y, model.X, initialize=lb_init, within=Any)
 
 # height of membrane
 def v_bounds(model, i, j):
