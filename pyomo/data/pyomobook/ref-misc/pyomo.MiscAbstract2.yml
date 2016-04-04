@@ -1,34 +1,3 @@
-log: "
-[    0.00] Setting up Pyomo environment
-[    0.00] Applying Pyomo preprocessing actions
-[    0.00] Creating model
-"
-action: "
-1 2 7
-1 3 2
-1 4 7
-2 1 6
-2 3 2
-2 4 8
-3 1 3
-3 2 9
-3 4 7
-4 1 3
-4 2 4
-4 3 4
-"
-log2: "
-[    0.02] Applying solver
-[    0.03] Processing results
-    Number of solutions: 1
-    Solution Information
-      Gap: 0.0
-      Status: feasible
-      Function Value: 16.0
-    Solver results file: results.yml
-[    0.03] Applying Pyomo postprocessing actions
-[    0.03] Pyomo Finished
-"
 # ==========================================================
 # = Solver Results                                         =
 # ==========================================================
@@ -37,8 +6,8 @@ log2: "
 # ----------------------------------------------------------
 Problem: 
 - Name: unknown
-  Lower bound: 16.0
-  Upper bound: 16.0
+  Lower bound: 14.0
+  Upper bound: 14.0
   Number of objectives: 1
   Number of constraints: 15
   Number of variables: 13
@@ -55,7 +24,7 @@ Solver:
       Number of bounded subproblems: 0
       Number of created subproblems: 0
   Error rc: 0
-  Time: 0.007954835891723633
+  Time: 0.00896692276001
 # ----------------------------------------------------------
 #   Solution Information
 # ----------------------------------------------------------
@@ -67,16 +36,16 @@ Solution:
   Message: None
   Objective:
     obj:
-      Value: 16
+      Value: 14
   Variable:
     x[1,2]:
-      Value: 7
+      Value: 6
     x[1,3]:
-      Value: 2
+      Value: 7
     x[1,4]:
-      Value: 7
+      Value: 1
     x[2,4]:
-      Value: 7
+      Value: 6
     x[3,4]:
-      Value: 2
+      Value: 7
   Constraint: No values
