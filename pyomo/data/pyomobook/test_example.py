@@ -72,6 +72,8 @@ def filter(line):
     line.strip()
     if line.startswith('password:') or line.startswith('http:') or line.startswith('Job '):
         return True
+    if 'Total CPU' in line:
+        return True
     if 'Ipopt' in line:
         return True
     if line.startswith('Importing module'):

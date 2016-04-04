@@ -1,6 +1,4 @@
 #!/bin/sh
 
-echo 'log: "'
-pyomo solve --solver=glpk MiscAbstract.py MiscAbstract.dat
-echo '"'
+pyomo solve --solver=glpk MiscAbstract.py MiscAbstract.dat > /dev/null 2>&1
 cat results.yml

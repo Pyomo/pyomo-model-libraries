@@ -1,31 +1,3 @@
-log: "
-[    0.00] Setting up Pyomo environment
-[    0.00] Applying Pyomo preprocessing actions
-[    0.00] Creating model
-Edge weights
-(1, 2) 8
-(1, 3) 7
-(1, 4) 1
-(2, 1) 4
-(2, 3) 5
-(2, 4) 6
-(3, 1) 10
-(3, 2) 2
-(3, 4) 7
-(4, 1) 4
-(4, 2) 5
-(4, 3) 3
-[    0.01] Applying solver
-[    0.03] Processing results
-    Number of solutions: 1
-    Solution Information
-      Gap: 0.0
-      Status: feasible
-      Function Value: 14.0
-    Solver results file: results.yml
-[    0.03] Applying Pyomo postprocessing actions
-[    0.03] Pyomo Finished
-"
 # ==========================================================
 # = Solver Results                                         =
 # ==========================================================
