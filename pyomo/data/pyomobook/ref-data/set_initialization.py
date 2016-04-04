@@ -103,7 +103,7 @@ model.N = Set(RangeSet(1,4), initialize=N_init, ordered=True)
 
 # @decl12:
 model.P = Set(initialize=[1,2,3,5,7])
-model.Q = Set(initialize=xrange(1,10),
+model.Q = Set(initialize=range(1,10),
              filter=lambda model, x:not x in model.P)
 # @:decl12
 

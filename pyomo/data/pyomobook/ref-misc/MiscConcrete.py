@@ -17,7 +17,7 @@ def create(N):
         return [(i,j) for i in sequence(N)
                       for j in sequence(N)
                       if i != j]
-    model.edges = Set(dimen=2, initialize=edges_rule)
+    model.edges = Set(dimen=2, initialize=edges_rule, ordered=True)
 
     if len(model.edges) != N*(N-1):
         raise RuntimeError("Check failed")

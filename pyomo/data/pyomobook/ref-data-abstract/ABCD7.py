@@ -9,8 +9,8 @@ model.Y = Param(model.Z)
 
 try:
     instance = model.create_instance('ABCD7.dat')
-except pyutilib.common.ApplicationError, e:
-    print("ERROR "+str(e))
+except pyutilib.common.ApplicationError:
+    print("ERROR")
     sys.exit(1)
 
 print('Z '+str(sorted(list(instance.Z.data()))))

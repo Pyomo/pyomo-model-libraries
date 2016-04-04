@@ -1,21 +1,21 @@
 Edge weights
-(1, 2) 8.000000
-(1, 3) 1.000000
-(1, 4) 2.000000
+(1, 2) 7.000000
+(1, 3) 2.000000
+(1, 4) 7.000000
 (2, 1) 6.000000
-(2, 3) 10.000000
-(2, 4) 3.000000
-(3, 1) 5.000000
-(3, 2) 7.000000
-(3, 4) 5.000000
-(4, 1) 4.000000
+(2, 3) 2.000000
+(2, 4) 8.000000
+(3, 1) 3.000000
+(3, 2) 9.000000
+(3, 4) 7.000000
+(4, 1) 3.000000
 (4, 2) 4.000000
-(4, 3) 7.000000
+(4, 3) 4.000000
 
 Problem: 
 - Name: unknown
-  Lower bound: 10.0
-  Upper bound: 10.0
+  Lower bound: 16.0
+  Upper bound: 16.0
   Number of objectives: 1
   Number of constraints: 15
   Number of variables: 13
@@ -29,7 +29,7 @@ Solver:
       Number of bounded subproblems: 0
       Number of created subproblems: 0
   Error rc: 0
-  Time: 0.00944995880127
+  Time: 0.008332014083862305
 Solution: 
 - number of solutions: 0
   number of solutions displayed: 0

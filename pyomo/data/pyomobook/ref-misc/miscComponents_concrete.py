@@ -15,16 +15,16 @@ def create(N):
         return [(i,j) for i in sequence(N)
                       for j in sequence(N)
                       if i != j]
-    model.edges = Set(dimen=2, initialize=edges_rule)
+    model.edges = Set(dimen=2, initialize=edges_rule, ordered=True)
 
     if len(model.edges) != N*(N-1):
-        raise RuntimeError, "Check failed"
+        raise RuntimeError("Check failed")
 
     def w_rule(m,i,j):
         return random.randint(1,10)
     model.w = Param(model.edges, initialize=w_rule)
 
-    print "Edge weights"
+    print("Edge weights")
     for e in sorted(model.edges):
         print("%s %f" % (str(e), value(model.w[e])))
 
@@ -53,4 +53,4 @@ model = create(4)
 
 opt = SolverFactory('glpk')
 results = opt.solve(model)
-print results
+print(results)

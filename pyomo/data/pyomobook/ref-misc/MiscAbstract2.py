@@ -15,7 +15,7 @@ def edges_rule(m):
     return [(i,j) for i in sequence(m.N)
                   for j in sequence(m.N)
                   if i != j]
-model.edges = Set(dimen=2, initialize=edges_rule)
+model.edges = Set(dimen=2, initialize=edges_rule, ordered=True)
 
 def check_rule(m):
     # An error check
@@ -27,8 +27,8 @@ def w_rule(m, i, j):
 model.w = Param(model.edges, initialize=w_rule)
 
 def preaction_rule(m):
-    print '"'
-    print 'action: "'
+    print('"')
+    print('action: "')
 model.preaction = BuildAction(rule=preaction_rule)
 
 # @all:
@@ -39,8 +39,8 @@ model.action = BuildAction(model.edges, rule=action_rule)
 # @:all
 
 def postaction_rule(m):
-    print '"'
-    print 'log2: "'
+    print('"')
+    print('log2: "')
 model.postaction = BuildAction(rule=postaction_rule)
 
 model.x = Var(model.edges, within=NonNegativeReals)

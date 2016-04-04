@@ -28,9 +28,9 @@ model.w = Param(model.edges, initialize=w_rule)
 
 def action_rule(m):
     # A debugging statement
-    print "Edge weights"
+    print("Edge weights")
     for e in sorted(m.edges):
-        print e, value(m.w[e])
+        print("%s %s" % (str(e), str(value(m.w[e]))))
 model.action = BuildAction(rule=action_rule)
 
 model.x = Var(model.edges, within=NonNegativeReals)

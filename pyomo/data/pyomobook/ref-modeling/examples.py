@@ -105,16 +105,16 @@ model.p = Param([1,2,3], initialize={1:1, 3:3})
 model.q = Param([1,2,3], initialize={1:1, 3:3}, default=0)
 
 # Demonstrating the keys() function
-print(model.p.keys())               # [1,3]
-print(model.q.keys())               # [1,2,3]
+print(list(model.p.keys()))         # [1,3]
+print(list(model.q.keys()))         # [1,2,3]
 
 # Demonstrating the items() function
-print(model.p.items())              # [(1,1), (3,3)]
-print(model.q.items())              # [(1,1), (2,0), (3,3)]
+print(list(model.p.items()))        # [(1,1), (3,3)]
+print(list(model.q.items()))        # [(1,1), (2,0), (3,3)]
 
 # Demonstrating the values() function
-print(model.p.values())             # [1,3]
-print(model.q.values())             # [1,0,3]
+print(list(model.p.values()))       # [1,3]
+print(list(model.q.values()))       # [1,0,3]
 # @:indexed2
 
 print("indexed3")

@@ -16,7 +16,7 @@ def edges_rule(m):
     return [(i,j) for i in sequence(m.N)
                   for j in sequence(m.N)
                   if i != j]
-model.edges = Set(dimen=2, initialize=edges_rule)
+model.edges = Set(dimen=2, initialize=edges_rule, ordered=True)
 
 def check_rule(m):
     # An error check
