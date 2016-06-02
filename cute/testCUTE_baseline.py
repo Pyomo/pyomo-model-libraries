@@ -2,6 +2,7 @@
 # Test the NL writer on a subset of the CUTE test cases
 #
 
+import sys
 import os
 from os.path import abspath, dirname
 
@@ -12,9 +13,13 @@ from pyomo.core.base import expr as Expr
 from pyomo.opt import ProblemFormat
 from pyomo.core import *
 
-from pyomo.data.cute import CUTE_classifications as CUTE
-
 currdir = dirname(abspath(__file__))+os.sep
+
+sys.path.append(currdir)
+#from pyomo.data.cute import CUTE_classifications as CUTE
+import CUTE_classifications as CUTE
+sys.path.pop()
+
 
 class Tests(unittest.TestCase):
     def pyomo(self, cmd):

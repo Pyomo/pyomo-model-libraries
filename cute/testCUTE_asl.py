@@ -2,6 +2,7 @@
 # Test the NL writer on a subset of the CUTE test cases
 #
 
+import sys
 import os
 from os.path import abspath, dirname
 import warnings
@@ -19,9 +20,13 @@ from pyomo.core.base import expr as Expr
 from pyomo.opt import ProblemFormat
 from pyomo.core import *
 
-from pyomo.data.cute import CUTE_classifications as CUTE
-
 currdir = dirname(abspath(__file__))+os.sep
+
+#from pyomo.data.cute import CUTE_classifications as CUTE
+sys.path.append(currdir)
+import CUTE_classifications as CUTE
+sys.path.pop()
+
 
 # https://github.com/ghackebeil/gjh_asl_json
 has_gjh_asl_json = False
