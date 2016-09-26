@@ -43,13 +43,13 @@ def fd_test(self, name):
     #if name in skip_files:
     #    unittest.skip('Ignoring test '+name)
     #    return
-    
+
     # all CUTE models implicitly create a concrete instance within the model file
     instance = pyutilib.misc.import_file(currdir+name+'_cute.py').model
 
     pvals = {}
     for obj in instance.component_data_objects(Objective, active=True):
-        fname = obj.cname(True)
+        fname = obj.name
         pvals[fname] = obj
         break
     #
