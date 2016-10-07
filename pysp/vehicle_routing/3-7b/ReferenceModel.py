@@ -6,8 +6,7 @@
 #
 # Imports
 #
-from pyomo.core import *
-from pyomo.opt import SolverFactory
+from pyomo.environ import *
 
 #
 # Model
@@ -85,9 +84,10 @@ def total_profit_rule(model):
 model.Total_Profit_Objective = Objective(rule=total_profit_rule, sense=maximize)
 
 # Solve and print
-EV_model = model.create('ReferenceModel.dat')
+EV_model = model.create_instance('ReferenceModel.dat')
 opt = SolverFactory('glpk')
-results_EV = opt.solve(EV_model)
-EV = results_EV.solution.objective.f.value
-print('EV = ' + str(EV) + '\n')
-print results_EV.solution.variable.X
+results = opt.solve(EV_model)
+EV = value(EV_model.Total_Profit_Objective)
+print("EV = %s" % (EV))
+for i in EV_model.X:
+    print("%s = %s" % (EV_model.X.name, value(EV_model.X[i])))
