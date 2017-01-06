@@ -46,7 +46,7 @@ model.u = Var()
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
 
 def f(model):
     return model.u

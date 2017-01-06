@@ -37,7 +37,7 @@ model.x = Var(RangeSet(1,8),bounds=(0.0,1.0),within=Integers,initialize=1)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
 
 def obj_rule(model):
     return (sum(model.a[j]*model.x[j]**2 for j in range(1,9)))+\

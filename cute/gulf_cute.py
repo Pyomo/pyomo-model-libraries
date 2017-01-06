@@ -52,7 +52,7 @@ model.x[3] = 0.15;
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
     
 def f_rule(model):
     return sum((exp(abs(model.y[i]-model.x[2])**model.x[3]/(-model.x[1]))-model.t[i])**2 for i in range(1,M+1))

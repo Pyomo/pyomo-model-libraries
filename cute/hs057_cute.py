@@ -29,7 +29,7 @@ model.a = Param(model.N)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
 
 def obj(model):
     return sum((model.b[i] - model.x[1] - (0.49 - model.x[1])*exp(-model.x[2]*(model.a[i]-8)))**2 for i in model.N)

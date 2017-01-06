@@ -43,7 +43,7 @@ model.r = Var(bounds=(0.39,None),initialize=0.75)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
 
 def f(model):
     return (model.d+model.r)**2*acos(-( (model.a*model.d)**2 - (model.a*model.d+model.r)**2 +\

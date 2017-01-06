@@ -52,7 +52,7 @@ model.x = Var(RangeSet(1,N),initialize=2.0)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
 
 def f_rule(model):
     return 1.0 + sum(alpha*model.x[i]**2*(i/float(N))**model.K[1] for i in range(1,N+1))+\

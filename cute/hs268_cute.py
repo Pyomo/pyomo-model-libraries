@@ -46,7 +46,7 @@ model.x = Var(model.N,initialize=1.0)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
 
 def f_rule(model):
     return 14463.0 + sum(model.D[i,j]*model.x[i]*model.x[j] for i in model.N for j in model.N) + -2*sum(model.B[i]*model.x[i] for i in model.N)

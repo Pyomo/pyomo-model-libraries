@@ -50,7 +50,7 @@ model.x = Var(RangeSet(1,3),initialize=x)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
 
 def f_rule(model):
     return model.x[1]-model.x[2]+model.x[2]**3

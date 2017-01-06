@@ -46,7 +46,7 @@ model.x = Var(model.I,bounds=x_bounds_rule,initialize=x_init_rule)
 # by loading the data
 import os
 if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat')):
-    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'),preprocess=False)
+    model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
 
 def obj_rule(model):
     return 5.04*model.x[1] + .035*model.x[2] + 10.0*model.x[3] + 3.36*model.x[5] - .063*model.x[4]*model.x[7]
