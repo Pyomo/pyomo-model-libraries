@@ -10,13 +10,13 @@ g3 1 1 0	# problem unknown
  0 0 0 0 0	# common exprs: b,c,o,c1,o1
 C0
 o41
-o0
-n-1
-o0
+o54
+3
 o2
 n-1
 v0
 v1
+n-1
 C1
 n0
 C2

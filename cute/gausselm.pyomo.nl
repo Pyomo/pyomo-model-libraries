@@ -9,7444 +9,9924 @@ g3 1 1 0	# problem unknown
  0 0	# max name lengths: constraints, variables
  0 0 0 0 0	# common exprs: b,c,o,c1,o1
 C0
-o3
+o2
 o2
 v15
 v0
+o3
+n1.0
 n1.0
 C1
-o3
+o2
 o2
 v15
 v1
+o3
+n1.0
 n1.0
 C2
-o3
+o2
 o2
 v15
 v2
+o3
+n1.0
 n1.0
 C3
-o3
+o2
 o2
 v15
 v3
+o3
+n1.0
 n1.0
 C4
-o3
+o2
 o2
 v15
 v4
+o3
+n1.0
 n1.0
 C5
-o3
+o2
 o2
 v15
 v5
+o3
+n1.0
 n1.0
 C6
-o3
+o2
 o2
 v15
 v6
+o3
+n1.0
 n1.0
 C7
-o3
+o2
 o2
 v15
 v7
+o3
+n1.0
 n1.0
 C8
-o3
+o2
 o2
 v15
 v8
+o3
+n1.0
 n1.0
 C9
-o3
+o2
 o2
 v15
 v9
+o3
+n1.0
 n1.0
 C10
-o3
+o2
 o2
 v15
 v10
+o3
+n1.0
 n1.0
 C11
-o3
+o2
 o2
 v15
 v11
+o3
+n1.0
 n1.0
 C12
-o3
+o2
 o2
 v15
 v12
+o3
+n1.0
 n1.0
 C13
-o3
+o2
 o2
 v15
 v13
+o3
+n1.0
 n1.0
 C14
-o3
+o2
 o2
 v15
 v14
+o3
+n1.0
 n1.0
 C15
-o3
+o2
 o2
 v16
 v0
+o3
+n1.0
 n1.0
 C16
-o3
+o2
 o2
 v16
 v1
+o3
+n1.0
 n1.0
 C17
-o3
+o2
 o2
 v16
 v2
+o3
+n1.0
 n1.0
 C18
-o3
+o2
 o2
 v16
 v3
+o3
+n1.0
 n1.0
 C19
-o3
+o2
 o2
 v16
 v4
+o3
+n1.0
 n1.0
 C20
-o3
+o2
 o2
 v16
 v5
+o3
+n1.0
 n1.0
 C21
-o3
+o2
 o2
 v16
 v6
+o3
+n1.0
 n1.0
 C22
-o3
+o2
 o2
 v16
 v7
+o3
+n1.0
 n1.0
 C23
-o3
+o2
 o2
 v16
 v8
+o3
+n1.0
 n1.0
 C24
-o3
+o2
 o2
 v16
 v9
+o3
+n1.0
 n1.0
 C25
-o3
+o2
 o2
 v16
 v10
+o3
+n1.0
 n1.0
 C26
-o3
+o2
 o2
 v16
 v11
+o3
+n1.0
 n1.0
 C27
-o3
+o2
 o2
 v16
 v12
+o3
+n1.0
 n1.0
 C28
-o3
+o2
 o2
 v16
 v13
+o3
+n1.0
 n1.0
 C29
-o3
+o2
 o2
 v16
 v14
+o3
+n1.0
 n1.0
 C30
-o3
+o2
 o2
 v17
 v0
+o3
+n1.0
 n1.0
 C31
-o3
+o2
 o2
 v17
 v1
+o3
+n1.0
 n1.0
 C32
-o3
+o2
 o2
 v17
 v2
+o3
+n1.0
 n1.0
 C33
-o3
+o2
 o2
 v17
 v3
+o3
+n1.0
 n1.0
 C34
-o3
+o2
 o2
 v17
 v4
+o3
+n1.0
 n1.0
 C35
-o3
+o2
 o2
 v17
 v5
+o3
+n1.0
 n1.0
 C36
-o3
+o2
 o2
 v17
 v6
+o3
+n1.0
 n1.0
 C37
-o3
+o2
 o2
 v17
 v7
+o3
+n1.0
 n1.0
 C38
-o3
+o2
 o2
 v17
 v8
+o3
+n1.0
 n1.0
 C39
-o3
+o2
 o2
 v17
 v9
+o3
+n1.0
 n1.0
 C40
-o3
+o2
 o2
 v17
 v10
+o3
+n1.0
 n1.0
 C41
-o3
+o2
 o2
 v17
 v11
+o3
+n1.0
 n1.0
 C42
-o3
+o2
 o2
 v17
 v12
+o3
+n1.0
 n1.0
 C43
-o3
+o2
 o2
 v17
 v13
+o3
+n1.0
 n1.0
 C44
-o3
+o2
 o2
 v17
 v14
+o3
+n1.0
 n1.0
 C45
-o3
+o2
 o2
 v18
 v0
+o3
+n1.0
 n1.0
 C46
-o3
+o2
 o2
 v18
 v1
+o3
+n1.0
 n1.0
 C47
-o3
+o2
 o2
 v18
 v2
+o3
+n1.0
 n1.0
 C48
-o3
+o2
 o2
 v18
 v3
+o3
+n1.0
 n1.0
 C49
-o3
+o2
 o2
 v18
 v4
+o3
+n1.0
 n1.0
 C50
-o3
+o2
 o2
 v18
 v5
+o3
+n1.0
 n1.0
 C51
-o3
+o2
 o2
 v18
 v6
+o3
+n1.0
 n1.0
 C52
-o3
+o2
 o2
 v18
 v7
+o3
+n1.0
 n1.0
 C53
-o3
+o2
 o2
 v18
 v8
+o3
+n1.0
 n1.0
 C54
-o3
+o2
 o2
 v18
 v9
+o3
+n1.0
 n1.0
 C55
-o3
+o2
 o2
 v18
 v10
+o3
+n1.0
 n1.0
 C56
-o3
+o2
 o2
 v18
 v11
+o3
+n1.0
 n1.0
 C57
-o3
+o2
 o2
 v18
 v12
+o3
+n1.0
 n1.0
 C58
-o3
+o2
 o2
 v18
 v13
+o3
+n1.0
 n1.0
 C59
-o3
+o2
 o2
 v18
 v14
+o3
+n1.0
 n1.0
 C60
-o3
+o2
 o2
 v19
 v0
+o3
+n1.0
 n1.0
 C61
-o3
+o2
 o2
 v19
 v1
+o3
+n1.0
 n1.0
 C62
-o3
+o2
 o2
 v19
 v2
+o3
+n1.0
 n1.0
 C63
-o3
+o2
 o2
 v19
 v3
+o3
+n1.0
 n1.0
 C64
-o3
+o2
 o2
 v19
 v4
+o3
+n1.0
 n1.0
 C65
-o3
+o2
 o2
 v19
 v5
+o3
+n1.0
 n1.0
 C66
-o3
+o2
 o2
 v19
 v6
+o3
+n1.0
 n1.0
 C67
-o3
+o2
 o2
 v19
 v7
+o3
+n1.0
 n1.0
 C68
-o3
+o2
 o2
 v19
 v8
+o3
+n1.0
 n1.0
 C69
-o3
+o2
 o2
 v19
 v9
+o3
+n1.0
 n1.0
 C70
-o3
+o2
 o2
 v19
 v10
+o3
+n1.0
 n1.0
 C71
-o3
+o2
 o2
 v19
 v11
+o3
+n1.0
 n1.0
 C72
-o3
+o2
 o2
 v19
 v12
+o3
+n1.0
 n1.0
 C73
-o3
+o2
 o2
 v19
 v13
+o3
+n1.0
 n1.0
 C74
-o3
+o2
 o2
 v19
 v14
+o3
+n1.0
 n1.0
 C75
-o3
+o2
 o2
 v20
 v0
+o3
+n1.0
 n1.0
 C76
-o3
+o2
 o2
 v20
 v1
+o3
+n1.0
 n1.0
 C77
-o3
+o2
 o2
 v20
 v2
+o3
+n1.0
 n1.0
 C78
-o3
+o2
 o2
 v20
 v3
+o3
+n1.0
 n1.0
 C79
-o3
+o2
 o2
 v20
 v4
+o3
+n1.0
 n1.0
 C80
-o3
+o2
 o2
 v20
 v5
+o3
+n1.0
 n1.0
 C81
-o3
+o2
 o2
 v20
 v6
+o3
+n1.0
 n1.0
 C82
-o3
+o2
 o2
 v20
 v7
+o3
+n1.0
 n1.0
 C83
-o3
+o2
 o2
 v20
 v8
+o3
+n1.0
 n1.0
 C84
-o3
+o2
 o2
 v20
 v9
+o3
+n1.0
 n1.0
 C85
-o3
+o2
 o2
 v20
 v10
+o3
+n1.0
 n1.0
 C86
-o3
+o2
 o2
 v20
 v11
+o3
+n1.0
 n1.0
 C87
-o3
+o2
 o2
 v20
 v12
+o3
+n1.0
 n1.0
 C88
-o3
+o2
 o2
 v20
 v13
+o3
+n1.0
 n1.0
 C89
-o3
+o2
 o2
 v20
 v14
+o3
+n1.0
 n1.0
 C90
-o3
+o2
 o2
 v21
 v0
+o3
+n1.0
 n1.0
 C91
-o3
+o2
 o2
 v21
 v1
+o3
+n1.0
 n1.0
 C92
-o3
+o2
 o2
 v21
 v2
+o3
+n1.0
 n1.0
 C93
-o3
+o2
 o2
 v21
 v3
+o3
+n1.0
 n1.0
 C94
-o3
+o2
 o2
 v21
 v4
+o3
+n1.0
 n1.0
 C95
-o3
+o2
 o2
 v21
 v5
+o3
+n1.0
 n1.0
 C96
-o3
+o2
 o2
 v21
 v6
+o3
+n1.0
 n1.0
 C97
-o3
+o2
 o2
 v21
 v7
+o3
+n1.0
 n1.0
 C98
-o3
+o2
 o2
 v21
 v8
+o3
+n1.0
 n1.0
 C99
-o3
+o2
 o2
 v21
 v9
+o3
+n1.0
 n1.0
 C100
-o3
+o2
 o2
 v21
 v10
+o3
+n1.0
 n1.0
 C101
-o3
+o2
 o2
 v21
 v11
+o3
+n1.0
 n1.0
 C102
-o3
+o2
 o2
 v21
 v12
+o3
+n1.0
 n1.0
 C103
-o3
+o2
 o2
 v21
 v13
+o3
+n1.0
 n1.0
 C104
-o3
+o2
 o2
 v21
 v14
+o3
+n1.0
 n1.0
 C105
-o3
+o2
 o2
 v22
 v0
+o3
+n1.0
 n1.0
 C106
-o3
+o2
 o2
 v22
 v1
+o3
+n1.0
 n1.0
 C107
-o3
+o2
 o2
 v22
 v2
+o3
+n1.0
 n1.0
 C108
-o3
+o2
 o2
 v22
 v3
+o3
+n1.0
 n1.0
 C109
-o3
+o2
 o2
 v22
 v4
+o3
+n1.0
 n1.0
 C110
-o3
+o2
 o2
 v22
 v5
+o3
+n1.0
 n1.0
 C111
-o3
+o2
 o2
 v22
 v6
+o3
+n1.0
 n1.0
 C112
-o3
+o2
 o2
 v22
 v7
+o3
+n1.0
 n1.0
 C113
-o3
+o2
 o2
 v22
 v8
+o3
+n1.0
 n1.0
 C114
-o3
+o2
 o2
 v22
 v9
+o3
+n1.0
 n1.0
 C115
-o3
+o2
 o2
 v22
 v10
+o3
+n1.0
 n1.0
 C116
-o3
+o2
 o2
 v22
 v11
+o3
+n1.0
 n1.0
 C117
-o3
+o2
 o2
 v22
 v12
+o3
+n1.0
 n1.0
 C118
-o3
+o2
 o2
 v22
 v13
+o3
+n1.0
 n1.0
 C119
-o3
+o2
 o2
 v22
 v14
+o3
+n1.0
 n1.0
 C120
-o3
+o2
 o2
 v23
 v0
+o3
+n1.0
 n1.0
 C121
-o3
+o2
 o2
 v23
 v1
+o3
+n1.0
 n1.0
 C122
-o3
+o2
 o2
 v23
 v2
+o3
+n1.0
 n1.0
 C123
-o3
+o2
 o2
 v23
 v3
+o3
+n1.0
 n1.0
 C124
-o3
+o2
 o2
 v23
 v4
+o3
+n1.0
 n1.0
 C125
-o3
+o2
 o2
 v23
 v5
+o3
+n1.0
 n1.0
 C126
-o3
+o2
 o2
 v23
 v6
+o3
+n1.0
 n1.0
 C127
-o3
+o2
 o2
 v23
 v7
+o3
+n1.0
 n1.0
 C128
-o3
+o2
 o2
 v23
 v8
+o3
+n1.0
 n1.0
 C129
-o3
+o2
 o2
 v23
 v9
+o3
+n1.0
 n1.0
 C130
-o3
+o2
 o2
 v23
 v10
+o3
+n1.0
 n1.0
 C131
-o3
+o2
 o2
 v23
 v11
+o3
+n1.0
 n1.0
 C132
-o3
+o2
 o2
 v23
 v12
+o3
+n1.0
 n1.0
 C133
-o3
+o2
 o2
 v23
 v13
+o3
+n1.0
 n1.0
 C134
-o3
+o2
 o2
 v23
 v14
+o3
+n1.0
 n1.0
 C135
-o3
+o2
 o2
 v24
 v0
+o3
+n1.0
 n1.0
 C136
-o3
+o2
 o2
 v24
 v1
+o3
+n1.0
 n1.0
 C137
-o3
+o2
 o2
 v24
 v2
+o3
+n1.0
 n1.0
 C138
-o3
+o2
 o2
 v24
 v3
+o3
+n1.0
 n1.0
 C139
-o3
+o2
 o2
 v24
 v4
+o3
+n1.0
 n1.0
 C140
-o3
+o2
 o2
 v24
 v5
+o3
+n1.0
 n1.0
 C141
-o3
+o2
 o2
 v24
 v6
+o3
+n1.0
 n1.0
 C142
-o3
+o2
 o2
 v24
 v7
+o3
+n1.0
 n1.0
 C143
-o3
+o2
 o2
 v24
 v8
+o3
+n1.0
 n1.0
 C144
-o3
+o2
 o2
 v24
 v9
+o3
+n1.0
 n1.0
 C145
-o3
+o2
 o2
 v24
 v10
+o3
+n1.0
 n1.0
 C146
-o3
+o2
 o2
 v24
 v11
+o3
+n1.0
 n1.0
 C147
-o3
+o2
 o2
 v24
 v12
+o3
+n1.0
 n1.0
 C148
-o3
+o2
 o2
 v24
 v13
+o3
+n1.0
 n1.0
 C149
-o3
+o2
 o2
 v24
 v14
+o3
+n1.0
 n1.0
 C150
-o3
+o2
 o2
 v25
 v0
+o3
+n1.0
 n1.0
 C151
-o3
+o2
 o2
 v25
 v1
+o3
+n1.0
 n1.0
 C152
-o3
+o2
 o2
 v25
 v2
+o3
+n1.0
 n1.0
 C153
-o3
+o2
 o2
 v25
 v3
+o3
+n1.0
 n1.0
 C154
-o3
+o2
 o2
 v25
 v4
+o3
+n1.0
 n1.0
 C155
-o3
+o2
 o2
 v25
 v5
+o3
+n1.0
 n1.0
 C156
-o3
+o2
 o2
 v25
 v6
+o3
+n1.0
 n1.0
 C157
-o3
+o2
 o2
 v25
 v7
+o3
+n1.0
 n1.0
 C158
-o3
+o2
 o2
 v25
 v8
+o3
+n1.0
 n1.0
 C159
-o3
+o2
 o2
 v25
 v9
+o3
+n1.0
 n1.0
 C160
-o3
+o2
 o2
 v25
 v10
+o3
+n1.0
 n1.0
 C161
-o3
+o2
 o2
 v25
 v11
+o3
+n1.0
 n1.0
 C162
-o3
+o2
 o2
 v25
 v12
+o3
+n1.0
 n1.0
 C163
-o3
+o2
 o2
 v25
 v13
+o3
+n1.0
 n1.0
 C164
-o3
+o2
 o2
 v25
 v14
+o3
+n1.0
 n1.0
 C165
-o3
+o2
 o2
 v26
 v0
+o3
+n1.0
 n1.0
 C166
-o3
+o2
 o2
 v26
 v1
+o3
+n1.0
 n1.0
 C167
-o3
+o2
 o2
 v26
 v2
+o3
+n1.0
 n1.0
 C168
-o3
+o2
 o2
 v26
 v3
+o3
+n1.0
 n1.0
 C169
-o3
+o2
 o2
 v26
 v4
+o3
+n1.0
 n1.0
 C170
-o3
+o2
 o2
 v26
 v5
+o3
+n1.0
 n1.0
 C171
-o3
+o2
 o2
 v26
 v6
+o3
+n1.0
 n1.0
 C172
-o3
+o2
 o2
 v26
 v7
+o3
+n1.0
 n1.0
 C173
-o3
+o2
 o2
 v26
 v8
+o3
+n1.0
 n1.0
 C174
-o3
+o2
 o2
 v26
 v9
+o3
+n1.0
 n1.0
 C175
-o3
+o2
 o2
 v26
 v10
+o3
+n1.0
 n1.0
 C176
-o3
+o2
 o2
 v26
 v11
+o3
+n1.0
 n1.0
 C177
-o3
+o2
 o2
 v26
 v12
+o3
+n1.0
 n1.0
 C178
-o3
+o2
 o2
 v26
 v13
+o3
+n1.0
 n1.0
 C179
-o3
+o2
 o2
 v26
 v14
+o3
+n1.0
 n1.0
 C180
-o3
+o2
 o2
 v27
 v0
+o3
+n1.0
 n1.0
 C181
-o3
+o2
 o2
 v27
 v1
+o3
+n1.0
 n1.0
 C182
-o3
+o2
 o2
 v27
 v2
+o3
+n1.0
 n1.0
 C183
-o3
+o2
 o2
 v27
 v3
+o3
+n1.0
 n1.0
 C184
-o3
+o2
 o2
 v27
 v4
+o3
+n1.0
 n1.0
 C185
-o3
+o2
 o2
 v27
 v5
+o3
+n1.0
 n1.0
 C186
-o3
+o2
 o2
 v27
 v6
+o3
+n1.0
 n1.0
 C187
-o3
+o2
 o2
 v27
 v7
+o3
+n1.0
 n1.0
 C188
-o3
+o2
 o2
 v27
 v8
+o3
+n1.0
 n1.0
 C189
-o3
+o2
 o2
 v27
 v9
+o3
+n1.0
 n1.0
 C190
-o3
+o2
 o2
 v27
 v10
+o3
+n1.0
 n1.0
 C191
-o3
+o2
 o2
 v27
 v11
+o3
+n1.0
 n1.0
 C192
-o3
+o2
 o2
 v27
 v12
+o3
+n1.0
 n1.0
 C193
-o3
+o2
 o2
 v27
 v13
+o3
+n1.0
 n1.0
 C194
-o3
+o2
 o2
 v27
 v14
+o3
+n1.0
 n1.0
 C195
-o3
+o2
 o2
 v28
 v0
+o3
+n1.0
 n1.0
 C196
-o3
+o2
 o2
 v28
 v1
+o3
+n1.0
 n1.0
 C197
-o3
+o2
 o2
 v28
 v2
+o3
+n1.0
 n1.0
 C198
-o3
+o2
 o2
 v28
 v3
+o3
+n1.0
 n1.0
 C199
-o3
+o2
 o2
 v28
 v4
+o3
+n1.0
 n1.0
 C200
-o3
+o2
 o2
 v28
 v5
+o3
+n1.0
 n1.0
 C201
-o3
+o2
 o2
 v28
 v6
+o3
+n1.0
 n1.0
 C202
-o3
+o2
 o2
 v28
 v7
+o3
+n1.0
 n1.0
 C203
-o3
+o2
 o2
 v28
 v8
+o3
+n1.0
 n1.0
 C204
-o3
+o2
 o2
 v28
 v9
+o3
+n1.0
 n1.0
 C205
-o3
+o2
 o2
 v28
 v10
+o3
+n1.0
 n1.0
 C206
-o3
+o2
 o2
 v28
 v11
+o3
+n1.0
 n1.0
 C207
-o3
+o2
 o2
 v28
 v12
+o3
+n1.0
 n1.0
 C208
-o3
+o2
 o2
 v28
 v13
+o3
+n1.0
 n1.0
 C209
-o3
+o2
 o2
 v28
 v14
+o3
+n1.0
 n1.0
 C210
-o3
+o2
 o2
 v29
 v0
+o3
+n1.0
 n1.0
 C211
-o3
+o2
 o2
 v29
 v1
+o3
+n1.0
 n1.0
 C212
-o3
+o2
 o2
 v29
 v2
+o3
+n1.0
 n1.0
 C213
-o3
+o2
 o2
 v29
 v3
+o3
+n1.0
 n1.0
 C214
-o3
+o2
 o2
 v29
 v4
+o3
+n1.0
 n1.0
 C215
-o3
+o2
 o2
 v29
 v5
+o3
+n1.0
 n1.0
 C216
-o3
+o2
 o2
 v29
 v6
+o3
+n1.0
 n1.0
 C217
-o3
+o2
 o2
 v29
 v7
+o3
+n1.0
 n1.0
 C218
-o3
+o2
 o2
 v29
 v8
+o3
+n1.0
 n1.0
 C219
-o3
+o2
 o2
 v29
 v9
+o3
+n1.0
 n1.0
 C220
-o3
+o2
 o2
 v29
 v10
+o3
+n1.0
 n1.0
 C221
-o3
+o2
 o2
 v29
 v11
+o3
+n1.0
 n1.0
 C222
-o3
+o2
 o2
 v29
 v12
+o3
+n1.0
 n1.0
 C223
-o3
+o2
 o2
 v29
 v13
+o3
+n1.0
 n1.0
 C224
-o3
+o2
 o2
 v29
 v14
+o3
+n1.0
 n1.0
 C225
-o3
+o2
 o2
 v45
 v31
+o3
+n1.0
 v30
 C226
-o3
+o2
 o2
 v45
 v32
+o3
+n1.0
 v30
 C227
-o3
+o2
 o2
 v45
 v33
+o3
+n1.0
 v30
 C228
-o3
+o2
 o2
 v45
 v34
+o3
+n1.0
 v30
 C229
-o3
+o2
 o2
 v45
 v35
+o3
+n1.0
 v30
 C230
-o3
+o2
 o2
 v45
 v36
+o3
+n1.0
 v30
 C231
-o3
+o2
 o2
 v45
 v37
+o3
+n1.0
 v30
 C232
-o3
+o2
 o2
 v45
 v38
+o3
+n1.0
 v30
 C233
-o3
+o2
 o2
 v45
 v39
+o3
+n1.0
 v30
 C234
-o3
+o2
 o2
 v45
 v40
+o3
+n1.0
 v30
 C235
-o3
+o2
 o2
 v45
 v41
+o3
+n1.0
 v30
 C236
-o3
+o2
 o2
 v45
 v42
+o3
+n1.0
 v30
 C237
-o3
+o2
 o2
 v45
 v43
+o3
+n1.0
 v30
 C238
-o3
+o2
 o2
 v45
 v44
+o3
+n1.0
 v30
 C239
-o3
+o2
 o2
 v46
 v31
+o3
+n1.0
 v30
 C240
-o3
+o2
 o2
 v46
 v32
+o3
+n1.0
 v30
 C241
-o3
+o2
 o2
 v46
 v33
+o3
+n1.0
 v30
 C242
-o3
+o2
 o2
 v46
 v34
+o3
+n1.0
 v30
 C243
-o3
+o2
 o2
 v46
 v35
+o3
+n1.0
 v30
 C244
-o3
+o2
 o2
 v46
 v36
+o3
+n1.0
 v30
 C245
-o3
+o2
 o2
 v46
 v37
+o3
+n1.0
 v30
 C246
-o3
+o2
 o2
 v46
 v38
+o3
+n1.0
 v30
 C247
-o3
+o2
 o2
 v46
 v39
+o3
+n1.0
 v30
 C248
-o3
+o2
 o2
 v46
 v40
+o3
+n1.0
 v30
 C249
-o3
+o2
 o2
 v46
 v41
+o3
+n1.0
 v30
 C250
-o3
+o2
 o2
 v46
 v42
+o3
+n1.0
 v30
 C251
-o3
+o2
 o2
 v46
 v43
+o3
+n1.0
 v30
 C252
-o3
+o2
 o2
 v46
 v44
+o3
+n1.0
 v30
 C253
-o3
+o2
 o2
 v47
 v31
+o3
+n1.0
 v30
 C254
-o3
+o2
 o2
 v47
 v32
+o3
+n1.0
 v30
 C255
-o3
+o2
 o2
 v47
 v33
+o3
+n1.0
 v30
 C256
-o3
+o2
 o2
 v47
 v34
+o3
+n1.0
 v30
 C257
-o3
+o2
 o2
 v47
 v35
+o3
+n1.0
 v30
 C258
-o3
+o2
 o2
 v47
 v36
+o3
+n1.0
 v30
 C259
-o3
+o2
 o2
 v47
 v37
+o3
+n1.0
 v30
 C260
-o3
+o2
 o2
 v47
 v38
+o3
+n1.0
 v30
 C261
-o3
+o2
 o2
 v47
 v39
+o3
+n1.0
 v30
 C262
-o3
+o2
 o2
 v47
 v40
+o3
+n1.0
 v30
 C263
-o3
+o2
 o2
 v47
 v41
+o3
+n1.0
 v30
 C264
-o3
+o2
 o2
 v47
 v42
+o3
+n1.0
 v30
 C265
-o3
+o2
 o2
 v47
 v43
+o3
+n1.0
 v30
 C266
-o3
+o2
 o2
 v47
 v44
+o3
+n1.0
 v30
 C267
-o3
+o2
 o2
 v48
 v31
+o3
+n1.0
 v30
 C268
-o3
+o2
 o2
 v48
 v32
+o3
+n1.0
 v30
 C269
-o3
+o2
 o2
 v48
 v33
+o3
+n1.0
 v30
 C270
-o3
+o2
 o2
 v48
 v34
+o3
+n1.0
 v30
 C271
-o3
+o2
 o2
 v48
 v35
+o3
+n1.0
 v30
 C272
-o3
+o2
 o2
 v48
 v36
+o3
+n1.0
 v30
 C273
-o3
+o2
 o2
 v48
 v37
+o3
+n1.0
 v30
 C274
-o3
+o2
 o2
 v48
 v38
+o3
+n1.0
 v30
 C275
-o3
+o2
 o2
 v48
 v39
+o3
+n1.0
 v30
 C276
-o3
+o2
 o2
 v48
 v40
+o3
+n1.0
 v30
 C277
-o3
+o2
 o2
 v48
 v41
+o3
+n1.0
 v30
 C278
-o3
+o2
 o2
 v48
 v42
+o3
+n1.0
 v30
 C279
-o3
+o2
 o2
 v48
 v43
+o3
+n1.0
 v30
 C280
-o3
+o2
 o2
 v48
 v44
+o3
+n1.0
 v30
 C281
-o3
+o2
 o2
 v49
 v31
+o3
+n1.0
 v30
 C282
-o3
+o2
 o2
 v49
 v32
+o3
+n1.0
 v30
 C283
-o3
+o2
 o2
 v49
 v33
+o3
+n1.0
 v30
 C284
-o3
+o2
 o2
 v49
 v34
+o3
+n1.0
 v30
 C285
-o3
+o2
 o2
 v49
 v35
+o3
+n1.0
 v30
 C286
-o3
+o2
 o2
 v49
 v36
+o3
+n1.0
 v30
 C287
-o3
+o2
 o2
 v49
 v37
+o3
+n1.0
 v30
 C288
-o3
+o2
 o2
 v49
 v38
+o3
+n1.0
 v30
 C289
-o3
+o2
 o2
 v49
 v39
+o3
+n1.0
 v30
 C290
-o3
+o2
 o2
 v49
 v40
+o3
+n1.0
 v30
 C291
-o3
+o2
 o2
 v49
 v41
+o3
+n1.0
 v30
 C292
-o3
+o2
 o2
 v49
 v42
+o3
+n1.0
 v30
 C293
-o3
+o2
 o2
 v49
 v43
+o3
+n1.0
 v30
 C294
-o3
+o2
 o2
 v49
 v44
+o3
+n1.0
 v30
 C295
-o3
+o2
 o2
 v50
 v31
+o3
+n1.0
 v30
 C296
-o3
+o2
 o2
 v50
 v32
+o3
+n1.0
 v30
 C297
-o3
+o2
 o2
 v50
 v33
+o3
+n1.0
 v30
 C298
-o3
+o2
 o2
 v50
 v34
+o3
+n1.0
 v30
 C299
-o3
+o2
 o2
 v50
 v35
+o3
+n1.0
 v30
 C300
-o3
+o2
 o2
 v50
 v36
+o3
+n1.0
 v30
 C301
-o3
+o2
 o2
 v50
 v37
+o3
+n1.0
 v30
 C302
-o3
+o2
 o2
 v50
 v38
+o3
+n1.0
 v30
 C303
-o3
+o2
 o2
 v50
 v39
+o3
+n1.0
 v30
 C304
-o3
+o2
 o2
 v50
 v40
+o3
+n1.0
 v30
 C305
-o3
+o2
 o2
 v50
 v41
+o3
+n1.0
 v30
 C306
-o3
+o2
 o2
 v50
 v42
+o3
+n1.0
 v30
 C307
-o3
+o2
 o2
 v50
 v43
+o3
+n1.0
 v30
 C308
-o3
+o2
 o2
 v50
 v44
+o3
+n1.0
 v30
 C309
-o3
+o2
 o2
 v51
 v31
+o3
+n1.0
 v30
 C310
-o3
+o2
 o2
 v51
 v32
+o3
+n1.0
 v30
 C311
-o3
+o2
 o2
 v51
 v33
+o3
+n1.0
 v30
 C312
-o3
+o2
 o2
 v51
 v34
+o3
+n1.0
 v30
 C313
-o3
+o2
 o2
 v51
 v35
+o3
+n1.0
 v30
 C314
-o3
+o2
 o2
 v51
 v36
+o3
+n1.0
 v30
 C315
-o3
+o2
 o2
 v51
 v37
+o3
+n1.0
 v30
 C316
-o3
+o2
 o2
 v51
 v38
+o3
+n1.0
 v30
 C317
-o3
+o2
 o2
 v51
 v39
+o3
+n1.0
 v30
 C318
-o3
+o2
 o2
 v51
 v40
+o3
+n1.0
 v30
 C319
-o3
+o2
 o2
 v51
 v41
+o3
+n1.0
 v30
 C320
-o3
+o2
 o2
 v51
 v42
+o3
+n1.0
 v30
 C321
-o3
+o2
 o2
 v51
 v43
+o3
+n1.0
 v30
 C322
-o3
+o2
 o2
 v51
 v44
+o3
+n1.0
 v30
 C323
-o3
+o2
 o2
 v52
 v31
+o3
+n1.0
 v30
 C324
-o3
+o2
 o2
 v52
 v32
+o3
+n1.0
 v30
 C325
-o3
+o2
 o2
 v52
 v33
+o3
+n1.0
 v30
 C326
-o3
+o2
 o2
 v52
 v34
+o3
+n1.0
 v30
 C327
-o3
+o2
 o2
 v52
 v35
+o3
+n1.0
 v30
 C328
-o3
+o2
 o2
 v52
 v36
+o3
+n1.0
 v30
 C329
-o3
+o2
 o2
 v52
 v37
+o3
+n1.0
 v30
 C330
-o3
+o2
 o2
 v52
 v38
+o3
+n1.0
 v30
 C331
-o3
+o2
 o2
 v52
 v39
+o3
+n1.0
 v30
 C332
-o3
+o2
 o2
 v52
 v40
+o3
+n1.0
 v30
 C333
-o3
+o2
 o2
 v52
 v41
+o3
+n1.0
 v30
 C334
-o3
+o2
 o2
 v52
 v42
+o3
+n1.0
 v30
 C335
-o3
+o2
 o2
 v52
 v43
+o3
+n1.0
 v30
 C336
-o3
+o2
 o2
 v52
 v44
+o3
+n1.0
 v30
 C337
-o3
+o2
 o2
 v53
 v31
+o3
+n1.0
 v30
 C338
-o3
+o2
 o2
 v53
 v32
+o3
+n1.0
 v30
 C339
-o3
+o2
 o2
 v53
 v33
+o3
+n1.0
 v30
 C340
-o3
+o2
 o2
 v53
 v34
+o3
+n1.0
 v30
 C341
-o3
+o2
 o2
 v53
 v35
+o3
+n1.0
 v30
 C342
-o3
+o2
 o2
 v53
 v36
+o3
+n1.0
 v30
 C343
-o3
+o2
 o2
 v53
 v37
+o3
+n1.0
 v30
 C344
-o3
+o2
 o2
 v53
 v38
+o3
+n1.0
 v30
 C345
-o3
+o2
 o2
 v53
 v39
+o3
+n1.0
 v30
 C346
-o3
+o2
 o2
 v53
 v40
+o3
+n1.0
 v30
 C347
-o3
+o2
 o2
 v53
 v41
+o3
+n1.0
 v30
 C348
-o3
+o2
 o2
 v53
 v42
+o3
+n1.0
 v30
 C349
-o3
+o2
 o2
 v53
 v43
+o3
+n1.0
 v30
 C350
-o3
+o2
 o2
 v53
 v44
+o3
+n1.0
 v30
 C351
-o3
+o2
 o2
 v54
 v31
+o3
+n1.0
 v30
 C352
-o3
+o2
 o2
 v54
 v32
+o3
+n1.0
 v30
 C353
-o3
+o2
 o2
 v54
 v33
+o3
+n1.0
 v30
 C354
-o3
+o2
 o2
 v54
 v34
+o3
+n1.0
 v30
 C355
-o3
+o2
 o2
 v54
 v35
+o3
+n1.0
 v30
 C356
-o3
+o2
 o2
 v54
 v36
+o3
+n1.0
 v30
 C357
-o3
+o2
 o2
 v54
 v37
+o3
+n1.0
 v30
 C358
-o3
+o2
 o2
 v54
 v38
+o3
+n1.0
 v30
 C359
-o3
+o2
 o2
 v54
 v39
+o3
+n1.0
 v30
 C360
-o3
+o2
 o2
 v54
 v40
+o3
+n1.0
 v30
 C361
-o3
+o2
 o2
 v54
 v41
+o3
+n1.0
 v30
 C362
-o3
+o2
 o2
 v54
 v42
+o3
+n1.0
 v30
 C363
-o3
+o2
 o2
 v54
 v43
+o3
+n1.0
 v30
 C364
-o3
+o2
 o2
 v54
 v44
+o3
+n1.0
 v30
 C365
-o3
+o2
 o2
 v55
 v31
+o3
+n1.0
 v30
 C366
-o3
+o2
 o2
 v55
 v32
+o3
+n1.0
 v30
 C367
-o3
+o2
 o2
 v55
 v33
+o3
+n1.0
 v30
 C368
-o3
+o2
 o2
 v55
 v34
+o3
+n1.0
 v30
 C369
-o3
+o2
 o2
 v55
 v35
+o3
+n1.0
 v30
 C370
-o3
+o2
 o2
 v55
 v36
+o3
+n1.0
 v30
 C371
-o3
+o2
 o2
 v55
 v37
+o3
+n1.0
 v30
 C372
-o3
+o2
 o2
 v55
 v38
+o3
+n1.0
 v30
 C373
-o3
+o2
 o2
 v55
 v39
+o3
+n1.0
 v30
 C374
-o3
+o2
 o2
 v55
 v40
+o3
+n1.0
 v30
 C375
-o3
+o2
 o2
 v55
 v41
+o3
+n1.0
 v30
 C376
-o3
+o2
 o2
 v55
 v42
+o3
+n1.0
 v30
 C377
-o3
+o2
 o2
 v55
 v43
+o3
+n1.0
 v30
 C378
-o3
+o2
 o2
 v55
 v44
+o3
+n1.0
 v30
 C379
-o3
+o2
 o2
 v56
 v31
+o3
+n1.0
 v30
 C380
-o3
+o2
 o2
 v56
 v32
+o3
+n1.0
 v30
 C381
-o3
+o2
 o2
 v56
 v33
+o3
+n1.0
 v30
 C382
-o3
+o2
 o2
 v56
 v34
+o3
+n1.0
 v30
 C383
-o3
+o2
 o2
 v56
 v35
+o3
+n1.0
 v30
 C384
-o3
+o2
 o2
 v56
 v36
+o3
+n1.0
 v30
 C385
-o3
+o2
 o2
 v56
 v37
+o3
+n1.0
 v30
 C386
-o3
+o2
 o2
 v56
 v38
+o3
+n1.0
 v30
 C387
-o3
+o2
 o2
 v56
 v39
+o3
+n1.0
 v30
 C388
-o3
+o2
 o2
 v56
 v40
+o3
+n1.0
 v30
 C389
-o3
+o2
 o2
 v56
 v41
+o3
+n1.0
 v30
 C390
-o3
+o2
 o2
 v56
 v42
+o3
+n1.0
 v30
 C391
-o3
+o2
 o2
 v56
 v43
+o3
+n1.0
 v30
 C392
-o3
+o2
 o2
 v56
 v44
+o3
+n1.0
 v30
 C393
-o3
+o2
 o2
 v57
 v31
+o3
+n1.0
 v30
 C394
-o3
+o2
 o2
 v57
 v32
+o3
+n1.0
 v30
 C395
-o3
+o2
 o2
 v57
 v33
+o3
+n1.0
 v30
 C396
-o3
+o2
 o2
 v57
 v34
+o3
+n1.0
 v30
 C397
-o3
+o2
 o2
 v57
 v35
+o3
+n1.0
 v30
 C398
-o3
+o2
 o2
 v57
 v36
+o3
+n1.0
 v30
 C399
-o3
+o2
 o2
 v57
 v37
+o3
+n1.0
 v30
 C400
-o3
+o2
 o2
 v57
 v38
+o3
+n1.0
 v30
 C401
-o3
+o2
 o2
 v57
 v39
+o3
+n1.0
 v30
 C402
-o3
+o2
 o2
 v57
 v40
+o3
+n1.0
 v30
 C403
-o3
+o2
 o2
 v57
 v41
+o3
+n1.0
 v30
 C404
-o3
+o2
 o2
 v57
 v42
+o3
+n1.0
 v30
 C405
-o3
+o2
 o2
 v57
 v43
+o3
+n1.0
 v30
 C406
-o3
+o2
 o2
 v57
 v44
+o3
+n1.0
 v30
 C407
-o3
+o2
 o2
 v58
 v31
+o3
+n1.0
 v30
 C408
-o3
+o2
 o2
 v58
 v32
+o3
+n1.0
 v30
 C409
-o3
+o2
 o2
 v58
 v33
+o3
+n1.0
 v30
 C410
-o3
+o2
 o2
 v58
 v34
+o3
+n1.0
 v30
 C411
-o3
+o2
 o2
 v58
 v35
+o3
+n1.0
 v30
 C412
-o3
+o2
 o2
 v58
 v36
+o3
+n1.0
 v30
 C413
-o3
+o2
 o2
 v58
 v37
+o3
+n1.0
 v30
 C414
-o3
+o2
 o2
 v58
 v38
+o3
+n1.0
 v30
 C415
-o3
+o2
 o2
 v58
 v39
+o3
+n1.0
 v30
 C416
-o3
+o2
 o2
 v58
 v40
+o3
+n1.0
 v30
 C417
-o3
+o2
 o2
 v58
 v41
+o3
+n1.0
 v30
 C418
-o3
+o2
 o2
 v58
 v42
+o3
+n1.0
 v30
 C419
-o3
+o2
 o2
 v58
 v43
+o3
+n1.0
 v30
 C420
-o3
+o2
 o2
 v58
 v44
+o3
+n1.0
 v30
 C421
-o3
+o2
 o2
 v73
 v60
+o3
+n1.0
 v59
 C422
-o3
+o2
 o2
 v73
 v61
+o3
+n1.0
 v59
 C423
-o3
+o2
 o2
 v73
 v62
+o3
+n1.0
 v59
 C424
-o3
+o2
 o2
 v73
 v63
+o3
+n1.0
 v59
 C425
-o3
+o2
 o2
 v73
 v64
+o3
+n1.0
 v59
 C426
-o3
+o2
 o2
 v73
 v65
+o3
+n1.0
 v59
 C427
-o3
+o2
 o2
 v73
 v66
+o3
+n1.0
 v59
 C428
-o3
+o2
 o2
 v73
 v67
+o3
+n1.0
 v59
 C429
-o3
+o2
 o2
 v73
 v68
+o3
+n1.0
 v59
 C430
-o3
+o2
 o2
 v73
 v69
+o3
+n1.0
 v59
 C431
-o3
+o2
 o2
 v73
 v70
+o3
+n1.0
 v59
 C432
-o3
+o2
 o2
 v73
 v71
+o3
+n1.0
 v59
 C433
-o3
+o2
 o2
 v73
 v72
+o3
+n1.0
 v59
 C434
-o3
+o2
 o2
 v74
 v60
+o3
+n1.0
 v59
 C435
-o3
+o2
 o2
 v74
 v61
+o3
+n1.0
 v59
 C436
-o3
+o2
 o2
 v74
 v62
+o3
+n1.0
 v59
 C437
-o3
+o2
 o2
 v74
 v63
+o3
+n1.0
 v59
 C438
-o3
+o2
 o2
 v74
 v64
+o3
+n1.0
 v59
 C439
-o3
+o2
 o2
 v74
 v65
+o3
+n1.0
 v59
 C440
-o3
+o2
 o2
 v74
 v66
+o3
+n1.0
 v59
 C441
-o3
+o2
 o2
 v74
 v67
+o3
+n1.0
 v59
 C442
-o3
+o2
 o2
 v74
 v68
+o3
+n1.0
 v59
 C443
-o3
+o2
 o2
 v74
 v69
+o3
+n1.0
 v59
 C444
-o3
+o2
 o2
 v74
 v70
+o3
+n1.0
 v59
 C445
-o3
+o2
 o2
 v74
 v71
+o3
+n1.0
 v59
 C446
-o3
+o2
 o2
 v74
 v72
+o3
+n1.0
 v59
 C447
-o3
+o2
 o2
 v75
 v60
+o3
+n1.0
 v59
 C448
-o3
+o2
 o2
 v75
 v61
+o3
+n1.0
 v59
 C449
-o3
+o2
 o2
 v75
 v62
+o3
+n1.0
 v59
 C450
-o3
+o2
 o2
 v75
 v63
+o3
+n1.0
 v59
 C451
-o3
+o2
 o2
 v75
 v64
+o3
+n1.0
 v59
 C452
-o3
+o2
 o2
 v75
 v65
+o3
+n1.0
 v59
 C453
-o3
+o2
 o2
 v75
 v66
+o3
+n1.0
 v59
 C454
-o3
+o2
 o2
 v75
 v67
+o3
+n1.0
 v59
 C455
-o3
+o2
 o2
 v75
 v68
+o3
+n1.0
 v59
 C456
-o3
+o2
 o2
 v75
 v69
+o3
+n1.0
 v59
 C457
-o3
+o2
 o2
 v75
 v70
+o3
+n1.0
 v59
 C458
-o3
+o2
 o2
 v75
 v71
+o3
+n1.0
 v59
 C459
-o3
+o2
 o2
 v75
 v72
+o3
+n1.0
 v59
 C460
-o3
+o2
 o2
 v76
 v60
+o3
+n1.0
 v59
 C461
-o3
+o2
 o2
 v76
 v61
+o3
+n1.0
 v59
 C462
-o3
+o2
 o2
 v76
 v62
+o3
+n1.0
 v59
 C463
-o3
+o2
 o2
 v76
 v63
+o3
+n1.0
 v59
 C464
-o3
+o2
 o2
 v76
 v64
+o3
+n1.0
 v59
 C465
-o3
+o2
 o2
 v76
 v65
+o3
+n1.0
 v59
 C466
-o3
+o2
 o2
 v76
 v66
+o3
+n1.0
 v59
 C467
-o3
+o2
 o2
 v76
 v67
+o3
+n1.0
 v59
 C468
-o3
+o2
 o2
 v76
 v68
+o3
+n1.0
 v59
 C469
-o3
+o2
 o2
 v76
 v69
+o3
+n1.0
 v59
 C470
-o3
+o2
 o2
 v76
 v70
+o3
+n1.0
 v59
 C471
-o3
+o2
 o2
 v76
 v71
+o3
+n1.0
 v59
 C472
-o3
+o2
 o2
 v76
 v72
+o3
+n1.0
 v59
 C473
-o3
+o2
 o2
 v77
 v60
+o3
+n1.0
 v59
 C474
-o3
+o2
 o2
 v77
 v61
+o3
+n1.0
 v59
 C475
-o3
+o2
 o2
 v77
 v62
+o3
+n1.0
 v59
 C476
-o3
+o2
 o2
 v77
 v63
+o3
+n1.0
 v59
 C477
-o3
+o2
 o2
 v77
 v64
+o3
+n1.0
 v59
 C478
-o3
+o2
 o2
 v77
 v65
+o3
+n1.0
 v59
 C479
-o3
+o2
 o2
 v77
 v66
+o3
+n1.0
 v59
 C480
-o3
+o2
 o2
 v77
 v67
+o3
+n1.0
 v59
 C481
-o3
+o2
 o2
 v77
 v68
+o3
+n1.0
 v59
 C482
-o3
+o2
 o2
 v77
 v69
+o3
+n1.0
 v59
 C483
-o3
+o2
 o2
 v77
 v70
+o3
+n1.0
 v59
 C484
-o3
+o2
 o2
 v77
 v71
+o3
+n1.0
 v59
 C485
-o3
+o2
 o2
 v77
 v72
+o3
+n1.0
 v59
 C486
-o3
+o2
 o2
 v78
 v60
+o3
+n1.0
 v59
 C487
-o3
+o2
 o2
 v78
 v61
+o3
+n1.0
 v59
 C488
-o3
+o2
 o2
 v78
 v62
+o3
+n1.0
 v59
 C489
-o3
+o2
 o2
 v78
 v63
+o3
+n1.0
 v59
 C490
-o3
+o2
 o2
 v78
 v64
+o3
+n1.0
 v59
 C491
-o3
+o2
 o2
 v78
 v65
+o3
+n1.0
 v59
 C492
-o3
+o2
 o2
 v78
 v66
+o3
+n1.0
 v59
 C493
-o3
+o2
 o2
 v78
 v67
+o3
+n1.0
 v59
 C494
-o3
+o2
 o2
 v78
 v68
+o3
+n1.0
 v59
 C495
-o3
+o2
 o2
 v78
 v69
+o3
+n1.0
 v59
 C496
-o3
+o2
 o2
 v78
 v70
+o3
+n1.0
 v59
 C497
-o3
+o2
 o2
 v78
 v71
+o3
+n1.0
 v59
 C498
-o3
+o2
 o2
 v78
 v72
+o3
+n1.0
 v59
 C499
-o3
+o2
 o2
 v79
 v60
+o3
+n1.0
 v59
 C500
-o3
+o2
 o2
 v79
 v61
+o3
+n1.0
 v59
 C501
-o3
+o2
 o2
 v79
 v62
+o3
+n1.0
 v59
 C502
-o3
+o2
 o2
 v79
 v63
+o3
+n1.0
 v59
 C503
-o3
+o2
 o2
 v79
 v64
+o3
+n1.0
 v59
 C504
-o3
+o2
 o2
 v79
 v65
+o3
+n1.0
 v59
 C505
-o3
+o2
 o2
 v79
 v66
+o3
+n1.0
 v59
 C506
-o3
+o2
 o2
 v79
 v67
+o3
+n1.0
 v59
 C507
-o3
+o2
 o2
 v79
 v68
+o3
+n1.0
 v59
 C508
-o3
+o2
 o2
 v79
 v69
+o3
+n1.0
 v59
 C509
-o3
+o2
 o2
 v79
 v70
+o3
+n1.0
 v59
 C510
-o3
+o2
 o2
 v79
 v71
+o3
+n1.0
 v59
 C511
-o3
+o2
 o2
 v79
 v72
+o3
+n1.0
 v59
 C512
-o3
+o2
 o2
 v80
 v60
+o3
+n1.0
 v59
 C513
-o3
+o2
 o2
 v80
 v61
+o3
+n1.0
 v59
 C514
-o3
+o2
 o2
 v80
 v62
+o3
+n1.0
 v59
 C515
-o3
+o2
 o2
 v80
 v63
+o3
+n1.0
 v59
 C516
-o3
+o2
 o2
 v80
 v64
+o3
+n1.0
 v59
 C517
-o3
+o2
 o2
 v80
 v65
+o3
+n1.0
 v59
 C518
-o3
+o2
 o2
 v80
 v66
+o3
+n1.0
 v59
 C519
-o3
+o2
 o2
 v80
 v67
+o3
+n1.0
 v59
 C520
-o3
+o2
 o2
 v80
 v68
+o3
+n1.0
 v59
 C521
-o3
+o2
 o2
 v80
 v69
+o3
+n1.0
 v59
 C522
-o3
+o2
 o2
 v80
 v70
+o3
+n1.0
 v59
 C523
-o3
+o2
 o2
 v80
 v71
+o3
+n1.0
 v59
 C524
-o3
+o2
 o2
 v80
 v72
+o3
+n1.0
 v59
 C525
-o3
+o2
 o2
 v81
 v60
+o3
+n1.0
 v59
 C526
-o3
+o2
 o2
 v81
 v61
+o3
+n1.0
 v59
 C527
-o3
+o2
 o2
 v81
 v62
+o3
+n1.0
 v59
 C528
-o3
+o2
 o2
 v81
 v63
+o3
+n1.0
 v59
 C529
-o3
+o2
 o2
 v81
 v64
+o3
+n1.0
 v59
 C530
-o3
+o2
 o2
 v81
 v65
+o3
+n1.0
 v59
 C531
-o3
+o2
 o2
 v81
 v66
+o3
+n1.0
 v59
 C532
-o3
+o2
 o2
 v81
 v67
+o3
+n1.0
 v59
 C533
-o3
+o2
 o2
 v81
 v68
+o3
+n1.0
 v59
 C534
-o3
+o2
 o2
 v81
 v69
+o3
+n1.0
 v59
 C535
-o3
+o2
 o2
 v81
 v70
+o3
+n1.0
 v59
 C536
-o3
+o2
 o2
 v81
 v71
+o3
+n1.0
 v59
 C537
-o3
+o2
 o2
 v81
 v72
+o3
+n1.0
 v59
 C538
-o3
+o2
 o2
 v82
 v60
+o3
+n1.0
 v59
 C539
-o3
+o2
 o2
 v82
 v61
+o3
+n1.0
 v59
 C540
-o3
+o2
 o2
 v82
 v62
+o3
+n1.0
 v59
 C541
-o3
+o2
 o2
 v82
 v63
+o3
+n1.0
 v59
 C542
-o3
+o2
 o2
 v82
 v64
+o3
+n1.0
 v59
 C543
-o3
+o2
 o2
 v82
 v65
+o3
+n1.0
 v59
 C544
-o3
+o2
 o2
 v82
 v66
+o3
+n1.0
 v59
 C545
-o3
+o2
 o2
 v82
 v67
+o3
+n1.0
 v59
 C546
-o3
+o2
 o2
 v82
 v68
+o3
+n1.0
 v59
 C547
-o3
+o2
 o2
 v82
 v69
+o3
+n1.0
 v59
 C548
-o3
+o2
 o2
 v82
 v70
+o3
+n1.0
 v59
 C549
-o3
+o2
 o2
 v82
 v71
+o3
+n1.0
 v59
 C550
-o3
+o2
 o2
 v82
 v72
+o3
+n1.0
 v59
 C551
-o3
+o2
 o2
 v83
 v60
+o3
+n1.0
 v59
 C552
-o3
+o2
 o2
 v83
 v61
+o3
+n1.0
 v59
 C553
-o3
+o2
 o2
 v83
 v62
+o3
+n1.0
 v59
 C554
-o3
+o2
 o2
 v83
 v63
+o3
+n1.0
 v59
 C555
-o3
+o2
 o2
 v83
 v64
+o3
+n1.0
 v59
 C556
-o3
+o2
 o2
 v83
 v65
+o3
+n1.0
 v59
 C557
-o3
+o2
 o2
 v83
 v66
+o3
+n1.0
 v59
 C558
-o3
+o2
 o2
 v83
 v67
+o3
+n1.0
 v59
 C559
-o3
+o2
 o2
 v83
 v68
+o3
+n1.0
 v59
 C560
-o3
+o2
 o2
 v83
 v69
+o3
+n1.0
 v59
 C561
-o3
+o2
 o2
 v83
 v70
+o3
+n1.0
 v59
 C562
-o3
+o2
 o2
 v83
 v71
+o3
+n1.0
 v59
 C563
-o3
+o2
 o2
 v83
 v72
+o3
+n1.0
 v59
 C564
-o3
+o2
 o2
 v84
 v60
+o3
+n1.0
 v59
 C565
-o3
+o2
 o2
 v84
 v61
+o3
+n1.0
 v59
 C566
-o3
+o2
 o2
 v84
 v62
+o3
+n1.0
 v59
 C567
-o3
+o2
 o2
 v84
 v63
+o3
+n1.0
 v59
 C568
-o3
+o2
 o2
 v84
 v64
+o3
+n1.0
 v59
 C569
-o3
+o2
 o2
 v84
 v65
+o3
+n1.0
 v59
 C570
-o3
+o2
 o2
 v84
 v66
+o3
+n1.0
 v59
 C571
-o3
+o2
 o2
 v84
 v67
+o3
+n1.0
 v59
 C572
-o3
+o2
 o2
 v84
 v68
+o3
+n1.0
 v59
 C573
-o3
+o2
 o2
 v84
 v69
+o3
+n1.0
 v59
 C574
-o3
+o2
 o2
 v84
 v70
+o3
+n1.0
 v59
 C575
-o3
+o2
 o2
 v84
 v71
+o3
+n1.0
 v59
 C576
-o3
+o2
 o2
 v84
 v72
+o3
+n1.0
 v59
 C577
-o3
+o2
 o2
 v85
 v60
+o3
+n1.0
 v59
 C578
-o3
+o2
 o2
 v85
 v61
+o3
+n1.0
 v59
 C579
-o3
+o2
 o2
 v85
 v62
+o3
+n1.0
 v59
 C580
-o3
+o2
 o2
 v85
 v63
+o3
+n1.0
 v59
 C581
-o3
+o2
 o2
 v85
 v64
+o3
+n1.0
 v59
 C582
-o3
+o2
 o2
 v85
 v65
+o3
+n1.0
 v59
 C583
-o3
+o2
 o2
 v85
 v66
+o3
+n1.0
 v59
 C584
-o3
+o2
 o2
 v85
 v67
+o3
+n1.0
 v59
 C585
-o3
+o2
 o2
 v85
 v68
+o3
+n1.0
 v59
 C586
-o3
+o2
 o2
 v85
 v69
+o3
+n1.0
 v59
 C587
-o3
+o2
 o2
 v85
 v70
+o3
+n1.0
 v59
 C588
-o3
+o2
 o2
 v85
 v71
+o3
+n1.0
 v59
 C589
-o3
+o2
 o2
 v85
 v72
+o3
+n1.0
 v59
 C590
-o3
+o2
 o2
 v99
 v87
+o3
+n1.0
 v86
 C591
-o3
+o2
 o2
 v99
 v88
+o3
+n1.0
 v86
 C592
-o3
+o2
 o2
 v99
 v89
+o3
+n1.0
 v86
 C593
-o3
+o2
 o2
 v99
 v90
+o3
+n1.0
 v86
 C594
-o3
+o2
 o2
 v99
 v91
+o3
+n1.0
 v86
 C595
-o3
+o2
 o2
 v99
 v92
+o3
+n1.0
 v86
 C596
-o3
+o2
 o2
 v99
 v93
+o3
+n1.0
 v86
 C597
-o3
+o2
 o2
 v99
 v94
+o3
+n1.0
 v86
 C598
-o3
+o2
 o2
 v99
 v95
+o3
+n1.0
 v86
 C599
-o3
+o2
 o2
 v99
 v96
+o3
+n1.0
 v86
 C600
-o3
+o2
 o2
 v99
 v97
+o3
+n1.0
 v86
 C601
-o3
+o2
 o2
 v99
 v98
+o3
+n1.0
 v86
 C602
-o3
+o2
 o2
 v100
 v87
+o3
+n1.0
 v86
 C603
-o3
+o2
 o2
 v100
 v88
+o3
+n1.0
 v86
 C604
-o3
+o2
 o2
 v100
 v89
+o3
+n1.0
 v86
 C605
-o3
+o2
 o2
 v100
 v90
+o3
+n1.0
 v86
 C606
-o3
+o2
 o2
 v100
 v91
+o3
+n1.0
 v86
 C607
-o3
+o2
 o2
 v100
 v92
+o3
+n1.0
 v86
 C608
-o3
+o2
 o2
 v100
 v93
+o3
+n1.0
 v86
 C609
-o3
+o2
 o2
 v100
 v94
+o3
+n1.0
 v86
 C610
-o3
+o2
 o2
 v100
 v95
+o3
+n1.0
 v86
 C611
-o3
+o2
 o2
 v100
 v96
+o3
+n1.0
 v86
 C612
-o3
+o2
 o2
 v100
 v97
+o3
+n1.0
 v86
 C613
-o3
+o2
 o2
 v100
 v98
+o3
+n1.0
 v86
 C614
-o3
+o2
 o2
 v101
 v87
+o3
+n1.0
 v86
 C615
-o3
+o2
 o2
 v101
 v88
+o3
+n1.0
 v86
 C616
-o3
+o2
 o2
 v101
 v89
+o3
+n1.0
 v86
 C617
-o3
+o2
 o2
 v101
 v90
+o3
+n1.0
 v86
 C618
-o3
+o2
 o2
 v101
 v91
+o3
+n1.0
 v86
 C619
-o3
+o2
 o2
 v101
 v92
+o3
+n1.0
 v86
 C620
-o3
+o2
 o2
 v101
 v93
+o3
+n1.0
 v86
 C621
-o3
+o2
 o2
 v101
 v94
+o3
+n1.0
 v86
 C622
-o3
+o2
 o2
 v101
 v95
+o3
+n1.0
 v86
 C623
-o3
+o2
 o2
 v101
 v96
+o3
+n1.0
 v86
 C624
-o3
+o2
 o2
 v101
 v97
+o3
+n1.0
 v86
 C625
-o3
+o2
 o2
 v101
 v98
+o3
+n1.0
 v86
 C626
-o3
+o2
 o2
 v102
 v87
+o3
+n1.0
 v86
 C627
-o3
+o2
 o2
 v102
 v88
+o3
+n1.0
 v86
 C628
-o3
+o2
 o2
 v102
 v89
+o3
+n1.0
 v86
 C629
-o3
+o2
 o2
 v102
 v90
+o3
+n1.0
 v86
 C630
-o3
+o2
 o2
 v102
 v91
+o3
+n1.0
 v86
 C631
-o3
+o2
 o2
 v102
 v92
+o3
+n1.0
 v86
 C632
-o3
+o2
 o2
 v102
 v93
+o3
+n1.0
 v86
 C633
-o3
+o2
 o2
 v102
 v94
+o3
+n1.0
 v86
 C634
-o3
+o2
 o2
 v102
 v95
+o3
+n1.0
 v86
 C635
-o3
+o2
 o2
 v102
 v96
+o3
+n1.0
 v86
 C636
-o3
+o2
 o2
 v102
 v97
+o3
+n1.0
 v86
 C637
-o3
+o2
 o2
 v102
 v98
+o3
+n1.0
 v86
 C638
-o3
+o2
 o2
 v103
 v87
+o3
+n1.0
 v86
 C639
-o3
+o2
 o2
 v103
 v88
+o3
+n1.0
 v86
 C640
-o3
+o2
 o2
 v103
 v89
+o3
+n1.0
 v86
 C641
-o3
+o2
 o2
 v103
 v90
+o3
+n1.0
 v86
 C642
-o3
+o2
 o2
 v103
 v91
+o3
+n1.0
 v86
 C643
-o3
+o2
 o2
 v103
 v92
+o3
+n1.0
 v86
 C644
-o3
+o2
 o2
 v103
 v93
+o3
+n1.0
 v86
 C645
-o3
+o2
 o2
 v103
 v94
+o3
+n1.0
 v86
 C646
-o3
+o2
 o2
 v103
 v95
+o3
+n1.0
 v86
 C647
-o3
+o2
 o2
 v103
 v96
+o3
+n1.0
 v86
 C648
-o3
+o2
 o2
 v103
 v97
+o3
+n1.0
 v86
 C649
-o3
+o2
 o2
 v103
 v98
+o3
+n1.0
 v86
 C650
-o3
+o2
 o2
 v104
 v87
+o3
+n1.0
 v86
 C651
-o3
+o2
 o2
 v104
 v88
+o3
+n1.0
 v86
 C652
-o3
+o2
 o2
 v104
 v89
+o3
+n1.0
 v86
 C653
-o3
+o2
 o2
 v104
 v90
+o3
+n1.0
 v86
 C654
-o3
+o2
 o2
 v104
 v91
+o3
+n1.0
 v86
 C655
-o3
+o2
 o2
 v104
 v92
+o3
+n1.0
 v86
 C656
-o3
+o2
 o2
 v104
 v93
+o3
+n1.0
 v86
 C657
-o3
+o2
 o2
 v104
 v94
+o3
+n1.0
 v86
 C658
-o3
+o2
 o2
 v104
 v95
+o3
+n1.0
 v86
 C659
-o3
+o2
 o2
 v104
 v96
+o3
+n1.0
 v86
 C660
-o3
+o2
 o2
 v104
 v97
+o3
+n1.0
 v86
 C661
-o3
+o2
 o2
 v104
 v98
+o3
+n1.0
 v86
 C662
-o3
+o2
 o2
 v105
 v87
+o3
+n1.0
 v86
 C663
-o3
+o2
 o2
 v105
 v88
+o3
+n1.0
 v86
 C664
-o3
+o2
 o2
 v105
 v89
+o3
+n1.0
 v86
 C665
-o3
+o2
 o2
 v105
 v90
+o3
+n1.0
 v86
 C666
-o3
+o2
 o2
 v105
 v91
+o3
+n1.0
 v86
 C667
-o3
+o2
 o2
 v105
 v92
+o3
+n1.0
 v86
 C668
-o3
+o2
 o2
 v105
 v93
+o3
+n1.0
 v86
 C669
-o3
+o2
 o2
 v105
 v94
+o3
+n1.0
 v86
 C670
-o3
+o2
 o2
 v105
 v95
+o3
+n1.0
 v86
 C671
-o3
+o2
 o2
 v105
 v96
+o3
+n1.0
 v86
 C672
-o3
+o2
 o2
 v105
 v97
+o3
+n1.0
 v86
 C673
-o3
+o2
 o2
 v105
 v98
+o3
+n1.0
 v86
 C674
-o3
+o2
 o2
 v106
 v87
+o3
+n1.0
 v86
 C675
-o3
+o2
 o2
 v106
 v88
+o3
+n1.0
 v86
 C676
-o3
+o2
 o2
 v106
 v89
+o3
+n1.0
 v86
 C677
-o3
+o2
 o2
 v106
 v90
+o3
+n1.0
 v86
 C678
-o3
+o2
 o2
 v106
 v91
+o3
+n1.0
 v86
 C679
-o3
+o2
 o2
 v106
 v92
+o3
+n1.0
 v86
 C680
-o3
+o2
 o2
 v106
 v93
+o3
+n1.0
 v86
 C681
-o3
+o2
 o2
 v106
 v94
+o3
+n1.0
 v86
 C682
-o3
+o2
 o2
 v106
 v95
+o3
+n1.0
 v86
 C683
-o3
+o2
 o2
 v106
 v96
+o3
+n1.0
 v86
 C684
-o3
+o2
 o2
 v106
 v97
+o3
+n1.0
 v86
 C685
-o3
+o2
 o2
 v106
 v98
+o3
+n1.0
 v86
 C686
-o3
+o2
 o2
 v107
 v87
+o3
+n1.0
 v86
 C687
-o3
+o2
 o2
 v107
 v88
+o3
+n1.0
 v86
 C688
-o3
+o2
 o2
 v107
 v89
+o3
+n1.0
 v86
 C689
-o3
+o2
 o2
 v107
 v90
+o3
+n1.0
 v86
 C690
-o3
+o2
 o2
 v107
 v91
+o3
+n1.0
 v86
 C691
-o3
+o2
 o2
 v107
 v92
+o3
+n1.0
 v86
 C692
-o3
+o2
 o2
 v107
 v93
+o3
+n1.0
 v86
 C693
-o3
+o2
 o2
 v107
 v94
+o3
+n1.0
 v86
 C694
-o3
+o2
 o2
 v107
 v95
+o3
+n1.0
 v86
 C695
-o3
+o2
 o2
 v107
 v96
+o3
+n1.0
 v86
 C696
-o3
+o2
 o2
 v107
 v97
+o3
+n1.0
 v86
 C697
-o3
+o2
 o2
 v107
 v98
+o3
+n1.0
 v86
 C698
-o3
+o2
 o2
 v108
 v87
+o3
+n1.0
 v86
 C699
-o3
+o2
 o2
 v108
 v88
+o3
+n1.0
 v86
 C700
-o3
+o2
 o2
 v108
 v89
+o3
+n1.0
 v86
 C701
-o3
+o2
 o2
 v108
 v90
+o3
+n1.0
 v86
 C702
-o3
+o2
 o2
 v108
 v91
+o3
+n1.0
 v86
 C703
-o3
+o2
 o2
 v108
 v92
+o3
+n1.0
 v86
 C704
-o3
+o2
 o2
 v108
 v93
+o3
+n1.0
 v86
 C705
-o3
+o2
 o2
 v108
 v94
+o3
+n1.0
 v86
 C706
-o3
+o2
 o2
 v108
 v95
+o3
+n1.0
 v86
 C707
-o3
+o2
 o2
 v108
 v96
+o3
+n1.0
 v86
 C708
-o3
+o2
 o2
 v108
 v97
+o3
+n1.0
 v86
 C709
-o3
+o2
 o2
 v108
 v98
+o3
+n1.0
 v86
 C710
-o3
+o2
 o2
 v109
 v87
+o3
+n1.0
 v86
 C711
-o3
+o2
 o2
 v109
 v88
+o3
+n1.0
 v86
 C712
-o3
+o2
 o2
 v109
 v89
+o3
+n1.0
 v86
 C713
-o3
+o2
 o2
 v109
 v90
+o3
+n1.0
 v86
 C714
-o3
+o2
 o2
 v109
 v91
+o3
+n1.0
 v86
 C715
-o3
+o2
 o2
 v109
 v92
+o3
+n1.0
 v86
 C716
-o3
+o2
 o2
 v109
 v93
+o3
+n1.0
 v86
 C717
-o3
+o2
 o2
 v109
 v94
+o3
+n1.0
 v86
 C718
-o3
+o2
 o2
 v109
 v95
+o3
+n1.0
 v86
 C719
-o3
+o2
 o2
 v109
 v96
+o3
+n1.0
 v86
 C720
-o3
+o2
 o2
 v109
 v97
+o3
+n1.0
 v86
 C721
-o3
+o2
 o2
 v109
 v98
+o3
+n1.0
 v86
 C722
-o3
+o2
 o2
 v110
 v87
+o3
+n1.0
 v86
 C723
-o3
+o2
 o2
 v110
 v88
+o3
+n1.0
 v86
 C724
-o3
+o2
 o2
 v110
 v89
+o3
+n1.0
 v86
 C725
-o3
+o2
 o2
 v110
 v90
+o3
+n1.0
 v86
 C726
-o3
+o2
 o2
 v110
 v91
+o3
+n1.0
 v86
 C727
-o3
+o2
 o2
 v110
 v92
+o3
+n1.0
 v86
 C728
-o3
+o2
 o2
 v110
 v93
+o3
+n1.0
 v86
 C729
-o3
+o2
 o2
 v110
 v94
+o3
+n1.0
 v86
 C730
-o3
+o2
 o2
 v110
 v95
+o3
+n1.0
 v86
 C731
-o3
+o2
 o2
 v110
 v96
+o3
+n1.0
 v86
 C732
-o3
+o2
 o2
 v110
 v97
+o3
+n1.0
 v86
 C733
-o3
+o2
 o2
 v110
 v98
+o3
+n1.0
 v86
 C734
-o3
+o2
 o2
 v123
 v112
+o3
+n1.0
 v111
 C735
-o3
+o2
 o2
 v123
 v113
+o3
+n1.0
 v111
 C736
-o3
+o2
 o2
 v123
 v114
+o3
+n1.0
 v111
 C737
-o3
+o2
 o2
 v123
 v115
+o3
+n1.0
 v111
 C738
-o3
+o2
 o2
 v123
 v116
+o3
+n1.0
 v111
 C739
-o3
+o2
 o2
 v123
 v117
+o3
+n1.0
 v111
 C740
-o3
+o2
 o2
 v123
 v118
+o3
+n1.0
 v111
 C741
-o3
+o2
 o2
 v123
 v119
+o3
+n1.0
 v111
 C742
-o3
+o2
 o2
 v123
 v120
+o3
+n1.0
 v111
 C743
-o3
+o2
 o2
 v123
 v121
+o3
+n1.0
 v111
 C744
-o3
+o2
 o2
 v123
 v122
+o3
+n1.0
 v111
 C745
-o3
+o2
 o2
 v124
 v112
+o3
+n1.0
 v111
 C746
-o3
+o2
 o2
 v124
 v113
+o3
+n1.0
 v111
 C747
-o3
+o2
 o2
 v124
 v114
+o3
+n1.0
 v111
 C748
-o3
+o2
 o2
 v124
 v115
+o3
+n1.0
 v111
 C749
-o3
+o2
 o2
 v124
 v116
+o3
+n1.0
 v111
 C750
-o3
+o2
 o2
 v124
 v117
+o3
+n1.0
 v111
 C751
-o3
+o2
 o2
 v124
 v118
+o3
+n1.0
 v111
 C752
-o3
+o2
 o2
 v124
 v119
+o3
+n1.0
 v111
 C753
-o3
+o2
 o2
 v124
 v120
+o3
+n1.0
 v111
 C754
-o3
+o2
 o2
 v124
 v121
+o3
+n1.0
 v111
 C755
-o3
+o2
 o2
 v124
 v122
+o3
+n1.0
 v111
 C756
-o3
+o2
 o2
 v125
 v112
+o3
+n1.0
 v111
 C757
-o3
+o2
 o2
 v125
 v113
+o3
+n1.0
 v111
 C758
-o3
+o2
 o2
 v125
 v114
+o3
+n1.0
 v111
 C759
-o3
+o2
 o2
 v125
 v115
+o3
+n1.0
 v111
 C760
-o3
+o2
 o2
 v125
 v116
+o3
+n1.0
 v111
 C761
-o3
+o2
 o2
 v125
 v117
+o3
+n1.0
 v111
 C762
-o3
+o2
 o2
 v125
 v118
+o3
+n1.0
 v111
 C763
-o3
+o2
 o2
 v125
 v119
+o3
+n1.0
 v111
 C764
-o3
+o2
 o2
 v125
 v120
+o3
+n1.0
 v111
 C765
-o3
+o2
 o2
 v125
 v121
+o3
+n1.0
 v111
 C766
-o3
+o2
 o2
 v125
 v122
+o3
+n1.0
 v111
 C767
-o3
+o2
 o2
 v126
 v112
+o3
+n1.0
 v111
 C768
-o3
+o2
 o2
 v126
 v113
+o3
+n1.0
 v111
 C769
-o3
+o2
 o2
 v126
 v114
+o3
+n1.0
 v111
 C770
-o3
+o2
 o2
 v126
 v115
+o3
+n1.0
 v111
 C771
-o3
+o2
 o2
 v126
 v116
+o3
+n1.0
 v111
 C772
-o3
+o2
 o2
 v126
 v117
+o3
+n1.0
 v111
 C773
-o3
+o2
 o2
 v126
 v118
+o3
+n1.0
 v111
 C774
-o3
+o2
 o2
 v126
 v119
+o3
+n1.0
 v111
 C775
-o3
+o2
 o2
 v126
 v120
+o3
+n1.0
 v111
 C776
-o3
+o2
 o2
 v126
 v121
+o3
+n1.0
 v111
 C777
-o3
+o2
 o2
 v126
 v122
+o3
+n1.0
 v111
 C778
-o3
+o2
 o2
 v127
 v112
+o3
+n1.0
 v111
 C779
-o3
+o2
 o2
 v127
 v113
+o3
+n1.0
 v111
 C780
-o3
+o2
 o2
 v127
 v114
+o3
+n1.0
 v111
 C781
-o3
+o2
 o2
 v127
 v115
+o3
+n1.0
 v111
 C782
-o3
+o2
 o2
 v127
 v116
+o3
+n1.0
 v111
 C783
-o3
+o2
 o2
 v127
 v117
+o3
+n1.0
 v111
 C784
-o3
+o2
 o2
 v127
 v118
+o3
+n1.0
 v111
 C785
-o3
+o2
 o2
 v127
 v119
+o3
+n1.0
 v111
 C786
-o3
+o2
 o2
 v127
 v120
+o3
+n1.0
 v111
 C787
-o3
+o2
 o2
 v127
 v121
+o3
+n1.0
 v111
 C788
-o3
+o2
 o2
 v127
 v122
+o3
+n1.0
 v111
 C789
-o3
+o2
 o2
 v128
 v112
+o3
+n1.0
 v111
 C790
-o3
+o2
 o2
 v128
 v113
+o3
+n1.0
 v111
 C791
-o3
+o2
 o2
 v128
 v114
+o3
+n1.0
 v111
 C792
-o3
+o2
 o2
 v128
 v115
+o3
+n1.0
 v111
 C793
-o3
+o2
 o2
 v128
 v116
+o3
+n1.0
 v111
 C794
-o3
+o2
 o2
 v128
 v117
+o3
+n1.0
 v111
 C795
-o3
+o2
 o2
 v128
 v118
+o3
+n1.0
 v111
 C796
-o3
+o2
 o2
 v128
 v119
+o3
+n1.0
 v111
 C797
-o3
+o2
 o2
 v128
 v120
+o3
+n1.0
 v111
 C798
-o3
+o2
 o2
 v128
 v121
+o3
+n1.0
 v111
 C799
-o3
+o2
 o2
 v128
 v122
+o3
+n1.0
 v111
 C800
-o3
+o2
 o2
 v129
 v112
+o3
+n1.0
 v111
 C801
-o3
+o2
 o2
 v129
 v113
+o3
+n1.0
 v111
 C802
-o3
+o2
 o2
 v129
 v114
+o3
+n1.0
 v111
 C803
-o3
+o2
 o2
 v129
 v115
+o3
+n1.0
 v111
 C804
-o3
+o2
 o2
 v129
 v116
+o3
+n1.0
 v111
 C805
-o3
+o2
 o2
 v129
 v117
+o3
+n1.0
 v111
 C806
-o3
+o2
 o2
 v129
 v118
+o3
+n1.0
 v111
 C807
-o3
+o2
 o2
 v129
 v119
+o3
+n1.0
 v111
 C808
-o3
+o2
 o2
 v129
 v120
+o3
+n1.0
 v111
 C809
-o3
+o2
 o2
 v129
 v121
+o3
+n1.0
 v111
 C810
-o3
+o2
 o2
 v129
 v122
+o3
+n1.0
 v111
 C811
-o3
+o2
 o2
 v130
 v112
+o3
+n1.0
 v111
 C812
-o3
+o2
 o2
 v130
 v113
+o3
+n1.0
 v111
 C813
-o3
+o2
 o2
 v130
 v114
+o3
+n1.0
 v111
 C814
-o3
+o2
 o2
 v130
 v115
+o3
+n1.0
 v111
 C815
-o3
+o2
 o2
 v130
 v116
+o3
+n1.0
 v111
 C816
-o3
+o2
 o2
 v130
 v117
+o3
+n1.0
 v111
 C817
-o3
+o2
 o2
 v130
 v118
+o3
+n1.0
 v111
 C818
-o3
+o2
 o2
 v130
 v119
+o3
+n1.0
 v111
 C819
-o3
+o2
 o2
 v130
 v120
+o3
+n1.0
 v111
 C820
-o3
+o2
 o2
 v130
 v121
+o3
+n1.0
 v111
 C821
-o3
+o2
 o2
 v130
 v122
+o3
+n1.0
 v111
 C822
-o3
+o2
 o2
 v131
 v112
+o3
+n1.0
 v111
 C823
-o3
+o2
 o2
 v131
 v113
+o3
+n1.0
 v111
 C824
-o3
+o2
 o2
 v131
 v114
+o3
+n1.0
 v111
 C825
-o3
+o2
 o2
 v131
 v115
+o3
+n1.0
 v111
 C826
-o3
+o2
 o2
 v131
 v116
+o3
+n1.0
 v111
 C827
-o3
+o2
 o2
 v131
 v117
+o3
+n1.0
 v111
 C828
-o3
+o2
 o2
 v131
 v118
+o3
+n1.0
 v111
 C829
-o3
+o2
 o2
 v131
 v119
+o3
+n1.0
 v111
 C830
-o3
+o2
 o2
 v131
 v120
+o3
+n1.0
 v111
 C831
-o3
+o2
 o2
 v131
 v121
+o3
+n1.0
 v111
 C832
-o3
+o2
 o2
 v131
 v122
+o3
+n1.0
 v111
 C833
-o3
+o2
 o2
 v132
 v112
+o3
+n1.0
 v111
 C834
-o3
+o2
 o2
 v132
 v113
+o3
+n1.0
 v111
 C835
-o3
+o2
 o2
 v132
 v114
+o3
+n1.0
 v111
 C836
-o3
+o2
 o2
 v132
 v115
+o3
+n1.0
 v111
 C837
-o3
+o2
 o2
 v132
 v116
+o3
+n1.0
 v111
 C838
-o3
+o2
 o2
 v132
 v117
+o3
+n1.0
 v111
 C839
-o3
+o2
 o2
 v132
 v118
+o3
+n1.0
 v111
 C840
-o3
+o2
 o2
 v132
 v119
+o3
+n1.0
 v111
 C841
-o3
+o2
 o2
 v132
 v120
+o3
+n1.0
 v111
 C842
-o3
+o2
 o2
 v132
 v121
+o3
+n1.0
 v111
 C843
-o3
+o2
 o2
 v132
 v122
+o3
+n1.0
 v111
 C844
-o3
+o2
 o2
 v133
 v112
+o3
+n1.0
 v111
 C845
-o3
+o2
 o2
 v133
 v113
+o3
+n1.0
 v111
 C846
-o3
+o2
 o2
 v133
 v114
+o3
+n1.0
 v111
 C847
-o3
+o2
 o2
 v133
 v115
+o3
+n1.0
 v111
 C848
-o3
+o2
 o2
 v133
 v116
+o3
+n1.0
 v111
 C849
-o3
+o2
 o2
 v133
 v117
+o3
+n1.0
 v111
 C850
-o3
+o2
 o2
 v133
 v118
+o3
+n1.0
 v111
 C851
-o3
+o2
 o2
 v133
 v119
+o3
+n1.0
 v111
 C852
-o3
+o2
 o2
 v133
 v120
+o3
+n1.0
 v111
 C853
-o3
+o2
 o2
 v133
 v121
+o3
+n1.0
 v111
 C854
-o3
+o2
 o2
 v133
 v122
+o3
+n1.0
 v111
 C855
-o3
+o2
 o2
 v145
 v135
+o3
+n1.0
 v134
 C856
-o3
+o2
 o2
 v145
 v136
+o3
+n1.0
 v134
 C857
-o3
+o2
 o2
 v145
 v137
+o3
+n1.0
 v134
 C858
-o3
+o2
 o2
 v145
 v138
+o3
+n1.0
 v134
 C859
-o3
+o2
 o2
 v145
 v139
+o3
+n1.0
 v134
 C860
-o3
+o2
 o2
 v145
 v140
+o3
+n1.0
 v134
 C861
-o3
+o2
 o2
 v145
 v141
+o3
+n1.0
 v134
 C862
-o3
+o2
 o2
 v145
 v142
+o3
+n1.0
 v134
 C863
-o3
+o2
 o2
 v145
 v143
+o3
+n1.0
 v134
 C864
-o3
+o2
 o2
 v145
 v144
+o3
+n1.0
 v134
 C865
-o3
+o2
 o2
 v146
 v135
+o3
+n1.0
 v134
 C866
-o3
+o2
 o2
 v146
 v136
+o3
+n1.0
 v134
 C867
-o3
+o2
 o2
 v146
 v137
+o3
+n1.0
 v134
 C868
-o3
+o2
 o2
 v146
 v138
+o3
+n1.0
 v134
 C869
-o3
+o2
 o2
 v146
 v139
+o3
+n1.0
 v134
 C870
-o3
+o2
 o2
 v146
 v140
+o3
+n1.0
 v134
 C871
-o3
+o2
 o2
 v146
 v141
+o3
+n1.0
 v134
 C872
-o3
+o2
 o2
 v146
 v142
+o3
+n1.0
 v134
 C873
-o3
+o2
 o2
 v146
 v143
+o3
+n1.0
 v134
 C874
-o3
+o2
 o2
 v146
 v144
+o3
+n1.0
 v134
 C875
-o3
+o2
 o2
 v147
 v135
+o3
+n1.0
 v134
 C876
-o3
+o2
 o2
 v147
 v136
+o3
+n1.0
 v134
 C877
-o3
+o2
 o2
 v147
 v137
+o3
+n1.0
 v134
 C878
-o3
+o2
 o2
 v147
 v138
+o3
+n1.0
 v134
 C879
-o3
+o2
 o2
 v147
 v139
+o3
+n1.0
 v134
 C880
-o3
+o2
 o2
 v147
 v140
+o3
+n1.0
 v134
 C881
-o3
+o2
 o2
 v147
 v141
+o3
+n1.0
 v134
 C882
-o3
+o2
 o2
 v147
 v142
+o3
+n1.0
 v134
 C883
-o3
+o2
 o2
 v147
 v143
+o3
+n1.0
 v134
 C884
-o3
+o2
 o2
 v147
 v144
+o3
+n1.0
 v134
 C885
-o3
+o2
 o2
 v148
 v135
+o3
+n1.0
 v134
 C886
-o3
+o2
 o2
 v148
 v136
+o3
+n1.0
 v134
 C887
-o3
+o2
 o2
 v148
 v137
+o3
+n1.0
 v134
 C888
-o3
+o2
 o2
 v148
 v138
+o3
+n1.0
 v134
 C889
-o3
+o2
 o2
 v148
 v139
+o3
+n1.0
 v134
 C890
-o3
+o2
 o2
 v148
 v140
+o3
+n1.0
 v134
 C891
-o3
+o2
 o2
 v148
 v141
+o3
+n1.0
 v134
 C892
-o3
+o2
 o2
 v148
 v142
+o3
+n1.0
 v134
 C893
-o3
+o2
 o2
 v148
 v143
+o3
+n1.0
 v134
 C894
-o3
+o2
 o2
 v148
 v144
+o3
+n1.0
 v134
 C895
-o3
+o2
 o2
 v149
 v135
+o3
+n1.0
 v134
 C896
-o3
+o2
 o2
 v149
 v136
+o3
+n1.0
 v134
 C897
-o3
+o2
 o2
 v149
 v137
+o3
+n1.0
 v134
 C898
-o3
+o2
 o2
 v149
 v138
+o3
+n1.0
 v134
 C899
-o3
+o2
 o2
 v149
 v139
+o3
+n1.0
 v134
 C900
-o3
+o2
 o2
 v149
 v140
+o3
+n1.0
 v134
 C901
-o3
+o2
 o2
 v149
 v141
+o3
+n1.0
 v134
 C902
-o3
+o2
 o2
 v149
 v142
+o3
+n1.0
 v134
 C903
-o3
+o2
 o2
 v149
 v143
+o3
+n1.0
 v134
 C904
-o3
+o2
 o2
 v149
 v144
+o3
+n1.0
 v134
 C905
-o3
+o2
 o2
 v150
 v135
+o3
+n1.0
 v134
 C906
-o3
+o2
 o2
 v150
 v136
+o3
+n1.0
 v134
 C907
-o3
+o2
 o2
 v150
 v137
+o3
+n1.0
 v134
 C908
-o3
+o2
 o2
 v150
 v138
+o3
+n1.0
 v134
 C909
-o3
+o2
 o2
 v150
 v139
+o3
+n1.0
 v134
 C910
-o3
+o2
 o2
 v150
 v140
+o3
+n1.0
 v134
 C911
-o3
+o2
 o2
 v150
 v141
+o3
+n1.0
 v134
 C912
-o3
+o2
 o2
 v150
 v142
+o3
+n1.0
 v134
 C913
-o3
+o2
 o2
 v150
 v143
+o3
+n1.0
 v134
 C914
-o3
+o2
 o2
 v150
 v144
+o3
+n1.0
 v134
 C915
-o3
+o2
 o2
 v151
 v135
+o3
+n1.0
 v134
 C916
-o3
+o2
 o2
 v151
 v136
+o3
+n1.0
 v134
 C917
-o3
+o2
 o2
 v151
 v137
+o3
+n1.0
 v134
 C918
-o3
+o2
 o2
 v151
 v138
+o3
+n1.0
 v134
 C919
-o3
+o2
 o2
 v151
 v139
+o3
+n1.0
 v134
 C920
-o3
+o2
 o2
 v151
 v140
+o3
+n1.0
 v134
 C921
-o3
+o2
 o2
 v151
 v141
+o3
+n1.0
 v134
 C922
-o3
+o2
 o2
 v151
 v142
+o3
+n1.0
 v134
 C923
-o3
+o2
 o2
 v151
 v143
+o3
+n1.0
 v134
 C924
-o3
+o2
 o2
 v151
 v144
+o3
+n1.0
 v134
 C925
-o3
+o2
 o2
 v152
 v135
+o3
+n1.0
 v134
 C926
-o3
+o2
 o2
 v152
 v136
+o3
+n1.0
 v134
 C927
-o3
+o2
 o2
 v152
 v137
+o3
+n1.0
 v134
 C928
-o3
+o2
 o2
 v152
 v138
+o3
+n1.0
 v134
 C929
-o3
+o2
 o2
 v152
 v139
+o3
+n1.0
 v134
 C930
-o3
+o2
 o2
 v152
 v140
+o3
+n1.0
 v134
 C931
-o3
+o2
 o2
 v152
 v141
+o3
+n1.0
 v134
 C932
-o3
+o2
 o2
 v152
 v142
+o3
+n1.0
 v134
 C933
-o3
+o2
 o2
 v152
 v143
+o3
+n1.0
 v134
 C934
-o3
+o2
 o2
 v152
 v144
+o3
+n1.0
 v134
 C935
-o3
+o2
 o2
 v153
 v135
+o3
+n1.0
 v134
 C936
-o3
+o2
 o2
 v153
 v136
+o3
+n1.0
 v134
 C937
-o3
+o2
 o2
 v153
 v137
+o3
+n1.0
 v134
 C938
-o3
+o2
 o2
 v153
 v138
+o3
+n1.0
 v134
 C939
-o3
+o2
 o2
 v153
 v139
+o3
+n1.0
 v134
 C940
-o3
+o2
 o2
 v153
 v140
+o3
+n1.0
 v134
 C941
-o3
+o2
 o2
 v153
 v141
+o3
+n1.0
 v134
 C942
-o3
+o2
 o2
 v153
 v142
+o3
+n1.0
 v134
 C943
-o3
+o2
 o2
 v153
 v143
+o3
+n1.0
 v134
 C944
-o3
+o2
 o2
 v153
 v144
+o3
+n1.0
 v134
 C945
-o3
+o2
 o2
 v154
 v135
+o3
+n1.0
 v134
 C946
-o3
+o2
 o2
 v154
 v136
+o3
+n1.0
 v134
 C947
-o3
+o2
 o2
 v154
 v137
+o3
+n1.0
 v134
 C948
-o3
+o2
 o2
 v154
 v138
+o3
+n1.0
 v134
 C949
-o3
+o2
 o2
 v154
 v139
+o3
+n1.0
 v134
 C950
-o3
+o2
 o2
 v154
 v140
+o3
+n1.0
 v134
 C951
-o3
+o2
 o2
 v154
 v141
+o3
+n1.0
 v134
 C952
-o3
+o2
 o2
 v154
 v142
+o3
+n1.0
 v134
 C953
-o3
+o2
 o2
 v154
 v143
+o3
+n1.0
 v134
 C954
-o3
+o2
 o2
 v154
 v144
+o3
+n1.0
 v134
 C955
-o3
+o2
 o2
 v165
 v156
+o3
+n1.0
 v155
 C956
-o3
+o2
 o2
 v165
 v157
+o3
+n1.0
 v155
 C957
-o3
+o2
 o2
 v165
 v158
+o3
+n1.0
 v155
 C958
-o3
+o2
 o2
 v165
 v159
+o3
+n1.0
 v155
 C959
-o3
+o2
 o2
 v165
 v160
+o3
+n1.0
 v155
 C960
-o3
+o2
 o2
 v165
 v161
+o3
+n1.0
 v155
 C961
-o3
+o2
 o2
 v165
 v162
+o3
+n1.0
 v155
 C962
-o3
+o2
 o2
 v165
 v163
+o3
+n1.0
 v155
 C963
-o3
+o2
 o2
 v165
 v164
+o3
+n1.0
 v155
 C964
-o3
+o2
 o2
 v166
 v156
+o3
+n1.0
 v155
 C965
-o3
+o2
 o2
 v166
 v157
+o3
+n1.0
 v155
 C966
-o3
+o2
 o2
 v166
 v158
+o3
+n1.0
 v155
 C967
-o3
+o2
 o2
 v166
 v159
+o3
+n1.0
 v155
 C968
-o3
+o2
 o2
 v166
 v160
+o3
+n1.0
 v155
 C969
-o3
+o2
 o2
 v166
 v161
+o3
+n1.0
 v155
 C970
-o3
+o2
 o2
 v166
 v162
+o3
+n1.0
 v155
 C971
-o3
+o2
 o2
 v166
 v163
+o3
+n1.0
 v155
 C972
-o3
+o2
 o2
 v166
 v164
+o3
+n1.0
 v155
 C973
-o3
+o2
 o2
 v167
 v156
+o3
+n1.0
 v155
 C974
-o3
+o2
 o2
 v167
 v157
+o3
+n1.0
 v155
 C975
-o3
+o2
 o2
 v167
 v158
+o3
+n1.0
 v155
 C976
-o3
+o2
 o2
 v167
 v159
+o3
+n1.0
 v155
 C977
-o3
+o2
 o2
 v167
 v160
+o3
+n1.0
 v155
 C978
-o3
+o2
 o2
 v167
 v161
+o3
+n1.0
 v155
 C979
-o3
+o2
 o2
 v167
 v162
+o3
+n1.0
 v155
 C980
-o3
+o2
 o2
 v167
 v163
+o3
+n1.0
 v155
 C981
-o3
+o2
 o2
 v167
 v164
+o3
+n1.0
 v155
 C982
-o3
+o2
 o2
 v168
 v156
+o3
+n1.0
 v155
 C983
-o3
+o2
 o2
 v168
 v157
+o3
+n1.0
 v155
 C984
-o3
+o2
 o2
 v168
 v158
+o3
+n1.0
 v155
 C985
-o3
+o2
 o2
 v168
 v159
+o3
+n1.0
 v155
 C986
-o3
+o2
 o2
 v168
 v160
+o3
+n1.0
 v155
 C987
-o3
+o2
 o2
 v168
 v161
+o3
+n1.0
 v155
 C988
-o3
+o2
 o2
 v168
 v162
+o3
+n1.0
 v155
 C989
-o3
+o2
 o2
 v168
 v163
+o3
+n1.0
 v155
 C990
-o3
+o2
 o2
 v168
 v164
+o3
+n1.0
 v155
 C991
-o3
+o2
 o2
 v169
 v156
+o3
+n1.0
 v155
 C992
-o3
+o2
 o2
 v169
 v157
+o3
+n1.0
 v155
 C993
-o3
+o2
 o2
 v169
 v158
+o3
+n1.0
 v155
 C994
-o3
+o2
 o2
 v169
 v159
+o3
+n1.0
 v155
 C995
-o3
+o2
 o2
 v169
 v160
+o3
+n1.0
 v155
 C996
-o3
+o2
 o2
 v169
 v161
+o3
+n1.0
 v155
 C997
-o3
+o2
 o2
 v169
 v162
+o3
+n1.0
 v155
 C998
-o3
+o2
 o2
 v169
 v163
+o3
+n1.0
 v155
 C999
-o3
+o2
 o2
 v169
 v164
+o3
+n1.0
 v155
 C1000
-o3
+o2
 o2
 v170
 v156
+o3
+n1.0
 v155
 C1001
-o3
+o2
 o2
 v170
 v157
+o3
+n1.0
 v155
 C1002
-o3
+o2
 o2
 v170
 v158
+o3
+n1.0
 v155
 C1003
-o3
+o2
 o2
 v170
 v159
+o3
+n1.0
 v155
 C1004
-o3
+o2
 o2
 v170
 v160
+o3
+n1.0
 v155
 C1005
-o3
+o2
 o2
 v170
 v161
+o3
+n1.0
 v155
 C1006
-o3
+o2
 o2
 v170
 v162
+o3
+n1.0
 v155
 C1007
-o3
+o2
 o2
 v170
 v163
+o3
+n1.0
 v155
 C1008
-o3
+o2
 o2
 v170
 v164
+o3
+n1.0
 v155
 C1009
-o3
+o2
 o2
 v171
 v156
+o3
+n1.0
 v155
 C1010
-o3
+o2
 o2
 v171
 v157
+o3
+n1.0
 v155
 C1011
-o3
+o2
 o2
 v171
 v158
+o3
+n1.0
 v155
 C1012
-o3
+o2
 o2
 v171
 v159
+o3
+n1.0
 v155
 C1013
-o3
+o2
 o2
 v171
 v160
+o3
+n1.0
 v155
 C1014
-o3
+o2
 o2
 v171
 v161
+o3
+n1.0
 v155
 C1015
-o3
+o2
 o2
 v171
 v162
+o3
+n1.0
 v155
 C1016
-o3
+o2
 o2
 v171
 v163
+o3
+n1.0
 v155
 C1017
-o3
+o2
 o2
 v171
 v164
+o3
+n1.0
 v155
 C1018
-o3
+o2
 o2
 v172
 v156
+o3
+n1.0
 v155
 C1019
-o3
+o2
 o2
 v172
 v157
+o3
+n1.0
 v155
 C1020
-o3
+o2
 o2
 v172
 v158
+o3
+n1.0
 v155
 C1021
-o3
+o2
 o2
 v172
 v159
+o3
+n1.0
 v155
 C1022
-o3
+o2
 o2
 v172
 v160
+o3
+n1.0
 v155
 C1023
-o3
+o2
 o2
 v172
 v161
+o3
+n1.0
 v155
 C1024
-o3
+o2
 o2
 v172
 v162
+o3
+n1.0
 v155
 C1025
-o3
+o2
 o2
 v172
 v163
+o3
+n1.0
 v155
 C1026
-o3
+o2
 o2
 v172
 v164
+o3
+n1.0
 v155
 C1027
-o3
+o2
 o2
 v173
 v156
+o3
+n1.0
 v155
 C1028
-o3
+o2
 o2
 v173
 v157
+o3
+n1.0
 v155
 C1029
-o3
+o2
 o2
 v173
 v158
+o3
+n1.0
 v155
 C1030
-o3
+o2
 o2
 v173
 v159
+o3
+n1.0
 v155
 C1031
-o3
+o2
 o2
 v173
 v160
+o3
+n1.0
 v155
 C1032
-o3
+o2
 o2
 v173
 v161
+o3
+n1.0
 v155
 C1033
-o3
+o2
 o2
 v173
 v162
+o3
+n1.0
 v155
 C1034
-o3
+o2
 o2
 v173
 v163
+o3
+n1.0
 v155
 C1035
-o3
+o2
 o2
 v173
 v164
+o3
+n1.0
 v155
 C1036
-o3
+o2
 o2
 v183
 v175
+o3
+n1.0
 v174
 C1037
-o3
+o2
 o2
 v183
 v176
+o3
+n1.0
 v174
 C1038
-o3
+o2
 o2
 v183
 v177
+o3
+n1.0
 v174
 C1039
-o3
+o2
 o2
 v183
 v178
+o3
+n1.0
 v174
 C1040
-o3
+o2
 o2
 v183
 v179
+o3
+n1.0
 v174
 C1041
-o3
+o2
 o2
 v183
 v180
+o3
+n1.0
 v174
 C1042
-o3
+o2
 o2
 v183
 v181
+o3
+n1.0
 v174
 C1043
-o3
+o2
 o2
 v183
 v182
+o3
+n1.0
 v174
 C1044
-o3
+o2
 o2
 v184
 v175
+o3
+n1.0
 v174
 C1045
-o3
+o2
 o2
 v184
 v176
+o3
+n1.0
 v174
 C1046
-o3
+o2
 o2
 v184
 v177
+o3
+n1.0
 v174
 C1047
-o3
+o2
 o2
 v184
 v178
+o3
+n1.0
 v174
 C1048
-o3
+o2
 o2
 v184
 v179
+o3
+n1.0
 v174
 C1049
-o3
+o2
 o2
 v184
 v180
+o3
+n1.0
 v174
 C1050
-o3
+o2
 o2
 v184
 v181
+o3
+n1.0
 v174
 C1051
-o3
+o2
 o2
 v184
 v182
+o3
+n1.0
 v174
 C1052
-o3
+o2
 o2
 v185
 v175
+o3
+n1.0
 v174
 C1053
-o3
+o2
 o2
 v185
 v176
+o3
+n1.0
 v174
 C1054
-o3
+o2
 o2
 v185
 v177
+o3
+n1.0
 v174
 C1055
-o3
+o2
 o2
 v185
 v178
+o3
+n1.0
 v174
 C1056
-o3
+o2
 o2
 v185
 v179
+o3
+n1.0
 v174
 C1057
-o3
+o2
 o2
 v185
 v180
+o3
+n1.0
 v174
 C1058
-o3
+o2
 o2
 v185
 v181
+o3
+n1.0
 v174
 C1059
-o3
+o2
 o2
 v185
 v182
+o3
+n1.0
 v174
 C1060
-o3
+o2
 o2
 v186
 v175
+o3
+n1.0
 v174
 C1061
-o3
+o2
 o2
 v186
 v176
+o3
+n1.0
 v174
 C1062
-o3
+o2
 o2
 v186
 v177
+o3
+n1.0
 v174
 C1063
-o3
+o2
 o2
 v186
 v178
+o3
+n1.0
 v174
 C1064
-o3
+o2
 o2
 v186
 v179
+o3
+n1.0
 v174
 C1065
-o3
+o2
 o2
 v186
 v180
+o3
+n1.0
 v174
 C1066
-o3
+o2
 o2
 v186
 v181
+o3
+n1.0
 v174
 C1067
-o3
+o2
 o2
 v186
 v182
+o3
+n1.0
 v174
 C1068
-o3
+o2
 o2
 v187
 v175
+o3
+n1.0
 v174
 C1069
-o3
+o2
 o2
 v187
 v176
+o3
+n1.0
 v174
 C1070
-o3
+o2
 o2
 v187
 v177
+o3
+n1.0
 v174
 C1071
-o3
+o2
 o2
 v187
 v178
+o3
+n1.0
 v174
 C1072
-o3
+o2
 o2
 v187
 v179
+o3
+n1.0
 v174
 C1073
-o3
+o2
 o2
 v187
 v180
+o3
+n1.0
 v174
 C1074
-o3
+o2
 o2
 v187
 v181
+o3
+n1.0
 v174
 C1075
-o3
+o2
 o2
 v187
 v182
+o3
+n1.0
 v174
 C1076
-o3
+o2
 o2
 v188
 v175
+o3
+n1.0
 v174
 C1077
-o3
+o2
 o2
 v188
 v176
+o3
+n1.0
 v174
 C1078
-o3
+o2
 o2
 v188
 v177
+o3
+n1.0
 v174
 C1079
-o3
+o2
 o2
 v188
 v178
+o3
+n1.0
 v174
 C1080
-o3
+o2
 o2
 v188
 v179
+o3
+n1.0
 v174
 C1081
-o3
+o2
 o2
 v188
 v180
+o3
+n1.0
 v174
 C1082
-o3
+o2
 o2
 v188
 v181
+o3
+n1.0
 v174
 C1083
-o3
+o2
 o2
 v188
 v182
+o3
+n1.0
 v174
 C1084
-o3
+o2
 o2
 v189
 v175
+o3
+n1.0
 v174
 C1085
-o3
+o2
 o2
 v189
 v176
+o3
+n1.0
 v174
 C1086
-o3
+o2
 o2
 v189
 v177
+o3
+n1.0
 v174
 C1087
-o3
+o2
 o2
 v189
 v178
+o3
+n1.0
 v174
 C1088
-o3
+o2
 o2
 v189
 v179
+o3
+n1.0
 v174
 C1089
-o3
+o2
 o2
 v189
 v180
+o3
+n1.0
 v174
 C1090
-o3
+o2
 o2
 v189
 v181
+o3
+n1.0
 v174
 C1091
-o3
+o2
 o2
 v189
 v182
+o3
+n1.0
 v174
 C1092
-o3
+o2
 o2
 v190
 v175
+o3
+n1.0
 v174
 C1093
-o3
+o2
 o2
 v190
 v176
+o3
+n1.0
 v174
 C1094
-o3
+o2
 o2
 v190
 v177
+o3
+n1.0
 v174
 C1095
-o3
+o2
 o2
 v190
 v178
+o3
+n1.0
 v174
 C1096
-o3
+o2
 o2
 v190
 v179
+o3
+n1.0
 v174
 C1097
-o3
+o2
 o2
 v190
 v180
+o3
+n1.0
 v174
 C1098
-o3
+o2
 o2
 v190
 v181
+o3
+n1.0
 v174
 C1099
-o3
+o2
 o2
 v190
 v182
+o3
+n1.0
 v174
 C1100
-o3
+o2
 o2
 v199
 v192
+o3
+n1.0
 v191
 C1101
-o3
+o2
 o2
 v199
 v193
+o3
+n1.0
 v191
 C1102
-o3
+o2
 o2
 v199
 v194
+o3
+n1.0
 v191
 C1103
-o3
+o2
 o2
 v199
 v195
+o3
+n1.0
 v191
 C1104
-o3
+o2
 o2
 v199
 v196
+o3
+n1.0
 v191
 C1105
-o3
+o2
 o2
 v199
 v197
+o3
+n1.0
 v191
 C1106
-o3
+o2
 o2
 v199
 v198
+o3
+n1.0
 v191
 C1107
-o3
+o2
 o2
 v200
 v192
+o3
+n1.0
 v191
 C1108
-o3
+o2
 o2
 v200
 v193
+o3
+n1.0
 v191
 C1109
-o3
+o2
 o2
 v200
 v194
+o3
+n1.0
 v191
 C1110
-o3
+o2
 o2
 v200
 v195
+o3
+n1.0
 v191
 C1111
-o3
+o2
 o2
 v200
 v196
+o3
+n1.0
 v191
 C1112
-o3
+o2
 o2
 v200
 v197
+o3
+n1.0
 v191
 C1113
-o3
+o2
 o2
 v200
 v198
+o3
+n1.0
 v191
 C1114
-o3
+o2
 o2
 v201
 v192
+o3
+n1.0
 v191
 C1115
-o3
+o2
 o2
 v201
 v193
+o3
+n1.0
 v191
 C1116
-o3
+o2
 o2
 v201
 v194
+o3
+n1.0
 v191
 C1117
-o3
+o2
 o2
 v201
 v195
+o3
+n1.0
 v191
 C1118
-o3
+o2
 o2
 v201
 v196
+o3
+n1.0
 v191
 C1119
-o3
+o2
 o2
 v201
 v197
+o3
+n1.0
 v191
 C1120
-o3
+o2
 o2
 v201
 v198
+o3
+n1.0
 v191
 C1121
-o3
+o2
 o2
 v202
 v192
+o3
+n1.0
 v191
 C1122
-o3
+o2
 o2
 v202
 v193
+o3
+n1.0
 v191
 C1123
-o3
+o2
 o2
 v202
 v194
+o3
+n1.0
 v191
 C1124
-o3
+o2
 o2
 v202
 v195
+o3
+n1.0
 v191
 C1125
-o3
+o2
 o2
 v202
 v196
+o3
+n1.0
 v191
 C1126
-o3
+o2
 o2
 v202
 v197
+o3
+n1.0
 v191
 C1127
-o3
+o2
 o2
 v202
 v198
+o3
+n1.0
 v191
 C1128
-o3
+o2
 o2
 v203
 v192
+o3
+n1.0
 v191
 C1129
-o3
+o2
 o2
 v203
 v193
+o3
+n1.0
 v191
 C1130
-o3
+o2
 o2
 v203
 v194
+o3
+n1.0
 v191
 C1131
-o3
+o2
 o2
 v203
 v195
+o3
+n1.0
 v191
 C1132
-o3
+o2
 o2
 v203
 v196
+o3
+n1.0
 v191
 C1133
-o3
+o2
 o2
 v203
 v197
+o3
+n1.0
 v191
 C1134
-o3
+o2
 o2
 v203
 v198
+o3
+n1.0
 v191
 C1135
-o3
+o2
 o2
 v204
 v192
+o3
+n1.0
 v191
 C1136
-o3
+o2
 o2
 v204
 v193
+o3
+n1.0
 v191
 C1137
-o3
+o2
 o2
 v204
 v194
+o3
+n1.0
 v191
 C1138
-o3
+o2
 o2
 v204
 v195
+o3
+n1.0
 v191
 C1139
-o3
+o2
 o2
 v204
 v196
+o3
+n1.0
 v191
 C1140
-o3
+o2
 o2
 v204
 v197
+o3
+n1.0
 v191
 C1141
-o3
+o2
 o2
 v204
 v198
+o3
+n1.0
 v191
 C1142
-o3
+o2
 o2
 v205
 v192
+o3
+n1.0
 v191
 C1143
-o3
+o2
 o2
 v205
 v193
+o3
+n1.0
 v191
 C1144
-o3
+o2
 o2
 v205
 v194
+o3
+n1.0
 v191
 C1145
-o3
+o2
 o2
 v205
 v195
+o3
+n1.0
 v191
 C1146
-o3
+o2
 o2
 v205
 v196
+o3
+n1.0
 v191
 C1147
-o3
+o2
 o2
 v205
 v197
+o3
+n1.0
 v191
 C1148
-o3
+o2
 o2
 v205
 v198
+o3
+n1.0
 v191
 C1149
-o3
+o2
 o2
 v213
 v207
+o3
+n1.0
 v206
 C1150
-o3
+o2
 o2
 v213
 v208
+o3
+n1.0
 v206
 C1151
-o3
+o2
 o2
 v213
 v209
+o3
+n1.0
 v206
 C1152
-o3
+o2
 o2
 v213
 v210
+o3
+n1.0
 v206
 C1153
-o3
+o2
 o2
 v213
 v211
+o3
+n1.0
 v206
 C1154
-o3
+o2
 o2
 v213
 v212
+o3
+n1.0
 v206
 C1155
-o3
+o2
 o2
 v214
 v207
+o3
+n1.0
 v206
 C1156
-o3
+o2
 o2
 v214
 v208
+o3
+n1.0
 v206
 C1157
-o3
+o2
 o2
 v214
 v209
+o3
+n1.0
 v206
 C1158
-o3
+o2
 o2
 v214
 v210
+o3
+n1.0
 v206
 C1159
-o3
+o2
 o2
 v214
 v211
+o3
+n1.0
 v206
 C1160
-o3
+o2
 o2
 v214
 v212
+o3
+n1.0
 v206
 C1161
-o3
+o2
 o2
 v215
 v207
+o3
+n1.0
 v206
 C1162
-o3
+o2
 o2
 v215
 v208
+o3
+n1.0
 v206
 C1163
-o3
+o2
 o2
 v215
 v209
+o3
+n1.0
 v206
 C1164
-o3
+o2
 o2
 v215
 v210
+o3
+n1.0
 v206
 C1165
-o3
+o2
 o2
 v215
 v211
+o3
+n1.0
 v206
 C1166
-o3
+o2
 o2
 v215
 v212
+o3
+n1.0
 v206
 C1167
-o3
+o2
 o2
 v216
 v207
+o3
+n1.0
 v206
 C1168
-o3
+o2
 o2
 v216
 v208
+o3
+n1.0
 v206
 C1169
-o3
+o2
 o2
 v216
 v209
+o3
+n1.0
 v206
 C1170
-o3
+o2
 o2
 v216
 v210
+o3
+n1.0
 v206
 C1171
-o3
+o2
 o2
 v216
 v211
+o3
+n1.0
 v206
 C1172
-o3
+o2
 o2
 v216
 v212
+o3
+n1.0
 v206
 C1173
-o3
+o2
 o2
 v217
 v207
+o3
+n1.0
 v206
 C1174
-o3
+o2
 o2
 v217
 v208
+o3
+n1.0
 v206
 C1175
-o3
+o2
 o2
 v217
 v209
+o3
+n1.0
 v206
 C1176
-o3
+o2
 o2
 v217
 v210
+o3
+n1.0
 v206
 C1177
-o3
+o2
 o2
 v217
 v211
+o3
+n1.0
 v206
 C1178
-o3
+o2
 o2
 v217
 v212
+o3
+n1.0
 v206
 C1179
-o3
+o2
 o2
 v218
 v207
+o3
+n1.0
 v206
 C1180
-o3
+o2
 o2
 v218
 v208
+o3
+n1.0
 v206
 C1181
-o3
+o2
 o2
 v218
 v209
+o3
+n1.0
 v206
 C1182
-o3
+o2
 o2
 v218
 v210
+o3
+n1.0
 v206
 C1183
-o3
+o2
 o2
 v218
 v211
+o3
+n1.0
 v206
 C1184
-o3
+o2
 o2
 v218
 v212
+o3
+n1.0
 v206
 C1185
-o3
+o2
 o2
 v225
 v220
+o3
+n1.0
 v219
 C1186
-o3
+o2
 o2
 v225
 v221
+o3
+n1.0
 v219
 C1187
-o3
+o2
 o2
 v225
 v222
+o3
+n1.0
 v219
 C1188
-o3
+o2
 o2
 v225
 v223
+o3
+n1.0
 v219
 C1189
-o3
+o2
 o2
 v225
 v224
+o3
+n1.0
 v219
 C1190
-o3
+o2
 o2
 v226
 v220
+o3
+n1.0
 v219
 C1191
-o3
+o2
 o2
 v226
 v221
+o3
+n1.0
 v219
 C1192
-o3
+o2
 o2
 v226
 v222
+o3
+n1.0
 v219
 C1193
-o3
+o2
 o2
 v226
 v223
+o3
+n1.0
 v219
 C1194
-o3
+o2
 o2
 v226
 v224
+o3
+n1.0
 v219
 C1195
-o3
+o2
 o2
 v227
 v220
+o3
+n1.0
 v219
 C1196
-o3
+o2
 o2
 v227
 v221
+o3
+n1.0
 v219
 C1197
-o3
+o2
 o2
 v227
 v222
+o3
+n1.0
 v219
 C1198
-o3
+o2
 o2
 v227
 v223
+o3
+n1.0
 v219
 C1199
-o3
+o2
 o2
 v227
 v224
+o3
+n1.0
 v219
 C1200
-o3
+o2
 o2
 v228
 v220
+o3
+n1.0
 v219
 C1201
-o3
+o2
 o2
 v228
 v221
+o3
+n1.0
 v219
 C1202
-o3
+o2
 o2
 v228
 v222
+o3
+n1.0
 v219
 C1203
-o3
+o2
 o2
 v228
 v223
+o3
+n1.0
 v219
 C1204
-o3
+o2
 o2
 v228
 v224
+o3
+n1.0
 v219
 C1205
-o3
+o2
 o2
 v229
 v220
+o3
+n1.0
 v219
 C1206
-o3
+o2
 o2
 v229
 v221
+o3
+n1.0
 v219
 C1207
-o3
+o2
 o2
 v229
 v222
+o3
+n1.0
 v219
 C1208
-o3
+o2
 o2
 v229
 v223
+o3
+n1.0
 v219
 C1209
-o3
+o2
 o2
 v229
 v224
+o3
+n1.0
 v219
 C1210
-o3
+o2
 o2
 v235
 v231
+o3
+n1.0
 v230
 C1211
-o3
+o2
 o2
 v235
 v232
+o3
+n1.0
 v230
 C1212
-o3
+o2
 o2
 v235
 v233
+o3
+n1.0
 v230
 C1213
-o3
+o2
 o2
 v235
 v234
+o3
+n1.0
 v230
 C1214
-o3
+o2
 o2
 v236
 v231
+o3
+n1.0
 v230
 C1215
-o3
+o2
 o2
 v236
 v232
+o3
+n1.0
 v230
 C1216
-o3
+o2
 o2
 v236
 v233
+o3
+n1.0
 v230
 C1217
-o3
+o2
 o2
 v236
 v234
+o3
+n1.0
 v230
 C1218
-o3
+o2
 o2
 v237
 v231
+o3
+n1.0
 v230
 C1219
-o3
+o2
 o2
 v237
 v232
+o3
+n1.0
 v230
 C1220
-o3
+o2
 o2
 v237
 v233
+o3
+n1.0
 v230
 C1221
-o3
+o2
 o2
 v237
 v234
+o3
+n1.0
 v230
 C1222
-o3
+o2
 o2
 v238
 v231
+o3
+n1.0
 v230
 C1223
-o3
+o2
 o2
 v238
 v232
+o3
+n1.0
 v230
 C1224
-o3
+o2
 o2
 v238
 v233
+o3
+n1.0
 v230
 C1225
-o3
+o2
 o2
 v238
 v234
+o3
+n1.0
 v230
 C1226
-o3
+o2
 o2
 v243
 v240
+o3
+n1.0
 v239
 C1227
-o3
+o2
 o2
 v243
 v241
+o3
+n1.0
 v239
 C1228
-o3
+o2
 o2
 v243
 v242
+o3
+n1.0
 v239
 C1229
-o3
+o2
 o2
 v244
 v240
+o3
+n1.0
 v239
 C1230
-o3
+o2
 o2
 v244
 v241
+o3
+n1.0
 v239
 C1231
-o3
+o2
 o2
 v244
 v242
+o3
+n1.0
 v239
 C1232
-o3
+o2
 o2
 v245
 v240
+o3
+n1.0
 v239
 C1233
-o3
+o2
 o2
 v245
 v241
+o3
+n1.0
 v239
 C1234
-o3
+o2
 o2
 v245
 v242
+o3
+n1.0
 v239
 C1235
-o3
+o2
 o2
 v249
 v247
+o3
+n1.0
 v246
 C1236
-o3
+o2
 o2
 v249
 v248
+o3
+n1.0
 v246
 C1237
-o3
+o2
 o2
 v250
 v247
+o3
+n1.0
 v246
 C1238
-o3
+o2
 o2
 v250
 v248
+o3
+n1.0
 v246
 C1239
-o3
+o2
 o2
 v253
 v252
+o3
+n1.0
 v251
 C1240
 n0
@@ -21345,7217 +23825,7217 @@ k1494
 11139
 11143
 J0 4
-254 -1.0
-30 1.0
+254 -1
+30 1
 0 0
 15 0
 J1 4
-255 -1.0
-31 1.0
+255 -1
+31 1
 1 0
 15 0
 J2 4
-256 -1.0
-32 1.0
+256 -1
+32 1
 2 0
 15 0
 J3 4
-257 -1.0
-33 1.0
+257 -1
+33 1
 3 0
 15 0
 J4 4
-258 -1.0
-34 1.0
+258 -1
+34 1
 4 0
 15 0
 J5 4
-259 -1.0
-35 1.0
+259 -1
+35 1
 5 0
 15 0
 J6 4
-260 -1.0
-36 1.0
+260 -1
+36 1
 6 0
 15 0
 J7 4
-261 -1.0
-37 1.0
+261 -1
+37 1
 7 0
 15 0
 J8 4
-262 -1.0
-38 1.0
+262 -1
+38 1
 8 0
 15 0
 J9 4
-263 -1.0
-39 1.0
+263 -1
+39 1
 9 0
 15 0
 J10 4
-264 -1.0
-40 1.0
+264 -1
+40 1
 10 0
 15 0
 J11 4
-265 -1.0
-41 1.0
+265 -1
+41 1
 11 0
 15 0
 J12 4
-266 -1.0
-42 1.0
+266 -1
+42 1
 12 0
 15 0
 J13 4
-267 -1.0
-43 1.0
+267 -1
+43 1
 13 0
 15 0
 J14 4
-268 -1.0
-44 1.0
+268 -1
+44 1
 14 0
 15 0
 J15 4
-269 -1.0
-45 1.0
+269 -1
+45 1
 0 0
 16 0
 J16 4
-270 -1.0
-479 1.0
+270 -1
+479 1
 1 0
 16 0
 J17 4
-271 -1.0
-480 1.0
+271 -1
+480 1
 2 0
 16 0
 J18 4
-272 -1.0
-481 1.0
+272 -1
+481 1
 3 0
 16 0
 J19 4
-273 -1.0
-482 1.0
+273 -1
+482 1
 4 0
 16 0
 J20 4
-274 -1.0
-483 1.0
+274 -1
+483 1
 5 0
 16 0
 J21 4
-275 -1.0
-484 1.0
+275 -1
+484 1
 6 0
 16 0
 J22 4
-276 -1.0
-485 1.0
+276 -1
+485 1
 7 0
 16 0
 J23 4
-277 -1.0
-486 1.0
+277 -1
+486 1
 8 0
 16 0
 J24 4
-278 -1.0
-487 1.0
+278 -1
+487 1
 9 0
 16 0
 J25 4
-279 -1.0
-488 1.0
+279 -1
+488 1
 10 0
 16 0
 J26 4
-280 -1.0
-489 1.0
+280 -1
+489 1
 11 0
 16 0
 J27 4
-281 -1.0
-490 1.0
+281 -1
+490 1
 12 0
 16 0
 J28 4
-282 -1.0
-491 1.0
+282 -1
+491 1
 13 0
 16 0
 J29 4
-283 -1.0
-492 1.0
+283 -1
+492 1
 14 0
 16 0
 J30 4
-284 -1.0
-46 1.0
+284 -1
+46 1
 0 0
 17 0
 J31 4
-285 -1.0
-493 1.0
+285 -1
+493 1
 1 0
 17 0
 J32 4
-286 -1.0
-494 1.0
+286 -1
+494 1
 2 0
 17 0
 J33 4
-287 -1.0
-495 1.0
+287 -1
+495 1
 3 0
 17 0
 J34 4
-288 -1.0
-496 1.0
+288 -1
+496 1
 4 0
 17 0
 J35 4
-289 -1.0
-497 1.0
+289 -1
+497 1
 5 0
 17 0
 J36 4
-290 -1.0
-498 1.0
+290 -1
+498 1
 6 0
 17 0
 J37 4
-291 -1.0
-499 1.0
+291 -1
+499 1
 7 0
 17 0
 J38 4
-292 -1.0
-500 1.0
+292 -1
+500 1
 8 0
 17 0
 J39 4
-293 -1.0
-501 1.0
+293 -1
+501 1
 9 0
 17 0
 J40 4
-294 -1.0
-502 1.0
+294 -1
+502 1
 10 0
 17 0
 J41 4
-295 -1.0
-503 1.0
+295 -1
+503 1
 11 0
 17 0
 J42 4
-296 -1.0
-504 1.0
+296 -1
+504 1
 12 0
 17 0
 J43 4
-297 -1.0
-505 1.0
+297 -1
+505 1
 13 0
 17 0
 J44 4
-298 -1.0
-506 1.0
+298 -1
+506 1
 14 0
 17 0
 J45 4
-299 -1.0
-47 1.0
+299 -1
+47 1
 0 0
 18 0
 J46 4
-300 -1.0
-507 1.0
+300 -1
+507 1
 1 0
 18 0
 J47 4
-301 -1.0
-508 1.0
+301 -1
+508 1
 2 0
 18 0
 J48 4
-302 -1.0
-509 1.0
+302 -1
+509 1
 3 0
 18 0
 J49 4
-303 -1.0
-510 1.0
+303 -1
+510 1
 4 0
 18 0
 J50 4
-304 -1.0
-511 1.0
+304 -1
+511 1
 5 0
 18 0
 J51 4
-305 -1.0
-512 1.0
+305 -1
+512 1
 6 0
 18 0
 J52 4
-306 -1.0
-513 1.0
+306 -1
+513 1
 7 0
 18 0
 J53 4
-307 -1.0
-514 1.0
+307 -1
+514 1
 8 0
 18 0
 J54 4
-308 -1.0
-515 1.0
+308 -1
+515 1
 9 0
 18 0
 J55 4
-309 -1.0
-516 1.0
+309 -1
+516 1
 10 0
 18 0
 J56 4
-310 -1.0
-517 1.0
+310 -1
+517 1
 11 0
 18 0
 J57 4
-311 -1.0
-518 1.0
+311 -1
+518 1
 12 0
 18 0
 J58 4
-312 -1.0
-519 1.0
+312 -1
+519 1
 13 0
 18 0
 J59 4
-313 -1.0
-520 1.0
+313 -1
+520 1
 14 0
 18 0
 J60 4
-314 -1.0
-48 1.0
+314 -1
+48 1
 0 0
 19 0
 J61 4
-315 -1.0
-521 1.0
+315 -1
+521 1
 1 0
 19 0
 J62 4
-316 -1.0
-522 1.0
+316 -1
+522 1
 2 0
 19 0
 J63 4
-317 -1.0
-523 1.0
+317 -1
+523 1
 3 0
 19 0
 J64 4
-318 -1.0
-524 1.0
+318 -1
+524 1
 4 0
 19 0
 J65 4
-319 -1.0
-525 1.0
+319 -1
+525 1
 5 0
 19 0
 J66 4
-320 -1.0
-526 1.0
+320 -1
+526 1
 6 0
 19 0
 J67 4
-321 -1.0
-527 1.0
+321 -1
+527 1
 7 0
 19 0
 J68 4
-322 -1.0
-528 1.0
+322 -1
+528 1
 8 0
 19 0
 J69 4
-323 -1.0
-529 1.0
+323 -1
+529 1
 9 0
 19 0
 J70 4
-324 -1.0
-530 1.0
+324 -1
+530 1
 10 0
 19 0
 J71 4
-325 -1.0
-531 1.0
+325 -1
+531 1
 11 0
 19 0
 J72 4
-326 -1.0
-532 1.0
+326 -1
+532 1
 12 0
 19 0
 J73 4
-327 -1.0
-533 1.0
+327 -1
+533 1
 13 0
 19 0
 J74 4
-328 -1.0
-534 1.0
+328 -1
+534 1
 14 0
 19 0
 J75 4
-329 -1.0
-49 1.0
+329 -1
+49 1
 0 0
 20 0
 J76 4
-330 -1.0
-535 1.0
+330 -1
+535 1
 1 0
 20 0
 J77 4
-331 -1.0
-536 1.0
+331 -1
+536 1
 2 0
 20 0
 J78 4
-332 -1.0
-537 1.0
+332 -1
+537 1
 3 0
 20 0
 J79 4
-333 -1.0
-538 1.0
+333 -1
+538 1
 4 0
 20 0
 J80 4
-334 -1.0
-539 1.0
+334 -1
+539 1
 5 0
 20 0
 J81 4
-335 -1.0
-540 1.0
+335 -1
+540 1
 6 0
 20 0
 J82 4
-336 -1.0
-541 1.0
+336 -1
+541 1
 7 0
 20 0
 J83 4
-337 -1.0
-542 1.0
+337 -1
+542 1
 8 0
 20 0
 J84 4
-338 -1.0
-543 1.0
+338 -1
+543 1
 9 0
 20 0
 J85 4
-339 -1.0
-544 1.0
+339 -1
+544 1
 10 0
 20 0
 J86 4
-340 -1.0
-545 1.0
+340 -1
+545 1
 11 0
 20 0
 J87 4
-341 -1.0
-546 1.0
+341 -1
+546 1
 12 0
 20 0
 J88 4
-342 -1.0
-547 1.0
+342 -1
+547 1
 13 0
 20 0
 J89 4
-343 -1.0
-548 1.0
+343 -1
+548 1
 14 0
 20 0
 J90 4
-344 -1.0
-50 1.0
+344 -1
+50 1
 0 0
 21 0
 J91 4
-345 -1.0
-549 1.0
+345 -1
+549 1
 1 0
 21 0
 J92 4
-346 -1.0
-550 1.0
+346 -1
+550 1
 2 0
 21 0
 J93 4
-347 -1.0
-551 1.0
+347 -1
+551 1
 3 0
 21 0
 J94 4
-348 -1.0
-552 1.0
+348 -1
+552 1
 4 0
 21 0
 J95 4
-349 -1.0
-553 1.0
+349 -1
+553 1
 5 0
 21 0
 J96 4
-350 -1.0
-554 1.0
+350 -1
+554 1
 6 0
 21 0
 J97 4
-351 -1.0
-555 1.0
+351 -1
+555 1
 7 0
 21 0
 J98 4
-352 -1.0
-556 1.0
+352 -1
+556 1
 8 0
 21 0
 J99 4
-353 -1.0
-557 1.0
+353 -1
+557 1
 9 0
 21 0
 J100 4
-354 -1.0
-558 1.0
+354 -1
+558 1
 10 0
 21 0
 J101 4
-355 -1.0
-559 1.0
+355 -1
+559 1
 11 0
 21 0
 J102 4
-356 -1.0
-560 1.0
+356 -1
+560 1
 12 0
 21 0
 J103 4
-357 -1.0
-561 1.0
+357 -1
+561 1
 13 0
 21 0
 J104 4
-358 -1.0
-562 1.0
+358 -1
+562 1
 14 0
 21 0
 J105 4
-359 -1.0
-51 1.0
+359 -1
+51 1
 0 0
 22 0
 J106 4
-360 -1.0
-563 1.0
+360 -1
+563 1
 1 0
 22 0
 J107 4
-361 -1.0
-564 1.0
+361 -1
+564 1
 2 0
 22 0
 J108 4
-362 -1.0
-565 1.0
+362 -1
+565 1
 3 0
 22 0
 J109 4
-363 -1.0
-566 1.0
+363 -1
+566 1
 4 0
 22 0
 J110 4
-364 -1.0
-567 1.0
+364 -1
+567 1
 5 0
 22 0
 J111 4
-365 -1.0
-568 1.0
+365 -1
+568 1
 6 0
 22 0
 J112 4
-366 -1.0
-569 1.0
+366 -1
+569 1
 7 0
 22 0
 J113 4
-367 -1.0
-570 1.0
+367 -1
+570 1
 8 0
 22 0
 J114 4
-368 -1.0
-571 1.0
+368 -1
+571 1
 9 0
 22 0
 J115 4
-369 -1.0
-572 1.0
+369 -1
+572 1
 10 0
 22 0
 J116 4
-370 -1.0
-573 1.0
+370 -1
+573 1
 11 0
 22 0
 J117 4
-371 -1.0
-574 1.0
+371 -1
+574 1
 12 0
 22 0
 J118 4
-372 -1.0
-575 1.0
+372 -1
+575 1
 13 0
 22 0
 J119 4
-373 -1.0
-576 1.0
+373 -1
+576 1
 14 0
 22 0
 J120 4
-374 -1.0
-52 1.0
+374 -1
+52 1
 0 0
 23 0
 J121 4
-375 -1.0
-577 1.0
+375 -1
+577 1
 1 0
 23 0
 J122 4
-376 -1.0
-578 1.0
+376 -1
+578 1
 2 0
 23 0
 J123 4
-377 -1.0
-579 1.0
+377 -1
+579 1
 3 0
 23 0
 J124 4
-378 -1.0
-580 1.0
+378 -1
+580 1
 4 0
 23 0
 J125 4
-379 -1.0
-581 1.0
+379 -1
+581 1
 5 0
 23 0
 J126 4
-380 -1.0
-582 1.0
+380 -1
+582 1
 6 0
 23 0
 J127 4
-381 -1.0
-583 1.0
+381 -1
+583 1
 7 0
 23 0
 J128 4
-382 -1.0
-584 1.0
+382 -1
+584 1
 8 0
 23 0
 J129 4
-383 -1.0
-585 1.0
+383 -1
+585 1
 9 0
 23 0
 J130 4
-384 -1.0
-586 1.0
+384 -1
+586 1
 10 0
 23 0
 J131 4
-385 -1.0
-587 1.0
+385 -1
+587 1
 11 0
 23 0
 J132 4
-386 -1.0
-588 1.0
+386 -1
+588 1
 12 0
 23 0
 J133 4
-387 -1.0
-589 1.0
+387 -1
+589 1
 13 0
 23 0
 J134 4
-388 -1.0
-590 1.0
+388 -1
+590 1
 14 0
 23 0
 J135 4
-389 -1.0
-53 1.0
+389 -1
+53 1
 0 0
 24 0
 J136 4
-390 -1.0
-591 1.0
+390 -1
+591 1
 1 0
 24 0
 J137 4
-391 -1.0
-592 1.0
+391 -1
+592 1
 2 0
 24 0
 J138 4
-392 -1.0
-593 1.0
+392 -1
+593 1
 3 0
 24 0
 J139 4
-393 -1.0
-594 1.0
+393 -1
+594 1
 4 0
 24 0
 J140 4
-394 -1.0
-595 1.0
+394 -1
+595 1
 5 0
 24 0
 J141 4
-395 -1.0
-596 1.0
+395 -1
+596 1
 6 0
 24 0
 J142 4
-396 -1.0
-597 1.0
+396 -1
+597 1
 7 0
 24 0
 J143 4
-397 -1.0
-598 1.0
+397 -1
+598 1
 8 0
 24 0
 J144 4
-398 -1.0
-599 1.0
+398 -1
+599 1
 9 0
 24 0
 J145 4
-399 -1.0
-600 1.0
+399 -1
+600 1
 10 0
 24 0
 J146 4
-400 -1.0
-601 1.0
+400 -1
+601 1
 11 0
 24 0
 J147 4
-401 -1.0
-602 1.0
+401 -1
+602 1
 12 0
 24 0
 J148 4
-402 -1.0
-603 1.0
+402 -1
+603 1
 13 0
 24 0
 J149 4
-403 -1.0
-604 1.0
+403 -1
+604 1
 14 0
 24 0
 J150 4
-404 -1.0
-54 1.0
+404 -1
+54 1
 0 0
 25 0
 J151 4
-405 -1.0
-605 1.0
+405 -1
+605 1
 1 0
 25 0
 J152 4
-406 -1.0
-606 1.0
+406 -1
+606 1
 2 0
 25 0
 J153 4
-407 -1.0
-607 1.0
+407 -1
+607 1
 3 0
 25 0
 J154 4
-408 -1.0
-608 1.0
+408 -1
+608 1
 4 0
 25 0
 J155 4
-409 -1.0
-609 1.0
+409 -1
+609 1
 5 0
 25 0
 J156 4
-410 -1.0
-610 1.0
+410 -1
+610 1
 6 0
 25 0
 J157 4
-411 -1.0
-611 1.0
+411 -1
+611 1
 7 0
 25 0
 J158 4
-412 -1.0
-612 1.0
+412 -1
+612 1
 8 0
 25 0
 J159 4
-413 -1.0
-613 1.0
+413 -1
+613 1
 9 0
 25 0
 J160 4
-414 -1.0
-614 1.0
+414 -1
+614 1
 10 0
 25 0
 J161 4
-415 -1.0
-615 1.0
+415 -1
+615 1
 11 0
 25 0
 J162 4
-416 -1.0
-616 1.0
+416 -1
+616 1
 12 0
 25 0
 J163 4
-417 -1.0
-617 1.0
+417 -1
+617 1
 13 0
 25 0
 J164 4
-418 -1.0
-618 1.0
+418 -1
+618 1
 14 0
 25 0
 J165 4
-419 -1.0
-55 1.0
+419 -1
+55 1
 0 0
 26 0
 J166 4
-420 -1.0
-619 1.0
+420 -1
+619 1
 1 0
 26 0
 J167 4
-421 -1.0
-620 1.0
+421 -1
+620 1
 2 0
 26 0
 J168 4
-422 -1.0
-621 1.0
+422 -1
+621 1
 3 0
 26 0
 J169 4
-423 -1.0
-622 1.0
+423 -1
+622 1
 4 0
 26 0
 J170 4
-424 -1.0
-623 1.0
+424 -1
+623 1
 5 0
 26 0
 J171 4
-425 -1.0
-624 1.0
+425 -1
+624 1
 6 0
 26 0
 J172 4
-426 -1.0
-625 1.0
+426 -1
+625 1
 7 0
 26 0
 J173 4
-427 -1.0
-626 1.0
+427 -1
+626 1
 8 0
 26 0
 J174 4
-428 -1.0
-627 1.0
+428 -1
+627 1
 9 0
 26 0
 J175 4
-429 -1.0
-628 1.0
+429 -1
+628 1
 10 0
 26 0
 J176 4
-430 -1.0
-629 1.0
+430 -1
+629 1
 11 0
 26 0
 J177 4
-431 -1.0
-630 1.0
+431 -1
+630 1
 12 0
 26 0
 J178 4
-432 -1.0
-631 1.0
+432 -1
+631 1
 13 0
 26 0
 J179 4
-433 -1.0
-632 1.0
+433 -1
+632 1
 14 0
 26 0
 J180 4
-434 -1.0
-56 1.0
+434 -1
+56 1
 0 0
 27 0
 J181 4
-435 -1.0
-633 1.0
+435 -1
+633 1
 1 0
 27 0
 J182 4
-436 -1.0
-634 1.0
+436 -1
+634 1
 2 0
 27 0
 J183 4
-437 -1.0
-635 1.0
+437 -1
+635 1
 3 0
 27 0
 J184 4
-438 -1.0
-636 1.0
+438 -1
+636 1
 4 0
 27 0
 J185 4
-439 -1.0
-637 1.0
+439 -1
+637 1
 5 0
 27 0
 J186 4
-440 -1.0
-638 1.0
+440 -1
+638 1
 6 0
 27 0
 J187 4
-441 -1.0
-639 1.0
+441 -1
+639 1
 7 0
 27 0
 J188 4
-442 -1.0
-640 1.0
+442 -1
+640 1
 8 0
 27 0
 J189 4
-443 -1.0
-641 1.0
+443 -1
+641 1
 9 0
 27 0
 J190 4
-444 -1.0
-642 1.0
+444 -1
+642 1
 10 0
 27 0
 J191 4
-445 -1.0
-643 1.0
+445 -1
+643 1
 11 0
 27 0
 J192 4
-446 -1.0
-644 1.0
+446 -1
+644 1
 12 0
 27 0
 J193 4
-447 -1.0
-645 1.0
+447 -1
+645 1
 13 0
 27 0
 J194 4
-448 -1.0
-646 1.0
+448 -1
+646 1
 14 0
 27 0
 J195 4
-449 -1.0
-57 1.0
+449 -1
+57 1
 0 0
 28 0
 J196 4
-450 -1.0
-647 1.0
+450 -1
+647 1
 1 0
 28 0
 J197 4
-451 -1.0
-648 1.0
+451 -1
+648 1
 2 0
 28 0
 J198 4
-452 -1.0
-649 1.0
+452 -1
+649 1
 3 0
 28 0
 J199 4
-453 -1.0
-650 1.0
+453 -1
+650 1
 4 0
 28 0
 J200 4
-454 -1.0
-651 1.0
+454 -1
+651 1
 5 0
 28 0
 J201 4
-455 -1.0
-652 1.0
+455 -1
+652 1
 6 0
 28 0
 J202 4
-456 -1.0
-653 1.0
+456 -1
+653 1
 7 0
 28 0
 J203 4
-457 -1.0
-654 1.0
+457 -1
+654 1
 8 0
 28 0
 J204 4
-458 -1.0
-655 1.0
+458 -1
+655 1
 9 0
 28 0
 J205 4
-459 -1.0
-656 1.0
+459 -1
+656 1
 10 0
 28 0
 J206 4
-460 -1.0
-657 1.0
+460 -1
+657 1
 11 0
 28 0
 J207 4
-461 -1.0
-658 1.0
+461 -1
+658 1
 12 0
 28 0
 J208 4
-462 -1.0
-659 1.0
+462 -1
+659 1
 13 0
 28 0
 J209 4
-463 -1.0
-660 1.0
+463 -1
+660 1
 14 0
 28 0
 J210 4
-464 -1.0
-58 1.0
+464 -1
+58 1
 0 0
 29 0
 J211 4
-465 -1.0
-661 1.0
+465 -1
+661 1
 1 0
 29 0
 J212 4
-466 -1.0
-662 1.0
+466 -1
+662 1
 2 0
 29 0
 J213 4
-467 -1.0
-663 1.0
+467 -1
+663 1
 3 0
 29 0
 J214 4
-468 -1.0
-664 1.0
+468 -1
+664 1
 4 0
 29 0
 J215 4
-469 -1.0
-665 1.0
+469 -1
+665 1
 5 0
 29 0
 J216 4
-470 -1.0
-666 1.0
+470 -1
+666 1
 6 0
 29 0
 J217 4
-471 -1.0
-667 1.0
+471 -1
+667 1
 7 0
 29 0
 J218 4
-472 -1.0
-668 1.0
+472 -1
+668 1
 8 0
 29 0
 J219 4
-473 -1.0
-669 1.0
+473 -1
+669 1
 9 0
 29 0
 J220 4
-474 -1.0
-670 1.0
+474 -1
+670 1
 10 0
 29 0
 J221 4
-475 -1.0
-671 1.0
+475 -1
+671 1
 11 0
 29 0
 J222 4
-476 -1.0
-672 1.0
+476 -1
+672 1
 12 0
 29 0
 J223 4
-477 -1.0
-673 1.0
+477 -1
+673 1
 13 0
 29 0
 J224 4
-478 -1.0
-674 1.0
+478 -1
+674 1
 14 0
 29 0
 J225 5
-479 -1.0
-59 1.0
+479 -1
+59 1
 30 0
 31 0
 45 0
 J226 5
-480 -1.0
-60 1.0
+480 -1
+60 1
 30 0
 32 0
 45 0
 J227 5
-481 -1.0
-61 1.0
+481 -1
+61 1
 30 0
 33 0
 45 0
 J228 5
-482 -1.0
-62 1.0
+482 -1
+62 1
 30 0
 34 0
 45 0
 J229 5
-483 -1.0
-63 1.0
+483 -1
+63 1
 30 0
 35 0
 45 0
 J230 5
-484 -1.0
-64 1.0
+484 -1
+64 1
 30 0
 36 0
 45 0
 J231 5
-485 -1.0
-65 1.0
+485 -1
+65 1
 30 0
 37 0
 45 0
 J232 5
-486 -1.0
-66 1.0
+486 -1
+66 1
 30 0
 38 0
 45 0
 J233 5
-487 -1.0
-67 1.0
+487 -1
+67 1
 30 0
 39 0
 45 0
 J234 5
-488 -1.0
-68 1.0
+488 -1
+68 1
 30 0
 40 0
 45 0
 J235 5
-489 -1.0
-69 1.0
+489 -1
+69 1
 30 0
 41 0
 45 0
 J236 5
-490 -1.0
-70 1.0
+490 -1
+70 1
 30 0
 42 0
 45 0
 J237 5
-491 -1.0
-71 1.0
+491 -1
+71 1
 30 0
 43 0
 45 0
 J238 5
-492 -1.0
-72 1.0
+492 -1
+72 1
 30 0
 44 0
 45 0
 J239 5
-493 -1.0
-73 1.0
+493 -1
+73 1
 30 0
 31 0
 46 0
 J240 5
-494 -1.0
-675 1.0
+494 -1
+675 1
 30 0
 32 0
 46 0
 J241 5
-495 -1.0
-676 1.0
+495 -1
+676 1
 30 0
 33 0
 46 0
 J242 5
-496 -1.0
-677 1.0
+496 -1
+677 1
 30 0
 34 0
 46 0
 J243 5
-497 -1.0
-678 1.0
+497 -1
+678 1
 30 0
 35 0
 46 0
 J244 5
-498 -1.0
-679 1.0
+498 -1
+679 1
 30 0
 36 0
 46 0
 J245 5
-499 -1.0
-680 1.0
+499 -1
+680 1
 30 0
 37 0
 46 0
 J246 5
-500 -1.0
-681 1.0
+500 -1
+681 1
 30 0
 38 0
 46 0
 J247 5
-501 -1.0
-682 1.0
+501 -1
+682 1
 30 0
 39 0
 46 0
 J248 5
-502 -1.0
-683 1.0
+502 -1
+683 1
 30 0
 40 0
 46 0
 J249 5
-503 -1.0
-684 1.0
+503 -1
+684 1
 30 0
 41 0
 46 0
 J250 5
-504 -1.0
-685 1.0
+504 -1
+685 1
 30 0
 42 0
 46 0
 J251 5
-505 -1.0
-686 1.0
+505 -1
+686 1
 30 0
 43 0
 46 0
 J252 5
-506 -1.0
-687 1.0
+506 -1
+687 1
 30 0
 44 0
 46 0
 J253 5
-507 -1.0
-74 1.0
+507 -1
+74 1
 30 0
 31 0
 47 0
 J254 5
-508 -1.0
-688 1.0
+508 -1
+688 1
 30 0
 32 0
 47 0
 J255 5
-509 -1.0
-689 1.0
+509 -1
+689 1
 30 0
 33 0
 47 0
 J256 5
-510 -1.0
-690 1.0
+510 -1
+690 1
 30 0
 34 0
 47 0
 J257 5
-511 -1.0
-691 1.0
+511 -1
+691 1
 30 0
 35 0
 47 0
 J258 5
-512 -1.0
-692 1.0
+512 -1
+692 1
 30 0
 36 0
 47 0
 J259 5
-513 -1.0
-693 1.0
+513 -1
+693 1
 30 0
 37 0
 47 0
 J260 5
-514 -1.0
-694 1.0
+514 -1
+694 1
 30 0
 38 0
 47 0
 J261 5
-515 -1.0
-695 1.0
+515 -1
+695 1
 30 0
 39 0
 47 0
 J262 5
-516 -1.0
-696 1.0
+516 -1
+696 1
 30 0
 40 0
 47 0
 J263 5
-517 -1.0
-697 1.0
+517 -1
+697 1
 30 0
 41 0
 47 0
 J264 5
-518 -1.0
-698 1.0
+518 -1
+698 1
 30 0
 42 0
 47 0
 J265 5
-519 -1.0
-699 1.0
+519 -1
+699 1
 30 0
 43 0
 47 0
 J266 5
-520 -1.0
-700 1.0
+520 -1
+700 1
 30 0
 44 0
 47 0
 J267 5
-521 -1.0
-75 1.0
+521 -1
+75 1
 30 0
 31 0
 48 0
 J268 5
-522 -1.0
-701 1.0
+522 -1
+701 1
 30 0
 32 0
 48 0
 J269 5
-523 -1.0
-702 1.0
+523 -1
+702 1
 30 0
 33 0
 48 0
 J270 5
-524 -1.0
-703 1.0
+524 -1
+703 1
 30 0
 34 0
 48 0
 J271 5
-525 -1.0
-704 1.0
+525 -1
+704 1
 30 0
 35 0
 48 0
 J272 5
-526 -1.0
-705 1.0
+526 -1
+705 1
 30 0
 36 0
 48 0
 J273 5
-527 -1.0
-706 1.0
+527 -1
+706 1
 30 0
 37 0
 48 0
 J274 5
-528 -1.0
-707 1.0
+528 -1
+707 1
 30 0
 38 0
 48 0
 J275 5
-529 -1.0
-708 1.0
+529 -1
+708 1
 30 0
 39 0
 48 0
 J276 5
-530 -1.0
-709 1.0
+530 -1
+709 1
 30 0
 40 0
 48 0
 J277 5
-531 -1.0
-710 1.0
+531 -1
+710 1
 30 0
 41 0
 48 0
 J278 5
-532 -1.0
-711 1.0
+532 -1
+711 1
 30 0
 42 0
 48 0
 J279 5
-533 -1.0
-712 1.0
+533 -1
+712 1
 30 0
 43 0
 48 0
 J280 5
-534 -1.0
-713 1.0
+534 -1
+713 1
 30 0
 44 0
 48 0
 J281 5
-535 -1.0
-76 1.0
+535 -1
+76 1
 30 0
 31 0
 49 0
 J282 5
-536 -1.0
-714 1.0
+536 -1
+714 1
 30 0
 32 0
 49 0
 J283 5
-537 -1.0
-715 1.0
+537 -1
+715 1
 30 0
 33 0
 49 0
 J284 5
-538 -1.0
-716 1.0
+538 -1
+716 1
 30 0
 34 0
 49 0
 J285 5
-539 -1.0
-717 1.0
+539 -1
+717 1
 30 0
 35 0
 49 0
 J286 5
-540 -1.0
-718 1.0
+540 -1
+718 1
 30 0
 36 0
 49 0
 J287 5
-541 -1.0
-719 1.0
+541 -1
+719 1
 30 0
 37 0
 49 0
 J288 5
-542 -1.0
-720 1.0
+542 -1
+720 1
 30 0
 38 0
 49 0
 J289 5
-543 -1.0
-721 1.0
+543 -1
+721 1
 30 0
 39 0
 49 0
 J290 5
-544 -1.0
-722 1.0
+544 -1
+722 1
 30 0
 40 0
 49 0
 J291 5
-545 -1.0
-723 1.0
+545 -1
+723 1
 30 0
 41 0
 49 0
 J292 5
-546 -1.0
-724 1.0
+546 -1
+724 1
 30 0
 42 0
 49 0
 J293 5
-547 -1.0
-725 1.0
+547 -1
+725 1
 30 0
 43 0
 49 0
 J294 5
-548 -1.0
-726 1.0
+548 -1
+726 1
 30 0
 44 0
 49 0
 J295 5
-549 -1.0
-77 1.0
+549 -1
+77 1
 30 0
 31 0
 50 0
 J296 5
-550 -1.0
-727 1.0
+550 -1
+727 1
 30 0
 32 0
 50 0
 J297 5
-551 -1.0
-728 1.0
+551 -1
+728 1
 30 0
 33 0
 50 0
 J298 5
-552 -1.0
-729 1.0
+552 -1
+729 1
 30 0
 34 0
 50 0
 J299 5
-553 -1.0
-730 1.0
+553 -1
+730 1
 30 0
 35 0
 50 0
 J300 5
-554 -1.0
-731 1.0
+554 -1
+731 1
 30 0
 36 0
 50 0
 J301 5
-555 -1.0
-732 1.0
+555 -1
+732 1
 30 0
 37 0
 50 0
 J302 5
-556 -1.0
-733 1.0
+556 -1
+733 1
 30 0
 38 0
 50 0
 J303 5
-557 -1.0
-734 1.0
+557 -1
+734 1
 30 0
 39 0
 50 0
 J304 5
-558 -1.0
-735 1.0
+558 -1
+735 1
 30 0
 40 0
 50 0
 J305 5
-559 -1.0
-736 1.0
+559 -1
+736 1
 30 0
 41 0
 50 0
 J306 5
-560 -1.0
-737 1.0
+560 -1
+737 1
 30 0
 42 0
 50 0
 J307 5
-561 -1.0
-738 1.0
+561 -1
+738 1
 30 0
 43 0
 50 0
 J308 5
-562 -1.0
-739 1.0
+562 -1
+739 1
 30 0
 44 0
 50 0
 J309 5
-563 -1.0
-78 1.0
+563 -1
+78 1
 30 0
 31 0
 51 0
 J310 5
-564 -1.0
-740 1.0
+564 -1
+740 1
 30 0
 32 0
 51 0
 J311 5
-565 -1.0
-741 1.0
+565 -1
+741 1
 30 0
 33 0
 51 0
 J312 5
-566 -1.0
-742 1.0
+566 -1
+742 1
 30 0
 34 0
 51 0
 J313 5
-567 -1.0
-743 1.0
+567 -1
+743 1
 30 0
 35 0
 51 0
 J314 5
-568 -1.0
-744 1.0
+568 -1
+744 1
 30 0
 36 0
 51 0
 J315 5
-569 -1.0
-745 1.0
+569 -1
+745 1
 30 0
 37 0
 51 0
 J316 5
-570 -1.0
-746 1.0
+570 -1
+746 1
 30 0
 38 0
 51 0
 J317 5
-571 -1.0
-747 1.0
+571 -1
+747 1
 30 0
 39 0
 51 0
 J318 5
-572 -1.0
-748 1.0
+572 -1
+748 1
 30 0
 40 0
 51 0
 J319 5
-573 -1.0
-749 1.0
+573 -1
+749 1
 30 0
 41 0
 51 0
 J320 5
-574 -1.0
-750 1.0
+574 -1
+750 1
 30 0
 42 0
 51 0
 J321 5
-575 -1.0
-751 1.0
+575 -1
+751 1
 30 0
 43 0
 51 0
 J322 5
-576 -1.0
-752 1.0
+576 -1
+752 1
 30 0
 44 0
 51 0
 J323 5
-577 -1.0
-79 1.0
+577 -1
+79 1
 30 0
 31 0
 52 0
 J324 5
-578 -1.0
-753 1.0
+578 -1
+753 1
 30 0
 32 0
 52 0
 J325 5
-579 -1.0
-754 1.0
+579 -1
+754 1
 30 0
 33 0
 52 0
 J326 5
-580 -1.0
-755 1.0
+580 -1
+755 1
 30 0
 34 0
 52 0
 J327 5
-581 -1.0
-756 1.0
+581 -1
+756 1
 30 0
 35 0
 52 0
 J328 5
-582 -1.0
-757 1.0
+582 -1
+757 1
 30 0
 36 0
 52 0
 J329 5
-583 -1.0
-758 1.0
+583 -1
+758 1
 30 0
 37 0
 52 0
 J330 5
-584 -1.0
-759 1.0
+584 -1
+759 1
 30 0
 38 0
 52 0
 J331 5
-585 -1.0
-760 1.0
+585 -1
+760 1
 30 0
 39 0
 52 0
 J332 5
-586 -1.0
-761 1.0
+586 -1
+761 1
 30 0
 40 0
 52 0
 J333 5
-587 -1.0
-762 1.0
+587 -1
+762 1
 30 0
 41 0
 52 0
 J334 5
-588 -1.0
-763 1.0
+588 -1
+763 1
 30 0
 42 0
 52 0
 J335 5
-589 -1.0
-764 1.0
+589 -1
+764 1
 30 0
 43 0
 52 0
 J336 5
-590 -1.0
-765 1.0
+590 -1
+765 1
 30 0
 44 0
 52 0
 J337 5
-591 -1.0
-80 1.0
+591 -1
+80 1
 30 0
 31 0
 53 0
 J338 5
-592 -1.0
-766 1.0
+592 -1
+766 1
 30 0
 32 0
 53 0
 J339 5
-593 -1.0
-767 1.0
+593 -1
+767 1
 30 0
 33 0
 53 0
 J340 5
-594 -1.0
-768 1.0
+594 -1
+768 1
 30 0
 34 0
 53 0
 J341 5
-595 -1.0
-769 1.0
+595 -1
+769 1
 30 0
 35 0
 53 0
 J342 5
-596 -1.0
-770 1.0
+596 -1
+770 1
 30 0
 36 0
 53 0
 J343 5
-597 -1.0
-771 1.0
+597 -1
+771 1
 30 0
 37 0
 53 0
 J344 5
-598 -1.0
-772 1.0
+598 -1
+772 1
 30 0
 38 0
 53 0
 J345 5
-599 -1.0
-773 1.0
+599 -1
+773 1
 30 0
 39 0
 53 0
 J346 5
-600 -1.0
-774 1.0
+600 -1
+774 1
 30 0
 40 0
 53 0
 J347 5
-601 -1.0
-775 1.0
+601 -1
+775 1
 30 0
 41 0
 53 0
 J348 5
-602 -1.0
-776 1.0
+602 -1
+776 1
 30 0
 42 0
 53 0
 J349 5
-603 -1.0
-777 1.0
+603 -1
+777 1
 30 0
 43 0
 53 0
 J350 5
-604 -1.0
-778 1.0
+604 -1
+778 1
 30 0
 44 0
 53 0
 J351 5
-605 -1.0
-81 1.0
+605 -1
+81 1
 30 0
 31 0
 54 0
 J352 5
-606 -1.0
-779 1.0
+606 -1
+779 1
 30 0
 32 0
 54 0
 J353 5
-607 -1.0
-780 1.0
+607 -1
+780 1
 30 0
 33 0
 54 0
 J354 5
-608 -1.0
-781 1.0
+608 -1
+781 1
 30 0
 34 0
 54 0
 J355 5
-609 -1.0
-782 1.0
+609 -1
+782 1
 30 0
 35 0
 54 0
 J356 5
-610 -1.0
-783 1.0
+610 -1
+783 1
 30 0
 36 0
 54 0
 J357 5
-611 -1.0
-784 1.0
+611 -1
+784 1
 30 0
 37 0
 54 0
 J358 5
-612 -1.0
-785 1.0
+612 -1
+785 1
 30 0
 38 0
 54 0
 J359 5
-613 -1.0
-786 1.0
+613 -1
+786 1
 30 0
 39 0
 54 0
 J360 5
-614 -1.0
-787 1.0
+614 -1
+787 1
 30 0
 40 0
 54 0
 J361 5
-615 -1.0
-788 1.0
+615 -1
+788 1
 30 0
 41 0
 54 0
 J362 5
-616 -1.0
-789 1.0
+616 -1
+789 1
 30 0
 42 0
 54 0
 J363 5
-617 -1.0
-790 1.0
+617 -1
+790 1
 30 0
 43 0
 54 0
 J364 5
-618 -1.0
-791 1.0
+618 -1
+791 1
 30 0
 44 0
 54 0
 J365 5
-619 -1.0
-82 1.0
+619 -1
+82 1
 30 0
 31 0
 55 0
 J366 5
-620 -1.0
-792 1.0
+620 -1
+792 1
 30 0
 32 0
 55 0
 J367 5
-621 -1.0
-793 1.0
+621 -1
+793 1
 30 0
 33 0
 55 0
 J368 5
-622 -1.0
-794 1.0
+622 -1
+794 1
 30 0
 34 0
 55 0
 J369 5
-623 -1.0
-795 1.0
+623 -1
+795 1
 30 0
 35 0
 55 0
 J370 5
-624 -1.0
-796 1.0
+624 -1
+796 1
 30 0
 36 0
 55 0
 J371 5
-625 -1.0
-797 1.0
+625 -1
+797 1
 30 0
 37 0
 55 0
 J372 5
-626 -1.0
-798 1.0
+626 -1
+798 1
 30 0
 38 0
 55 0
 J373 5
-627 -1.0
-799 1.0
+627 -1
+799 1
 30 0
 39 0
 55 0
 J374 5
-628 -1.0
-800 1.0
+628 -1
+800 1
 30 0
 40 0
 55 0
 J375 5
-629 -1.0
-801 1.0
+629 -1
+801 1
 30 0
 41 0
 55 0
 J376 5
-630 -1.0
-802 1.0
+630 -1
+802 1
 30 0
 42 0
 55 0
 J377 5
-631 -1.0
-803 1.0
+631 -1
+803 1
 30 0
 43 0
 55 0
 J378 5
-632 -1.0
-804 1.0
+632 -1
+804 1
 30 0
 44 0
 55 0
 J379 5
-633 -1.0
-83 1.0
+633 -1
+83 1
 30 0
 31 0
 56 0
 J380 5
-634 -1.0
-805 1.0
+634 -1
+805 1
 30 0
 32 0
 56 0
 J381 5
-635 -1.0
-806 1.0
+635 -1
+806 1
 30 0
 33 0
 56 0
 J382 5
-636 -1.0
-807 1.0
+636 -1
+807 1
 30 0
 34 0
 56 0
 J383 5
-637 -1.0
-808 1.0
+637 -1
+808 1
 30 0
 35 0
 56 0
 J384 5
-638 -1.0
-809 1.0
+638 -1
+809 1
 30 0
 36 0
 56 0
 J385 5
-639 -1.0
-810 1.0
+639 -1
+810 1
 30 0
 37 0
 56 0
 J386 5
-640 -1.0
-811 1.0
+640 -1
+811 1
 30 0
 38 0
 56 0
 J387 5
-641 -1.0
-812 1.0
+641 -1
+812 1
 30 0
 39 0
 56 0
 J388 5
-642 -1.0
-813 1.0
+642 -1
+813 1
 30 0
 40 0
 56 0
 J389 5
-643 -1.0
-814 1.0
+643 -1
+814 1
 30 0
 41 0
 56 0
 J390 5
-644 -1.0
-815 1.0
+644 -1
+815 1
 30 0
 42 0
 56 0
 J391 5
-645 -1.0
-816 1.0
+645 -1
+816 1
 30 0
 43 0
 56 0
 J392 5
-646 -1.0
-817 1.0
+646 -1
+817 1
 30 0
 44 0
 56 0
 J393 5
-647 -1.0
-84 1.0
+647 -1
+84 1
 30 0
 31 0
 57 0
 J394 5
-648 -1.0
-818 1.0
+648 -1
+818 1
 30 0
 32 0
 57 0
 J395 5
-649 -1.0
-819 1.0
+649 -1
+819 1
 30 0
 33 0
 57 0
 J396 5
-650 -1.0
-820 1.0
+650 -1
+820 1
 30 0
 34 0
 57 0
 J397 5
-651 -1.0
-821 1.0
+651 -1
+821 1
 30 0
 35 0
 57 0
 J398 5
-652 -1.0
-822 1.0
+652 -1
+822 1
 30 0
 36 0
 57 0
 J399 5
-653 -1.0
-823 1.0
+653 -1
+823 1
 30 0
 37 0
 57 0
 J400 5
-654 -1.0
-824 1.0
+654 -1
+824 1
 30 0
 38 0
 57 0
 J401 5
-655 -1.0
-825 1.0
+655 -1
+825 1
 30 0
 39 0
 57 0
 J402 5
-656 -1.0
-826 1.0
+656 -1
+826 1
 30 0
 40 0
 57 0
 J403 5
-657 -1.0
-827 1.0
+657 -1
+827 1
 30 0
 41 0
 57 0
 J404 5
-658 -1.0
-828 1.0
+658 -1
+828 1
 30 0
 42 0
 57 0
 J405 5
-659 -1.0
-829 1.0
+659 -1
+829 1
 30 0
 43 0
 57 0
 J406 5
-660 -1.0
-830 1.0
+660 -1
+830 1
 30 0
 44 0
 57 0
 J407 5
-661 -1.0
-85 1.0
+661 -1
+85 1
 30 0
 31 0
 58 0
 J408 5
-662 -1.0
-831 1.0
+662 -1
+831 1
 30 0
 32 0
 58 0
 J409 5
-663 -1.0
-832 1.0
+663 -1
+832 1
 30 0
 33 0
 58 0
 J410 5
-664 -1.0
-833 1.0
+664 -1
+833 1
 30 0
 34 0
 58 0
 J411 5
-665 -1.0
-834 1.0
+665 -1
+834 1
 30 0
 35 0
 58 0
 J412 5
-666 -1.0
-835 1.0
+666 -1
+835 1
 30 0
 36 0
 58 0
 J413 5
-667 -1.0
-836 1.0
+667 -1
+836 1
 30 0
 37 0
 58 0
 J414 5
-668 -1.0
-837 1.0
+668 -1
+837 1
 30 0
 38 0
 58 0
 J415 5
-669 -1.0
-838 1.0
+669 -1
+838 1
 30 0
 39 0
 58 0
 J416 5
-670 -1.0
-839 1.0
+670 -1
+839 1
 30 0
 40 0
 58 0
 J417 5
-671 -1.0
-840 1.0
+671 -1
+840 1
 30 0
 41 0
 58 0
 J418 5
-672 -1.0
-841 1.0
+672 -1
+841 1
 30 0
 42 0
 58 0
 J419 5
-673 -1.0
-842 1.0
+673 -1
+842 1
 30 0
 43 0
 58 0
 J420 5
-674 -1.0
-843 1.0
+674 -1
+843 1
 30 0
 44 0
 58 0
 J421 5
-675 -1.0
-86 1.0
+675 -1
+86 1
 59 0
 60 0
 73 0
 J422 5
-676 -1.0
-87 1.0
+676 -1
+87 1
 59 0
 61 0
 73 0
 J423 5
-677 -1.0
-88 1.0
+677 -1
+88 1
 59 0
 62 0
 73 0
 J424 5
-678 -1.0
-89 1.0
+678 -1
+89 1
 59 0
 63 0
 73 0
 J425 5
-679 -1.0
-90 1.0
+679 -1
+90 1
 59 0
 64 0
 73 0
 J426 5
-680 -1.0
-91 1.0
+680 -1
+91 1
 59 0
 65 0
 73 0
 J427 5
-681 -1.0
-92 1.0
+681 -1
+92 1
 59 0
 66 0
 73 0
 J428 5
-682 -1.0
-93 1.0
+682 -1
+93 1
 59 0
 67 0
 73 0
 J429 5
-683 -1.0
-94 1.0
+683 -1
+94 1
 59 0
 68 0
 73 0
 J430 5
-684 -1.0
-95 1.0
+684 -1
+95 1
 59 0
 69 0
 73 0
 J431 5
-685 -1.0
-96 1.0
+685 -1
+96 1
 59 0
 70 0
 73 0
 J432 5
-686 -1.0
-97 1.0
+686 -1
+97 1
 59 0
 71 0
 73 0
 J433 5
-687 -1.0
-98 1.0
+687 -1
+98 1
 59 0
 72 0
 73 0
 J434 5
-688 -1.0
-99 1.0
+688 -1
+99 1
 59 0
 60 0
 74 0
 J435 5
-689 -1.0
-844 1.0
+689 -1
+844 1
 59 0
 61 0
 74 0
 J436 5
-690 -1.0
-845 1.0
+690 -1
+845 1
 59 0
 62 0
 74 0
 J437 5
-691 -1.0
-846 1.0
+691 -1
+846 1
 59 0
 63 0
 74 0
 J438 5
-692 -1.0
-847 1.0
+692 -1
+847 1
 59 0
 64 0
 74 0
 J439 5
-693 -1.0
-848 1.0
+693 -1
+848 1
 59 0
 65 0
 74 0
 J440 5
-694 -1.0
-849 1.0
+694 -1
+849 1
 59 0
 66 0
 74 0
 J441 5
-695 -1.0
-850 1.0
+695 -1
+850 1
 59 0
 67 0
 74 0
 J442 5
-696 -1.0
-851 1.0
+696 -1
+851 1
 59 0
 68 0
 74 0
 J443 5
-697 -1.0
-852 1.0
+697 -1
+852 1
 59 0
 69 0
 74 0
 J444 5
-698 -1.0
-853 1.0
+698 -1
+853 1
 59 0
 70 0
 74 0
 J445 5
-699 -1.0
-854 1.0
+699 -1
+854 1
 59 0
 71 0
 74 0
 J446 5
-700 -1.0
-855 1.0
+700 -1
+855 1
 59 0
 72 0
 74 0
 J447 5
-701 -1.0
-100 1.0
+701 -1
+100 1
 59 0
 60 0
 75 0
 J448 5
-702 -1.0
-856 1.0
+702 -1
+856 1
 59 0
 61 0
 75 0
 J449 5
-703 -1.0
-857 1.0
+703 -1
+857 1
 59 0
 62 0
 75 0
 J450 5
-704 -1.0
-858 1.0
+704 -1
+858 1
 59 0
 63 0
 75 0
 J451 5
-705 -1.0
-859 1.0
+705 -1
+859 1
 59 0
 64 0
 75 0
 J452 5
-706 -1.0
-860 1.0
+706 -1
+860 1
 59 0
 65 0
 75 0
 J453 5
-707 -1.0
-861 1.0
+707 -1
+861 1
 59 0
 66 0
 75 0
 J454 5
-708 -1.0
-862 1.0
+708 -1
+862 1
 59 0
 67 0
 75 0
 J455 5
-709 -1.0
-863 1.0
+709 -1
+863 1
 59 0
 68 0
 75 0
 J456 5
-710 -1.0
-864 1.0
+710 -1
+864 1
 59 0
 69 0
 75 0
 J457 5
-711 -1.0
-865 1.0
+711 -1
+865 1
 59 0
 70 0
 75 0
 J458 5
-712 -1.0
-866 1.0
+712 -1
+866 1
 59 0
 71 0
 75 0
 J459 5
-713 -1.0
-867 1.0
+713 -1
+867 1
 59 0
 72 0
 75 0
 J460 5
-714 -1.0
-101 1.0
+714 -1
+101 1
 59 0
 60 0
 76 0
 J461 5
-715 -1.0
-868 1.0
+715 -1
+868 1
 59 0
 61 0
 76 0
 J462 5
-716 -1.0
-869 1.0
+716 -1
+869 1
 59 0
 62 0
 76 0
 J463 5
-717 -1.0
-870 1.0
+717 -1
+870 1
 59 0
 63 0
 76 0
 J464 5
-718 -1.0
-871 1.0
+718 -1
+871 1
 59 0
 64 0
 76 0
 J465 5
-719 -1.0
-872 1.0
+719 -1
+872 1
 59 0
 65 0
 76 0
 J466 5
-720 -1.0
-873 1.0
+720 -1
+873 1
 59 0
 66 0
 76 0
 J467 5
-721 -1.0
-874 1.0
+721 -1
+874 1
 59 0
 67 0
 76 0
 J468 5
-722 -1.0
-875 1.0
+722 -1
+875 1
 59 0
 68 0
 76 0
 J469 5
-723 -1.0
-876 1.0
+723 -1
+876 1
 59 0
 69 0
 76 0
 J470 5
-724 -1.0
-877 1.0
+724 -1
+877 1
 59 0
 70 0
 76 0
 J471 5
-725 -1.0
-878 1.0
+725 -1
+878 1
 59 0
 71 0
 76 0
 J472 5
-726 -1.0
-879 1.0
+726 -1
+879 1
 59 0
 72 0
 76 0
 J473 5
-727 -1.0
-102 1.0
+727 -1
+102 1
 59 0
 60 0
 77 0
 J474 5
-728 -1.0
-880 1.0
+728 -1
+880 1
 59 0
 61 0
 77 0
 J475 5
-729 -1.0
-881 1.0
+729 -1
+881 1
 59 0
 62 0
 77 0
 J476 5
-730 -1.0
-882 1.0
+730 -1
+882 1
 59 0
 63 0
 77 0
 J477 5
-731 -1.0
-883 1.0
+731 -1
+883 1
 59 0
 64 0
 77 0
 J478 5
-732 -1.0
-884 1.0
+732 -1
+884 1
 59 0
 65 0
 77 0
 J479 5
-733 -1.0
-885 1.0
+733 -1
+885 1
 59 0
 66 0
 77 0
 J480 5
-734 -1.0
-886 1.0
+734 -1
+886 1
 59 0
 67 0
 77 0
 J481 5
-735 -1.0
-887 1.0
+735 -1
+887 1
 59 0
 68 0
 77 0
 J482 5
-736 -1.0
-888 1.0
+736 -1
+888 1
 59 0
 69 0
 77 0
 J483 5
-737 -1.0
-889 1.0
+737 -1
+889 1
 59 0
 70 0
 77 0
 J484 5
-738 -1.0
-890 1.0
+738 -1
+890 1
 59 0
 71 0
 77 0
 J485 5
-739 -1.0
-891 1.0
+739 -1
+891 1
 59 0
 72 0
 77 0
 J486 5
-740 -1.0
-103 1.0
+740 -1
+103 1
 59 0
 60 0
 78 0
 J487 5
-741 -1.0
-892 1.0
+741 -1
+892 1
 59 0
 61 0
 78 0
 J488 5
-742 -1.0
-893 1.0
+742 -1
+893 1
 59 0
 62 0
 78 0
 J489 5
-743 -1.0
-894 1.0
+743 -1
+894 1
 59 0
 63 0
 78 0
 J490 5
-744 -1.0
-895 1.0
+744 -1
+895 1
 59 0
 64 0
 78 0
 J491 5
-745 -1.0
-896 1.0
+745 -1
+896 1
 59 0
 65 0
 78 0
 J492 5
-746 -1.0
-897 1.0
+746 -1
+897 1
 59 0
 66 0
 78 0
 J493 5
-747 -1.0
-898 1.0
+747 -1
+898 1
 59 0
 67 0
 78 0
 J494 5
-748 -1.0
-899 1.0
+748 -1
+899 1
 59 0
 68 0
 78 0
 J495 5
-749 -1.0
-900 1.0
+749 -1
+900 1
 59 0
 69 0
 78 0
 J496 5
-750 -1.0
-901 1.0
+750 -1
+901 1
 59 0
 70 0
 78 0
 J497 5
-751 -1.0
-902 1.0
+751 -1
+902 1
 59 0
 71 0
 78 0
 J498 5
-752 -1.0
-903 1.0
+752 -1
+903 1
 59 0
 72 0
 78 0
 J499 5
-753 -1.0
-104 1.0
+753 -1
+104 1
 59 0
 60 0
 79 0
 J500 5
-754 -1.0
-904 1.0
+754 -1
+904 1
 59 0
 61 0
 79 0
 J501 5
-755 -1.0
-905 1.0
+755 -1
+905 1
 59 0
 62 0
 79 0
 J502 5
-756 -1.0
-906 1.0
+756 -1
+906 1
 59 0
 63 0
 79 0
 J503 5
-757 -1.0
-907 1.0
+757 -1
+907 1
 59 0
 64 0
 79 0
 J504 5
-758 -1.0
-908 1.0
+758 -1
+908 1
 59 0
 65 0
 79 0
 J505 5
-759 -1.0
-909 1.0
+759 -1
+909 1
 59 0
 66 0
 79 0
 J506 5
-760 -1.0
-910 1.0
+760 -1
+910 1
 59 0
 67 0
 79 0
 J507 5
-761 -1.0
-911 1.0
+761 -1
+911 1
 59 0
 68 0
 79 0
 J508 5
-762 -1.0
-912 1.0
+762 -1
+912 1
 59 0
 69 0
 79 0
 J509 5
-763 -1.0
-913 1.0
+763 -1
+913 1
 59 0
 70 0
 79 0
 J510 5
-764 -1.0
-914 1.0
+764 -1
+914 1
 59 0
 71 0
 79 0
 J511 5
-765 -1.0
-915 1.0
+765 -1
+915 1
 59 0
 72 0
 79 0
 J512 5
-766 -1.0
-105 1.0
+766 -1
+105 1
 59 0
 60 0
 80 0
 J513 5
-767 -1.0
-916 1.0
+767 -1
+916 1
 59 0
 61 0
 80 0
 J514 5
-768 -1.0
-917 1.0
+768 -1
+917 1
 59 0
 62 0
 80 0
 J515 5
-769 -1.0
-918 1.0
+769 -1
+918 1
 59 0
 63 0
 80 0
 J516 5
-770 -1.0
-919 1.0
+770 -1
+919 1
 59 0
 64 0
 80 0
 J517 5
-771 -1.0
-920 1.0
+771 -1
+920 1
 59 0
 65 0
 80 0
 J518 5
-772 -1.0
-921 1.0
+772 -1
+921 1
 59 0
 66 0
 80 0
 J519 5
-773 -1.0
-922 1.0
+773 -1
+922 1
 59 0
 67 0
 80 0
 J520 5
-774 -1.0
-923 1.0
+774 -1
+923 1
 59 0
 68 0
 80 0
 J521 5
-775 -1.0
-924 1.0
+775 -1
+924 1
 59 0
 69 0
 80 0
 J522 5
-776 -1.0
-925 1.0
+776 -1
+925 1
 59 0
 70 0
 80 0
 J523 5
-777 -1.0
-926 1.0
+777 -1
+926 1
 59 0
 71 0
 80 0
 J524 5
-778 -1.0
-927 1.0
+778 -1
+927 1
 59 0
 72 0
 80 0
 J525 5
-779 -1.0
-106 1.0
+779 -1
+106 1
 59 0
 60 0
 81 0
 J526 5
-780 -1.0
-928 1.0
+780 -1
+928 1
 59 0
 61 0
 81 0
 J527 5
-781 -1.0
-929 1.0
+781 -1
+929 1
 59 0
 62 0
 81 0
 J528 5
-782 -1.0
-930 1.0
+782 -1
+930 1
 59 0
 63 0
 81 0
 J529 5
-783 -1.0
-931 1.0
+783 -1
+931 1
 59 0
 64 0
 81 0
 J530 5
-784 -1.0
-932 1.0
+784 -1
+932 1
 59 0
 65 0
 81 0
 J531 5
-785 -1.0
-933 1.0
+785 -1
+933 1
 59 0
 66 0
 81 0
 J532 5
-786 -1.0
-934 1.0
+786 -1
+934 1
 59 0
 67 0
 81 0
 J533 5
-787 -1.0
-935 1.0
+787 -1
+935 1
 59 0
 68 0
 81 0
 J534 5
-788 -1.0
-936 1.0
+788 -1
+936 1
 59 0
 69 0
 81 0
 J535 5
-789 -1.0
-937 1.0
+789 -1
+937 1
 59 0
 70 0
 81 0
 J536 5
-790 -1.0
-938 1.0
+790 -1
+938 1
 59 0
 71 0
 81 0
 J537 5
-791 -1.0
-939 1.0
+791 -1
+939 1
 59 0
 72 0
 81 0
 J538 5
-792 -1.0
-107 1.0
+792 -1
+107 1
 59 0
 60 0
 82 0
 J539 5
-793 -1.0
-940 1.0
+793 -1
+940 1
 59 0
 61 0
 82 0
 J540 5
-794 -1.0
-941 1.0
+794 -1
+941 1
 59 0
 62 0
 82 0
 J541 5
-795 -1.0
-942 1.0
+795 -1
+942 1
 59 0
 63 0
 82 0
 J542 5
-796 -1.0
-943 1.0
+796 -1
+943 1
 59 0
 64 0
 82 0
 J543 5
-797 -1.0
-944 1.0
+797 -1
+944 1
 59 0
 65 0
 82 0
 J544 5
-798 -1.0
-945 1.0
+798 -1
+945 1
 59 0
 66 0
 82 0
 J545 5
-799 -1.0
-946 1.0
+799 -1
+946 1
 59 0
 67 0
 82 0
 J546 5
-800 -1.0
-947 1.0
+800 -1
+947 1
 59 0
 68 0
 82 0
 J547 5
-801 -1.0
-948 1.0
+801 -1
+948 1
 59 0
 69 0
 82 0
 J548 5
-802 -1.0
-949 1.0
+802 -1
+949 1
 59 0
 70 0
 82 0
 J549 5
-803 -1.0
-950 1.0
+803 -1
+950 1
 59 0
 71 0
 82 0
 J550 5
-804 -1.0
-951 1.0
+804 -1
+951 1
 59 0
 72 0
 82 0
 J551 5
-805 -1.0
-108 1.0
+805 -1
+108 1
 59 0
 60 0
 83 0
 J552 5
-806 -1.0
-952 1.0
+806 -1
+952 1
 59 0
 61 0
 83 0
 J553 5
-807 -1.0
-953 1.0
+807 -1
+953 1
 59 0
 62 0
 83 0
 J554 5
-808 -1.0
-954 1.0
+808 -1
+954 1
 59 0
 63 0
 83 0
 J555 5
-809 -1.0
-955 1.0
+809 -1
+955 1
 59 0
 64 0
 83 0
 J556 5
-810 -1.0
-956 1.0
+810 -1
+956 1
 59 0
 65 0
 83 0
 J557 5
-811 -1.0
-957 1.0
+811 -1
+957 1
 59 0
 66 0
 83 0
 J558 5
-812 -1.0
-958 1.0
+812 -1
+958 1
 59 0
 67 0
 83 0
 J559 5
-813 -1.0
-959 1.0
+813 -1
+959 1
 59 0
 68 0
 83 0
 J560 5
-814 -1.0
-960 1.0
+814 -1
+960 1
 59 0
 69 0
 83 0
 J561 5
-815 -1.0
-961 1.0
+815 -1
+961 1
 59 0
 70 0
 83 0
 J562 5
-816 -1.0
-962 1.0
+816 -1
+962 1
 59 0
 71 0
 83 0
 J563 5
-817 -1.0
-963 1.0
+817 -1
+963 1
 59 0
 72 0
 83 0
 J564 5
-818 -1.0
-109 1.0
+818 -1
+109 1
 59 0
 60 0
 84 0
 J565 5
-819 -1.0
-964 1.0
+819 -1
+964 1
 59 0
 61 0
 84 0
 J566 5
-820 -1.0
-965 1.0
+820 -1
+965 1
 59 0
 62 0
 84 0
 J567 5
-821 -1.0
-966 1.0
+821 -1
+966 1
 59 0
 63 0
 84 0
 J568 5
-822 -1.0
-967 1.0
+822 -1
+967 1
 59 0
 64 0
 84 0
 J569 5
-823 -1.0
-968 1.0
+823 -1
+968 1
 59 0
 65 0
 84 0
 J570 5
-824 -1.0
-969 1.0
+824 -1
+969 1
 59 0
 66 0
 84 0
 J571 5
-825 -1.0
-970 1.0
+825 -1
+970 1
 59 0
 67 0
 84 0
 J572 5
-826 -1.0
-971 1.0
+826 -1
+971 1
 59 0
 68 0
 84 0
 J573 5
-827 -1.0
-972 1.0
+827 -1
+972 1
 59 0
 69 0
 84 0
 J574 5
-828 -1.0
-973 1.0
+828 -1
+973 1
 59 0
 70 0
 84 0
 J575 5
-829 -1.0
-974 1.0
+829 -1
+974 1
 59 0
 71 0
 84 0
 J576 5
-830 -1.0
-975 1.0
+830 -1
+975 1
 59 0
 72 0
 84 0
 J577 5
-831 -1.0
-110 1.0
+831 -1
+110 1
 59 0
 60 0
 85 0
 J578 5
-832 -1.0
-976 1.0
+832 -1
+976 1
 59 0
 61 0
 85 0
 J579 5
-833 -1.0
-977 1.0
+833 -1
+977 1
 59 0
 62 0
 85 0
 J580 5
-834 -1.0
-978 1.0
+834 -1
+978 1
 59 0
 63 0
 85 0
 J581 5
-835 -1.0
-979 1.0
+835 -1
+979 1
 59 0
 64 0
 85 0
 J582 5
-836 -1.0
-980 1.0
+836 -1
+980 1
 59 0
 65 0
 85 0
 J583 5
-837 -1.0
-981 1.0
+837 -1
+981 1
 59 0
 66 0
 85 0
 J584 5
-838 -1.0
-982 1.0
+838 -1
+982 1
 59 0
 67 0
 85 0
 J585 5
-839 -1.0
-983 1.0
+839 -1
+983 1
 59 0
 68 0
 85 0
 J586 5
-840 -1.0
-984 1.0
+840 -1
+984 1
 59 0
 69 0
 85 0
 J587 5
-841 -1.0
-985 1.0
+841 -1
+985 1
 59 0
 70 0
 85 0
 J588 5
-842 -1.0
-986 1.0
+842 -1
+986 1
 59 0
 71 0
 85 0
 J589 5
-843 -1.0
-987 1.0
+843 -1
+987 1
 59 0
 72 0
 85 0
 J590 5
-844 -1.0
-111 1.0
+844 -1
+111 1
 86 0
 87 0
 99 0
 J591 5
-845 -1.0
-112 1.0
+845 -1
+112 1
 86 0
 88 0
 99 0
 J592 5
-846 -1.0
-113 1.0
+846 -1
+113 1
 86 0
 89 0
 99 0
 J593 5
-847 -1.0
-114 1.0
+847 -1
+114 1
 86 0
 90 0
 99 0
 J594 5
-848 -1.0
-115 1.0
+848 -1
+115 1
 86 0
 91 0
 99 0
 J595 5
-849 -1.0
-116 1.0
+849 -1
+116 1
 86 0
 92 0
 99 0
 J596 5
-850 -1.0
-117 1.0
+850 -1
+117 1
 86 0
 93 0
 99 0
 J597 5
-851 -1.0
-118 1.0
+851 -1
+118 1
 86 0
 94 0
 99 0
 J598 5
-852 -1.0
-119 1.0
+852 -1
+119 1
 86 0
 95 0
 99 0
 J599 5
-853 -1.0
-120 1.0
+853 -1
+120 1
 86 0
 96 0
 99 0
 J600 5
-854 -1.0
-121 1.0
+854 -1
+121 1
 86 0
 97 0
 99 0
 J601 5
-855 -1.0
-122 1.0
+855 -1
+122 1
 86 0
 98 0
 99 0
 J602 5
-856 -1.0
-123 1.0
+856 -1
+123 1
 86 0
 87 0
 100 0
 J603 5
-857 -1.0
-988 1.0
+857 -1
+988 1
 86 0
 88 0
 100 0
 J604 5
-858 -1.0
-989 1.0
+858 -1
+989 1
 86 0
 89 0
 100 0
 J605 5
-859 -1.0
-990 1.0
+859 -1
+990 1
 86 0
 90 0
 100 0
 J606 5
-860 -1.0
-991 1.0
+860 -1
+991 1
 86 0
 91 0
 100 0
 J607 5
-861 -1.0
-992 1.0
+861 -1
+992 1
 86 0
 92 0
 100 0
 J608 5
-862 -1.0
-993 1.0
+862 -1
+993 1
 86 0
 93 0
 100 0
 J609 5
-863 -1.0
-994 1.0
+863 -1
+994 1
 86 0
 94 0
 100 0
 J610 5
-864 -1.0
-995 1.0
+864 -1
+995 1
 86 0
 95 0
 100 0
 J611 5
-865 -1.0
-996 1.0
+865 -1
+996 1
 86 0
 96 0
 100 0
 J612 5
-866 -1.0
-997 1.0
+866 -1
+997 1
 86 0
 97 0
 100 0
 J613 5
-867 -1.0
-998 1.0
+867 -1
+998 1
 86 0
 98 0
 100 0
 J614 5
-868 -1.0
-124 1.0
+868 -1
+124 1
 86 0
 87 0
 101 0
 J615 5
-869 -1.0
-999 1.0
+869 -1
+999 1
 86 0
 88 0
 101 0
 J616 5
-870 -1.0
-1000 1.0
+870 -1
+1000 1
 86 0
 89 0
 101 0
 J617 5
-871 -1.0
-1001 1.0
+871 -1
+1001 1
 86 0
 90 0
 101 0
 J618 5
-872 -1.0
-1002 1.0
+872 -1
+1002 1
 86 0
 91 0
 101 0
 J619 5
-873 -1.0
-1003 1.0
+873 -1
+1003 1
 86 0
 92 0
 101 0
 J620 5
-874 -1.0
-1004 1.0
+874 -1
+1004 1
 86 0
 93 0
 101 0
 J621 5
-875 -1.0
-1005 1.0
+875 -1
+1005 1
 86 0
 94 0
 101 0
 J622 5
-876 -1.0
-1006 1.0
+876 -1
+1006 1
 86 0
 95 0
 101 0
 J623 5
-877 -1.0
-1007 1.0
+877 -1
+1007 1
 86 0
 96 0
 101 0
 J624 5
-878 -1.0
-1008 1.0
+878 -1
+1008 1
 86 0
 97 0
 101 0
 J625 5
-879 -1.0
-1009 1.0
+879 -1
+1009 1
 86 0
 98 0
 101 0
 J626 5
-880 -1.0
-125 1.0
+880 -1
+125 1
 86 0
 87 0
 102 0
 J627 5
-881 -1.0
-1010 1.0
+881 -1
+1010 1
 86 0
 88 0
 102 0
 J628 5
-882 -1.0
-1011 1.0
+882 -1
+1011 1
 86 0
 89 0
 102 0
 J629 5
-883 -1.0
-1012 1.0
+883 -1
+1012 1
 86 0
 90 0
 102 0
 J630 5
-884 -1.0
-1013 1.0
+884 -1
+1013 1
 86 0
 91 0
 102 0
 J631 5
-885 -1.0
-1014 1.0
+885 -1
+1014 1
 86 0
 92 0
 102 0
 J632 5
-886 -1.0
-1015 1.0
+886 -1
+1015 1
 86 0
 93 0
 102 0
 J633 5
-887 -1.0
-1016 1.0
+887 -1
+1016 1
 86 0
 94 0
 102 0
 J634 5
-888 -1.0
-1017 1.0
+888 -1
+1017 1
 86 0
 95 0
 102 0
 J635 5
-889 -1.0
-1018 1.0
+889 -1
+1018 1
 86 0
 96 0
 102 0
 J636 5
-890 -1.0
-1019 1.0
+890 -1
+1019 1
 86 0
 97 0
 102 0
 J637 5
-891 -1.0
-1020 1.0
+891 -1
+1020 1
 86 0
 98 0
 102 0
 J638 5
-892 -1.0
-126 1.0
+892 -1
+126 1
 86 0
 87 0
 103 0
 J639 5
-893 -1.0
-1021 1.0
+893 -1
+1021 1
 86 0
 88 0
 103 0
 J640 5
-894 -1.0
-1022 1.0
+894 -1
+1022 1
 86 0
 89 0
 103 0
 J641 5
-895 -1.0
-1023 1.0
+895 -1
+1023 1
 86 0
 90 0
 103 0
 J642 5
-896 -1.0
-1024 1.0
+896 -1
+1024 1
 86 0
 91 0
 103 0
 J643 5
-897 -1.0
-1025 1.0
+897 -1
+1025 1
 86 0
 92 0
 103 0
 J644 5
-898 -1.0
-1026 1.0
+898 -1
+1026 1
 86 0
 93 0
 103 0
 J645 5
-899 -1.0
-1027 1.0
+899 -1
+1027 1
 86 0
 94 0
 103 0
 J646 5
-900 -1.0
-1028 1.0
+900 -1
+1028 1
 86 0
 95 0
 103 0
 J647 5
-901 -1.0
-1029 1.0
+901 -1
+1029 1
 86 0
 96 0
 103 0
 J648 5
-902 -1.0
-1030 1.0
+902 -1
+1030 1
 86 0
 97 0
 103 0
 J649 5
-903 -1.0
-1031 1.0
+903 -1
+1031 1
 86 0
 98 0
 103 0
 J650 5
-904 -1.0
-127 1.0
+904 -1
+127 1
 86 0
 87 0
 104 0
 J651 5
-905 -1.0
-1032 1.0
+905 -1
+1032 1
 86 0
 88 0
 104 0
 J652 5
-906 -1.0
-1033 1.0
+906 -1
+1033 1
 86 0
 89 0
 104 0
 J653 5
-907 -1.0
-1034 1.0
+907 -1
+1034 1
 86 0
 90 0
 104 0
 J654 5
-908 -1.0
-1035 1.0
+908 -1
+1035 1
 86 0
 91 0
 104 0
 J655 5
-909 -1.0
-1036 1.0
+909 -1
+1036 1
 86 0
 92 0
 104 0
 J656 5
-910 -1.0
-1037 1.0
+910 -1
+1037 1
 86 0
 93 0
 104 0
 J657 5
-911 -1.0
-1038 1.0
+911 -1
+1038 1
 86 0
 94 0
 104 0
 J658 5
-912 -1.0
-1039 1.0
+912 -1
+1039 1
 86 0
 95 0
 104 0
 J659 5
-913 -1.0
-1040 1.0
+913 -1
+1040 1
 86 0
 96 0
 104 0
 J660 5
-914 -1.0
-1041 1.0
+914 -1
+1041 1
 86 0
 97 0
 104 0
 J661 5
-915 -1.0
-1042 1.0
+915 -1
+1042 1
 86 0
 98 0
 104 0
 J662 5
-916 -1.0
-128 1.0
+916 -1
+128 1
 86 0
 87 0
 105 0
 J663 5
-917 -1.0
-1043 1.0
+917 -1
+1043 1
 86 0
 88 0
 105 0
 J664 5
-918 -1.0
-1044 1.0
+918 -1
+1044 1
 86 0
 89 0
 105 0
 J665 5
-919 -1.0
-1045 1.0
+919 -1
+1045 1
 86 0
 90 0
 105 0
 J666 5
-920 -1.0
-1046 1.0
+920 -1
+1046 1
 86 0
 91 0
 105 0
 J667 5
-921 -1.0
-1047 1.0
+921 -1
+1047 1
 86 0
 92 0
 105 0
 J668 5
-922 -1.0
-1048 1.0
+922 -1
+1048 1
 86 0
 93 0
 105 0
 J669 5
-923 -1.0
-1049 1.0
+923 -1
+1049 1
 86 0
 94 0
 105 0
 J670 5
-924 -1.0
-1050 1.0
+924 -1
+1050 1
 86 0
 95 0
 105 0
 J671 5
-925 -1.0
-1051 1.0
+925 -1
+1051 1
 86 0
 96 0
 105 0
 J672 5
-926 -1.0
-1052 1.0
+926 -1
+1052 1
 86 0
 97 0
 105 0
 J673 5
-927 -1.0
-1053 1.0
+927 -1
+1053 1
 86 0
 98 0
 105 0
 J674 5
-928 -1.0
-129 1.0
+928 -1
+129 1
 86 0
 87 0
 106 0
 J675 5
-929 -1.0
-1054 1.0
+929 -1
+1054 1
 86 0
 88 0
 106 0
 J676 5
-930 -1.0
-1055 1.0
+930 -1
+1055 1
 86 0
 89 0
 106 0
 J677 5
-931 -1.0
-1056 1.0
+931 -1
+1056 1
 86 0
 90 0
 106 0
 J678 5
-932 -1.0
-1057 1.0
+932 -1
+1057 1
 86 0
 91 0
 106 0
 J679 5
-933 -1.0
-1058 1.0
+933 -1
+1058 1
 86 0
 92 0
 106 0
 J680 5
-934 -1.0
-1059 1.0
+934 -1
+1059 1
 86 0
 93 0
 106 0
 J681 5
-935 -1.0
-1060 1.0
+935 -1
+1060 1
 86 0
 94 0
 106 0
 J682 5
-936 -1.0
-1061 1.0
+936 -1
+1061 1
 86 0
 95 0
 106 0
 J683 5
-937 -1.0
-1062 1.0
+937 -1
+1062 1
 86 0
 96 0
 106 0
 J684 5
-938 -1.0
-1063 1.0
+938 -1
+1063 1
 86 0
 97 0
 106 0
 J685 5
-939 -1.0
-1064 1.0
+939 -1
+1064 1
 86 0
 98 0
 106 0
 J686 5
-940 -1.0
-130 1.0
+940 -1
+130 1
 86 0
 87 0
 107 0
 J687 5
-941 -1.0
-1065 1.0
+941 -1
+1065 1
 86 0
 88 0
 107 0
 J688 5
-942 -1.0
-1066 1.0
+942 -1
+1066 1
 86 0
 89 0
 107 0
 J689 5
-943 -1.0
-1067 1.0
+943 -1
+1067 1
 86 0
 90 0
 107 0
 J690 5
-944 -1.0
-1068 1.0
+944 -1
+1068 1
 86 0
 91 0
 107 0
 J691 5
-945 -1.0
-1069 1.0
+945 -1
+1069 1
 86 0
 92 0
 107 0
 J692 5
-946 -1.0
-1070 1.0
+946 -1
+1070 1
 86 0
 93 0
 107 0
 J693 5
-947 -1.0
-1071 1.0
+947 -1
+1071 1
 86 0
 94 0
 107 0
 J694 5
-948 -1.0
-1072 1.0
+948 -1
+1072 1
 86 0
 95 0
 107 0
 J695 5
-949 -1.0
-1073 1.0
+949 -1
+1073 1
 86 0
 96 0
 107 0
 J696 5
-950 -1.0
-1074 1.0
+950 -1
+1074 1
 86 0
 97 0
 107 0
 J697 5
-951 -1.0
-1075 1.0
+951 -1
+1075 1
 86 0
 98 0
 107 0
 J698 5
-952 -1.0
-131 1.0
+952 -1
+131 1
 86 0
 87 0
 108 0
 J699 5
-953 -1.0
-1076 1.0
+953 -1
+1076 1
 86 0
 88 0
 108 0
 J700 5
-954 -1.0
-1077 1.0
+954 -1
+1077 1
 86 0
 89 0
 108 0
 J701 5
-955 -1.0
-1078 1.0
+955 -1
+1078 1
 86 0
 90 0
 108 0
 J702 5
-956 -1.0
-1079 1.0
+956 -1
+1079 1
 86 0
 91 0
 108 0
 J703 5
-957 -1.0
-1080 1.0
+957 -1
+1080 1
 86 0
 92 0
 108 0
 J704 5
-958 -1.0
-1081 1.0
+958 -1
+1081 1
 86 0
 93 0
 108 0
 J705 5
-959 -1.0
-1082 1.0
+959 -1
+1082 1
 86 0
 94 0
 108 0
 J706 5
-960 -1.0
-1083 1.0
+960 -1
+1083 1
 86 0
 95 0
 108 0
 J707 5
-961 -1.0
-1084 1.0
+961 -1
+1084 1
 86 0
 96 0
 108 0
 J708 5
-962 -1.0
-1085 1.0
+962 -1
+1085 1
 86 0
 97 0
 108 0
 J709 5
-963 -1.0
-1086 1.0
+963 -1
+1086 1
 86 0
 98 0
 108 0
 J710 5
-964 -1.0
-132 1.0
+964 -1
+132 1
 86 0
 87 0
 109 0
 J711 5
-965 -1.0
-1087 1.0
+965 -1
+1087 1
 86 0
 88 0
 109 0
 J712 5
-966 -1.0
-1088 1.0
+966 -1
+1088 1
 86 0
 89 0
 109 0
 J713 5
-967 -1.0
-1089 1.0
+967 -1
+1089 1
 86 0
 90 0
 109 0
 J714 5
-968 -1.0
-1090 1.0
+968 -1
+1090 1
 86 0
 91 0
 109 0
 J715 5
-969 -1.0
-1091 1.0
+969 -1
+1091 1
 86 0
 92 0
 109 0
 J716 5
-970 -1.0
-1092 1.0
+970 -1
+1092 1
 86 0
 93 0
 109 0
 J717 5
-971 -1.0
-1093 1.0
+971 -1
+1093 1
 86 0
 94 0
 109 0
 J718 5
-972 -1.0
-1094 1.0
+972 -1
+1094 1
 86 0
 95 0
 109 0
 J719 5
-973 -1.0
-1095 1.0
+973 -1
+1095 1
 86 0
 96 0
 109 0
 J720 5
-974 -1.0
-1096 1.0
+974 -1
+1096 1
 86 0
 97 0
 109 0
 J721 5
-975 -1.0
-1097 1.0
+975 -1
+1097 1
 86 0
 98 0
 109 0
 J722 5
-976 -1.0
-133 1.0
+976 -1
+133 1
 86 0
 87 0
 110 0
 J723 5
-977 -1.0
-1098 1.0
+977 -1
+1098 1
 86 0
 88 0
 110 0
 J724 5
-978 -1.0
-1099 1.0
+978 -1
+1099 1
 86 0
 89 0
 110 0
 J725 5
-979 -1.0
-1100 1.0
+979 -1
+1100 1
 86 0
 90 0
 110 0
 J726 5
-980 -1.0
-1101 1.0
+980 -1
+1101 1
 86 0
 91 0
 110 0
 J727 5
-981 -1.0
-1102 1.0
+981 -1
+1102 1
 86 0
 92 0
 110 0
 J728 5
-982 -1.0
-1103 1.0
+982 -1
+1103 1
 86 0
 93 0
 110 0
 J729 5
-983 -1.0
-1104 1.0
+983 -1
+1104 1
 86 0
 94 0
 110 0
 J730 5
-984 -1.0
-1105 1.0
+984 -1
+1105 1
 86 0
 95 0
 110 0
 J731 5
-985 -1.0
-1106 1.0
+985 -1
+1106 1
 86 0
 96 0
 110 0
 J732 5
-986 -1.0
-1107 1.0
+986 -1
+1107 1
 86 0
 97 0
 110 0
 J733 5
-987 -1.0
-1108 1.0
+987 -1
+1108 1
 86 0
 98 0
 110 0
 J734 5
-988 -1.0
-134 1.0
+988 -1
+134 1
 111 0
 112 0
 123 0
 J735 5
-989 -1.0
-135 1.0
+989 -1
+135 1
 111 0
 113 0
 123 0
 J736 5
-990 -1.0
-136 1.0
+990 -1
+136 1
 111 0
 114 0
 123 0
 J737 5
-991 -1.0
-137 1.0
+991 -1
+137 1
 111 0
 115 0
 123 0
 J738 5
-992 -1.0
-138 1.0
+992 -1
+138 1
 111 0
 116 0
 123 0
 J739 5
-993 -1.0
-139 1.0
+993 -1
+139 1
 111 0
 117 0
 123 0
 J740 5
-994 -1.0
-140 1.0
+994 -1
+140 1
 111 0
 118 0
 123 0
 J741 5
-995 -1.0
-141 1.0
+995 -1
+141 1
 111 0
 119 0
 123 0
 J742 5
-996 -1.0
-142 1.0
+996 -1
+142 1
 111 0
 120 0
 123 0
 J743 5
-997 -1.0
-143 1.0
+997 -1
+143 1
 111 0
 121 0
 123 0
 J744 5
-998 -1.0
-144 1.0
+998 -1
+144 1
 111 0
 122 0
 123 0
 J745 5
-999 -1.0
-145 1.0
+999 -1
+145 1
 111 0
 112 0
 124 0
 J746 5
-1000 -1.0
-1109 1.0
+1000 -1
+1109 1
 111 0
 113 0
 124 0
 J747 5
-1001 -1.0
-1110 1.0
+1001 -1
+1110 1
 111 0
 114 0
 124 0
 J748 5
-1002 -1.0
-1111 1.0
+1002 -1
+1111 1
 111 0
 115 0
 124 0
 J749 5
-1003 -1.0
-1112 1.0
+1003 -1
+1112 1
 111 0
 116 0
 124 0
 J750 5
-1004 -1.0
-1113 1.0
+1004 -1
+1113 1
 111 0
 117 0
 124 0
 J751 5
-1005 -1.0
-1114 1.0
+1005 -1
+1114 1
 111 0
 118 0
 124 0
 J752 5
-1006 -1.0
-1115 1.0
+1006 -1
+1115 1
 111 0
 119 0
 124 0
 J753 5
-1007 -1.0
-1116 1.0
+1007 -1
+1116 1
 111 0
 120 0
 124 0
 J754 5
-1008 -1.0
-1117 1.0
+1008 -1
+1117 1
 111 0
 121 0
 124 0
 J755 5
-1009 -1.0
-1118 1.0
+1009 -1
+1118 1
 111 0
 122 0
 124 0
 J756 5
-1010 -1.0
-146 1.0
+1010 -1
+146 1
 111 0
 112 0
 125 0
 J757 5
-1011 -1.0
-1119 1.0
+1011 -1
+1119 1
 111 0
 113 0
 125 0
 J758 5
-1012 -1.0
-1120 1.0
+1012 -1
+1120 1
 111 0
 114 0
 125 0
 J759 5
-1013 -1.0
-1121 1.0
+1013 -1
+1121 1
 111 0
 115 0
 125 0
 J760 5
-1014 -1.0
-1122 1.0
+1014 -1
+1122 1
 111 0
 116 0
 125 0
 J761 5
-1015 -1.0
-1123 1.0
+1015 -1
+1123 1
 111 0
 117 0
 125 0
 J762 5
-1016 -1.0
-1124 1.0
+1016 -1
+1124 1
 111 0
 118 0
 125 0
 J763 5
-1017 -1.0
-1125 1.0
+1017 -1
+1125 1
 111 0
 119 0
 125 0
 J764 5
-1018 -1.0
-1126 1.0
+1018 -1
+1126 1
 111 0
 120 0
 125 0
 J765 5
-1019 -1.0
-1127 1.0
+1019 -1
+1127 1
 111 0
 121 0
 125 0
 J766 5
-1020 -1.0
-1128 1.0
+1020 -1
+1128 1
 111 0
 122 0
 125 0
 J767 5
-1021 -1.0
-147 1.0
+1021 -1
+147 1
 111 0
 112 0
 126 0
 J768 5
-1022 -1.0
-1129 1.0
+1022 -1
+1129 1
 111 0
 113 0
 126 0
 J769 5
-1023 -1.0
-1130 1.0
+1023 -1
+1130 1
 111 0
 114 0
 126 0
 J770 5
-1024 -1.0
-1131 1.0
+1024 -1
+1131 1
 111 0
 115 0
 126 0
 J771 5
-1025 -1.0
-1132 1.0
+1025 -1
+1132 1
 111 0
 116 0
 126 0
 J772 5
-1026 -1.0
-1133 1.0
+1026 -1
+1133 1
 111 0
 117 0
 126 0
 J773 5
-1027 -1.0
-1134 1.0
+1027 -1
+1134 1
 111 0
 118 0
 126 0
 J774 5
-1028 -1.0
-1135 1.0
+1028 -1
+1135 1
 111 0
 119 0
 126 0
 J775 5
-1029 -1.0
-1136 1.0
+1029 -1
+1136 1
 111 0
 120 0
 126 0
 J776 5
-1030 -1.0
-1137 1.0
+1030 -1
+1137 1
 111 0
 121 0
 126 0
 J777 5
-1031 -1.0
-1138 1.0
+1031 -1
+1138 1
 111 0
 122 0
 126 0
 J778 5
-1032 -1.0
-148 1.0
+1032 -1
+148 1
 111 0
 112 0
 127 0
 J779 5
-1033 -1.0
-1139 1.0
+1033 -1
+1139 1
 111 0
 113 0
 127 0
 J780 5
-1034 -1.0
-1140 1.0
+1034 -1
+1140 1
 111 0
 114 0
 127 0
 J781 5
-1035 -1.0
-1141 1.0
+1035 -1
+1141 1
 111 0
 115 0
 127 0
 J782 5
-1036 -1.0
-1142 1.0
+1036 -1
+1142 1
 111 0
 116 0
 127 0
 J783 5
-1037 -1.0
-1143 1.0
+1037 -1
+1143 1
 111 0
 117 0
 127 0
 J784 5
-1038 -1.0
-1144 1.0
+1038 -1
+1144 1
 111 0
 118 0
 127 0
 J785 5
-1039 -1.0
-1145 1.0
+1039 -1
+1145 1
 111 0
 119 0
 127 0
 J786 5
-1040 -1.0
-1146 1.0
+1040 -1
+1146 1
 111 0
 120 0
 127 0
 J787 5
-1041 -1.0
-1147 1.0
+1041 -1
+1147 1
 111 0
 121 0
 127 0
 J788 5
-1042 -1.0
-1148 1.0
+1042 -1
+1148 1
 111 0
 122 0
 127 0
 J789 5
-1043 -1.0
-149 1.0
+1043 -1
+149 1
 111 0
 112 0
 128 0
 J790 5
-1044 -1.0
-1149 1.0
+1044 -1
+1149 1
 111 0
 113 0
 128 0
 J791 5
-1045 -1.0
-1150 1.0
+1045 -1
+1150 1
 111 0
 114 0
 128 0
 J792 5
-1046 -1.0
-1151 1.0
+1046 -1
+1151 1
 111 0
 115 0
 128 0
 J793 5
-1047 -1.0
-1152 1.0
+1047 -1
+1152 1
 111 0
 116 0
 128 0
 J794 5
-1048 -1.0
-1153 1.0
+1048 -1
+1153 1
 111 0
 117 0
 128 0
 J795 5
-1049 -1.0
-1154 1.0
+1049 -1
+1154 1
 111 0
 118 0
 128 0
 J796 5
-1050 -1.0
-1155 1.0
+1050 -1
+1155 1
 111 0
 119 0
 128 0
 J797 5
-1051 -1.0
-1156 1.0
+1051 -1
+1156 1
 111 0
 120 0
 128 0
 J798 5
-1052 -1.0
-1157 1.0
+1052 -1
+1157 1
 111 0
 121 0
 128 0
 J799 5
-1053 -1.0
-1158 1.0
+1053 -1
+1158 1
 111 0
 122 0
 128 0
 J800 5
-1054 -1.0
-150 1.0
+1054 -1
+150 1
 111 0
 112 0
 129 0
 J801 5
-1055 -1.0
-1159 1.0
+1055 -1
+1159 1
 111 0
 113 0
 129 0
 J802 5
-1056 -1.0
-1160 1.0
+1056 -1
+1160 1
 111 0
 114 0
 129 0
 J803 5
-1057 -1.0
-1161 1.0
+1057 -1
+1161 1
 111 0
 115 0
 129 0
 J804 5
-1058 -1.0
-1162 1.0
+1058 -1
+1162 1
 111 0
 116 0
 129 0
 J805 5
-1059 -1.0
-1163 1.0
+1059 -1
+1163 1
 111 0
 117 0
 129 0
 J806 5
-1060 -1.0
-1164 1.0
+1060 -1
+1164 1
 111 0
 118 0
 129 0
 J807 5
-1061 -1.0
-1165 1.0
+1061 -1
+1165 1
 111 0
 119 0
 129 0
 J808 5
-1062 -1.0
-1166 1.0
+1062 -1
+1166 1
 111 0
 120 0
 129 0
 J809 5
-1063 -1.0
-1167 1.0
+1063 -1
+1167 1
 111 0
 121 0
 129 0
 J810 5
-1064 -1.0
-1168 1.0
+1064 -1
+1168 1
 111 0
 122 0
 129 0
 J811 5
-1065 -1.0
-151 1.0
+1065 -1
+151 1
 111 0
 112 0
 130 0
 J812 5
-1066 -1.0
-1169 1.0
+1066 -1
+1169 1
 111 0
 113 0
 130 0
 J813 5
-1067 -1.0
-1170 1.0
+1067 -1
+1170 1
 111 0
 114 0
 130 0
 J814 5
-1068 -1.0
-1171 1.0
+1068 -1
+1171 1
 111 0
 115 0
 130 0
 J815 5
-1069 -1.0
-1172 1.0
+1069 -1
+1172 1
 111 0
 116 0
 130 0
 J816 5
-1070 -1.0
-1173 1.0
+1070 -1
+1173 1
 111 0
 117 0
 130 0
 J817 5
-1071 -1.0
-1174 1.0
+1071 -1
+1174 1
 111 0
 118 0
 130 0
 J818 5
-1072 -1.0
-1175 1.0
+1072 -1
+1175 1
 111 0
 119 0
 130 0
 J819 5
-1073 -1.0
-1176 1.0
+1073 -1
+1176 1
 111 0
 120 0
 130 0
 J820 5
-1074 -1.0
-1177 1.0
+1074 -1
+1177 1
 111 0
 121 0
 130 0
 J821 5
-1075 -1.0
-1178 1.0
+1075 -1
+1178 1
 111 0
 122 0
 130 0
 J822 5
-1076 -1.0
-152 1.0
+1076 -1
+152 1
 111 0
 112 0
 131 0
 J823 5
-1077 -1.0
-1179 1.0
+1077 -1
+1179 1
 111 0
 113 0
 131 0
 J824 5
-1078 -1.0
-1180 1.0
+1078 -1
+1180 1
 111 0
 114 0
 131 0
 J825 5
-1079 -1.0
-1181 1.0
+1079 -1
+1181 1
 111 0
 115 0
 131 0
 J826 5
-1080 -1.0
-1182 1.0
+1080 -1
+1182 1
 111 0
 116 0
 131 0
 J827 5
-1081 -1.0
-1183 1.0
+1081 -1
+1183 1
 111 0
 117 0
 131 0
 J828 5
-1082 -1.0
-1184 1.0
+1082 -1
+1184 1
 111 0
 118 0
 131 0
 J829 5
-1083 -1.0
-1185 1.0
+1083 -1
+1185 1
 111 0
 119 0
 131 0
 J830 5
-1084 -1.0
-1186 1.0
+1084 -1
+1186 1
 111 0
 120 0
 131 0
 J831 5
-1085 -1.0
-1187 1.0
+1085 -1
+1187 1
 111 0
 121 0
 131 0
 J832 5
-1086 -1.0
-1188 1.0
+1086 -1
+1188 1
 111 0
 122 0
 131 0
 J833 5
-1087 -1.0
-153 1.0
+1087 -1
+153 1
 111 0
 112 0
 132 0
 J834 5
-1088 -1.0
-1189 1.0
+1088 -1
+1189 1
 111 0
 113 0
 132 0
 J835 5
-1089 -1.0
-1190 1.0
+1089 -1
+1190 1
 111 0
 114 0
 132 0
 J836 5
-1090 -1.0
-1191 1.0
+1090 -1
+1191 1
 111 0
 115 0
 132 0
 J837 5
-1091 -1.0
-1192 1.0
+1091 -1
+1192 1
 111 0
 116 0
 132 0
 J838 5
-1092 -1.0
-1193 1.0
+1092 -1
+1193 1
 111 0
 117 0
 132 0
 J839 5
-1093 -1.0
-1194 1.0
+1093 -1
+1194 1
 111 0
 118 0
 132 0
 J840 5
-1094 -1.0
-1195 1.0
+1094 -1
+1195 1
 111 0
 119 0
 132 0
 J841 5
-1095 -1.0
-1196 1.0
+1095 -1
+1196 1
 111 0
 120 0
 132 0
 J842 5
-1096 -1.0
-1197 1.0
+1096 -1
+1197 1
 111 0
 121 0
 132 0
 J843 5
-1097 -1.0
-1198 1.0
+1097 -1
+1198 1
 111 0
 122 0
 132 0
 J844 5
-1098 -1.0
-154 1.0
+1098 -1
+154 1
 111 0
 112 0
 133 0
 J845 5
-1099 -1.0
-1199 1.0
+1099 -1
+1199 1
 111 0
 113 0
 133 0
 J846 5
-1100 -1.0
-1200 1.0
+1100 -1
+1200 1
 111 0
 114 0
 133 0
 J847 5
-1101 -1.0
-1201 1.0
+1101 -1
+1201 1
 111 0
 115 0
 133 0
 J848 5
-1102 -1.0
-1202 1.0
+1102 -1
+1202 1
 111 0
 116 0
 133 0
 J849 5
-1103 -1.0
-1203 1.0
+1103 -1
+1203 1
 111 0
 117 0
 133 0
 J850 5
-1104 -1.0
-1204 1.0
+1104 -1
+1204 1
 111 0
 118 0
 133 0
 J851 5
-1105 -1.0
-1205 1.0
+1105 -1
+1205 1
 111 0
 119 0
 133 0
 J852 5
-1106 -1.0
-1206 1.0
+1106 -1
+1206 1
 111 0
 120 0
 133 0
 J853 5
-1107 -1.0
-1207 1.0
+1107 -1
+1207 1
 111 0
 121 0
 133 0
 J854 5
-1108 -1.0
-1208 1.0
+1108 -1
+1208 1
 111 0
 122 0
 133 0
 J855 5
-1109 -1.0
-155 1.0
+1109 -1
+155 1
 134 0
 135 0
 145 0
 J856 5
-1110 -1.0
-156 1.0
+1110 -1
+156 1
 134 0
 136 0
 145 0
 J857 5
-1111 -1.0
-157 1.0
+1111 -1
+157 1
 134 0
 137 0
 145 0
 J858 5
-1112 -1.0
-158 1.0
+1112 -1
+158 1
 134 0
 138 0
 145 0
 J859 5
-1113 -1.0
-159 1.0
+1113 -1
+159 1
 134 0
 139 0
 145 0
 J860 5
-1114 -1.0
-160 1.0
+1114 -1
+160 1
 134 0
 140 0
 145 0
 J861 5
-1115 -1.0
-161 1.0
+1115 -1
+161 1
 134 0
 141 0
 145 0
 J862 5
-1116 -1.0
-162 1.0
+1116 -1
+162 1
 134 0
 142 0
 145 0
 J863 5
-1117 -1.0
-163 1.0
+1117 -1
+163 1
 134 0
 143 0
 145 0
 J864 5
-1118 -1.0
-164 1.0
+1118 -1
+164 1
 134 0
 144 0
 145 0
 J865 5
-1119 -1.0
-165 1.0
+1119 -1
+165 1
 134 0
 135 0
 146 0
 J866 5
-1120 -1.0
-1209 1.0
+1120 -1
+1209 1
 134 0
 136 0
 146 0
 J867 5
-1121 -1.0
-1210 1.0
+1121 -1
+1210 1
 134 0
 137 0
 146 0
 J868 5
-1122 -1.0
-1211 1.0
+1122 -1
+1211 1
 134 0
 138 0
 146 0
 J869 5
-1123 -1.0
-1212 1.0
+1123 -1
+1212 1
 134 0
 139 0
 146 0
 J870 5
-1124 -1.0
-1213 1.0
+1124 -1
+1213 1
 134 0
 140 0
 146 0
 J871 5
-1125 -1.0
-1214 1.0
+1125 -1
+1214 1
 134 0
 141 0
 146 0
 J872 5
-1126 -1.0
-1215 1.0
+1126 -1
+1215 1
 134 0
 142 0
 146 0
 J873 5
-1127 -1.0
-1216 1.0
+1127 -1
+1216 1
 134 0
 143 0
 146 0
 J874 5
-1128 -1.0
-1217 1.0
+1128 -1
+1217 1
 134 0
 144 0
 146 0
 J875 5
-1129 -1.0
-166 1.0
+1129 -1
+166 1
 134 0
 135 0
 147 0
 J876 5
-1130 -1.0
-1218 1.0
+1130 -1
+1218 1
 134 0
 136 0
 147 0
 J877 5
-1131 -1.0
-1219 1.0
+1131 -1
+1219 1
 134 0
 137 0
 147 0
 J878 5
-1132 -1.0
-1220 1.0
+1132 -1
+1220 1
 134 0
 138 0
 147 0
 J879 5
-1133 -1.0
-1221 1.0
+1133 -1
+1221 1
 134 0
 139 0
 147 0
 J880 5
-1134 -1.0
-1222 1.0
+1134 -1
+1222 1
 134 0
 140 0
 147 0
 J881 5
-1135 -1.0
-1223 1.0
+1135 -1
+1223 1
 134 0
 141 0
 147 0
 J882 5
-1136 -1.0
-1224 1.0
+1136 -1
+1224 1
 134 0
 142 0
 147 0
 J883 5
-1137 -1.0
-1225 1.0
+1137 -1
+1225 1
 134 0
 143 0
 147 0
 J884 5
-1138 -1.0
-1226 1.0
+1138 -1
+1226 1
 134 0
 144 0
 147 0
 J885 5
-1139 -1.0
-167 1.0
+1139 -1
+167 1
 134 0
 135 0
 148 0
 J886 5
-1140 -1.0
-1227 1.0
+1140 -1
+1227 1
 134 0
 136 0
 148 0
 J887 5
-1141 -1.0
-1228 1.0
+1141 -1
+1228 1
 134 0
 137 0
 148 0
 J888 5
-1142 -1.0
-1229 1.0
+1142 -1
+1229 1
 134 0
 138 0
 148 0
 J889 5
-1143 -1.0
-1230 1.0
+1143 -1
+1230 1
 134 0
 139 0
 148 0
 J890 5
-1144 -1.0
-1231 1.0
+1144 -1
+1231 1
 134 0
 140 0
 148 0
 J891 5
-1145 -1.0
-1232 1.0
+1145 -1
+1232 1
 134 0
 141 0
 148 0
 J892 5
-1146 -1.0
-1233 1.0
+1146 -1
+1233 1
 134 0
 142 0
 148 0
 J893 5
-1147 -1.0
-1234 1.0
+1147 -1
+1234 1
 134 0
 143 0
 148 0
 J894 5
-1148 -1.0
-1235 1.0
+1148 -1
+1235 1
 134 0
 144 0
 148 0
 J895 5
-1149 -1.0
-168 1.0
+1149 -1
+168 1
 134 0
 135 0
 149 0
 J896 5
-1150 -1.0
-1236 1.0
+1150 -1
+1236 1
 134 0
 136 0
 149 0
 J897 5
-1151 -1.0
-1237 1.0
+1151 -1
+1237 1
 134 0
 137 0
 149 0
 J898 5
-1152 -1.0
-1238 1.0
+1152 -1
+1238 1
 134 0
 138 0
 149 0
 J899 5
-1153 -1.0
-1239 1.0
+1153 -1
+1239 1
 134 0
 139 0
 149 0
 J900 5
-1154 -1.0
-1240 1.0
+1154 -1
+1240 1
 134 0
 140 0
 149 0
 J901 5
-1155 -1.0
-1241 1.0
+1155 -1
+1241 1
 134 0
 141 0
 149 0
 J902 5
-1156 -1.0
-1242 1.0
+1156 -1
+1242 1
 134 0
 142 0
 149 0
 J903 5
-1157 -1.0
-1243 1.0
+1157 -1
+1243 1
 134 0
 143 0
 149 0
 J904 5
-1158 -1.0
-1244 1.0
+1158 -1
+1244 1
 134 0
 144 0
 149 0
 J905 5
-1159 -1.0
-169 1.0
+1159 -1
+169 1
 134 0
 135 0
 150 0
 J906 5
-1160 -1.0
-1245 1.0
+1160 -1
+1245 1
 134 0
 136 0
 150 0
 J907 5
-1161 -1.0
-1246 1.0
+1161 -1
+1246 1
 134 0
 137 0
 150 0
 J908 5
-1162 -1.0
-1247 1.0
+1162 -1
+1247 1
 134 0
 138 0
 150 0
 J909 5
-1163 -1.0
-1248 1.0
+1163 -1
+1248 1
 134 0
 139 0
 150 0
 J910 5
-1164 -1.0
-1249 1.0
+1164 -1
+1249 1
 134 0
 140 0
 150 0
 J911 5
-1165 -1.0
-1250 1.0
+1165 -1
+1250 1
 134 0
 141 0
 150 0
 J912 5
-1166 -1.0
-1251 1.0
+1166 -1
+1251 1
 134 0
 142 0
 150 0
 J913 5
-1167 -1.0
-1252 1.0
+1167 -1
+1252 1
 134 0
 143 0
 150 0
 J914 5
-1168 -1.0
-1253 1.0
+1168 -1
+1253 1
 134 0
 144 0
 150 0
 J915 5
-1169 -1.0
-170 1.0
+1169 -1
+170 1
 134 0
 135 0
 151 0
 J916 5
-1170 -1.0
-1254 1.0
+1170 -1
+1254 1
 134 0
 136 0
 151 0
 J917 5
-1171 -1.0
-1255 1.0
+1171 -1
+1255 1
 134 0
 137 0
 151 0
 J918 5
-1172 -1.0
-1256 1.0
+1172 -1
+1256 1
 134 0
 138 0
 151 0
 J919 5
-1173 -1.0
-1257 1.0
+1173 -1
+1257 1
 134 0
 139 0
 151 0
 J920 5
-1174 -1.0
-1258 1.0
+1174 -1
+1258 1
 134 0
 140 0
 151 0
 J921 5
-1175 -1.0
-1259 1.0
+1175 -1
+1259 1
 134 0
 141 0
 151 0
 J922 5
-1176 -1.0
-1260 1.0
+1176 -1
+1260 1
 134 0
 142 0
 151 0
 J923 5
-1177 -1.0
-1261 1.0
+1177 -1
+1261 1
 134 0
 143 0
 151 0
 J924 5
-1178 -1.0
-1262 1.0
+1178 -1
+1262 1
 134 0
 144 0
 151 0
 J925 5
-1179 -1.0
-171 1.0
+1179 -1
+171 1
 134 0
 135 0
 152 0
 J926 5
-1180 -1.0
-1263 1.0
+1180 -1
+1263 1
 134 0
 136 0
 152 0
 J927 5
-1181 -1.0
-1264 1.0
+1181 -1
+1264 1
 134 0
 137 0
 152 0
 J928 5
-1182 -1.0
-1265 1.0
+1182 -1
+1265 1
 134 0
 138 0
 152 0
 J929 5
-1183 -1.0
-1266 1.0
+1183 -1
+1266 1
 134 0
 139 0
 152 0
 J930 5
-1184 -1.0
-1267 1.0
+1184 -1
+1267 1
 134 0
 140 0
 152 0
 J931 5
-1185 -1.0
-1268 1.0
+1185 -1
+1268 1
 134 0
 141 0
 152 0
 J932 5
-1186 -1.0
-1269 1.0
+1186 -1
+1269 1
 134 0
 142 0
 152 0
 J933 5
-1187 -1.0
-1270 1.0
+1187 -1
+1270 1
 134 0
 143 0
 152 0
 J934 5
-1188 -1.0
-1271 1.0
+1188 -1
+1271 1
 134 0
 144 0
 152 0
 J935 5
-1189 -1.0
-172 1.0
+1189 -1
+172 1
 134 0
 135 0
 153 0
 J936 5
-1190 -1.0
-1272 1.0
+1190 -1
+1272 1
 134 0
 136 0
 153 0
 J937 5
-1191 -1.0
-1273 1.0
+1191 -1
+1273 1
 134 0
 137 0
 153 0
 J938 5
-1192 -1.0
-1274 1.0
+1192 -1
+1274 1
 134 0
 138 0
 153 0
 J939 5
-1193 -1.0
-1275 1.0
+1193 -1
+1275 1
 134 0
 139 0
 153 0
 J940 5
-1194 -1.0
-1276 1.0
+1194 -1
+1276 1
 134 0
 140 0
 153 0
 J941 5
-1195 -1.0
-1277 1.0
+1195 -1
+1277 1
 134 0
 141 0
 153 0
 J942 5
-1196 -1.0
-1278 1.0
+1196 -1
+1278 1
 134 0
 142 0
 153 0
 J943 5
-1197 -1.0
-1279 1.0
+1197 -1
+1279 1
 134 0
 143 0
 153 0
 J944 5
-1198 -1.0
-1280 1.0
+1198 -1
+1280 1
 134 0
 144 0
 153 0
 J945 5
-1199 -1.0
-173 1.0
+1199 -1
+173 1
 134 0
 135 0
 154 0
 J946 5
-1200 -1.0
-1281 1.0
+1200 -1
+1281 1
 134 0
 136 0
 154 0
 J947 5
-1201 -1.0
-1282 1.0
+1201 -1
+1282 1
 134 0
 137 0
 154 0
 J948 5
-1202 -1.0
-1283 1.0
+1202 -1
+1283 1
 134 0
 138 0
 154 0
 J949 5
-1203 -1.0
-1284 1.0
+1203 -1
+1284 1
 134 0
 139 0
 154 0
 J950 5
-1204 -1.0
-1285 1.0
+1204 -1
+1285 1
 134 0
 140 0
 154 0
 J951 5
-1205 -1.0
-1286 1.0
+1205 -1
+1286 1
 134 0
 141 0
 154 0
 J952 5
-1206 -1.0
-1287 1.0
+1206 -1
+1287 1
 134 0
 142 0
 154 0
 J953 5
-1207 -1.0
-1288 1.0
+1207 -1
+1288 1
 134 0
 143 0
 154 0
 J954 5
-1208 -1.0
-1289 1.0
+1208 -1
+1289 1
 134 0
 144 0
 154 0
 J955 5
-1209 -1.0
-174 1.0
+1209 -1
+174 1
 155 0
 156 0
 165 0
 J956 5
-1210 -1.0
-175 1.0
+1210 -1
+175 1
 155 0
 157 0
 165 0
 J957 5
-1211 -1.0
-176 1.0
+1211 -1
+176 1
 155 0
 158 0
 165 0
 J958 5
-1212 -1.0
-177 1.0
+1212 -1
+177 1
 155 0
 159 0
 165 0
 J959 5
-1213 -1.0
-178 1.0
+1213 -1
+178 1
 155 0
 160 0
 165 0
 J960 5
-1214 -1.0
-179 1.0
+1214 -1
+179 1
 155 0
 161 0
 165 0
 J961 5
-1215 -1.0
-180 1.0
+1215 -1
+180 1
 155 0
 162 0
 165 0
 J962 5
-1216 -1.0
-181 1.0
+1216 -1
+181 1
 155 0
 163 0
 165 0
 J963 5
-1217 -1.0
-182 1.0
+1217 -1
+182 1
 155 0
 164 0
 165 0
 J964 5
-1218 -1.0
-183 1.0
+1218 -1
+183 1
 155 0
 156 0
 166 0
 J965 5
-1219 -1.0
-1290 1.0
+1219 -1
+1290 1
 155 0
 157 0
 166 0
 J966 5
-1220 -1.0
-1291 1.0
+1220 -1
+1291 1
 155 0
 158 0
 166 0
 J967 5
-1221 -1.0
-1292 1.0
+1221 -1
+1292 1
 155 0
 159 0
 166 0
 J968 5
-1222 -1.0
-1293 1.0
+1222 -1
+1293 1
 155 0
 160 0
 166 0
 J969 5
-1223 -1.0
-1294 1.0
+1223 -1
+1294 1
 155 0
 161 0
 166 0
 J970 5
-1224 -1.0
-1295 1.0
+1224 -1
+1295 1
 155 0
 162 0
 166 0
 J971 5
-1225 -1.0
-1296 1.0
+1225 -1
+1296 1
 155 0
 163 0
 166 0
 J972 5
-1226 -1.0
-1297 1.0
+1226 -1
+1297 1
 155 0
 164 0
 166 0
 J973 5
-1227 -1.0
-184 1.0
+1227 -1
+184 1
 155 0
 156 0
 167 0
 J974 5
-1228 -1.0
-1298 1.0
+1228 -1
+1298 1
 155 0
 157 0
 167 0
 J975 5
-1229 -1.0
-1299 1.0
+1229 -1
+1299 1
 155 0
 158 0
 167 0
 J976 5
-1230 -1.0
-1300 1.0
+1230 -1
+1300 1
 155 0
 159 0
 167 0
 J977 5
-1231 -1.0
-1301 1.0
+1231 -1
+1301 1
 155 0
 160 0
 167 0
 J978 5
-1232 -1.0
-1302 1.0
+1232 -1
+1302 1
 155 0
 161 0
 167 0
 J979 5
-1233 -1.0
-1303 1.0
+1233 -1
+1303 1
 155 0
 162 0
 167 0
 J980 5
-1234 -1.0
-1304 1.0
+1234 -1
+1304 1
 155 0
 163 0
 167 0
 J981 5
-1235 -1.0
-1305 1.0
+1235 -1
+1305 1
 155 0
 164 0
 167 0
 J982 5
-1236 -1.0
-185 1.0
+1236 -1
+185 1
 155 0
 156 0
 168 0
 J983 5
-1237 -1.0
-1306 1.0
+1237 -1
+1306 1
 155 0
 157 0
 168 0
 J984 5
-1238 -1.0
-1307 1.0
+1238 -1
+1307 1
 155 0
 158 0
 168 0
 J985 5
-1239 -1.0
-1308 1.0
+1239 -1
+1308 1
 155 0
 159 0
 168 0
 J986 5
-1240 -1.0
-1309 1.0
+1240 -1
+1309 1
 155 0
 160 0
 168 0
 J987 5
-1241 -1.0
-1310 1.0
+1241 -1
+1310 1
 155 0
 161 0
 168 0
 J988 5
-1242 -1.0
-1311 1.0
+1242 -1
+1311 1
 155 0
 162 0
 168 0
 J989 5
-1243 -1.0
-1312 1.0
+1243 -1
+1312 1
 155 0
 163 0
 168 0
 J990 5
-1244 -1.0
-1313 1.0
+1244 -1
+1313 1
 155 0
 164 0
 168 0
 J991 5
-1245 -1.0
-186 1.0
+1245 -1
+186 1
 155 0
 156 0
 169 0
 J992 5
-1246 -1.0
-1314 1.0
+1246 -1
+1314 1
 155 0
 157 0
 169 0
 J993 5
-1247 -1.0
-1315 1.0
+1247 -1
+1315 1
 155 0
 158 0
 169 0
 J994 5
-1248 -1.0
-1316 1.0
+1248 -1
+1316 1
 155 0
 159 0
 169 0
 J995 5
-1249 -1.0
-1317 1.0
+1249 -1
+1317 1
 155 0
 160 0
 169 0
 J996 5
-1250 -1.0
-1318 1.0
+1250 -1
+1318 1
 155 0
 161 0
 169 0
 J997 5
-1251 -1.0
-1319 1.0
+1251 -1
+1319 1
 155 0
 162 0
 169 0
 J998 5
-1252 -1.0
-1320 1.0
+1252 -1
+1320 1
 155 0
 163 0
 169 0
 J999 5
-1253 -1.0
-1321 1.0
+1253 -1
+1321 1
 155 0
 164 0
 169 0
 J1000 5
-1254 -1.0
-187 1.0
+1254 -1
+187 1
 155 0
 156 0
 170 0
 J1001 5
-1255 -1.0
-1322 1.0
+1255 -1
+1322 1
 155 0
 157 0
 170 0
 J1002 5
-1256 -1.0
-1323 1.0
+1256 -1
+1323 1
 155 0
 158 0
 170 0
 J1003 5
-1257 -1.0
-1324 1.0
+1257 -1
+1324 1
 155 0
 159 0
 170 0
 J1004 5
-1258 -1.0
-1325 1.0
+1258 -1
+1325 1
 155 0
 160 0
 170 0
 J1005 5
-1259 -1.0
-1326 1.0
+1259 -1
+1326 1
 155 0
 161 0
 170 0
 J1006 5
-1260 -1.0
-1327 1.0
+1260 -1
+1327 1
 155 0
 162 0
 170 0
 J1007 5
-1261 -1.0
-1328 1.0
+1261 -1
+1328 1
 155 0
 163 0
 170 0
 J1008 5
-1262 -1.0
-1329 1.0
+1262 -1
+1329 1
 155 0
 164 0
 170 0
 J1009 5
-1263 -1.0
-188 1.0
+1263 -1
+188 1
 155 0
 156 0
 171 0
 J1010 5
-1264 -1.0
-1330 1.0
+1264 -1
+1330 1
 155 0
 157 0
 171 0
 J1011 5
-1265 -1.0
-1331 1.0
+1265 -1
+1331 1
 155 0
 158 0
 171 0
 J1012 5
-1266 -1.0
-1332 1.0
+1266 -1
+1332 1
 155 0
 159 0
 171 0
 J1013 5
-1267 -1.0
-1333 1.0
+1267 -1
+1333 1
 155 0
 160 0
 171 0
 J1014 5
-1268 -1.0
-1334 1.0
+1268 -1
+1334 1
 155 0
 161 0
 171 0
 J1015 5
-1269 -1.0
-1335 1.0
+1269 -1
+1335 1
 155 0
 162 0
 171 0
 J1016 5
-1270 -1.0
-1336 1.0
+1270 -1
+1336 1
 155 0
 163 0
 171 0
 J1017 5
-1271 -1.0
-1337 1.0
+1271 -1
+1337 1
 155 0
 164 0
 171 0
 J1018 5
-1272 -1.0
-189 1.0
+1272 -1
+189 1
 155 0
 156 0
 172 0
 J1019 5
-1273 -1.0
-1338 1.0
+1273 -1
+1338 1
 155 0
 157 0
 172 0
 J1020 5
-1274 -1.0
-1339 1.0
+1274 -1
+1339 1
 155 0
 158 0
 172 0
 J1021 5
-1275 -1.0
-1340 1.0
+1275 -1
+1340 1
 155 0
 159 0
 172 0
 J1022 5
-1276 -1.0
-1341 1.0
+1276 -1
+1341 1
 155 0
 160 0
 172 0
 J1023 5
-1277 -1.0
-1342 1.0
+1277 -1
+1342 1
 155 0
 161 0
 172 0
 J1024 5
-1278 -1.0
-1343 1.0
+1278 -1
+1343 1
 155 0
 162 0
 172 0
 J1025 5
-1279 -1.0
-1344 1.0
+1279 -1
+1344 1
 155 0
 163 0
 172 0
 J1026 5
-1280 -1.0
-1345 1.0
+1280 -1
+1345 1
 155 0
 164 0
 172 0
 J1027 5
-1281 -1.0
-190 1.0
+1281 -1
+190 1
 155 0
 156 0
 173 0
 J1028 5
-1282 -1.0
-1346 1.0
+1282 -1
+1346 1
 155 0
 157 0
 173 0
 J1029 5
-1283 -1.0
-1347 1.0
+1283 -1
+1347 1
 155 0
 158 0
 173 0
 J1030 5
-1284 -1.0
-1348 1.0
+1284 -1
+1348 1
 155 0
 159 0
 173 0
 J1031 5
-1285 -1.0
-1349 1.0
+1285 -1
+1349 1
 155 0
 160 0
 173 0
 J1032 5
-1286 -1.0
-1350 1.0
+1286 -1
+1350 1
 155 0
 161 0
 173 0
 J1033 5
-1287 -1.0
-1351 1.0
+1287 -1
+1351 1
 155 0
 162 0
 173 0
 J1034 5
-1288 -1.0
-1352 1.0
+1288 -1
+1352 1
 155 0
 163 0
 173 0
 J1035 5
-1289 -1.0
-1353 1.0
+1289 -1
+1353 1
 155 0
 164 0
 173 0
 J1036 5
-1290 -1.0
-191 1.0
+1290 -1
+191 1
 174 0
 175 0
 183 0
 J1037 5
-1291 -1.0
-192 1.0
+1291 -1
+192 1
 174 0
 176 0
 183 0
 J1038 5
-1292 -1.0
-193 1.0
+1292 -1
+193 1
 174 0
 177 0
 183 0
 J1039 5
-1293 -1.0
-194 1.0
+1293 -1
+194 1
 174 0
 178 0
 183 0
 J1040 5
-1294 -1.0
-195 1.0
+1294 -1
+195 1
 174 0
 179 0
 183 0
 J1041 5
-1295 -1.0
-196 1.0
+1295 -1
+196 1
 174 0
 180 0
 183 0
 J1042 5
-1296 -1.0
-197 1.0
+1296 -1
+197 1
 174 0
 181 0
 183 0
 J1043 5
-1297 -1.0
-198 1.0
+1297 -1
+198 1
 174 0
 182 0
 183 0
 J1044 5
-1298 -1.0
-199 1.0
+1298 -1
+199 1
 174 0
 175 0
 184 0
 J1045 5
-1299 -1.0
-1354 1.0
+1299 -1
+1354 1
 174 0
 176 0
 184 0
 J1046 5
-1300 -1.0
-1355 1.0
+1300 -1
+1355 1
 174 0
 177 0
 184 0
 J1047 5
-1301 -1.0
-1356 1.0
+1301 -1
+1356 1
 174 0
 178 0
 184 0
 J1048 5
-1302 -1.0
-1357 1.0
+1302 -1
+1357 1
 174 0
 179 0
 184 0
 J1049 5
-1303 -1.0
-1358 1.0
+1303 -1
+1358 1
 174 0
 180 0
 184 0
 J1050 5
-1304 -1.0
-1359 1.0
+1304 -1
+1359 1
 174 0
 181 0
 184 0
 J1051 5
-1305 -1.0
-1360 1.0
+1305 -1
+1360 1
 174 0
 182 0
 184 0
 J1052 5
-1306 -1.0
-200 1.0
+1306 -1
+200 1
 174 0
 175 0
 185 0
 J1053 5
-1307 -1.0
-1361 1.0
+1307 -1
+1361 1
 174 0
 176 0
 185 0
 J1054 5
-1308 -1.0
-1362 1.0
+1308 -1
+1362 1
 174 0
 177 0
 185 0
 J1055 5
-1309 -1.0
-1363 1.0
+1309 -1
+1363 1
 174 0
 178 0
 185 0
 J1056 5
-1310 -1.0
-1364 1.0
+1310 -1
+1364 1
 174 0
 179 0
 185 0
 J1057 5
-1311 -1.0
-1365 1.0
+1311 -1
+1365 1
 174 0
 180 0
 185 0
 J1058 5
-1312 -1.0
-1366 1.0
+1312 -1
+1366 1
 174 0
 181 0
 185 0
 J1059 5
-1313 -1.0
-1367 1.0
+1313 -1
+1367 1
 174 0
 182 0
 185 0
 J1060 5
-1314 -1.0
-201 1.0
+1314 -1
+201 1
 174 0
 175 0
 186 0
 J1061 5
-1315 -1.0
-1368 1.0
+1315 -1
+1368 1
 174 0
 176 0
 186 0
 J1062 5
-1316 -1.0
-1369 1.0
+1316 -1
+1369 1
 174 0
 177 0
 186 0
 J1063 5
-1317 -1.0
-1370 1.0
+1317 -1
+1370 1
 174 0
 178 0
 186 0
 J1064 5
-1318 -1.0
-1371 1.0
+1318 -1
+1371 1
 174 0
 179 0
 186 0
 J1065 5
-1319 -1.0
-1372 1.0
+1319 -1
+1372 1
 174 0
 180 0
 186 0
 J1066 5
-1320 -1.0
-1373 1.0
+1320 -1
+1373 1
 174 0
 181 0
 186 0
 J1067 5
-1321 -1.0
-1374 1.0
+1321 -1
+1374 1
 174 0
 182 0
 186 0
 J1068 5
-1322 -1.0
-202 1.0
+1322 -1
+202 1
 174 0
 175 0
 187 0
 J1069 5
-1323 -1.0
-1375 1.0
+1323 -1
+1375 1
 174 0
 176 0
 187 0
 J1070 5
-1324 -1.0
-1376 1.0
+1324 -1
+1376 1
 174 0
 177 0
 187 0
 J1071 5
-1325 -1.0
-1377 1.0
+1325 -1
+1377 1
 174 0
 178 0
 187 0
 J1072 5
-1326 -1.0
-1378 1.0
+1326 -1
+1378 1
 174 0
 179 0
 187 0
 J1073 5
-1327 -1.0
-1379 1.0
+1327 -1
+1379 1
 174 0
 180 0
 187 0
 J1074 5
-1328 -1.0
-1380 1.0
+1328 -1
+1380 1
 174 0
 181 0
 187 0
 J1075 5
-1329 -1.0
-1381 1.0
+1329 -1
+1381 1
 174 0
 182 0
 187 0
 J1076 5
-1330 -1.0
-203 1.0
+1330 -1
+203 1
 174 0
 175 0
 188 0
 J1077 5
-1331 -1.0
-1382 1.0
+1331 -1
+1382 1
 174 0
 176 0
 188 0
 J1078 5
-1332 -1.0
-1383 1.0
+1332 -1
+1383 1
 174 0
 177 0
 188 0
 J1079 5
-1333 -1.0
-1384 1.0
+1333 -1
+1384 1
 174 0
 178 0
 188 0
 J1080 5
-1334 -1.0
-1385 1.0
+1334 -1
+1385 1
 174 0
 179 0
 188 0
 J1081 5
-1335 -1.0
-1386 1.0
+1335 -1
+1386 1
 174 0
 180 0
 188 0
 J1082 5
-1336 -1.0
-1387 1.0
+1336 -1
+1387 1
 174 0
 181 0
 188 0
 J1083 5
-1337 -1.0
-1388 1.0
+1337 -1
+1388 1
 174 0
 182 0
 188 0
 J1084 5
-1338 -1.0
-204 1.0
+1338 -1
+204 1
 174 0
 175 0
 189 0
 J1085 5
-1339 -1.0
-1389 1.0
+1339 -1
+1389 1
 174 0
 176 0
 189 0
 J1086 5
-1340 -1.0
-1390 1.0
+1340 -1
+1390 1
 174 0
 177 0
 189 0
 J1087 5
-1341 -1.0
-1391 1.0
+1341 -1
+1391 1
 174 0
 178 0
 189 0
 J1088 5
-1342 -1.0
-1392 1.0
+1342 -1
+1392 1
 174 0
 179 0
 189 0
 J1089 5
-1343 -1.0
-1393 1.0
+1343 -1
+1393 1
 174 0
 180 0
 189 0
 J1090 5
-1344 -1.0
-1394 1.0
+1344 -1
+1394 1
 174 0
 181 0
 189 0
 J1091 5
-1345 -1.0
-1395 1.0
+1345 -1
+1395 1
 174 0
 182 0
 189 0
 J1092 5
-1346 -1.0
-205 1.0
+1346 -1
+205 1
 174 0
 175 0
 190 0
 J1093 5
-1347 -1.0
-1396 1.0
+1347 -1
+1396 1
 174 0
 176 0
 190 0
 J1094 5
-1348 -1.0
-1397 1.0
+1348 -1
+1397 1
 174 0
 177 0
 190 0
 J1095 5
-1349 -1.0
-1398 1.0
+1349 -1
+1398 1
 174 0
 178 0
 190 0
 J1096 5
-1350 -1.0
-1399 1.0
+1350 -1
+1399 1
 174 0
 179 0
 190 0
 J1097 5
-1351 -1.0
-1400 1.0
+1351 -1
+1400 1
 174 0
 180 0
 190 0
 J1098 5
-1352 -1.0
-1401 1.0
+1352 -1
+1401 1
 174 0
 181 0
 190 0
 J1099 5
-1353 -1.0
-1402 1.0
+1353 -1
+1402 1
 174 0
 182 0
 190 0
 J1100 5
-1354 -1.0
-206 1.0
+1354 -1
+206 1
 191 0
 192 0
 199 0
 J1101 5
-1355 -1.0
-207 1.0
+1355 -1
+207 1
 191 0
 193 0
 199 0
 J1102 5
-1356 -1.0
-208 1.0
+1356 -1
+208 1
 191 0
 194 0
 199 0
 J1103 5
-1357 -1.0
-209 1.0
+1357 -1
+209 1
 191 0
 195 0
 199 0
 J1104 5
-1358 -1.0
-210 1.0
+1358 -1
+210 1
 191 0
 196 0
 199 0
 J1105 5
-1359 -1.0
-211 1.0
+1359 -1
+211 1
 191 0
 197 0
 199 0
 J1106 5
-1360 -1.0
-212 1.0
+1360 -1
+212 1
 191 0
 198 0
 199 0
 J1107 5
-1361 -1.0
-213 1.0
+1361 -1
+213 1
 191 0
 192 0
 200 0
 J1108 5
-1362 -1.0
-1403 1.0
+1362 -1
+1403 1
 191 0
 193 0
 200 0
 J1109 5
-1363 -1.0
-1404 1.0
+1363 -1
+1404 1
 191 0
 194 0
 200 0
 J1110 5
-1364 -1.0
-1405 1.0
+1364 -1
+1405 1
 191 0
 195 0
 200 0
 J1111 5
-1365 -1.0
-1406 1.0
+1365 -1
+1406 1
 191 0
 196 0
 200 0
 J1112 5
-1366 -1.0
-1407 1.0
+1366 -1
+1407 1
 191 0
 197 0
 200 0
 J1113 5
-1367 -1.0
-1408 1.0
+1367 -1
+1408 1
 191 0
 198 0
 200 0
 J1114 5
-1368 -1.0
-214 1.0
+1368 -1
+214 1
 191 0
 192 0
 201 0
 J1115 5
-1369 -1.0
-1409 1.0
+1369 -1
+1409 1
 191 0
 193 0
 201 0
 J1116 5
-1370 -1.0
-1410 1.0
+1370 -1
+1410 1
 191 0
 194 0
 201 0
 J1117 5
-1371 -1.0
-1411 1.0
+1371 -1
+1411 1
 191 0
 195 0
 201 0
 J1118 5
-1372 -1.0
-1412 1.0
+1372 -1
+1412 1
 191 0
 196 0
 201 0
 J1119 5
-1373 -1.0
-1413 1.0
+1373 -1
+1413 1
 191 0
 197 0
 201 0
 J1120 5
-1374 -1.0
-1414 1.0
+1374 -1
+1414 1
 191 0
 198 0
 201 0
 J1121 5
-1375 -1.0
-215 1.0
+1375 -1
+215 1
 191 0
 192 0
 202 0
 J1122 5
-1376 -1.0
-1415 1.0
+1376 -1
+1415 1
 191 0
 193 0
 202 0
 J1123 5
-1377 -1.0
-1416 1.0
+1377 -1
+1416 1
 191 0
 194 0
 202 0
 J1124 5
-1378 -1.0
-1417 1.0
+1378 -1
+1417 1
 191 0
 195 0
 202 0
 J1125 5
-1379 -1.0
-1418 1.0
+1379 -1
+1418 1
 191 0
 196 0
 202 0
 J1126 5
-1380 -1.0
-1419 1.0
+1380 -1
+1419 1
 191 0
 197 0
 202 0
 J1127 5
-1381 -1.0
-1420 1.0
+1381 -1
+1420 1
 191 0
 198 0
 202 0
 J1128 5
-1382 -1.0
-216 1.0
+1382 -1
+216 1
 191 0
 192 0
 203 0
 J1129 5
-1383 -1.0
-1421 1.0
+1383 -1
+1421 1
 191 0
 193 0
 203 0
 J1130 5
-1384 -1.0
-1422 1.0
+1384 -1
+1422 1
 191 0
 194 0
 203 0
 J1131 5
-1385 -1.0
-1423 1.0
+1385 -1
+1423 1
 191 0
 195 0
 203 0
 J1132 5
-1386 -1.0
-1424 1.0
+1386 -1
+1424 1
 191 0
 196 0
 203 0
 J1133 5
-1387 -1.0
-1425 1.0
+1387 -1
+1425 1
 191 0
 197 0
 203 0
 J1134 5
-1388 -1.0
-1426 1.0
+1388 -1
+1426 1
 191 0
 198 0
 203 0
 J1135 5
-1389 -1.0
-217 1.0
+1389 -1
+217 1
 191 0
 192 0
 204 0
 J1136 5
-1390 -1.0
-1427 1.0
+1390 -1
+1427 1
 191 0
 193 0
 204 0
 J1137 5
-1391 -1.0
-1428 1.0
+1391 -1
+1428 1
 191 0
 194 0
 204 0
 J1138 5
-1392 -1.0
-1429 1.0
+1392 -1
+1429 1
 191 0
 195 0
 204 0
 J1139 5
-1393 -1.0
-1430 1.0
+1393 -1
+1430 1
 191 0
 196 0
 204 0
 J1140 5
-1394 -1.0
-1431 1.0
+1394 -1
+1431 1
 191 0
 197 0
 204 0
 J1141 5
-1395 -1.0
-1432 1.0
+1395 -1
+1432 1
 191 0
 198 0
 204 0
 J1142 5
-1396 -1.0
-218 1.0
+1396 -1
+218 1
 191 0
 192 0
 205 0
 J1143 5
-1397 -1.0
-1433 1.0
+1397 -1
+1433 1
 191 0
 193 0
 205 0
 J1144 5
-1398 -1.0
-1434 1.0
+1398 -1
+1434 1
 191 0
 194 0
 205 0
 J1145 5
-1399 -1.0
-1435 1.0
+1399 -1
+1435 1
 191 0
 195 0
 205 0
 J1146 5
-1400 -1.0
-1436 1.0
+1400 -1
+1436 1
 191 0
 196 0
 205 0
 J1147 5
-1401 -1.0
-1437 1.0
+1401 -1
+1437 1
 191 0
 197 0
 205 0
 J1148 5
-1402 -1.0
-1438 1.0
+1402 -1
+1438 1
 191 0
 198 0
 205 0
 J1149 5
-1403 -1.0
-219 1.0
+1403 -1
+219 1
 206 0
 207 0
 213 0
 J1150 5
-1404 -1.0
-220 1.0
+1404 -1
+220 1
 206 0
 208 0
 213 0
 J1151 5
-1405 -1.0
-221 1.0
+1405 -1
+221 1
 206 0
 209 0
 213 0
 J1152 5
-1406 -1.0
-222 1.0
+1406 -1
+222 1
 206 0
 210 0
 213 0
 J1153 5
-1407 -1.0
-223 1.0
+1407 -1
+223 1
 206 0
 211 0
 213 0
 J1154 5
-1408 -1.0
-224 1.0
+1408 -1
+224 1
 206 0
 212 0
 213 0
 J1155 5
-1409 -1.0
-225 1.0
+1409 -1
+225 1
 206 0
 207 0
 214 0
 J1156 5
-1410 -1.0
-1439 1.0
+1410 -1
+1439 1
 206 0
 208 0
 214 0
 J1157 5
-1411 -1.0
-1440 1.0
+1411 -1
+1440 1
 206 0
 209 0
 214 0
 J1158 5
-1412 -1.0
-1441 1.0
+1412 -1
+1441 1
 206 0
 210 0
 214 0
 J1159 5
-1413 -1.0
-1442 1.0
+1413 -1
+1442 1
 206 0
 211 0
 214 0
 J1160 5
-1414 -1.0
-1443 1.0
+1414 -1
+1443 1
 206 0
 212 0
 214 0
 J1161 5
-1415 -1.0
-226 1.0
+1415 -1
+226 1
 206 0
 207 0
 215 0
 J1162 5
-1416 -1.0
-1444 1.0
+1416 -1
+1444 1
 206 0
 208 0
 215 0
 J1163 5
-1417 -1.0
-1445 1.0
+1417 -1
+1445 1
 206 0
 209 0
 215 0
 J1164 5
-1418 -1.0
-1446 1.0
+1418 -1
+1446 1
 206 0
 210 0
 215 0
 J1165 5
-1419 -1.0
-1447 1.0
+1419 -1
+1447 1
 206 0
 211 0
 215 0
 J1166 5
-1420 -1.0
-1448 1.0
+1420 -1
+1448 1
 206 0
 212 0
 215 0
 J1167 5
-1421 -1.0
-227 1.0
+1421 -1
+227 1
 206 0
 207 0
 216 0
 J1168 5
-1422 -1.0
-1449 1.0
+1422 -1
+1449 1
 206 0
 208 0
 216 0
 J1169 5
-1423 -1.0
-1450 1.0
+1423 -1
+1450 1
 206 0
 209 0
 216 0
 J1170 5
-1424 -1.0
-1451 1.0
+1424 -1
+1451 1
 206 0
 210 0
 216 0
 J1171 5
-1425 -1.0
-1452 1.0
+1425 -1
+1452 1
 206 0
 211 0
 216 0
 J1172 5
-1426 -1.0
-1453 1.0
+1426 -1
+1453 1
 206 0
 212 0
 216 0
 J1173 5
-1427 -1.0
-228 1.0
+1427 -1
+228 1
 206 0
 207 0
 217 0
 J1174 5
-1428 -1.0
-1454 1.0
+1428 -1
+1454 1
 206 0
 208 0
 217 0
 J1175 5
-1429 -1.0
-1455 1.0
+1429 -1
+1455 1
 206 0
 209 0
 217 0
 J1176 5
-1430 -1.0
-1456 1.0
+1430 -1
+1456 1
 206 0
 210 0
 217 0
 J1177 5
-1431 -1.0
-1457 1.0
+1431 -1
+1457 1
 206 0
 211 0
 217 0
 J1178 5
-1432 -1.0
-1458 1.0
+1432 -1
+1458 1
 206 0
 212 0
 217 0
 J1179 5
-1433 -1.0
-229 1.0
+1433 -1
+229 1
 206 0
 207 0
 218 0
 J1180 5
-1434 -1.0
-1459 1.0
+1434 -1
+1459 1
 206 0
 208 0
 218 0
 J1181 5
-1435 -1.0
-1460 1.0
+1435 -1
+1460 1
 206 0
 209 0
 218 0
 J1182 5
-1436 -1.0
-1461 1.0
+1436 -1
+1461 1
 206 0
 210 0
 218 0
 J1183 5
-1437 -1.0
-1462 1.0
+1437 -1
+1462 1
 206 0
 211 0
 218 0
 J1184 5
-1438 -1.0
-1463 1.0
+1438 -1
+1463 1
 206 0
 212 0
 218 0
 J1185 5
-1439 -1.0
-230 1.0
+1439 -1
+230 1
 219 0
 220 0
 225 0
 J1186 5
-1440 -1.0
-231 1.0
+1440 -1
+231 1
 219 0
 221 0
 225 0
 J1187 5
-1441 -1.0
-232 1.0
+1441 -1
+232 1
 219 0
 222 0
 225 0
 J1188 5
-1442 -1.0
-233 1.0
+1442 -1
+233 1
 219 0
 223 0
 225 0
 J1189 5
-1443 -1.0
-234 1.0
+1443 -1
+234 1
 219 0
 224 0
 225 0
 J1190 5
-1444 -1.0
-235 1.0
+1444 -1
+235 1
 219 0
 220 0
 226 0
 J1191 5
-1445 -1.0
-1464 1.0
+1445 -1
+1464 1
 219 0
 221 0
 226 0
 J1192 5
-1446 -1.0
-1465 1.0
+1446 -1
+1465 1
 219 0
 222 0
 226 0
 J1193 5
-1447 -1.0
-1466 1.0
+1447 -1
+1466 1
 219 0
 223 0
 226 0
 J1194 5
-1448 -1.0
-1467 1.0
+1448 -1
+1467 1
 219 0
 224 0
 226 0
 J1195 5
-1449 -1.0
-236 1.0
+1449 -1
+236 1
 219 0
 220 0
 227 0
 J1196 5
-1450 -1.0
-1468 1.0
+1450 -1
+1468 1
 219 0
 221 0
 227 0
 J1197 5
-1451 -1.0
-1469 1.0
+1451 -1
+1469 1
 219 0
 222 0
 227 0
 J1198 5
-1452 -1.0
-1470 1.0
+1452 -1
+1470 1
 219 0
 223 0
 227 0
 J1199 5
-1453 -1.0
-1471 1.0
+1453 -1
+1471 1
 219 0
 224 0
 227 0
 J1200 5
-1454 -1.0
-237 1.0
+1454 -1
+237 1
 219 0
 220 0
 228 0
 J1201 5
-1455 -1.0
-1472 1.0
+1455 -1
+1472 1
 219 0
 221 0
 228 0
 J1202 5
-1456 -1.0
-1473 1.0
+1456 -1
+1473 1
 219 0
 222 0
 228 0
 J1203 5
-1457 -1.0
-1474 1.0
+1457 -1
+1474 1
 219 0
 223 0
 228 0
 J1204 5
-1458 -1.0
-1475 1.0
+1458 -1
+1475 1
 219 0
 224 0
 228 0
 J1205 5
-1459 -1.0
-238 1.0
+1459 -1
+238 1
 219 0
 220 0
 229 0
 J1206 5
-1460 -1.0
-1476 1.0
+1460 -1
+1476 1
 219 0
 221 0
 229 0
 J1207 5
-1461 -1.0
-1477 1.0
+1461 -1
+1477 1
 219 0
 222 0
 229 0
 J1208 5
-1462 -1.0
-1478 1.0
+1462 -1
+1478 1
 219 0
 223 0
 229 0
 J1209 5
-1463 -1.0
-1479 1.0
+1463 -1
+1479 1
 219 0
 224 0
 229 0
 J1210 5
-1464 -1.0
-239 1.0
+1464 -1
+239 1
 230 0
 231 0
 235 0
 J1211 5
-1465 -1.0
-240 1.0
+1465 -1
+240 1
 230 0
 232 0
 235 0
 J1212 5
-1466 -1.0
-241 1.0
+1466 -1
+241 1
 230 0
 233 0
 235 0
 J1213 5
-1467 -1.0
-242 1.0
+1467 -1
+242 1
 230 0
 234 0
 235 0
 J1214 5
-1468 -1.0
-243 1.0
+1468 -1
+243 1
 230 0
 231 0
 236 0
 J1215 5
-1469 -1.0
-1480 1.0
+1469 -1
+1480 1
 230 0
 232 0
 236 0
 J1216 5
-1470 -1.0
-1481 1.0
+1470 -1
+1481 1
 230 0
 233 0
 236 0
 J1217 5
-1471 -1.0
-1482 1.0
+1471 -1
+1482 1
 230 0
 234 0
 236 0
 J1218 5
-1472 -1.0
-244 1.0
+1472 -1
+244 1
 230 0
 231 0
 237 0
 J1219 5
-1473 -1.0
-1483 1.0
+1473 -1
+1483 1
 230 0
 232 0
 237 0
 J1220 5
-1474 -1.0
-1484 1.0
+1474 -1
+1484 1
 230 0
 233 0
 237 0
 J1221 5
-1475 -1.0
-1485 1.0
+1475 -1
+1485 1
 230 0
 234 0
 237 0
 J1222 5
-1476 -1.0
-245 1.0
+1476 -1
+245 1
 230 0
 231 0
 238 0
 J1223 5
-1477 -1.0
-1486 1.0
+1477 -1
+1486 1
 230 0
 232 0
 238 0
 J1224 5
-1478 -1.0
-1487 1.0
+1478 -1
+1487 1
 230 0
 233 0
 238 0
 J1225 5
-1479 -1.0
-1488 1.0
+1479 -1
+1488 1
 230 0
 234 0
 238 0
 J1226 5
-1480 -1.0
-246 1.0
+1480 -1
+246 1
 239 0
 240 0
 243 0
 J1227 5
-1481 -1.0
-247 1.0
+1481 -1
+247 1
 239 0
 241 0
 243 0
 J1228 5
-1482 -1.0
-248 1.0
+1482 -1
+248 1
 239 0
 242 0
 243 0
 J1229 5
-1483 -1.0
-249 1.0
+1483 -1
+249 1
 239 0
 240 0
 244 0
 J1230 5
-1484 -1.0
-1489 1.0
+1484 -1
+1489 1
 239 0
 241 0
 244 0
 J1231 5
-1485 -1.0
-1490 1.0
+1485 -1
+1490 1
 239 0
 242 0
 244 0
 J1232 5
-1486 -1.0
-250 1.0
+1486 -1
+250 1
 239 0
 240 0
 245 0
 J1233 5
-1487 -1.0
-1491 1.0
+1487 -1
+1491 1
 239 0
 241 0
 245 0
 J1234 5
-1488 -1.0
-1492 1.0
+1488 -1
+1492 1
 239 0
 242 0
 245 0
 J1235 5
-1489 -1.0
-251 1.0
+1489 -1
+251 1
 246 0
 247 0
 249 0
 J1236 5
-1490 -1.0
-252 1.0
+1490 -1
+252 1
 246 0
 248 0
 249 0
 J1237 5
-1491 -1.0
-253 1.0
+1491 -1
+253 1
 246 0
 247 0
 250 0
 J1238 5
-1492 -1.0
-1493 1.0
+1492 -1
+1493 1
 246 0
 248 0
 250 0
 J1239 5
-1493 -1.0
-1494 1.0
+1493 -1
+1494 1
 251 0
 252 0
 253 0

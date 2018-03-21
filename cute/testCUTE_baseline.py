@@ -9,7 +9,7 @@ from os.path import abspath, dirname
 import pyutilib.th as unittest
 import pyutilib.subprocess
 import pyomo.scripting.pyomo_main as main
-from pyomo.core.base import expr as Expr
+import pyomo.core.expr.current as Expr
 from pyomo.opt import ProblemFormat
 from pyomo.core import *
 

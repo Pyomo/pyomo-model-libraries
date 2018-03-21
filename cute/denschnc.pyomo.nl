@@ -11,28 +11,28 @@ g3 1 1 0	# problem unknown
 O0 0
 o0
 o5
-o0
-n-2
-o0
+o54
+3
 o5
 v0
-n2.0
+n2
 o5
 v1
-n2.0
-n2.0
-o5
-o0
+n2
 n-2
-o0
+n2
+o5
+o54
+3
 o44
 o0
-n-1
 v0
+n-1
 o5
 v1
-n3.0
-n2.0
+n3
+n-2
+n2
 x2
 0 2
 1 3
