@@ -51,9 +51,9 @@ if os.path.isfile(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py'
     model = model.create_instance(os.path.abspath(__file__).replace('.pyc','.dat').replace('.py','.dat'))
 
 def f_rule(model):
-    return sum(0.5*Expr_if(IF_=abs(model.a*model.x[i]+model.b-model.y[i])>15,
-                               THEN_=1.5*abs(model.a*model.x[i]+model.b-model.y[i])-0.5*1.5**2,
-                               ELSE_=0.5*abs(model.a*model.x[i]+model.b-model.y[i])**2) \
+    return sum(0.5*Expr_if(IF=abs(model.a*model.x[i]+model.b-model.y[i])>15,
+                               THEN=1.5*abs(model.a*model.x[i]+model.b-model.y[i])-0.5*1.5**2,
+                               ELSE=0.5*abs(model.a*model.x[i]+model.b-model.y[i])**2) \
                    for i in range(1,6))
 model.f = Objective(rule=f_rule,sense=minimize)
 
