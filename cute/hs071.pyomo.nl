@@ -10,10 +10,10 @@ g3 1 1 0	# problem unknown
  0 0 0 0 0	# common exprs: b,c,o,c1,o1
 C0
 o2
+o2
+o2
 v0
-o2
 v1
-o2
 v2
 v3
 C1
@@ -21,20 +21,20 @@ o54
 4
 o5
 v0
-n2.0
+n2
 o5
 v1
-n2.0
+n2
 o5
 v2
-n2.0
+n2
 o5
 v3
-n2.0
+n2
 O0 0
 o2
-v0
 o2
+v0
 v3
 o54
 3
@@ -71,5 +71,5 @@ J1 4
 G0 4
 0 0
 1 0
-2 1.0
+2 1
 3 0
