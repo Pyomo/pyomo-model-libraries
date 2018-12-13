@@ -5,7 +5,7 @@ g3 1 1 0	# problem unknown
  0 5 0 	# nonlinear vars in constraints, objectives, both
  0 0 0 1	# linear network variables; functions; arith, flags
  0 0 0 0 0 	# discrete variables: binary, integer, nonlinear (b,c,o)
- 1757 5 	# nonzeros in Jacobian, obj. gradient
+ 1751 5 	# nonzeros in Jacobian, obj. gradient
  0 0	# max name lengths: constraints, variables
  0 0 0 0 0	# common exprs: b,c,o,c1,o1
 C0
@@ -8307,13 +8307,11 @@ b
 3
 k4
 251
-502
-753
-1255
-J0 5
+501
+751
+1251
+J0 3
 0 1
-1 0.0
-2 0.0
 3 5.0
 4 -25.0
 J1 5
@@ -9810,12 +9808,10 @@ J249 5
 2 24.800400000000003
 3 2.9094876330721386
 4 -0.05818975266144153
-J250 5
+J250 3
 0 1
 1 5.0
 2 25.0
-3 -0.0
-4 -0.0
 J251 2
 3 -5.0
 4 25.0
@@ -10566,9 +10562,6 @@ J499 2
 J500 2
 3 -0.019999999999999574
 4 0.00039999999999998294
-J501 2
-3 0.0
-4 0.0
 G0 5
 0 0
 1 0
