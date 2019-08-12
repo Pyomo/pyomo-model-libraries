@@ -11,12 +11,10 @@ g3 1 1 0	# problem unknown
 C0
 o2
 n-1
-o2
+o3
 o0
 v2
 v4
-o3
-n1.0
 v1
 C1
 o2
@@ -46,12 +44,10 @@ n2
 C3
 o2
 n-1
-o2
+o3
 o2
 n98000.0
 v3
-o3
-n1.0
 o0
 o2
 v0

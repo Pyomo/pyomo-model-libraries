@@ -11,7 +11,7 @@ g3 1 1 0	# problem unknown
 C0
 o54
 3
-o2
+o3
 o5
 o0
 o2
@@ -21,8 +21,6 @@ o2
 v1
 v3
 n2
-o3
-n1.0
 o0
 o5
 v0
