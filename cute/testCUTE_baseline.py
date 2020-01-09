@@ -30,12 +30,11 @@ class Tests(unittest.TestCase):
 class SmokeBaselineTests(Tests):
     def __init__(self, *args, **kwds):
         Tests.__init__(self, *args, **kwds)
-SmokeBaselineTests = unittest.category('smoke','nightly','expensive')(SmokeBaselineTests)
 
+@unittest.category('expensive')
 class ExpensiveBaselineTests(Tests):
     def __init__(self, *args, **kwds):
         Tests.__init__(self, *args, **kwds)
-ExpensiveBaselineTests = unittest.category('expensive')(ExpensiveBaselineTests)
 
 """
 The following test generates an nl file for the test case

@@ -25,7 +25,6 @@ except:
 class ExpensiveTests(unittest.TestCase):
     pass
 
-@unittest.category('smoke', 'nightly', 'expensive')
 class SmokeTests(unittest.TestCase):
     pass
 

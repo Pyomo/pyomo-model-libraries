@@ -43,12 +43,11 @@ class Tests(unittest.TestCase):
 class SmokeASLTests(Tests):
     def __init__(self, *args, **kwds):
         Tests.__init__(self, *args, **kwds)
-SmokeASLTests = unittest.category('smoke','nightly','expensive')(SmokeASLTests)
 
+@unittest.category('expensive')
 class ExpensiveASLTests(Tests):
     def __init__(self, *args, **kwds):
         Tests.__init__(self, *args, **kwds)
-ExpensiveASLTests = unittest.category('expensive')(ExpensiveASLTests)
 
 #
 # The following test calls the gjh_asl_json executable to
