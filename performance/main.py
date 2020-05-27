@@ -116,10 +116,13 @@ def getPyomoInfo():
 def getRunInfo():
     info = {
         'time': time.time(),
-        'python': [platform.python_implementation()] + list(sys.version_info),
+        'python_implementation': platform.python_implementation(),
+        'python_version': tuple(sys.version_info),
         'platform': platform.system(),
         'hostname': platform.node(),
     }
+    if info['python_implementation'].lower() == 'pypy':
+        info['pypy_version'] = tuple(sys.pypy_version_info)
     info.update(getPyomoInfo())
     return info
 
