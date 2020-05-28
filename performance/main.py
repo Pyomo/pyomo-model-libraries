@@ -33,13 +33,22 @@ class TimingHandler(logging.Handler):
         if self._testRecord is None:
             return
         cat = record.msg.__class__.__name__
-        if cat not in self._testRecord:
-            self._testRecord[cat] = OrderedDict()
+        if cat in self._testRecord:
+            _cat = self._testRecord[cat]
+        else:
+            _cat = self._testRecord[cat] = OrderedDict()
         try:
             name = record.msg.obj.name
         except AttributeError:
             name = record.msg.obj.__class__.__name__
-        self._testRecord[cat][name] = record.msg.timer
+        if name in _cat:
+            _val = _cat[name]
+            if type(_val) is not list:
+                _val = [_val]
+            _val.append(record.msg.timer)
+        else:
+            _val = record.msg.timer
+        _cat[name] = _val
 
 
 class DataRecorder(nose.plugins.base.Plugin):
