@@ -17,7 +17,7 @@
 
 from pyomo.environ import *
 from pyomo.opt import SolverFactory
-import numpy as np
+from pyomo.common.dependencies import numpy as np
 
 def lingen(ntrain, p):
     nval = 1000

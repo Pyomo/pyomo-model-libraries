@@ -3,6 +3,7 @@ import six
 
 import pyutilib.th as unittest
 
+from pyomo.common.dependencies import numpy_available
 from pyomo.common.timing import TicTocTimer
 from pyomo.opt import WriterFactory
 
@@ -201,6 +202,7 @@ class TestJump(TestModel):
 @unittest.category('performance', 'nl', 'lp', 'bar', 'gams')
 class TestDevel(TestModel):
 
+    @unittest.skipIf(not numpy_available, 'numpy is not available')
     @unittest.category('devel')
     def test_issue_691(self):
         self._run_test(osarwar_github_issue_691.create_model, 1000)
