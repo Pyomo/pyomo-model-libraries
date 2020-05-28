@@ -22,6 +22,8 @@ from .models.devel import (
     osarwar_github_issue_691,
 )
 
+CWD = os.getcwd()
+
 class TestModel(unittest.TestCase):
 
     def _run_test(self, model_lib, data):
@@ -45,7 +47,7 @@ class TestModel(unittest.TestCase):
             if not getattr(self, fmt, 0):
                 continue
             writer = WriterFactory(fmt)
-            fname = 'tmp.test.'+fmt
+            fname = os.path.join(CWD, 'tmp.test.'+fmt)
             self.assertFalse(os.path.exists(fname))
             try:
                 timer.tic('')
