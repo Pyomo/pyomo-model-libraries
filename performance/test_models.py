@@ -3,7 +3,15 @@ import six
 
 import pyutilib.th as unittest
 
-from pyomo.common.dependencies import numpy_available
+try:
+    from pyomo.common.dependencies import numpy_available
+except ImportError:
+    try:
+        import numpy
+        numpy_available = True
+    except ImportError:
+        numpy_available = False
+
 from pyomo.common.timing import TicTocTimer
 from pyomo.opt import WriterFactory
 
