@@ -15,6 +15,7 @@ from six import iteritems
 
 import pyutilib.th as unittest
 import pyomo
+from pyomo.version import version_info as pyomo_version
 from pyomo.common.timing import TicTocTimer, report_timing
 
 class TimingHandler(logging.Handler):
@@ -119,7 +120,8 @@ def getPyomoInfo():
         branch = os.popen('git symbolic-ref -q --short HEAD').read().strip()
     finally:
         os.chdir(cwd)
-    return {'branch':branch, 'sha':sha, 'diffs':diffs}
+    return { 'branch':branch, 'sha':sha, 'diffs':diffs,
+             'pyomo_version': pyomo_version }
 
 
 def getRunInfo():
