@@ -136,7 +136,7 @@ def getRunInfo(cython):
         info['pypy_version'] = tuple(sys.pypy_version_info)
     if cython:
         import Cython
-        info['cython'] = tuple(Cython.__version__.split('.'))
+        info['cython'] = tuple(int(x) for x in Cython.__version__.split('.'))
     info.update(getPyomoInfo())
     return info
 
