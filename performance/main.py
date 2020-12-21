@@ -124,7 +124,7 @@ def getPyomoInfo():
              'pyomo_version': pyomo_version }
 
 
-def getRunInfo():
+def getRunInfo(cython):
     info = {
         'time': time.time(),
         'python_implementation': platform.python_implementation(),
@@ -134,12 +134,15 @@ def getRunInfo():
     }
     if info['python_implementation'].lower() == 'pypy':
         info['pypy_version'] = tuple(sys.pypy_version_info)
+    if cython:
+        import Cython
+        info['cython'] = tuple(Cython.__version__.split('.'))
     info.update(getPyomoInfo())
     return info
 
 
-def run_tests(argv):
-    results = ( getRunInfo(), OrderedDict() )
+def run_tests(cython, argv):
+    results = ( getRunInfo(cython), OrderedDict() )
     recorder = DataRecorder(results[1])
     nose.core.run(argv=argv, addplugins=[recorder])
     return results
@@ -154,7 +157,7 @@ def main(argv):
         action='store',
         dest='output',
         default=None,
-        help='Store the test results to the specified file'
+        help='Store the test results to the specified file.'
     )
     parser.add_argument(
         '-n', '--replicates',
@@ -162,19 +165,25 @@ def main(argv):
         dest='replicates',
         type=int,
         default=1,
-        help='Number of replicates to run'
+        help='Number of replicates to run.'
+    )
+    parser.add_argument(
+        '--with-cython',
+        action='store_true',
+        dest='cython',
+        help='Cythonization enabled.'
     )
 
     options, argv = parser.parse_known_args(argv)
+    cython = options.cython
     if options.output:
         ostream = open(options.output, 'w')
         close_ostream = True
     else:
         ostream = sys.stdout
         close_ostream = False
-
     try:
-        results = tuple(run_tests(argv) for i in range(options.replicates))
+        results = tuple(run_tests(cython, argv) for i in range(options.replicates))
         results = (results[0][0],) + tuple(r[1] for r in results)
         # Note: explicitly specify sort_keys=False so that ujson
         # preserves the OrderedDict keys in the JSON
