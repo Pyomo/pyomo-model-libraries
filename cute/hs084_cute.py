@@ -47,19 +47,28 @@ def obj_rule(model):
 model.obj = Objective(rule=obj_rule)
 
 def cons1_rule(model):
-    return 0 <= model.a[7]*model.x[1] + model.a[8]*model.x[1]*model.x[2]\
-             + model.a[9]*model.x[1]*model.x[3] + model.a[10]*model.x[1]*model.x[4]\
-             + model.a[11]*model.x[1]*model.x[5] <= 294000.0
+    return inequality(
+        0,
+        model.a[7]*model.x[1] + model.a[8]*model.x[1]*model.x[2]
+        + model.a[9]*model.x[1]*model.x[3] + model.a[10]*model.x[1]*model.x[4]
+        + model.a[11]*model.x[1]*model.x[5],
+        294000.0)
 model.constr1 = Constraint(rule=cons1_rule)
 
 def cons2_rule(model):
-    return 0 <= model.a[12]*model.x[1] + model.a[13]*model.x[1]*model.x[2]\
-             + model.a[14]*model.x[1]*model.x[3] + model.a[15]*model.x[1]*model.x[4]\
-             + model.a[16]*model.x[1]*model.x[5] <= 294000.0
+    return inequality(
+        0,
+        model.a[12]*model.x[1] + model.a[13]*model.x[1]*model.x[2]
+        + model.a[14]*model.x[1]*model.x[3] + model.a[15]*model.x[1]*model.x[4]
+        + model.a[16]*model.x[1]*model.x[5],
+        294000.0)
 model.constr2 = Constraint(rule=cons2_rule)
 
 def cons3_rule(model):
-    return 0 <= model.a[17]*model.x[1] + model.a[18]*model.x[1]*model.x[2]\
-             + model.a[19]*model.x[1]*model.x[3] + model.a[20]*model.x[1]*model.x[4]\
-             + model.a[21]*model.x[1]*model.x[5] <= 277200.0
+    return inequality(
+        0,
+        model.a[17]*model.x[1] + model.a[18]*model.x[1]*model.x[2]
+        + model.a[19]*model.x[1]*model.x[3] + model.a[20]*model.x[1]*model.x[4]
+        + model.a[21]*model.x[1]*model.x[5],
+        277200.0)
 model.constr3 = Constraint(rule=cons3_rule)

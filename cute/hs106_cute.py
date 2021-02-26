@@ -43,11 +43,11 @@ model.c3 = Constraint(expr=1 - b * (model.x[8] - model.x[5]) >= 0)
 model.c4 = Constraint(expr=model.x[1] * model.x[6] - c * model.x[4] - d * model.x[1] + e >= 0)
 model.c5 = Constraint(expr=model.x[2] * model.x[7] - f * model.x[5] - model.x[2] * model.x[4] + f *model.x[4] >= 0)
 model.c6 = Constraint(expr=model.x[3] * model.x[8] - g - model.x[3] * model.x[5] + h * model.x[5] >= 0)
-model.c7 = Constraint(expr=100 <= model.x[1] <= 10000)
+model.c7 = Constraint(expr=inequality(100, model.x[1], 10000))
 def cons8(model,i):
-    return 1000 <= model.x[i] <= 10000
+    return inequality(1000, model.x[i], 10000)
 model.c8 = Constraint(model.M,rule=cons8)
 def cons9(model,i):
-    return 10 <= model.x[i] <= 1000
+    return inequality(10, model.x[i], 1000)
 model.c9 = Constraint(model.L,rule=cons9)
     

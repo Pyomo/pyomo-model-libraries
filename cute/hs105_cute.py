@@ -62,26 +62,26 @@ def cons1(model):
     return 1 - model.x[1] - model.x[2] >= 0
 model.C1 = Constraint(rule=cons1)
 def bound1(model):
-    return .001 <= model.x[1] <= .499
+    return inequality(.001, model.x[1], .499)
 model.B1 = Constraint(rule=bound1)
 def bound2(model):
-    return .001 <= model.x[2] <= .449
+    return inequality(.001, model.x[2], .449)
 model.B2 = Constraint(rule=bound2)
 def bound3(model):
-    return 100 <= model.x[3] <= 180
+    return inequality(100, model.x[3], 180)
 model.B3 = Constraint(rule=bound3)
 def bound4(model):
-    return 130 <= model.x[4] <= 210
+    return inequality(130, model.x[4], 210)
 model.B4 = Constraint(rule=bound4)
 def bound5(model):
-    return 170 <= model.x[5] <= 240
+    return inequality(170, model.x[5], 240)
 model.B5 = Constraint(rule=bound5)
 def bound6(model):
-    return 5 <= model.x[6] <= 25
+    return inequality(5, model.x[6], 25)
 model.B6 = Constraint(rule=bound6)
 def bound7(model):
-    return 5 <= model.x[7] <= 25
+    return inequality(5, model.x[7], 25)
 model.B7 = Constraint(rule=bound7)
 def bound8(model):
-    return 5 <= model.x[8] <= 25
+    return inequality(5, model.x[8], 25)
 model.B8 = Constraint(rule=bound8)

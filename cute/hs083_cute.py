@@ -44,16 +44,26 @@ def obj_rule(model):
 model.obj = Objective(rule=obj_rule, sense=minimize)
 
 def cons1_rule(model):
-    return 0 <= model.a[1] + model.a[2]*model.x[2]*model.x[5] + model.a[3]*model.x[1]*model.x[4]\
-         - model.a[4]*model.x[3]*model.x[5] <= 92
+    return inequality(
+        0,
+        model.a[1] + model.a[2]*model.x[2]*model.x[5]
+        + model.a[3]*model.x[1]*model.x[4] - model.a[4]*model.x[3]*model.x[5],
+        92)
 model.constr1 = Constraint(rule=cons1_rule)
 
 def cons2_rule(model):
-    return 0 <= model.a[5] + model.a[6]*model.x[2]*model.x[5] + model.a[7]*model.x[1]*model.x[2]\
-         + model.a[8]*model.x[3]**2 - 90 <= 20
+    return inequality(
+        0,
+        model.a[5] + model.a[6]*model.x[2]*model.x[5]
+        + model.a[7]*model.x[1]*model.x[2] + model.a[8]*model.x[3]**2 - 90,
+        20)
 model.constr2 = Constraint(rule=cons2_rule)
 
 def cons3_rule(model):
-    return 0 <= model.a[9] + model.a[10]*model.x[3]*model.x[5] + model.a[11]*model.x[1]*model.x[3]\
-         + model.a[12]*model.x[3]*model.x[4] -20 <= 5
+    return inequality(
+        0,
+        model.a[9] + model.a[10]*model.x[3]*model.x[5]
+        + model.a[11]*model.x[1]*model.x[3] + model.a[12]*model.x[3]*model.x[4]
+        - 20,
+        5)
 model.constr3 = Constraint(rule=cons3_rule)

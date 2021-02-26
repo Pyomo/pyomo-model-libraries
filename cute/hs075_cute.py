@@ -26,7 +26,8 @@ model.x[4].setlb(-model.a)
 
 model.obj = Objective(expr = 3.0*model.x[1] + 1.0e-6*model.x[1]**3 + 2*model.x[2] + 2.0e-6*model.x[2]**3/3)
 
-model.constr1 = Constraint(expr = -model.a <= model.x[4] - model.x[3] <= model.a)
+model.constr1 = Constraint(expr = inequality(
+    -model.a, model.x[4] - model.x[3], model.a))
 model.constr2 = Constraint(expr = model.x[1] == 1000*sin(-model.x[3] - 0.25) + 1000*sin(-model.x[4] - 0.25) + 894.8)
 model.constr3 = Constraint(expr = model.x[2] == 1000*sin(model.x[3] - 0.25) + 1000*sin(model.x[3] - model.x[4] - 0.25) + 894.8)
 model.constr4 = Constraint(expr = 0.0 == 1000*sin(model.x[4] - 0.25) + 1000*sin(model.x[4] - model.x[3] - 0.25) + 1294.8)
