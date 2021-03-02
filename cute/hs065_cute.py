@@ -22,6 +22,6 @@ model.obj = Objective(expr =(model.x[1] - model.x[2])**2 + (model.x[1] + model.x
     + (model.x[3] - 5)**2)
 
 model.constr1 = Constraint(expr=model.x[1]**2 + model.x[2]**2 + model.x[3]**2 <= 48)
-model.constr2 = Constraint(expr=-4.5 <= model.x[1] <= 4.5)
-model.constr3 = Constraint(expr=-4.5 <= model.x[2] <= 4.5)
-model.constr4 = Constraint(expr= -5 <= model.x[3] <=   5)
+model.constr2 = Constraint(expr=inequality(-4.5, model.x[1], 4.5))
+model.constr3 = Constraint(expr=inequality(-4.5, model.x[2], 4.5))
+model.constr4 = Constraint(expr=inequality( -5, model.x[3],   5))

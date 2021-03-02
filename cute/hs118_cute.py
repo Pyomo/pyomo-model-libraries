@@ -57,13 +57,13 @@ model.x[15] = 20
 model.obj = Objective(expr=sum((2.3*model.x[3*k+1] + 0.0001*model.x[3*k+1]**2 + 1.7*model.x[3*k+2] + 0.0001*model.x[3*k+2]**2 + 2.2*model.x[3*k+3] + 0.00015*model.x[3*k+3]**2) for k in model.L))
 
 def cons1_rule(model,j):
-    return 0 <= model.x[3*j+1] - model.x[3*j-2] + 7 <= 13
+    return inequality(0, model.x[3*j+1] - model.x[3*j-2] + 7, 13)
 model.constr1 = Constraint(model.M,rule=cons1_rule)
 def cons2_rule(model,j):
-    return 0 <= model.x[3*j+2] - model.x[3*j-1] + 7 <= 14
+    return inequality(0, model.x[3*j+2] - model.x[3*j-1] + 7, 14)
 model.constr2 = Constraint(model.M,rule=cons2_rule)
 def cons3_rule(model,j):
-    return 0 <= model.x[3*j+3] - model.x[3*j] + 7 <= 13
+    return inequality(0, model.x[3*j+3] - model.x[3*j] + 7, 13)
 model.constr3 = Constraint(model.M,rule=cons3_rule)
 
 model.constr4 = Constraint(expr= model.x[1] + model.x[2] + model.x[3] >= 60)

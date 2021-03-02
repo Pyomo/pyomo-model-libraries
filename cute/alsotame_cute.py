@@ -39,5 +39,5 @@ model.y = Var()
 model.f = Objective (expr=exp(model.x-2*model.y))
 
 model.cons1 = Constraint(expr=sin(-model.x+model.y-1)==0)
-model.cons2 = Constraint (expr=-2<=model.x<=2)
-model.cons3 = Constraint(expr=-1.5<=model.y<=1.5)
+model.cons2 = Constraint(expr=inequality(-2, model.x, 2))
+model.cons3 = Constraint(expr=inequality(-1.5, model.y, 1.5))

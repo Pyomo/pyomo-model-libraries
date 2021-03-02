@@ -124,6 +124,6 @@ model.si2a = Constraint(expr=model.tt2 * model.bt2 - 240.0*model.pw2>=0.0)
 model.si2b = Constraint(expr=model.tt2 * model.bt2 - 290.0*model.pw2<=0.0)
 model.si3a = Constraint(expr=model.tt3 * model.bt3 - 340.0*model.pw3>=0.0)
 model.si3b = Constraint(expr=model.tt3 * model.bt3 - 375.0*model.pw3<=0.0)
-model.glgcon = Constraint(expr=0.0<=-32.0*(model.tt1 * model.bt1 * (log(model.mf1)) ) /model.pw1 - 32.0*(model.tt2 * model.bt2 * (log(model.mf2)) ) /model.pw2 - 32.0*(model.tt3 * model.bt3 * (log(model.mf3)) ) /model.pw3 - 35000.0 <= 15000.0)
+model.glgcon = Constraint(expr=inequality(0.0, -32.0*(model.tt1 * model.bt1 * (log(model.mf1)) ) /model.pw1 - 32.0*(model.tt2 * model.bt2 * (log(model.mf2)) ) /model.pw2 - 32.0*(model.tt3 * model.bt3 * (log(model.mf3)) ) /model.pw3 - 35000.0, 15000.0))
 
 

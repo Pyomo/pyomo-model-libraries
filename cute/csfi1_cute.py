@@ -60,7 +60,7 @@ def con2(model):
 def con3(model):
     return model.wid/model.thick <= maxaspr
 def con4(model):
-    return 0.0 <= model.thick*model.wid - minarea <= maxarea-minarea
+    return inequality(0.0, model.thick*model.wid - minarea, maxarea-minarea)
     
 model.cons1 = Constraint(rule=con1)
 model.cons2 = Constraint(rule=con2)

@@ -46,8 +46,8 @@ for i in model.N:
 model.f = Objective(expr=-100+0.01*(model.x[1]**2+model.x[3]**2+model.x[5]**2+model.x[6]**2) + (model.x[2]**2+model.x[4]**2+model.x[7]**2))
 
 model.cons1 = Constraint(expr=10.0*model.x[1]-model.x[2]-10>=0)
-model.cons2 = Constraint(expr=2<=model.x[1]<=50)
-model.cons3 = Constraint(expr=-50<=model.x[2]<=50)
+model.cons2 = Constraint(expr=inequality(2, model.x[1], 50))
+model.cons3 = Constraint(expr=inequality(-50, model.x[2], 50))
 model.cons4 = Constraint(expr=model.x[3]<=50)
 model.cons5 = Constraint(expr=2<=model.x[4])
 model.cons6 = Constraint(expr=model.x[6]<=0)

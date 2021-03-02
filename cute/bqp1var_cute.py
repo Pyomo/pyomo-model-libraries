@@ -40,4 +40,4 @@ def f(model):
     return (model.x1 + model.x1**2)
 model.f=Objective(rule=f,sense=minimize)
 
-model.cons1 = Constraint(expr=0.0 <= model.x1 <= 0.5)
+model.cons1 = Constraint(expr=inequality(0.0, model.x1, 0.5))

@@ -42,6 +42,6 @@ model.f = Objective (expr=model.x[3]-1 +    model.x[1]**2+\
     sin(model.x[4])**4)
 
 model.cons1 = Constraint(expr=model.x[2]>=1)
-model.cons2 = Constraint(expr=-1e10<=model.x[3]<=1)
+model.cons2 = Constraint(expr=inequality(-1e10, model.x[3], 1))
 model.cons3 = Constraint(expr=model.x[4]==2)
-model.cons4 = Constraint(expr=model.x[1]**2+model.x[2]**2-1<=0)
+model.cons4 = Constraint(expr=model.x[1]**2+model.x[2]**2-1 <= 0)
