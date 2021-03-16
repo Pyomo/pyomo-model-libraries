@@ -11,6 +11,7 @@ _dir = os.path.dirname(__file__)
 
 @unittest.category('performance', 'short', 'nl', 'bar', 'gams')
 class TestStochPDEgas(unittest.TestCase):
+    # These two lines can be removed after we finish the PyUtilib divorce
     pyutilib_th = 1
     pyomo_unittest = 1
     def test_stochpdegas_automatic(self):

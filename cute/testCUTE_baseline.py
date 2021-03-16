@@ -22,6 +22,7 @@ sys.path.pop()
 
 
 class Tests(unittest.TestCase):
+    # These two lines can be removed after we finish the PyUtilib divorce
     pyutilib_th = 1
     pyomo_unittest = 1
     def pyomo(self, cmd):
