@@ -97,7 +97,8 @@ class Tests(unittest.TestCase):
         try:
             with open(currdir+name+'.test.json', 'r') as test, \
                 open(currdir+name+'.ampl.json', 'r') as base:
-                    self.assertStructuredAlmostEqual(test, base)
+                    self.assertStructuredAlmostEqual(json.load(test),
+                                                     json.load(base))
         except AssertionError:
             # Make sure this is not a simple case of Pyomo/AMPL moving
             # constants in the constraint body to the upper/lower bound
@@ -119,7 +120,8 @@ class Tests(unittest.TestCase):
             f.close()
             with open(currdir+name+'.test.json', 'r') as test, \
                 open(currdir+name+'.ampl.json', 'r') as base:
-                    self.assertStructuredAlmostEqual(test, base)
+                    self.assertStructuredAlmostEqual(json.load(test),
+                                                     json.load(base))
             # If the json files match at this point, it is
             # almost entirely certain that the difference had to
             # do with one of AMPL or Pyomo moving a fixed part
