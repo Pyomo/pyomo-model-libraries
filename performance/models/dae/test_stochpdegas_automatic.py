@@ -1,6 +1,6 @@
 import os
 
-import pyutilib.th as unittest
+import pyomo.common.unittest as unittest
 
 from pyomo.common.timing import TicTocTimer
 from pyomo.environ import *
@@ -11,6 +11,8 @@ _dir = os.path.dirname(__file__)
 
 @unittest.category('performance', 'short', 'nl', 'bar', 'gams')
 class TestStochPDEgas(unittest.TestCase):
+    pyutilib_th = 1
+    pyomo_unittest = 1
     def test_stochpdegas_automatic(self):
         timer = TicTocTimer()
         from .stochpdegas_automatic import model

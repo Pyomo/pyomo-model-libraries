@@ -13,7 +13,7 @@ try:
 except:
     pass
 
-import pyutilib.th as unittest
+import pyomo.common.unittest as unittest
 import pyutilib.subprocess
 import pyomo.scripting.pyomo_main as main
 import pyomo.core.expr.current as Expr
@@ -34,7 +34,8 @@ if os.system('gjh_asl_json -v') == 0:
     has_gjh_asl_json = True
 
 class Tests(unittest.TestCase):
-
+    pyutilib_th = 1
+    pyomo_unittest = 1
     def pyomo(self, cmd):
         os.chdir(currdir)
         output = main.main(['convert', '--logging=quiet', '-c']+cmd)
