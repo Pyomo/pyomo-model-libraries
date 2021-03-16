@@ -6,7 +6,6 @@ from itertools import zip_longest
 import sys
 import os
 from os.path import abspath, dirname, join
-from filecmp import cmp
 
 import pyomo.common.unittest as unittest
 import pyomo.scripting.pyomo_main as main
