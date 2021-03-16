@@ -1,7 +1,7 @@
 import os
 import six
 
-import pyutilib.th as unittest
+import pyomo.common.unittest as unittest
 
 try:
     from pyomo.common.dependencies import numpy_available
@@ -33,7 +33,9 @@ from .models.devel import (
 CWD = os.getcwd()
 
 class TestModel(unittest.TestCase):
-
+    # These two lines can be removed after we finish the PyUtilib divorce
+    pyutilib_th = 1
+    pyomo_unittest = 1
     def _run_test(self, model_lib, data):
         timer = TicTocTimer()
         if isinstance(data, six.string_types) and data.endswith('.dat'):

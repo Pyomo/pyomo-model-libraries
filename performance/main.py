@@ -13,7 +13,7 @@ except ImportError:
 from collections import OrderedDict
 from six import iteritems
 
-import pyutilib.th as unittest
+import pyomo.common.unittest as unittest
 import pyomo
 from pyomo.version import version_info as pyomo_version
 from pyomo.common.timing import TicTocTimer, report_timing
