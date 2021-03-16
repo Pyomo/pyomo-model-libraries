@@ -74,18 +74,18 @@ class SmokeBaselineTests(Tests):
         self.pyomo_baseline(name)
 
 
-# @unittest.category('expensive')
-# class ExpensiveBaselineTests(Tests):
-#     def __init__(self, *args, **kwds):
-#         Tests.__init__(self, *args, **kwds)
+@unittest.category('expensive')
+class ExpensiveBaselineTests(Tests):
+    def __init__(self, *args, **kwds):
+        Tests.__init__(self, *args, **kwds)
 
-#     """
-#     The following test generates an nl file for the test case
-#     and checks that it matches the current pyomo baseline nl file.
-#     """
-#     @parameterized.parameterized.expand(input=expensive)
-#     def test_pyomo_baseline_expensive(self, name):
-#         self.pyomo_baseline(name)
+    """
+    The following test generates an nl file for the test case
+    and checks that it matches the current pyomo baseline nl file.
+    """
+    @parameterized.parameterized.expand(input=expensive)
+    def test_pyomo_baseline_expensive(self, name):
+        self.pyomo_baseline(name)
 
 
 if __name__ == "__main__":
