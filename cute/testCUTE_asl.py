@@ -3,6 +3,7 @@
 #
 
 import sys
+import subprocess
 import os
 from os.path import abspath, dirname
 import warnings
@@ -14,7 +15,6 @@ except:
     pass
 
 import pyomo.common.unittest as unittest
-import pyutilib.subprocess
 import pyomo.scripting.pyomo_main as main
 import pyomo.core.expr.current as Expr
 from pyomo.opt import ProblemFormat
@@ -84,16 +84,18 @@ class Tests(unittest.TestCase):
             pass
 
         # obtain the nl file summary information for comparison with ampl
-        p = pyutilib.subprocess.run(
-            'gjh_asl_json '+currdir+name+'.test.nl rows='
-            +currdir+name+'.test.row cols='+currdir+name+'.test.col')
-        self.assertTrue(p[0] == 0, msg=p[1])
+        cmd = 'gjh_asl_json '+currdir+name+'.test.nl rows='+currdir+name+'.test.row cols='+currdir+name+'.test.col'
+        p = subprocess.run(cmd.split(),
+            universal_newlines=True, stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE)
+        self.assertTrue(p.returncode == 0, msg=p.stdout)
 
         # obtain the nl file summary information for comparison with pyomo
-        p = pyutilib.subprocess.run(
-            'gjh_asl_json '+currdir+name+'.ampl.nl rows='
-            +currdir+name+'.ampl.row cols='+currdir+name+'.ampl.col')
-        self.assertTrue(p[0] == 0, msg=p[1])
+        cmd = 'gjh_asl_json '+currdir+name+'.ampl.nl rows='+currdir+name+'.ampl.row cols='+currdir+name+'.ampl.col'
+        p = subprocess.run(cmd.split(),
+            universal_newlines=True, stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE)
+        self.assertTrue(p.returncode == 0, msg=p.stdout)
         try:
             with open(currdir+name+'.test.json', 'r') as test, \
                 open(currdir+name+'.ampl.json', 'r') as base:
