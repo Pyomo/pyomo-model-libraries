@@ -14,6 +14,16 @@ class TestStochPDEgas(unittest.TestCase):
     # These two lines can be removed after we finish the PyUtilib divorce
     pyutilib_th = 1
     pyomo_unittest = 1
+
+    @unittest.nottest
+    def recordTestData(self, name, value):
+        """A method for recording data associated with a test.  This method is only
+           meaningful when running this TestCase with 'nose', using the TestData plugin.
+        """
+        tmp = getattr(self, 'testdata', None)
+        if not tmp is None:
+            tmp[name] = value
+
     def test_stochpdegas_automatic(self):
         timer = TicTocTimer()
         from .stochpdegas_automatic import model
