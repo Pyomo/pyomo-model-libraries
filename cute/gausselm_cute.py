@@ -72,7 +72,7 @@ def conspijk_rule(model,k,i,j):
 model.conspijk = Constraint(consmijk_index,rule=conspijk_rule)
 
 def var_bnd_rule(model,i,j):
-    return -1.0 <= model.x[1,i,j] <= 1.0
+    return inequality(-1.0, model.x[1,i,j], 1.0)
 model.var_bnd = Constraint(RangeSet(1,n),RangeSet(1,n),rule=var_bnd_rule)
 
 def var_bnd_diag_rule(model,k):

@@ -42,5 +42,5 @@ def f_rule(model):
 model.f = Objective(rule=f_rule)
 
 def cons1(model,i):
-    return 0.0<=model.x[i]<=0.9
+    return inequality(0.0, model.x[i], 0.9)
 model.cons1 = Constraint(RangeSet(1,model.N-1),rule=cons1)
