@@ -11,7 +11,6 @@ except ImportError:
     import json
 
 from collections import OrderedDict
-from six import iteritems
 
 import pyomo.common.unittest as unittest
 import pyomo
@@ -99,7 +98,7 @@ class DataRecorder(nose.plugins.base.Plugin):
         test.test.testdata = self._data[addr] = OrderedDict()
         self._timingHandler.setTest(test.test.testdata)
         # disable any categories we are not interested in
-        for cat, req in iteritems(self._category):
+        for cat, req in self._category.items():
             if getattr(test.test, cat, 0):
                 setattr(test.test, cat, req)
         self._timer.tic("")

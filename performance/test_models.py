@@ -1,5 +1,4 @@
 import os
-import six
 
 import pyomo.common.unittest as unittest
 
@@ -49,7 +48,7 @@ class TestModel(unittest.TestCase):
 
     def _run_test(self, model_lib, data):
         timer = TicTocTimer()
-        if isinstance(data, six.string_types) and data.endswith('.dat'):
+        if isinstance(data, str) and data.endswith('.dat'):
             model = model_lib()
             modeldir = os.path.dirname(model_lib.__code__.co_filename)
             dat_file = os.path.join(modeldir, data)
