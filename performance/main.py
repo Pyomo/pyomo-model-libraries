@@ -1,4 +1,5 @@
 import argparse
+import gc
 import logging
 import nose
 import os
@@ -101,6 +102,9 @@ class DataRecorder(nose.plugins.base.Plugin):
         for cat, req in self._category.items():
             if getattr(test.test, cat, 0):
                 setattr(test.test, cat, req)
+        # Trigger garbage collection (try and get a "clean" environment)
+        gc.collect()
+        gc.collect()
         self._timer.tic("")
 
     def afterTest(self, test):
