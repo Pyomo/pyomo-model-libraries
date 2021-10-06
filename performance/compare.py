@@ -46,25 +46,27 @@ def compare(base_data, test_data):
             [ test['test_time'] ],
             [ test['test_time'] - base['test_time'],
               (None if not base['test_time'] else
-               (test['test_time'] - base['test_time']) / base['test_time']), ],
+               100 * (test['test_time'] - base['test_time'])
+               / base['test_time']), ],
             [ (None if (field not in base or field not in test) else
                test[field] - base[field]) for field in fields ],
             [ test.get(field, None) for field in fields ]
         ])
     lines.sort()
     return (
-        [['test_name'], ['test_time'], ['abs_time', 'rel_time'], fields, fields],
+        [['test_name'], ['test_time'], ['time(\u0394)', 'time(%)'],
+         fields, fields],
         abs_rel,
         lines,
     )
 
-def _print_field(os, val, width, tol):
+def _print_field(os, val, width, tol, prec):
     if val is None:
         val = '--'
     if type(val) is str:
         os.write((' %%%ds' % (width-1)) % val)
         return
-    val_str = ('%%%d.3f' % width) % val
+    val_str = ('%%%d.%sf' % (width, prec)) % val
     if tol is None:
         os.write(val_str)
     elif val < -tol:
@@ -74,7 +76,7 @@ def _print_field(os, val, width, tol):
     else:
         os.write(val_str)
 
-def print_comparison(os, data, thresholds=[0.1, 0.01, None]):
+def print_comparison(os, data, thresholds=[0.1, 1, None], precision=[3,2,3]):
     """Print the 'comparison' table from the data to os
 
     Parameters
@@ -86,11 +88,14 @@ def print_comparison(os, data, thresholds=[0.1, 0.01, None]):
     threshold: list
         List of 3 floats / None describing the coloring thresholds for
         [absolute metrics, relative metrics, and other metrics]
+    precision: list
+        List of 3 ints specifying floating point output precision for
+        [absolute metrics, relative metrics, and other metrics]
 
     """
-    _printer([2, 1, 3, 0], os, data, thresholds)
+    _printer([2, 1, 3, 0], os, data, thresholds, precision)
 
-def print_test_result(os, data, thresholds=[0.1, 0.01, None]):
+def print_test_result(os, data, thresholds=[0.1, 1, None], precision=[3,2,3]):
     """Print the 'test result' table from the data to os
 
     Parameters
@@ -102,11 +107,14 @@ def print_test_result(os, data, thresholds=[0.1, 0.01, None]):
     threshold: list
         List of 3 floats / None describing the coloring thresholds for
         [absolute metrics, relative metrics, and other metrics]
+    precision: list
+        List of 3 ints specifying floating point output precision for
+        [absolute metrics, relative metrics, and other metrics]
 
     """
-    _printer([1, 4, 0], os, data, thresholds)
+    _printer([1, 4, 0], os, data, thresholds, precision)
 
-def _printer(arglist, os, data, thresholds):
+def _printer(arglist, os, data, thresholds, precision):
     fields = sum((data[0][i] for i in arglist), [])
     abs_rel = sum((data[1][i] for i in arglist), [])
     lines = [ sum((line[i] for i in arglist), []) for line in data[2] ]
@@ -117,7 +125,12 @@ def _printer(arglist, os, data, thresholds):
     os.write('\n' + '-'*sum(field_w) + '\n')
     for line in sorted(lines):
         for i, width in enumerate(field_w):
-            _print_field(os, line[i], width, thresholds[abs_rel[i]])
+            _print_field(os,
+                         line[i],
+                         width,
+                         thresholds[abs_rel[i]],
+                         precision[abs_rel[i]],
+            )
         os.write('\n')
 
 if __name__ == '__main__':
