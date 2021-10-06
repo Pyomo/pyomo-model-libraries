@@ -1,3 +1,4 @@
+import gc
 import os
 
 import pyomo.common.unittest as unittest
@@ -47,6 +48,7 @@ class TestModel(unittest.TestCase):
             tmp[name] = value
 
     def _run_test(self, model_lib, data):
+        gc.collect()
         timer = TicTocTimer()
         if isinstance(data, str) and data.endswith('.dat'):
             model = model_lib()
@@ -69,6 +71,7 @@ class TestModel(unittest.TestCase):
             writer = WriterFactory(fmt)
             fname = os.path.join(CWD, 'tmp.test.'+fmt)
             self.assertFalse(os.path.exists(fname))
+            gc.collect()
             try:
                 timer.tic('')
                 writer(model, fname, lambda x:True, {})
