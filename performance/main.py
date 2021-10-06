@@ -145,9 +145,13 @@ def getRunInfo(cython):
 
 
 def run_tests(cython, argv):
+    gc.collect()
+    gc.collect()
     results = ( getRunInfo(cython), OrderedDict() )
     recorder = DataRecorder(results[1])
     nose.core.run(argv=argv, addplugins=[recorder])
+    gc.collect()
+    gc.collect()
     return results
 
 

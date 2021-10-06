@@ -48,6 +48,7 @@ class TestModel(unittest.TestCase):
             tmp[name] = value
 
     def _run_test(self, model_lib, data):
+        gc.collect()
         timer = TicTocTimer()
         if isinstance(data, str) and data.endswith('.dat'):
             model = model_lib()
