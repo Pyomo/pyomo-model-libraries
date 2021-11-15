@@ -115,6 +115,9 @@ class DataRecorder(nose.plugins.base.Plugin):
 
 def getPyomoInfo():
     cwd = os.getcwd()
+    sha = None
+    diffs = []
+    branch = None
     try:
         os.chdir(os.path.dirname(pyomo.__file__))
         sha = os.popen('git rev-parse HEAD').read().strip()
@@ -132,6 +135,7 @@ def getRunInfo(cython):
         'time': time.time(),
         'python_implementation': platform.python_implementation(),
         'python_version': tuple(sys.version_info),
+        'python_build': platform.python_build(),
         'platform': platform.system(),
         'hostname': platform.node(),
     }
@@ -167,6 +171,15 @@ def main(argv):
         help='Store the test results to the specified file.'
     )
     parser.add_argument(
+        '-d', '--dir',
+        action='store',
+        dest='output_dir',
+        default=None,
+        help='Store the test results in the specified directory.  If -o '
+        'is not specified, then a file name is automatically generated '
+        'based on the git branch and hash.'
+    )
+    parser.add_argument(
         '-n', '--replicates',
         action='store',
         dest='replicates',
@@ -183,22 +196,35 @@ def main(argv):
 
     options, argv = parser.parse_known_args(argv)
     cython = options.cython
+    results = tuple(run_tests(cython, argv) for i in range(options.replicates))
+    results = (results[0][0],) + tuple(r[1] for r in results)
+
+    if options.output_dir:
+        if not options.output:
+            options.output = 'perf-%s-%s-%s-%s.json' % (
+                results[0]['branch'],
+                results[0]['sha'][:7] + (
+                    '_mod' if results[0]['diffs'] else ''),
+                results[0]['python_implementation'].lower() + (
+                    '.'.join(str(i) for i in results[0]['python_version'][:3])),
+                time.strftime('%y%m%d:%H%M', time.gmtime())
+            )
+        options.output = os.path.join(options.output_dir, options.output)
     if options.output:
+        print(f"Writing results to {options.output}")
         ostream = open(options.output, 'w')
         close_ostream = True
     else:
         ostream = sys.stdout
         close_ostream = False
     try:
-        results = tuple(run_tests(cython, argv) for i in range(options.replicates))
-        results = (results[0][0],) + tuple(r[1] for r in results)
         # Note: explicitly specify sort_keys=False so that ujson
         # preserves the OrderedDict keys in the JSON
         json.dump(results, ostream, indent=2, sort_keys=False)
     finally:
         if close_ostream:
             ostream.close()
-
+    print("Performance run complete.")
 
 if __name__ == '__main__':
     main(sys.argv)
