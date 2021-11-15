@@ -115,6 +115,9 @@ class DataRecorder(nose.plugins.base.Plugin):
 
 def getPyomoInfo():
     cwd = os.getcwd()
+    sha = None
+    diffs = []
+    branch = None
     try:
         os.chdir(os.path.dirname(pyomo.__file__))
         sha = os.popen('git rev-parse HEAD').read().strip()
@@ -132,6 +135,7 @@ def getRunInfo(cython):
         'time': time.time(),
         'python_implementation': platform.python_implementation(),
         'python_version': tuple(sys.version_info),
+        'python_build': platform.python_build(),
         'platform': platform.system(),
         'hostname': platform.node(),
     }
