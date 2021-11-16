@@ -15,6 +15,12 @@ except ImportError:
 from pyomo.common.timing import TicTocTimer
 from pyomo.opt import WriterFactory
 
+if __name__ == '__main__':
+    import sys
+    from pyomo.common.fileutils import this_file_dir
+    sys.path.insert(0, os.path.dirname(this_file_dir()))
+    __package__ = os.path.basename(this_file_dir())
+
 from .models.misc import (
     pmedian, pmedian_quicksum, pmedian_tuple,
     bilinear, bilinear_nlcontext,
@@ -234,3 +240,7 @@ class TestDevel(TestModel):
     @unittest.category('devel')
     def test_issue_691(self):
         self._run_test(osarwar_github_issue_691.create_model, 1000)
+
+
+if __name__ == '__main__':
+    unittest.main()

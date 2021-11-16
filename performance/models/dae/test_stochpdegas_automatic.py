@@ -98,3 +98,10 @@ class TestStochPDEgas(unittest.TestCase):
                     os.remove(fname)
                 except:
                     pass
+
+if __name__ == '__main__':
+    import sys
+    from pyomo.common.fileutils import this_file_dir
+    sys.path.insert(0, os.path.dirname(this_file_dir()))
+    __package__ = os.path.basename(this_file_dir())
+    unittest.main()
