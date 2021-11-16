@@ -29,18 +29,18 @@ class TestStochPDEgas(unittest.TestCase):
         from .stochpdegas_automatic import model
         instance = model.create_instance(
             os.path.join(_dir,'stochpdegas_automatic.dat'))
-        self.recordTestData('create_instance', timer.toc(''))
+        self.recordTestData('create_instance', timer.toc('create_instance'))
 
         # discretize model
         discretizer = TransformationFactory('dae.finite_difference')
         discretizer.apply_to(instance,nfe=1,wrt=instance.DIS,scheme='FORWARD')
         discretizer.apply_to(instance,nfe=47,wrt=instance.TIME,scheme='BACKWARD')
-        self.recordTestData('discretize', timer.toc(''))
+        self.recordTestData('discretize', timer.toc('discretize'))
 
         # What it should be to match description in paper
         #discretizer.apply_to(instance,nfe=48,wrt=instance.TIME,scheme='BACKWARD')
         
-        TimeStep = instance.TIME[2]-instance.TIME[1]
+        TimeStep = instance.TIME.at(2)-instance.TIME.at(1)
         
         def supcost_rule(m,k):
             return sum(m.cs*m.s[k,j,t]*(TimeStep) for j in m.SUP for t in m.TIME.get_finite_elements())
@@ -78,7 +78,7 @@ class TestStochPDEgas(unittest.TestCase):
             return (1.0-m.cvar_lambda)*m.mcost + m.cvar_lambda*m.cvarcost
         instance.obj = Objective(rule=obj_rule)
         
-        self.recordTestData('postprocessing', timer.toc(''))
+        self.recordTestData('postprocessing', timer.toc('postprocessing'))
         
 
         for fmt in ('nl', 'bar','gams'):
@@ -88,9 +88,9 @@ class TestStochPDEgas(unittest.TestCase):
             fname = 'tmp.test.'+fmt
             self.assertFalse(os.path.exists(fname))
             try:
-                timer.tic('')
+                timer.tic(None)
                 writer(instance, fname, lambda x:True, {})
-                _time = timer.toc('')
+                _time = timer.toc(fmt)
                 self.assertTrue(os.path.exists(fname))
                 self.recordTestData(fmt, _time)
             finally:
@@ -98,3 +98,10 @@ class TestStochPDEgas(unittest.TestCase):
                     os.remove(fname)
                 except:
                     pass
+
+if __name__ == '__main__':
+    import sys
+    from pyomo.common.fileutils import this_file_dir
+    sys.path.insert(0, os.path.dirname(this_file_dir()))
+    __package__ = os.path.basename(this_file_dir())
+    unittest.main()

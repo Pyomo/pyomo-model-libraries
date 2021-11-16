@@ -62,6 +62,22 @@ def create_model(busfile, branchfile):
         b.def_min *= 3.14159/180
         b.def_max *= 3.14159/180
         b.def0 *= -3.14159/180
+        if not( b.b_shunt_min <= b.b_shunt0 <= b.b_shunt_max ):
+            if b.b_dispatch == 0:
+                # The shunt will be fixed at this value.  Move the bounds
+                print("DATA warning: b_shunt0[%s] = %s outside (%s, %s); as "
+                      "this will be fixed, moving bounds to accomodate value" %
+                      (i, b.b_shunt0, b.b_shunt_min, b.b_shunt_max ))
+                b.b_shunt_min = b.b_shunt_max = b.b_shunt0
+            else:
+                # The shunt will be free. snap to the bounds
+                print("DATA warning: b_shunt0[%s] = %s outside (%s, %s); "
+                      "moving the value to the nearest bound" %
+                      (i, b.b_shunt0, b.b_shunt_min, b.b_shunt_max ))
+                if b.b_shunt0 < b.b_shunt_min:
+                    b.b_shunt0 = b.b_shunt_min
+                else:
+                    b.b_shunt0 = b.b_shunt_max
         branch.append(b)
     
     

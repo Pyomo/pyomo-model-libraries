@@ -38,6 +38,24 @@ def create_model(busfile, branchfile):
         b.q_max /= 100
         b.p_load /= 100
         b.q_load /= 100
+        if not( b.b_shunt_min <= b.b_shunt0 <= b.b_shunt_max ):
+            # The test data sets have invalid data.  As logged warnings
+            # (raised during data validation) significant impact both
+            # the performance test time and time variability, we will
+            # "fix" the data here so that warnings are not generated.
+            #print("DATA warning: b_shunt0[%s] = %s outside (%s, %s)"
+            #      % (i, b.b_shunt0, b.b_shunt_min, b.b_shunt_max ))
+            if b.b_dispatch == 0:
+                # The shunt will be fixed at this value.  Move the bounds
+                #print("...as this will be fixed, moving bounds to value")
+                b.b_shunt_min = b.b_shunt_max = b.b_shunt0
+            else:
+                # The shunt will be free. snap to the bounds
+                #print("...moving the value to the nearest bound")
+                if b.b_shunt0 < b.b_shunt_min:
+                    b.b_shunt0 = b.b_shunt_min
+                else:
+                    b.b_shunt0 = b.b_shunt_max
         bus.append(b)
     
     branchfile = open(branchfile, "r")

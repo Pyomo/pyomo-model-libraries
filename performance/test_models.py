@@ -15,6 +15,12 @@ except ImportError:
 from pyomo.common.timing import TicTocTimer
 from pyomo.opt import WriterFactory
 
+if __name__ == '__main__':
+    import sys
+    from pyomo.common.fileutils import this_file_dir
+    sys.path.insert(0, os.path.dirname(this_file_dir()))
+    __package__ = os.path.basename(this_file_dir())
+
 from .models.misc import (
     pmedian, pmedian_quicksum, pmedian_tuple,
     bilinear, bilinear_nlcontext,
@@ -40,8 +46,11 @@ class TestModel(unittest.TestCase):
 
     @unittest.nottest
     def recordTestData(self, name, value):
-        """A method for recording data associated with a test.  This method is only
-           meaningful when running this TestCase with 'nose', using the TestData plugin.
+        """A method for recording data associated with a test.
+
+        This method is only meaningful when running this TestCase with
+        'nose', using the TestData plugin.
+
         """
         tmp = getattr(self, 'testdata', None)
         if not tmp is None:
@@ -63,7 +72,7 @@ class TestModel(unittest.TestCase):
             model = model_lib(data)
         if not model.is_constructed():
             model = model.create_instance()
-        self.recordTestData('create_instance', timer.toc(''))
+        self.recordTestData('create_instance', timer.toc('create_instance'))
 
         for fmt in ('nl', 'lp','bar','gams'):
             if not getattr(self, fmt, 0):
@@ -73,9 +82,9 @@ class TestModel(unittest.TestCase):
             self.assertFalse(os.path.exists(fname))
             gc.collect()
             try:
-                timer.tic('')
+                timer.tic(None)
                 writer(model, fname, lambda x:True, {})
-                _time = timer.toc('')
+                _time = timer.toc(fmt)
                 self.assertTrue(os.path.exists(fname))
                 self.recordTestData(fmt, _time)
             finally:
@@ -231,3 +240,7 @@ class TestDevel(TestModel):
     @unittest.category('devel')
     def test_issue_691(self):
         self._run_test(osarwar_github_issue_691.create_model, 1000)
+
+
+if __name__ == '__main__':
+    unittest.main()
