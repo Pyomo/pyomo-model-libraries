@@ -5,7 +5,7 @@ try:
 except ImportError:
     import json
 
-from math import sqrt
+from math import sqrt, log10, floor
 from statistics import stdev, mean
 #import scipy.stats as st
 # scipy.stats.norm.ppf(0.9)
@@ -32,32 +32,41 @@ class Result(object):
         self.relative = relative
 
     def value(self):
-        if not self.test:
+        _test, _base = self.test_base_value()
+        if not _test:
             return '--', None
-        if not isinstance(self.test, list):
-            return self.test, None
-        _test = min(self.test)
-        if self.base:
-            _base = min(self.base)
+        if isinstance(self.test, list) and len(self.test) > 1:
+            t_stdev = stdev(self.test)
         else:
-            _base = 0
+            t_stdev = 0
+        if isinstance(self.base, list) and len(self.base) > 1:
+            b_stdev = stdev(self.base)
+        else:
+            b_stdev = 0
         if self.relative:
             if not _base:
                 return '**', None
             else:
                 val = 100 * (_test - _base) / _base
-                t_stdev = stdev(self.test) if len(self.test) > 1 else 0
-                b_stdev = stdev(self.base) if len(self.base) > 1 else 0
                 dev = min(t_stdev, b_stdev) / _base
         elif not self.base:
             val = _test
             dev = None
         else:
             val = _test - _base
-            t_stdev = stdev(self.test) if len(self.test) > 1 else 0
-            b_stdev = stdev(self.base) if len(self.base) > 1 else 0
             dev = min(t_stdev, b_stdev)
         return val, dev
+
+    def test_base_value(self):
+        if isinstance(self.test, list):
+            _test = min(self.test)
+        else:
+            _test = self.test or 0
+        if isinstance(self.base, list):
+            _base = min(self.base)
+        else:
+            _base = self.base or 0
+        return _test, _base
 
     def __float__(self):
         val, dev = self.value()
@@ -83,7 +92,14 @@ class Result(object):
             )
         except (ZeroDivisionError, TypeError):
             z = 0
-        val_str = ('%%%d.%df' % (width, self.precision,)) % val
+
+        precision = self.precision
+        if width:
+            precision = max(0, min(
+                precision,
+                width - (2 if val >= 0 else 3) - floor(log10(abs(val)))
+            ))
+        val_str = ('%%%d.%df' % (width, precision,)) % val
         if z > Result.z_threshold:
             if val < 0:
                 return '\033[92m' + val_str + '\033[0m'
@@ -180,13 +196,27 @@ def _printer(arglist, os, data):
     os.write(' '.join(('%%%ds' % w) % fields[i]
                       for i, w in enumerate(field_w)) + '\n')
     os.write('-'*(len(field_w) + sum(field_w) - 1) + '\n')
-    cumul = [Result(0, relative=v.relative) for i,v in enumerate(lines[0])]
+    cumul = [Result(0, 0, relative=v.relative) for i,v in enumerate(lines[0])]
     for line in sorted(lines):
         os.write(' '.join(('%%%ds' % width) % line[i].tostr(width)
                           for i, width in enumerate(field_w)) + '\n')
         for i,v in enumerate(line):
-            cumul[i].test += float(v)
+            _test, _base = v.test_base_value()
+            if isinstance(_test, str):
+                continue
+            cumul[i].test += _test
+            cumul[i].base += _base
     os.write('-'*(len(field_w) + sum(field_w) - 1) + '\n')
+    cumul[-1].test = "[ TOTAL ]"
+    os.write(' '.join(('%%%ds' % width) % cumul[i].tostr(width)
+                      for i, width in enumerate(field_w)) + '\n')
+    if not any(c.base for c in cumul):
+        return
+    for c in cumul[:-1]:
+        if c.relative:
+            c.base = 0
+        c.relative = True
+    cumul[-1].test = "[ %diff ]"
     os.write(' '.join(('%%%ds' % width) % cumul[i].tostr(width)
                       for i, width in enumerate(field_w)) + '\n')
 
