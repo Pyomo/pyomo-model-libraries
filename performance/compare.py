@@ -97,7 +97,8 @@ class Result(object):
         if width:
             precision = max(0, min(
                 precision,
-                width - (2 if val >= 0 else 3) - floor(log10(abs(val)))
+                width - (2 if val >= 0 else 3) - (
+                    1 if not val else floor(log10(abs(val))))
             ))
         val_str = ('%%%d.%df' % (width, precision,)) % val
         if z > Result.z_threshold:
