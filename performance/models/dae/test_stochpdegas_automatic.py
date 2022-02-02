@@ -9,14 +9,14 @@ from pyomo.dae import *
 
 _dir = os.path.dirname(__file__)
 
-@unittest.category('performance', 'short', 'nl', 'bar', 'gams')
+@unittest.pytest.mark.performance
+@unittest.pytest.mark.short
+@unittest.pytest.mark.nl
+@unittest.pytest.mark.bar
+@unittest.pytest.mark.gams
 class TestStochPDEgas(unittest.TestCase):
-    # These two lines can be removed after we finish the PyUtilib divorce
-    pyutilib_th = 1
-    pyomo_unittest = 1
 
-    @unittest.nottest
-    def recordTestData(self, name, value):
+    def recordData(self, name, value):
         """A method for recording data associated with a test.  This method is only
            meaningful when running this TestCase with 'nose', using the TestData plugin.
         """
@@ -29,13 +29,13 @@ class TestStochPDEgas(unittest.TestCase):
         from .stochpdegas_automatic import model
         instance = model.create_instance(
             os.path.join(_dir,'stochpdegas_automatic.dat'))
-        self.recordTestData('create_instance', timer.toc('create_instance'))
+        self.recordData('create_instance', timer.toc('create_instance'))
 
         # discretize model
         discretizer = TransformationFactory('dae.finite_difference')
         discretizer.apply_to(instance,nfe=1,wrt=instance.DIS,scheme='FORWARD')
         discretizer.apply_to(instance,nfe=47,wrt=instance.TIME,scheme='BACKWARD')
-        self.recordTestData('discretize', timer.toc('discretize'))
+        self.recordData('discretize', timer.toc('discretize'))
 
         # What it should be to match description in paper
         #discretizer.apply_to(instance,nfe=48,wrt=instance.TIME,scheme='BACKWARD')
@@ -78,7 +78,7 @@ class TestStochPDEgas(unittest.TestCase):
             return (1.0-m.cvar_lambda)*m.mcost + m.cvar_lambda*m.cvarcost
         instance.obj = Objective(rule=obj_rule)
         
-        self.recordTestData('postprocessing', timer.toc('postprocessing'))
+        self.recordData('postprocessing', timer.toc('postprocessing'))
         
 
         for fmt in ('nl', 'bar','gams'):
@@ -92,7 +92,7 @@ class TestStochPDEgas(unittest.TestCase):
                 writer(instance, fname, lambda x:True, {})
                 _time = timer.toc(fmt)
                 self.assertTrue(os.path.exists(fname))
-                self.recordTestData(fmt, _time)
+                self.recordData(fmt, _time)
             finally:
                 try:
                     os.remove(fname)

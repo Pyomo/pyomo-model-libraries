@@ -19,6 +19,7 @@ import pyomo
 from pyomo.version import version_info as pyomo_version
 from pyomo.common.timing import TicTocTimer, report_timing
 
+
 class TimingHandler(logging.Handler):
     def __init__(self):
         super(TimingHandler, self).__init__()
@@ -80,11 +81,11 @@ class DataRecorder(nose.plugins.base.Plugin):
         # remain enabled.  However, if the user specified any
         # categories, then disable the ones that the user did NOT
         # request.
-        for cat in ('nl','lp','bar','gams'):
+        for cat in ('nl', 'lp', 'bar', 'gams'):
             if not self.attribPlugin.enabled:
                 self._category[cat] = True
                 continue
-            @unittest.category(cat, 'performance', 'long', 'short', 'devel')
+            # @unittest.category(cat, 'performance', 'long', 'short', 'devel')
             class tmp(unittest.TestCase):
                 def test(self):
                     pass
@@ -154,7 +155,7 @@ def run_tests(cython, argv):
     gc.collect()
     results = ( getRunInfo(cython), OrderedDict() )
     recorder = DataRecorder(results[1])
-    nose.core.run(argv=argv, addplugins=[recorder])
+    unittest.pytest.main([argv], plugins=[recorder])
     gc.collect()
     gc.collect()
     return results

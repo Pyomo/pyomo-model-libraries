@@ -40,12 +40,8 @@ CWD = os.getcwd()
 
 
 class TestModel(unittest.TestCase):
-    # These two lines can be removed after we finish the PyUtilib divorce
-    pyutilib_th = 1
-    pyomo_unittest = 1
 
-    @unittest.nottest
-    def recordTestData(self, name, value):
+    def recordData(self, name, value):
         """A method for recording data associated with a test.
 
         This method is only meaningful when running this TestCase with
@@ -72,7 +68,7 @@ class TestModel(unittest.TestCase):
             model = model_lib(data)
         if not model.is_constructed():
             model = model.create_instance()
-        self.recordTestData('create_instance', timer.toc('create_instance'))
+        self.recordData('create_instance', timer.toc('create_instance'))
 
         for fmt in ('nl', 'lp','bar','gams'):
             if not getattr(self, fmt, 0):
@@ -86,105 +82,127 @@ class TestModel(unittest.TestCase):
                 writer(model, fname, lambda x:True, {})
                 _time = timer.toc(fmt)
                 self.assertTrue(os.path.exists(fname))
-                self.recordTestData(fmt, _time)
+                self.recordData(fmt, _time)
             finally:
                 try:
                     os.remove(fname)
                 except:
                     pass
 
-@unittest.category('performance', 'nl', 'lp', 'bar', 'gams')
+@unittest.pytest.mark.performance
+@unittest.pytest.mark.lp
+@unittest.pytest.mark.nl
+@unittest.pytest.mark.bar
+@unittest.pytest.mark.gams
 class TestMisc(TestModel):
 
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_pmedian_sum_test4(self):
         self._run_test(pmedian.create_model, 'pmedian.test4.dat')
 
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_pmedian_quicksum_test4(self):
         self._run_test(pmedian_quicksum.create_model, 'pmedian.test4.dat')
 
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_pmedian_tuple_test4(self):
         self._run_test(pmedian_tuple.create_model, 'pmedian.test4.dat')
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_pmedian_sum_test8(self):
         self._run_test(pmedian.create_model, 'pmedian.test8.dat')
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_pmedian_quicksum_test8(self):
         self._run_test(pmedian_quicksum.create_model, 'pmedian.test8.dat')
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_pmedian_tuple_test8(self):
         self._run_test(pmedian_tuple.create_model, 'pmedian.test8.dat')
 
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_bilinear_100(self):
         self._run_test(bilinear.create_model, 100)
 
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_bilinear_nlcontext_100(self):
         self._run_test(bilinear_nlcontext.create_model, 100)
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_bilinear_100000(self):
         self._run_test(bilinear.create_model, 100000)
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_bilinear_nlcontext_100000(self):
         self._run_test(bilinear_nlcontext.create_model, 100000)
         
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_diag_sum_100(self):
         self._run_test(diag_sum.create_model, 100)
 
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_diag_quicksum_100(self):
         self._run_test(diag_quicksum.create_model, 100)
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_diag_sum_100000(self):
         self._run_test(diag_sum.create_model, 100000)
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_diag_quicksum_100000(self):
         self._run_test(diag_quicksum.create_model, 100000)
 
 
-@unittest.category('performance', 'nl', 'gams')
+@unittest.pytest.mark.performance
+@unittest.pytest.mark.nl
+@unittest.pytest.mark.gams
 class TestJump(TestModel):
 
-    @unittest.category('short', 'lp', 'bar')
+    @unittest.pytest.mark.short
+    @unittest.pytest.mark.lp
+    @unittest.pytest.mark.bar
     def test_lqcp_10(self):
         self._run_test(lqcp.create_model, 10)
 
-    @unittest.category('short', 'lp', 'bar')
+    @unittest.pytest.mark.short
+    @unittest.pytest.mark.lp
+    @unittest.pytest.mark.bar
     def test_lqcp_quicksum_10(self):
         self._run_test(lqcp_quicksum.create_model, 10)
 
-    @unittest.category('long', 'lp', 'bar')
+    @unittest.pytest.mark.long
+    @unittest.pytest.mark.lp
+    @unittest.pytest.mark.bar
     def test_lqcp_500(self):
         self._run_test(lqcp.create_model, 500)
 
-    @unittest.category('long', 'lp', 'bar')
+    @unittest.pytest.mark.long
+    @unittest.pytest.mark.lp
+    @unittest.pytest.mark.bar
     def test_lqcp_quicksum_500(self):
         self._run_test(lqcp_quicksum.create_model, 500)
 
-    @unittest.category('short', 'lp', 'bar')
+    @unittest.pytest.mark.short
+    @unittest.pytest.mark.lp
+    @unittest.pytest.mark.bar
     def test_facility_5(self):
         self._run_test(facility.create_model, 5)
 
-    @unittest.category('short', 'lp', 'bar')
+    @unittest.pytest.mark.short
+    @unittest.pytest.mark.lp
+    @unittest.pytest.mark.bar
     def test_facility_quicksum_5(self):
         self._run_test(facility_quicksum.create_model, 5)
 
-    @unittest.category('long', 'lp', 'bar')
+    @unittest.pytest.mark.long
+    @unittest.pytest.mark.lp
+    @unittest.pytest.mark.bar
     def test_facility_25(self):
         self._run_test(facility.create_model, 25)
 
-    @unittest.category('long', 'lp', 'bar')
+    @unittest.pytest.mark.long
+    @unittest.pytest.mark.lp
+    @unittest.pytest.mark.bar
     def test_facility_quicksum_25(self):
         self._run_test(facility_quicksum.create_model, 25)
 
@@ -192,28 +210,28 @@ class TestJump(TestModel):
     # Note: opf contains cos() and cannot be sent to Baron
     #
 
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_opf_662(self):
         _dir = os.path.dirname(opf.__file__)
         self._run_test(opf.create_model, (
             os.path.join(_dir, 'IEEE662.bus'),
             os.path.join(_dir, 'IEEE662.branch') ))
 
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_opf_quicksum_662(self):
         _dir = os.path.dirname(opf.__file__)
         self._run_test(opf_quicksum.create_model, (
             os.path.join(_dir, 'IEEE662.bus'),
             os.path.join(_dir, 'IEEE662.branch') ))
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_opf_6620(self):
         _dir = os.path.dirname(opf.__file__)
         self._run_test(opf.create_model, (
             os.path.join(_dir, 'IEEE6620.bus'),
             os.path.join(_dir, 'IEEE6620.branch') ))
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_opf_quicksum_6620(self):
         _dir = os.path.dirname(opf.__file__)
         self._run_test(opf_quicksum.create_model, (
@@ -224,20 +242,24 @@ class TestJump(TestModel):
     # Note: clnlbean contains cos() and cannot be sent to Baron
     #
 
-    @unittest.category('short')
+    @unittest.pytest.mark.short
     def test_clnlbean_5000(self):
         self._run_test(clnlbeam.create_model, 'clnlbeam-5000.dat')
 
-    @unittest.category('long')
+    @unittest.pytest.mark.long
     def test_clnlbean_50000(self):
         self._run_test(clnlbeam.create_model, 'clnlbeam-50000.dat')
 
 
-@unittest.category('performance', 'nl', 'lp', 'bar', 'gams')
+@unittest.pytest.mark.performance
+@unittest.pytest.mark.lp
+@unittest.pytest.mark.nl
+@unittest.pytest.mark.bar
+@unittest.pytest.mark.gams
 class TestDevel(TestModel):
 
     @unittest.skipIf(not numpy_available, 'numpy is not available')
-    @unittest.category('devel')
+    @unittest.pytest.mark.devel
     def test_issue_691(self):
         self._run_test(osarwar_github_issue_691.create_model, 1000)
 
