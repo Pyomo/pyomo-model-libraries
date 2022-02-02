@@ -147,7 +147,7 @@ class SmokeASLTests(Tests):
         self.pyomo_asl(name)
 
 
-@unittest.category('expensive')
+@unittest.pytest.mark.expensive
 class ExpensiveASLTests(Tests):
     def __init__(self, *args, **kwds):
         Tests.__init__(self, *args, **kwds)

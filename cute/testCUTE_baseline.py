@@ -73,7 +73,7 @@ class SmokeBaselineTests(Tests):
         self.pyomo_baseline(name)
 
 
-@unittest.category('expensive')
+@unittest.pytest.mark.expensive
 class ExpensiveBaselineTests(Tests):
     def __init__(self, *args, **kwds):
         Tests.__init__(self, *args, **kwds)
