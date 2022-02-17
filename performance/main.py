@@ -2,7 +2,6 @@
 import argparse
 import gc
 import logging
-import nose
 import os
 import platform
 import sys
@@ -17,7 +16,7 @@ from collections import OrderedDict
 import pyomo.common.unittest as unittest
 import pyomo
 from pyomo.version import version_info as pyomo_version
-from pyomo.common.timing import TicTocTimer, report_timing
+from pyomo.common.timing import TicTocTimer
 
 
 class TimingHandler(logging.Handler):
@@ -169,6 +168,7 @@ def main(argv):
     )
 
     options, argv = parser.parse_known_args(argv)
+    argv.append('-W ignore::Warning')
     cython = options.cython
     results = tuple(run_tests(cython, argv) for i in range(options.replicates))
     results = (results[0][0],) + tuple(r[1] for r in results)

@@ -69,9 +69,9 @@ class TestModel(unittest.TestCase):
         if not model.is_constructed():
             model = model.create_instance()
         self.recordData('create_instance', timer.toc('create_instance'))
-
-        for fmt in ('nl', 'lp','bar','gams'):
-            if not getattr(self, fmt, 0):
+        markers = [mark.name for mark in self.pytestmark]
+        for fmt in ('nl', 'lp', 'bar', 'gams'):
+            if fmt not in markers:
                 continue
             writer = WriterFactory(fmt)
             fname = os.path.join(CWD, 'tmp.test.'+fmt)
