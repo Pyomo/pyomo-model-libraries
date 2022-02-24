@@ -37,9 +37,6 @@ for name in CUTE.expensive_models:
 
 
 class Tests(unittest.TestCase):
-    # These two lines can be removed after we finish the PyUtilib divorce
-    pyutilib_th = 1
-    pyomo_unittest = 1
     def pyomo(self, cmd):
         os.chdir(currdir)
         output = main.main(['convert', '--logging=quiet', '-c']+cmd)
@@ -73,7 +70,7 @@ class SmokeBaselineTests(Tests):
         self.pyomo_baseline(name)
 
 
-@unittest.category('expensive')
+@unittest.pytest.mark.expensive
 class ExpensiveBaselineTests(Tests):
     def __init__(self, *args, **kwds):
         Tests.__init__(self, *args, **kwds)

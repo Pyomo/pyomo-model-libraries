@@ -2,7 +2,6 @@
 import argparse
 import gc
 import logging
-import nose
 import os
 import platform
 import sys
@@ -17,7 +16,8 @@ from collections import OrderedDict
 import pyomo.common.unittest as unittest
 import pyomo
 from pyomo.version import version_info as pyomo_version
-from pyomo.common.timing import TicTocTimer, report_timing
+from pyomo.common.timing import TicTocTimer
+
 
 class TimingHandler(logging.Handler):
     def __init__(self):
@@ -53,64 +53,36 @@ class TimingHandler(logging.Handler):
         _cat[name] = _val
 
 
-class DataRecorder(nose.plugins.base.Plugin):
-    enabled = True
-
+class DataRecorder(object):
     def __init__(self, data):
-        super(DataRecorder, self).__init__()
         self._data = data
-        self._timingHandler = None
         self._timer = TicTocTimer()
         self._category = {}
 
-    def configure(self, options, conf):
-        super(DataRecorder, self).configure(options, conf)
-        self.attribPlugin = next( x for x in conf.plugins
-                                  if hasattr(x, 'validateAttrib') )
-        self.enabled = True
-
-    def begin(self):
-        # Set up the interception of the timing reports
         self._timingHandler = TimingHandler()
         timing_logger = logging.getLogger('pyomo.common.timing')
         timing_logger.setLevel(logging.INFO)
         timing_logger.addHandler(self._timingHandler)
-        # Determine and remember the "status" of all key categories.  If
-        # the user did not specify any categories, then they all will
-        # remain enabled.  However, if the user specified any
-        # categories, then disable the ones that the user did NOT
-        # request.
-        for cat in ('nl','lp','bar','gams'):
-            if not self.attribPlugin.enabled:
-                self._category[cat] = True
-                continue
-            @unittest.category(cat, 'performance', 'long', 'short', 'devel')
-            class tmp(unittest.TestCase):
-                def test(self):
-                    pass
-            req = self.attribPlugin.validateAttrib(tmp.test, tmp)
-            self._category[cat] = req is not False
 
-    def beforeTest(self, test):
-        addr = test.address()
-        try:
-            addr = addr[1]+":"+addr[2]
-        except:
-            addr = test.id()
-        test.test.testdata = self._data[addr] = OrderedDict()
-        self._timingHandler.setTest(test.test.testdata)
-        # disable any categories we are not interested in
-        for cat, req in self._category.items():
-            if getattr(test.test, cat, 0):
-                setattr(test.test, cat, req)
+    @unittest.pytest.fixture(autouse=True)
+    def add_data_attribute(self, request):
+        # set a class attribute on the invoking test context
+        request.cls.testdata = OrderedDict()
+        self._data[request.node.nodeid] = request.cls.testdata
+        yield
+        request.cls.testdata = None
+
+    @unittest.pytest.hookimpl(hookwrapper=True)
+    def pytest_runtest_call(self, item):
+        self._timingHandler.setTest(self._data[item.nodeid])
         # Trigger garbage collection (try and get a "clean" environment)
         gc.collect()
         gc.collect()
         self._timer.tic("")
-
-    def afterTest(self, test):
-        test.test.testdata['test_time'] = self._timer.toc("")
-        test.test.testdata = None
+        # Run the test
+        yield
+        # Collect the timing and clean up
+        self._data[item.nodeid]['test_time'] = self._timer.toc("")
         self._timingHandler.clearTest()
 
 
@@ -154,7 +126,7 @@ def run_tests(cython, argv):
     gc.collect()
     results = ( getRunInfo(cython), OrderedDict() )
     recorder = DataRecorder(results[1])
-    nose.core.run(argv=argv, addplugins=[recorder])
+    unittest.pytest.main(argv, plugins=[recorder])
     gc.collect()
     gc.collect()
     return results
@@ -196,6 +168,7 @@ def main(argv):
     )
 
     options, argv = parser.parse_known_args(argv)
+    argv.append('-W ignore::Warning')
     cython = options.cython
     results = tuple(run_tests(cython, argv) for i in range(options.replicates))
     results = (results[0][0],) + tuple(r[1] for r in results)
