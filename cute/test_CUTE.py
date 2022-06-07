@@ -58,15 +58,9 @@ try:
 finally:
     sys.path.remove(currdir)
 
-smoke = []
-for name in CUTE.smoke_models:
-    smoke.append(name)
-
-expensive = []
-for name in CUTE.moderate_models:
-    expensive.append(name)
-for name in CUTE.expensive_models:
-    expensive.append(name)
+smoke = list(CUTE.smoke_models)
+expensive = list(CUTE.moderate_models)
+expensive.extend(CUTE.expensive_models)
 
 # https://github.com/ghackebeil/gjh_asl_json
 has_gjh_asl_json = False
@@ -241,21 +235,21 @@ class ExpensiveBaselineTests_v1(Driver, unittest.TestCase):
 #
 # Explicitly test the NL_v2 writer, if present
 #
-@unittest.skipUnless(WriterFactory('nl_v2') is not None, "Requires nl_v2")
+@unittest.skipIf(WriterFactory('nl_v2') is None, "Requires nl_v2 writer")
 class SmokeASLTests_v2(SmokeASLTests_v1):
     _nl_version = 'nl_v2'
 
 @unittest.pytest.mark.expensive
-@unittest.skipUnless(WriterFactory('nl_v2') is not None, "Requires nl_v2")
+@unittest.skipIf(WriterFactory('nl_v2') is None, "Requires nl_v2 writer")
 class ExpensiveASLTests_v2(ExpensiveASLTests_v1):
     _nl_version = 'nl_v2'
 
-@unittest.skipUnless(WriterFactory('nl_v2') is not None, "Requires nl_v2")
+@unittest.skipIf(WriterFactory('nl_v2') is None, "Requires nl_v2 writer")
 class SmokeBaselineTests_v2(SmokeBaselineTests_v1):
     _nl_version = 'nl_v2'
 
 @unittest.pytest.mark.expensive
-@unittest.skipUnless(WriterFactory('nl_v2') is not None, "Requires nl_v2")
+@unittest.skipIf(WriterFactory('nl_v2') is None, "Requires nl_v2 writer")
 class ExpensiveBaselineTests_v2(ExpensiveBaselineTests_v1):
     _nl_version = 'nl_v2'
 
