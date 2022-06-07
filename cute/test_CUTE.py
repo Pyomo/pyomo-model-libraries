@@ -124,7 +124,7 @@ class Driver(object):
         The following test calls the gjh_asl_json executable to generate
         JSON files corresponding to both the cached AMPL-generated nl
         file and a freshly-generated Pyomo-generated nl file. The JSON
-        files are then compated with reasonable numerical tolerances.
+        files are then compared with reasonable numerical tolerances.
 
         """
         if name in CUTE.asl_skipped_models:
