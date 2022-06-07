@@ -10,20 +10,39 @@ import warnings
 import json
 
 import pyomo.common.unittest as unittest
-import pyomo.scripting.pyomo_main as main
 
 from pyomo.common.dependencies import attempt_import
-from pyomo.common.fileutils import this_file_dir
+from pyomo.common.fileutils import this_file_dir, import_file
 from pyomo.common.tempfiles import TempfileManager
 
 # Ensure plugins are registered
 import pyomo.environ
+from pyomo.opt import WriterFactory
 
 parameterized, param_available = attempt_import('parameterized')
 if not param_available:
     raise unittest.SkipTest('Parameterized is not available.')
 
 currdir = this_file_dir()
+
+try:
+    from pyomo.repn.tests.ampl.nl_diff import load_and_compare_nl_baseline
+except ImportError:
+    # Backwards compatibility: fallback to the previous differ
+    # TODO: This can be removed after the NL Writer v2 has been merged
+    def load_and_compare_nl_baseline(base, test):
+        # Check that the pyomo nl file matches its own baseline
+        with open(test, 'r') as f1, open(base, 'r') as f2:
+            f1_contents = list(
+                filter(None, f1.read().replace('n', 'n ').split()))
+            f2_contents = list(
+                filter(None, f2.read().replace('n', 'n ').split()))
+            for item1, item2 in zip_longest(f1_contents, f2_contents):
+                try:
+                    self.assertAlmostEqual(
+                        float(item1.strip()), float(item2.strip()))
+                except:
+                    self.assertEqual(item1, item2)
 
 try:
     sys.path.insert(0, currdir)
@@ -41,23 +60,71 @@ for name in CUTE.moderate_models:
 for name in CUTE.expensive_models:
     expensive.append(name)
 
-
 # https://github.com/ghackebeil/gjh_asl_json
 has_gjh_asl_json = False
-if os.system(['gjh_asl_json', '-v']) == 0:
+if os.system('gjh_asl_json -v') == 0:
     has_gjh_asl_json = True
 
+# Prevent the module cache from persisting past the end of testing this module
+def tearDownModule():
+    Driver._model_cache.clear()
 
-class Tests(unittest.TestCase):
+
+class Driver(object):
     # These two lines can be removed after we finish the PyUtilib divorce
     pyutilib_th = 1
     pyomo_unittest = 1
-    def pyomo(self, cmd):
-        os.chdir(currdir)
-        output = main.main(['convert', '--logging=quiet', '-c']+cmd)
-        return output
+
+    _nl_version = 'nl' if WriterFactory('nl_v1') is None else 'nl_v1'
+    _model_cache = {}
+
+    def create_nl_file(self, source, result, symbolic):
+        # This module creates models up to 4 times.  Caching the models
+        # saves significant time by avoiding repeated work.
+        if source in self._model_cache:
+            m = self._model_cache[source]
+        else:
+            module = import_file(source)
+            m = module.model
+            if not m.is_constructed():
+                m = m.create_instance()
+            self._model_cache[source] = m
+        
+        m.write(
+            result,
+            format=self._nl_version,
+            io_options={'symbolic_solver_labels': symbolic}
+        )
+
+    def pyomo_baseline(self, name):
+        """Compare against a cached NL baseline file
+
+        The following test generates an nl file for the test case and
+        checks that it matches the current pyomo baseline nl file.
+
+        """
+        if name in CUTE.baseline_skipped_models:
+            self.skipTest('Ignoring test '+name)
+            return
+
+        source = os.path.join(currdir, name + '_cute.py')
+        with TempfileManager:
+            result = TempfileManager.create_tempfile(suffix='.test.nl')
+            self.create_nl_file(source, result, False)
+
+            self.assertEqual(*load_and_compare_nl_baseline(
+                os.path.join(currdir, name + '.pyomo.nl'),
+                result))
 
     def pyomo_asl(self, name):
+        """Compare NL files using gjh_asl_json
+
+        The following test calls the gjh_asl_json executable to generate
+        JSON files corresponding to both the cached AMPL-generated nl
+        file and a freshly-generated Pyomo-generated nl file. The JSON
+        files are then compated with reasonable numerical tolerances.
+
+        """
         if name in CUTE.asl_skipped_models:
             self.skipTest('Ignoring test ' + name)
             return
@@ -72,12 +139,7 @@ class Tests(unittest.TestCase):
     def _pyomo_asl_impl(self, name, tmpdir):
         source = os.path.join(currdir, name + '_cute.py')
         nl = os.path.join(tmpdir, name + '.test.nl')
-        main.main([
-            'convert', '--logging=quiet', '-c',
-            '--output=' + nl,
-            '--symbolic-solver-labels',
-            source,
-        ])
+        self.create_nl_file(source, nl, True)
 
         # obtain the pyomo-generated nl file summary information for
         # comparison with ampl
@@ -140,34 +202,54 @@ class Tests(unittest.TestCase):
         # almost entirely certain that the difference had to
         # do with one of AMPL or Pyomo moving a fixed part
         # of the constraint body from the body to the bounds
-        warnings.warn('asl comparison was relaxed for model '+name)
+        warnings.warn('asl comparison was relaxed for model ' + name)
 
 
-class SmokeASLTests(Tests):
-    def __init__(self, *args, **kwds):
-        Tests.__init__(self, *args, **kwds)
-
+class SmokeASLTests_v1(Driver, unittest.TestCase):
     @parameterized.parameterized.expand(input=smoke)
     def test_pyomo_asl_smoke(self, name):
         self.pyomo_asl(name)
 
 
 @unittest.pytest.mark.expensive
-class ExpensiveASLTests(Tests):
-    def __init__(self, *args, **kwds):
-        Tests.__init__(self, *args, **kwds)
-
-    #
-    # The following test calls the gjh_asl_json executable to
-    # generate JSON files corresponding to both the
-    # AMPL-generated nl file and the Pyomo-generated nl
-    # file. The JSON files are then diffed using the pyutilib.th
-    # test class method assertMatchesJsonBaseline()
-    #
+class ExpensiveASLTests_v1(Driver, unittest.TestCase):
     @parameterized.parameterized.expand(input=expensive)
     def test_pyomo_asl_expensive(self, name):
         self.pyomo_asl(name)
 
+
+class SmokeBaselineTests_v1(Driver, unittest.TestCase):
+    @parameterized.parameterized.expand(input=smoke)
+    def test_pyomo_baseline_smoke(self, name):
+        self.pyomo_baseline(name)
+
+
+@unittest.pytest.mark.expensive
+class ExpensiveBaselineTests_v1(Driver, unittest.TestCase):
+    @parameterized.parameterized.expand(input=expensive)
+    def test_pyomo_baseline_expensive(self, name):
+        self.pyomo_baseline(name)
+
+#
+# Explicitly test the NL_v2 writer, if present
+#
+@unittest.skipUnless(WriterFactory('nl_v2') is not None, "Requires nl_v2")
+class SmokeASLTests_v2(SmokeASLTests_v1):
+    _nl_version = 'nl_v2'
+
+@unittest.pytest.mark.expensive
+@unittest.skipUnless(WriterFactory('nl_v2') is not None, "Requires nl_v2")
+class ExpensiveASLTests_v2(ExpensiveASLTests_v1):
+    _nl_version = 'nl_v2'
+
+@unittest.skipUnless(WriterFactory('nl_v2') is not None, "Requires nl_v2")
+class SmokeBaselineTests_v2(SmokeBaselineTests_v1):
+    _nl_version = 'nl_v2'
+
+@unittest.pytest.mark.expensive
+@unittest.skipUnless(WriterFactory('nl_v2') is not None, "Requires nl_v2")
+class ExpensiveBaselineTests_v2(ExpensiveBaselineTests_v1):
+    _nl_version = 'nl_v2'
 
 if __name__ == "__main__":
     unittest.main()
