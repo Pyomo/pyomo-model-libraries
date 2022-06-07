@@ -32,17 +32,25 @@ except ImportError:
     # TODO: This can be removed after the NL Writer v2 has been merged
     def load_and_compare_nl_baseline(base, test):
         # Check that the pyomo nl file matches its own baseline
-        with open(test, 'r') as f1, open(base, 'r') as f2:
+        with open(base, 'r') as f1, open(test, 'r') as f2:
             f1_contents = list(
                 filter(None, f1.read().replace('n', 'n ').split()))
             f2_contents = list(
                 filter(None, f2.read().replace('n', 'n ').split()))
-            for item1, item2 in zip_longest(f1_contents, f2_contents):
-                try:
-                    self.assertAlmostEqual(
-                        float(item1.strip()), float(item2.strip()))
-                except:
-                    self.assertEqual(item1, item2)
+        for i, item1 in enumerate(f1_contents):
+            try:
+                # mock up assertAlmostEqual:
+                if abs(float(item1) - float(f2_contents[i])) <= 1e-7:
+                    f2_contents[i] = item1
+            except:
+                pass
+        # for item1, item2 in zip_longest(f1_contents, f2_contents):
+        #     try:
+        #         self.assertAlmostEqual(
+        #             float(item1.strip()), float(item2.strip()))
+        #     except:
+        #         self.assertEqual(item1, item2)
+        return f1_contents, f2_contents
 
 try:
     sys.path.insert(0, currdir)
