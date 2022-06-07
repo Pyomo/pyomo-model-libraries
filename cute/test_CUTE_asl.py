@@ -2,35 +2,34 @@
 # Test the NL writer on a subset of the CUTE test cases
 #
 
+import shutil
 import sys
 import subprocess
 import os
-from os.path import abspath, dirname
 import warnings
-has_json = False
-try:
-    import json
-    has_json = True
-except:
-    pass
+import json
 
 import pyomo.common.unittest as unittest
 import pyomo.scripting.pyomo_main as main
-import pyomo.core.expr.current as Expr
-from pyomo.opt import ProblemFormat
-from pyomo.core import *
-import pyomo.common
 
-currdir = dirname(abspath(__file__))+os.sep
+from pyomo.common.dependencies import attempt_import
+from pyomo.common.fileutils import this_file_dir
+from pyomo.common.tempfiles import TempfileManager
 
-parameterized, param_available = pyomo.common.dependencies.attempt_import('parameterized')
+# Ensure plugins are registered
+import pyomo.environ
+
+parameterized, param_available = attempt_import('parameterized')
 if not param_available:
     raise unittest.SkipTest('Parameterized is not available.')
 
-#from pyomo.data.cute import CUTE_classifications as CUTE
-sys.path.append(currdir)
-import CUTE_classifications as CUTE
-sys.path.pop()
+currdir = this_file_dir()
+
+try:
+    sys.path.insert(0, currdir)
+    import CUTE_classifications as CUTE
+finally:
+    sys.path.remove(currdir)
 
 smoke = []
 for name in CUTE.smoke_models:
@@ -45,7 +44,7 @@ for name in CUTE.expensive_models:
 
 # https://github.com/ghackebeil/gjh_asl_json
 has_gjh_asl_json = False
-if os.system('gjh_asl_json -v') == 0:
+if os.system(['gjh_asl_json', '-v']) == 0:
     has_gjh_asl_json = True
 
 
@@ -60,82 +59,88 @@ class Tests(unittest.TestCase):
 
     def pyomo_asl(self, name):
         if name in CUTE.asl_skipped_models:
-            self.skipTest('Ignoring test '+name)
+            self.skipTest('Ignoring test ' + name)
             return
         if not has_gjh_asl_json:
             self.skipTest("'gjh_asl_json' executable not available")
             return
-        if has_json is False:
-            self.skipTest('JSON module not available')
-            return
-        self.pyomo(['--output='+currdir+name+'.test.nl',
-                    '--symbolic-solver-labels',
-                    currdir+name+'_cute.py'])
 
-        # compare AMPL and Pyomo nl file structure
-        #########################################
-        try:
-            os.remove(currdir+name+'.ampl.json')
-        except Exception:
-            pass
-        try:
-            os.remove(currdir+name+'.test.json')
-        except Exception:
-            pass
+        with TempfileManager:
+            tmpdir = TempfileManager.create_tempdir()
+            self._pyomo_asl_impl(name, tmpdir)
 
-        # obtain the nl file summary information for comparison with ampl
-        cmd = 'gjh_asl_json '+currdir+name+'.test.nl rows='+currdir+name+'.test.row cols='+currdir+name+'.test.col'
-        p = subprocess.run(cmd.split(),
-            universal_newlines=True, stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE)
-        self.assertTrue(p.returncode == 0, msg=p.stdout)
+    def _pyomo_asl_impl(self, name, tmpdir):
+        source = os.path.join(currdir, name + '_cute.py')
+        nl = os.path.join(tmpdir, name + '.test.nl')
+        main.main([
+            'convert', '--logging=quiet', '-c',
+            '--output=' + nl,
+            '--symbolic-solver-labels',
+            source,
+        ])
 
-        # obtain the nl file summary information for comparison with pyomo
-        cmd = 'gjh_asl_json '+currdir+name+'.ampl.nl rows='+currdir+name+'.ampl.row cols='+currdir+name+'.ampl.col'
-        p = subprocess.run(cmd.split(),
-            universal_newlines=True, stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE)
-        self.assertTrue(p.returncode == 0, msg=p.stdout)
-        try:
-            with open(currdir+name+'.test.json', 'r') as test, \
-                open(currdir+name+'.ampl.json', 'r') as base:
-                    self.assertStructuredAlmostEqual(json.load(test),
-                                                     json.load(base))
-        except AssertionError:
-            # Make sure this is not a simple case of Pyomo/AMPL moving
-            # constants in the constraint body to the upper/lower bound
-            f = open(currdir+name+'.ampl.json','r')
-            ampl_res = json.load(f)
-            f.close()
-            f = open(currdir+name+'.test.json','r')
+        # obtain the pyomo-generated nl file summary information for
+        # comparison with ampl
+        cmd = [
+            'gjh_asl_json', nl,
+            'rows=' + os.path.join(tmpdir, name + '.test.row'),
+            'cols=' + os.path.join(tmpdir, name + '.test.col'),
+        ]
+        p = subprocess.run(
+            cmd,
+            universal_newlines=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        self.assertEqual(p.returncode, 0, msg=p.stdout)
+
+        # obtain the ampl-generated nl file summary information for
+        # comparison with pyomo
+        #
+        # Note: gjh_asl_json writes the JSON to the same directory as
+        # the source.  We will copy the sources into the temporary
+        # directory before running it (in case the source dir is not
+        # writable).
+        for ext in ('nl', 'row', 'col'):
+            shutil.copyfile(os.path.join(currdir, name + '.ampl.' + ext),
+                            os.path.join(tmpdir, name + '.ampl.' + ext))
+        cmd = [
+            'gjh_asl_json',
+            os.path.join(tmpdir, name + '.ampl.nl'),
+            'rows=' + os.path.join(tmpdir, name + '.ampl.row'),
+            'cols=' + os.path.join(tmpdir, name + '.ampl.col'),
+        ]
+        p = subprocess.run(
+            cmd,
+            universal_newlines=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        self.assertEqual(p.returncode, 0, msg=p.stdout)
+        with open(os.path.join(tmpdir, name + '.test.json'), 'r') as f:
             pyomo_res = json.load(f)
-            f.close()
-            del ampl_res["constraint bounds"]
-            del pyomo_res["constraint bounds"]
-            del ampl_res["initial evaluations"]["constraints"]
-            del pyomo_res["initial evaluations"]["constraints"]
-            f = open(currdir+name+'.ampl.json','w')
-            json.dump(ampl_res,f,indent=2)
-            f.close()
-            f = open(currdir+name+'.test.json','w')
-            json.dump(pyomo_res,f,indent=2)
-            f.close()
-            with open(currdir+name+'.test.json', 'r') as test, \
-                open(currdir+name+'.ampl.json', 'r') as base:
-                    self.assertStructuredAlmostEqual(json.load(test),
-                                                     json.load(base))
-            # If the json files match at this point, it is
-            # almost entirely certain that the difference had to
-            # do with one of AMPL or Pyomo moving a fixed part
-            # of the constraint body from the body to the bounds
-            warnings.warn('asl comparison was relaxed for model '+name)
-        os.remove(currdir+name+'.ampl.json')
+        with open(os.path.join(tmpdir, name + '.ampl.json'), 'r') as f:
+            ampl_res = json.load(f)
+        try:
+            self.assertStructuredAlmostEqual(
+                pyomo_res, ampl_res, abstol=1e-14, reltol=1e-7)
+            return
+        except AssertionError:
+            pass
 
-        # delete temporary test files
-        os.remove(currdir+name+'.test.col')
-        os.remove(currdir+name+'.test.row')
-        os.remove(currdir+name+'.test.nl')
-        ##########################################
+        # Make sure this is not a simple case of Pyomo/AMPL moving
+        # constants in the constraint body to the upper/lower bound
+        del ampl_res["constraint bounds"]
+        del pyomo_res["constraint bounds"]
+        del ampl_res["initial evaluations"]["constraints"]
+        del pyomo_res["initial evaluations"]["constraints"]
+        self.assertStructuredAlmostEqual(
+            pyomo_res, ampl_res, abstol=1e-14, reltol=1e-7)
+        # If the json files match at this point, it is
+        # almost entirely certain that the difference had to
+        # do with one of AMPL or Pyomo moving a fixed part
+        # of the constraint body from the body to the bounds
+        warnings.warn('asl comparison was relaxed for model '+name)
 
 
 class SmokeASLTests(Tests):
@@ -165,5 +170,4 @@ class ExpensiveASLTests(Tests):
 
 
 if __name__ == "__main__":
-    import pyomo.environ
     unittest.main()
