@@ -95,7 +95,10 @@ class Driver(object):
         m.write(
             result,
             format=self._nl_version,
-            io_options={'symbolic_solver_labels': symbolic}
+            io_options={
+                'symbolic_solver_labels': symbolic,
+                'file_determinism': 2 if self._nl_version == 'nl_v2' else 1,
+            }
         )
 
     def pyomo_baseline(self, name):
@@ -113,10 +116,14 @@ class Driver(object):
         with TempfileManager:
             result = TempfileManager.create_tempfile(suffix='.test.nl')
             self.create_nl_file(source, result, False)
-
-            self.assertEqual(*load_and_compare_nl_baseline(
-                os.path.join(currdir, name + '.pyomo.nl'),
-                result))
+            try:
+                baseline = os.path.join(currdir, name + '.pyomo.nl')
+                self.assertEqual(*load_and_compare_nl_baseline(
+                    baseline, result, self._nl_version
+                ))
+            except:
+                os.system(f"cp {result} {baseline}.new")
+                raise
 
     def pyomo_asl(self, name):
         """Compare NL files using gjh_asl_json
