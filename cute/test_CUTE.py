@@ -23,7 +23,7 @@ parameterized, param_available = attempt_import('parameterized')
 if not param_available:
     raise unittest.SkipTest('Parameterized is not available.')
 
-currdir = this_file_dir()
+srcdir = this_file_dir()
 
 try:
     from pyomo.repn.tests.ampl.nl_diff import load_and_compare_nl_baseline
@@ -53,10 +53,10 @@ except ImportError:
         return f1_contents, f2_contents
 
 try:
-    sys.path.insert(0, currdir)
+    sys.path.insert(0, srcdir)
     import CUTE_classifications as CUTE
 finally:
-    sys.path.remove(currdir)
+    sys.path.remove(srcdir)
 
 smoke = list(CUTE.smoke_models)
 expensive = list(CUTE.moderate_models)
@@ -112,12 +112,12 @@ class Driver(object):
             self.skipTest('Ignoring test '+name)
             return
 
-        source = os.path.join(currdir, name + '_cute.py')
+        source = os.path.join(srcdir, name + '_cute.py')
         with TempfileManager:
             result = TempfileManager.create_tempfile(suffix='.test.nl')
             self.create_nl_file(source, result, False)
             try:
-                baseline = os.path.join(currdir, name + '.pyomo.nl')
+                baseline = os.path.join(srcdir, name + '.pyomo.nl')
                 self.assertEqual(*load_and_compare_nl_baseline(
                     baseline, result, self._nl_version
                 ))
@@ -146,7 +146,7 @@ class Driver(object):
             self._pyomo_asl_impl(name, tmpdir)
 
     def _pyomo_asl_impl(self, name, tmpdir):
-        source = os.path.join(currdir, name + '_cute.py')
+        source = os.path.join(srcdir, name + '_cute.py')
         nl = os.path.join(tmpdir, name + '.test.nl')
         self.create_nl_file(source, nl, True)
 
@@ -173,7 +173,7 @@ class Driver(object):
         # directory before running it (in case the source dir is not
         # writable).
         for ext in ('nl', 'row', 'col'):
-            shutil.copyfile(os.path.join(currdir, name + '.ampl.' + ext),
+            shutil.copyfile(os.path.join(srcdir, name + '.ampl.' + ext),
                             os.path.join(tmpdir, name + '.ampl.' + ext))
         cmd = [
             'gjh_asl_json',
