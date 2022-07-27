@@ -23,7 +23,7 @@ parameterized, param_available = attempt_import('parameterized')
 if not param_available:
     raise unittest.SkipTest('Parameterized is not available.')
 
-currdir = this_file_dir()
+srcdir = this_file_dir()
 
 try:
     from pyomo.repn.tests.ampl.nl_diff import load_and_compare_nl_baseline
@@ -53,10 +53,10 @@ except ImportError:
         return f1_contents, f2_contents
 
 try:
-    sys.path.insert(0, currdir)
+    sys.path.insert(0, srcdir)
     import CUTE_classifications as CUTE
 finally:
-    sys.path.remove(currdir)
+    sys.path.remove(srcdir)
 
 smoke = list(CUTE.smoke_models)
 expensive = list(CUTE.moderate_models)
@@ -95,7 +95,10 @@ class Driver(object):
         m.write(
             result,
             format=self._nl_version,
-            io_options={'symbolic_solver_labels': symbolic}
+            io_options={
+                'symbolic_solver_labels': symbolic,
+                'file_determinism': 2 if self._nl_version == 'nl_v2' else 1,
+            }
         )
 
     def pyomo_baseline(self, name):
@@ -109,14 +112,21 @@ class Driver(object):
             self.skipTest('Ignoring test '+name)
             return
 
-        source = os.path.join(currdir, name + '_cute.py')
+        source = os.path.join(srcdir, name + '_cute.py')
         with TempfileManager:
             result = TempfileManager.create_tempfile(suffix='.test.nl')
             self.create_nl_file(source, result, False)
-
-            self.assertEqual(*load_and_compare_nl_baseline(
-                os.path.join(currdir, name + '.pyomo.nl'),
-                result))
+            try:
+                baseline = os.path.join(srcdir, name + '.pyomo.nl')
+                self.assertEqual(*load_and_compare_nl_baseline(
+                    baseline, result, self._nl_version
+                ))
+            except:
+                # Development: uncomment to update the test result
+                # shutil.copyfile(
+                #     result,
+                #     f"{os.path.splitext(baseline)[0]}.{self._nl_version}")
+                raise
 
     def pyomo_asl(self, name):
         """Compare NL files using gjh_asl_json
@@ -139,7 +149,7 @@ class Driver(object):
             self._pyomo_asl_impl(name, tmpdir)
 
     def _pyomo_asl_impl(self, name, tmpdir):
-        source = os.path.join(currdir, name + '_cute.py')
+        source = os.path.join(srcdir, name + '_cute.py')
         nl = os.path.join(tmpdir, name + '.test.nl')
         self.create_nl_file(source, nl, True)
 
@@ -166,7 +176,7 @@ class Driver(object):
         # directory before running it (in case the source dir is not
         # writable).
         for ext in ('nl', 'row', 'col'):
-            shutil.copyfile(os.path.join(currdir, name + '.ampl.' + ext),
+            shutil.copyfile(os.path.join(srcdir, name + '.ampl.' + ext),
                             os.path.join(tmpdir, name + '.ampl.' + ext))
         cmd = [
             'gjh_asl_json',
@@ -198,8 +208,21 @@ class Driver(object):
         del pyomo_res["constraint bounds"]
         del ampl_res["initial evaluations"]["constraints"]
         del pyomo_res["initial evaluations"]["constraints"]
-        self.assertStructuredAlmostEqual(
-            pyomo_res, ampl_res, abstol=1e-14, reltol=1e-7)
+        try:
+            self.assertStructuredAlmostEqual(
+                pyomo_res, ampl_res, abstol=1e-14, reltol=1e-7)
+        except AssertionError:
+            # Development: uncomment to preserve the result JSON
+            # shutil.copyfile(
+            #     os.path.join(tmpdir, name + '.ampl.json'),
+            #     os.path.join(srcdir, name + '.ampl.json')
+            # )
+            # shutil.copyfile(
+            #     os.path.join(tmpdir, name + '.test.json'),
+            #     os.path.join(srcdir, name + '.test.json')
+            # )
+            raise
+
         # If the json files match at this point, it is
         # almost entirely certain that the difference had to
         # do with one of AMPL or Pyomo moving a fixed part

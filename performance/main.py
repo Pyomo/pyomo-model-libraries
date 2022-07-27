@@ -39,10 +39,13 @@ class TimingHandler(logging.Handler):
             _cat = self._testRecord[cat]
         else:
             _cat = self._testRecord[cat] = OrderedDict()
-        try:
-            name = record.msg.obj.name
-        except AttributeError:
-            name = record.msg.obj.__class__.__name__
+        if isinstance(record.msg, str):
+            name = record.msg
+        else:
+            try:
+                name = record.msg.obj.name
+            except AttributeError:
+                name = record.msg.obj.__class__.__name__
         if name in _cat:
             _val = _cat[name]
             if type(_val) is not list:
@@ -181,7 +184,7 @@ def main(argv):
                     '_mod' if results[0]['diffs'] else ''),
                 results[0]['python_implementation'].lower() + (
                     '.'.join(str(i) for i in results[0]['python_version'][:3])),
-                time.strftime('%y%m%d:%H%M', time.gmtime())
+                time.strftime('%y%m%d_%H%M', time.localtime())
             )
         options.output = os.path.join(options.output_dir, options.output)
     if options.output:
