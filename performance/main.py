@@ -184,7 +184,7 @@ def main(argv):
                     '_mod' if results[0]['diffs'] else ''),
                 results[0]['python_implementation'].lower() + (
                     '.'.join(str(i) for i in results[0]['python_version'][:3])),
-                time.strftime('%y%m%d:%H%M', time.gmtime())
+                time.strftime('%y%m%d_%H%M', time.localtime())
             )
         options.output = os.path.join(options.output_dir, options.output)
     if options.output:
