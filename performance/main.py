@@ -39,10 +39,13 @@ class TimingHandler(logging.Handler):
             _cat = self._testRecord[cat]
         else:
             _cat = self._testRecord[cat] = OrderedDict()
-        try:
-            name = record.msg.obj.name
-        except AttributeError:
-            name = record.msg.obj.__class__.__name__
+        if isinstance(record.msg, str):
+            name = record.msg
+        else:
+            try:
+                name = record.msg.obj.name
+            except AttributeError:
+                name = record.msg.obj.__class__.__name__
         if name in _cat:
             _val = _cat[name]
             if type(_val) is not list:
