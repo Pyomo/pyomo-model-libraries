@@ -7,8 +7,52 @@ g3 1 1 0	# problem unknown
  0 0 0 0 0 	# discrete variables: binary, integer, nonlinear (b,c,o)
  45 0 	# nonzeros in Jacobian, obj. gradient
  0 0	# max name lengths: constraints, variables
- 0 0 0 0 0	# common exprs: b,c,o,c1,o1
+ 0 0 0 3 0	# common exprs: b,c,o,c1,o1
+V9 0 1
+o54
+3
+o2
+o54
+3
+o2
+n1.3725e-07
+v0
+o2
+n937.62
+v3
+o2
+n-42.207
+v6
+v0
+o2
+o54
+3
+o2
+n1.3725e-07
+v1
+o2
+n937.62
+v4
+o2
+n-42.207
+v7
+v3
+o2
+o54
+3
+o2
+n1.3725e-07
+v2
+o2
+n937.62
+v5
+o2
+n-42.207
+v8
+v6
 C0
+v9
+V10 0 2
 o54
 3
 o2
@@ -23,7 +67,7 @@ v3
 o2
 n-42.207
 v6
-v0
+v1
 o2
 o54
 3
@@ -36,7 +80,7 @@ v4
 o2
 n-42.207
 v7
-v3
+v4
 o2
 o54
 3
@@ -49,8 +93,10 @@ v5
 o2
 n-42.207
 v8
-v6
+v7
 C1
+v10
+V11 0 3
 o54
 3
 o2
@@ -65,7 +111,7 @@ v3
 o2
 n-42.207
 v6
-v1
+v2
 o2
 o54
 3
@@ -78,7 +124,7 @@ v4
 o2
 n-42.207
 v7
-v4
+v5
 o2
 o54
 3
@@ -91,49 +137,9 @@ v5
 o2
 n-42.207
 v8
-v7
+v8
 C2
-o54
-3
-o2
-o54
-3
-o2
-n1.3725e-07
-v0
-o2
-n937.62
-v3
-o2
-n-42.207
-v6
-v2
-o2
-o54
-3
-o2
-n1.3725e-07
-v1
-o2
-n937.62
-v4
-o2
-n-42.207
-v7
-v5
-o2
-o54
-3
-o2
-n1.3725e-07
-v2
-o2
-n937.62
-v5
-o2
-n-42.207
-v8
-v8
+v11
 C3
 n0
 C4
