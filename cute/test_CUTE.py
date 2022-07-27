@@ -30,7 +30,7 @@ try:
 except ImportError:
     # Backwards compatibility: fallback to the previous differ
     # TODO: This can be removed after the NL Writer v2 has been merged
-    def load_and_compare_nl_baseline(base, test):
+    def load_and_compare_nl_baseline(base, test, nl_version):
         # Check that the pyomo nl file matches its own baseline
         with open(base, 'r') as f1, open(test, 'r') as f2:
             f1_contents = list(
