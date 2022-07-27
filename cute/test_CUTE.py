@@ -122,7 +122,10 @@ class Driver(object):
                     baseline, result, self._nl_version
                 ))
             except:
-                os.system(f"cp {result} {baseline}.new")
+                # Development: uncomment to update the test result
+                # shutil.copyfile(
+                #     result,
+                #     f"{os.path.splitext(baseline)[0]}.{self._nl_version}")
                 raise
 
     def pyomo_asl(self, name):
@@ -205,8 +208,21 @@ class Driver(object):
         del pyomo_res["constraint bounds"]
         del ampl_res["initial evaluations"]["constraints"]
         del pyomo_res["initial evaluations"]["constraints"]
-        self.assertStructuredAlmostEqual(
-            pyomo_res, ampl_res, abstol=1e-14, reltol=1e-7)
+        try:
+            self.assertStructuredAlmostEqual(
+                pyomo_res, ampl_res, abstol=1e-14, reltol=1e-7)
+        except AssertionError:
+            # Development: uncomment to preserve the result JSON
+            # shutil.copyfile(
+            #     os.path.join(tmpdir, name + '.ampl.json'),
+            #     os.path.join(srcdir, name + '.ampl.json')
+            # )
+            # shutil.copyfile(
+            #     os.path.join(tmpdir, name + '.test.json'),
+            #     os.path.join(srcdir, name + '.test.json')
+            # )
+            raise
+
         # If the json files match at this point, it is
         # almost entirely certain that the difference had to
         # do with one of AMPL or Pyomo moving a fixed part
