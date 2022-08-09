@@ -8,7 +8,12 @@ from pyomo.dae import *
 
 _dir = os.path.dirname(__file__)
 
+from pyomo.contrib.pynumero.algorithms.solvers.cyipopt_solver import (
+    cyipopt_available,
+)
+
 @unittest.pytest.mark.performance
+@unittest.skipUnless(cyipopt_available, "CyIpopt is not available")
 class TestImplicitDistill(unittest.TestCase):
 
     _predicted_results = {
