@@ -11,7 +11,7 @@
 
 from pyomo.environ import *
 
-def create_model():
+def create_model(**kwds):
     import random
 
     random.seed(1000)
@@ -51,3 +51,5 @@ def create_model():
     model.num_facilities = Constraint(rule=rule)
 
     return model
+
+pyomo_create_model = create_model
