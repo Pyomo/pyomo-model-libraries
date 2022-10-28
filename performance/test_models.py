@@ -70,8 +70,8 @@ class TestModel(unittest.TestCase):
             model = model.create_instance()
         self.recordData('create_instance', timer.toc('create_instance'))
         markers = [mark.name for mark in self.pytestmark]
-        for fmt in ('nl', 'lp', 'bar', 'gams'):
-            if fmt not in markers:
+        for fmt in ('nl', 'nl_v1', 'nl_v2', 'lp', 'bar', 'gams'):
+            if fmt.split('_', 1)[0] not in markers:
                 continue
             writer = WriterFactory(fmt)
             fname = os.path.join(CWD, 'tmp.test.'+fmt)
