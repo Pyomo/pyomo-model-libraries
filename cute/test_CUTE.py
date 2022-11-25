@@ -53,6 +53,12 @@ except ImportError:
         return f1_contents, f2_contents
 
 try:
+    from pyomo.repn.plugins.nl_writer import FileDeterminism
+except ImportError:
+    class FileDeterminism(object):
+        ORDERED = 1
+
+try:
     sys.path.insert(0, srcdir)
     import CUTE_classifications as CUTE
 finally:
@@ -92,12 +98,13 @@ class Driver(object):
                 m = m.create_instance()
             self._model_cache[source] = m
         
+        fd = FileDeterminism.SORT_INDICES if self._nl_version == 'nl_v2' else 1
         m.write(
             result,
             format=self._nl_version,
             io_options={
                 'symbolic_solver_labels': symbolic,
-                'file_determinism': 2 if self._nl_version == 'nl_v2' else 1,
+                'file_determinism': fd,
             }
         )
 
