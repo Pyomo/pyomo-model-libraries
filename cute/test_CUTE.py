@@ -129,10 +129,12 @@ class Driver(object):
                     baseline, result, self._nl_version
                 ))
             except:
-                # Development: uncomment to update the test result
+                # Development: uncomment to update the test baseline
+                # import pyomo.core.expr.current as EXPR
                 # shutil.copyfile(
                 #     result,
-                #     f"{os.path.splitext(baseline)[0]}.{self._nl_version}")
+                #     f"{os.path.splitext(baseline)[0]}"
+                #     f".expr{int(EXPR._mode)}.{self._nl_version}")
                 raise
 
     def pyomo_asl(self, name):
