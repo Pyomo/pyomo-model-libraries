@@ -131,10 +131,13 @@ class Driver(object):
             except:
                 # Development: uncomment to update the test baseline
                 # import pyomo.core.expr.current as EXPR
+                # _mode = EXPR._mode
+                # if type(_mode) is tuple:
+                #     _mode = EXPR._mode[0]
                 # shutil.copyfile(
                 #     result,
                 #     f"{os.path.splitext(baseline)[0]}"
-                #     f".expr{int(EXPR._mode)}.{self._nl_version}")
+                #     f".expr{int(_mode)}.{self._nl_version}")
                 raise
 
     def pyomo_asl(self, name):
