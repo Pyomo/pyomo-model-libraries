@@ -1,4 +1,5 @@
 import gc
+import inspect
 import os
 
 import pyomo.common.unittest as unittest
@@ -38,6 +39,23 @@ from .models.devel import (
 
 CWD = os.getcwd()
 
+_calling_frame_function_locations = (
+    # local function
+    lambda frame, name: frame.f_locals.get(name, None),
+    # global function
+    lambda frame, name: frame.f_globals.get(name, None),
+    # class method (assuming the local variable for the class was 'self')
+    lambda frame, name: getattr(frame.f_locals.get('self', None), name, None),
+)
+
+def _get_calling_function():
+    frame = inspect.currentframe().f_back.f_back
+    code = frame.f_code
+    name = code.co_name
+    for get_fcn in _calling_frame_function_locations:
+        fcn = get_fcn(frame, name)
+        if getattr(fcn, '__code__', None) == code:
+            return fcn
 
 class TestModel(unittest.TestCase):
 
@@ -53,6 +71,11 @@ class TestModel(unittest.TestCase):
             tmp[name] = value
 
     def _run_test(self, model_lib, data):
+        markers = [
+            mark.name for mark in
+            getattr(self, 'pytestmark', [])
+            + getattr(_get_calling_function(), 'pytestmark', [])
+        ]
         gc.collect()
         timer = TicTocTimer()
         if isinstance(data, str) and data.endswith('.dat'):
@@ -69,8 +92,7 @@ class TestModel(unittest.TestCase):
         if not model.is_constructed():
             model = model.create_instance()
         self.recordData('create_instance', timer.toc('create_instance'))
-        markers = [mark.name for mark in self.pytestmark]
-        for fmt in ('nl', 'nl_v1', 'nl_v2', 'lp', 'bar', 'gams'):
+        for fmt in ('nl', 'lp', 'bar', 'gams'):
             if fmt.split('_', 1)[0] not in markers:
                 continue
             writer = WriterFactory(fmt)
