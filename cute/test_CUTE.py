@@ -26,8 +26,17 @@ if not param_available:
 srcdir = this_file_dir()
 
 try:
-    from pyomo.repn.tests.ampl.nl_diff import load_and_compare_nl_baseline
+    from pyomo.repn.tests.nl_diff import load_and_compare_nl_baseline
+    _loaded = True
 except ImportError:
+    _loaded = False
+if not _loaded:
+    try:
+        from pyomo.repn.tests.ampl.nl_diff import load_and_compare_nl_baseline
+        _loaded = True
+    except ImportError:
+        _loaded = False
+if not _loaded:
     # Backwards compatibility: fallback to the previous differ
     # TODO: This can be removed after the NL Writer v2 has been merged
     def load_and_compare_nl_baseline(base, test, nl_version):
@@ -53,8 +62,17 @@ except ImportError:
         return f1_contents, f2_contents
 
 try:
-    from pyomo.repn.plugins.nl_writer import FileDeterminism
+    from pyomo.repn.util import FileDeterminism
+    _loaded = True
 except ImportError:
+    _loaded = False
+if not _loaded:
+    try:
+        from pyomo.repn.plugins.nl_writer import FileDeterminism
+        _loaded = True
+    except ImportError:
+        _loaded = False
+if not _loaded:
     class FileDeterminism(object):
         ORDERED = 1
 
