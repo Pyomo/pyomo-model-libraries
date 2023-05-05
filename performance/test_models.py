@@ -92,7 +92,7 @@ class TestModel(unittest.TestCase):
         if not model.is_constructed():
             model = model.create_instance()
         self.recordData('create_instance', timer.toc('create_instance'))
-        for fmt in ('nl', 'nl_v1', 'nl_v2', 'lp', 'bar', 'gams'):
+        for fmt in ('nl', 'lp', 'bar', 'gams'):
             if fmt.split('_', 1)[0] not in markers:
                 continue
             writer = WriterFactory(fmt)
