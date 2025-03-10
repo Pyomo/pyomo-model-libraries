@@ -1,6 +1,10 @@
-Copyright 2008 Sandia Corporation. Under the terms of Contract DE-AC04-
-94AL85000 with Sandia Corporation, the U.S. Government retains certain
-rights in this software.
+iLICENSE
+=======
+
+Copyright (c) 2008-2025 National Technology and Engineering Solutions of
+Sandia, LLC . Under the terms of Contract DE-NA0003525 with National
+Technology and Engineering Solutions of Sandia, LLC , the U.S.
+Government retains certain rights in this software.
 
 All rights reserved.
 
@@ -30,3 +34,4 @@ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
