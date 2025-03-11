@@ -11,7 +11,7 @@
 
 #   Source: a generalization of problem 20 in
 #   M. J. D. Powell
-#   "On the quadratic progamming algorithm of Goldfarb and Idnani",
+#   "On the quadratic programming algorithm of Goldfarb and Idnani",
 #   Mathematical Programmimg Study 25 (1985) 46-61.
 
 #   SIF input: Nick Gould, August 1994.

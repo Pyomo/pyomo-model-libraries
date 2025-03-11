@@ -20,7 +20,7 @@
 # Maximize the volume of the parameterized body B(x) contained 
 # in a second body G, described by a set of convex inequalities.
 #
-# Removed devision by x[3]^2 and x[4]^2 in complementarity constraints
+# Removed division by x[3]^2 and x[4]^2 in complementarity constraints
 #
 # Original Pyomo coding by William Hart
 # Adapted from AMPL coding by Sven Leyffer, University of Dundee, Jan. 2002

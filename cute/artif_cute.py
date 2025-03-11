@@ -24,7 +24,7 @@
 
 #   Source:
 #   K.M. Irani, M.P. Kamat, C.J. Ribbens, H.F.Walker and L.T. Watson,
-#   "Experiments with conjugate gradient algoritms for homotopy curve
+#   "Experiments with conjugate gradient algorithms for homotopy curve
 #    tracking" ,
 #   SIAM Journal on Optimization, May 1991, pp. 222-251, 1991.
 

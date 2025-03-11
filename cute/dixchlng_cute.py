@@ -23,7 +23,7 @@
 # permission notice appear in all supporting documentation.
 
 #   Source:
-#   L.C.W. Dixon, personnal communication, Jan 1991.
+#   L.C.W. Dixon, personal communication, Jan 1991.
 
 #   SIF input: Ph. Toint, Feb 1991.
 

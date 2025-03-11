@@ -23,7 +23,7 @@ asl_skipped_models = []
 baseline_skipped_models = []
 
 if sys.version_info[0] == 3:
-    # These models use to many explicit opertions in a single
+    # These models use to many explicit operations in a single
     # expression and crash the interpreter resulting in a message like
     # "RuntimeError: maximum recursion depth exceeded during compilation"
     asl_skipped_models.append('aug3dc')
@@ -61,7 +61,7 @@ smoke_models.extend([\
 'lch'])
 
 asl_skipped_models.append('hs087')         # uses Piecewise (naming scheme is different)
-asl_skipped_models.append('coolhans')      # AMPL does not eleminate Var*0 from expressions in NL file
+asl_skipped_models.append('coolhans')      # AMPL does not eliminate Var*0 from expressions in NL file
 
 baseline_skipped_models.extend([])
 
@@ -109,7 +109,7 @@ baseline_skipped_models.extend([])
 
 if set(all_models) != set(smoke_models+moderate_models+expensive_models):
     sys.stdout.write("\n")
-    sys.stdout.write("WARNING: The following cute models are not classifed and so will not be tested:\n")
+    sys.stdout.write("WARNING: The following cute models are not classified and so will not be tested:\n")
     sys.stdout.write("         (someone should classify them)\n")
     sys.stdout.write("\n")
     pprint.pprint(set(all_models).difference(set(smoke_models+moderate_models+expensive_models)))

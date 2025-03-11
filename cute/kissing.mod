@@ -20,7 +20,7 @@
 #   satisfying optimality conditions. We have, thus, a class of problems 
 #   indexed by the parameters MDIM and NP, that provides a suitable 
 #   set of test problems for evaluating nonlinear programming codes.
-#   After some algebric manipulations, we can formulate this problem as
+#   After some algebraic manipulations, we can formulate this problem as
 #
 #                            Minimize z
 #

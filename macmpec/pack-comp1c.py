@@ -20,7 +20,7 @@
 # Minimize membrane surface under the condition that 
 # the membrane comes into contact with a compliant obstacle. 
 #
-# Constaint that enforces convexity of membrane region added.
+# Constraint that enforces convexity of membrane region added.
 #
 # A 2D obstacle problem on [0,1] x [0,1].
 #

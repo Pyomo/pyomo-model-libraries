@@ -68,7 +68,7 @@ def y_rule(model, i):
 #               return (None,None)
 #def fix2(model, i):
 #       if i == model.N+1:
-#               return (model.length,modell.ength)
+#               return (model.length,model.length)
 #       if i == 0:
 #               return (0,0)
 #       else:

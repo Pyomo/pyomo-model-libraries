@@ -23,7 +23,7 @@
 # copies and that the copyright notice and this
 # permission notice appear in all supporting documentation.
 
-#   Source: an exercize for L. Watson course on LANCELOT in the Spring 1993.
+#   Source: an exercise for L. Watson course on LANCELOT in the Spring 1993.
 #   B.Benhabib, R.G.Fenton and A.A.Goldberg,
 #   "Analytical trajectory optimization of seven degrees of freedom redundant
 #   robot",

@@ -24,7 +24,7 @@
 
 #   Source:
 #   T.C.T. Kotiah and D.I. Steinberg,
-#   "Occurences of cycling and other phenomena arising in a class of
+#   "Occurrences of cycling and other phenomena arising in a class of
 #   linear programming models",
 #   Communications of the ACM, vol. 20, pp. 107-112, 1977.
 

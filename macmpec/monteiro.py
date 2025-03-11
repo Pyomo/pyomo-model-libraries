@@ -38,7 +38,7 @@ model.L = Set()                             # set of Kirchhoff's voltage loops
 
 # PARAMETERS --------------------------------------------------
 model.a = Param(model.P)                            # intercept of supply function
-model.b = Param(model.P)                            # slope of supply funtion
+model.b = Param(model.P)                            # slope of supply function
 model.c = Param(model.D)                            # intercept of demand function 
 model.d = Param(model.D)                            # slope of demand function
 model.alfa_s = Param(model.P)                       # upper bound of the bid 
