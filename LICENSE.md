@@ -1,4 +1,4 @@
-iLICENSE
+LICENSE
 =======
 
 Copyright (c) 2008-2025 National Technology and Engineering Solutions of
