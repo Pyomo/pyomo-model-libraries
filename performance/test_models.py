@@ -24,6 +24,14 @@ except ImportError:
     except ImportError:
         numpy_available = False
 
+try:
+    from pyomo.common.errors import InvalidExpressionError
+except ImportError:
+
+    class InvalidExpressionError(Exception):
+        pass
+
+
 from pyomo.common.timing import TicTocTimer
 from pyomo.opt import WriterFactory
 
@@ -121,6 +129,18 @@ class TestModel(unittest.TestCase):
                     os.remove(fname)
                 except:
                     pass
+        if 'lp' in markers:
+            fmt = 'compile_standard_form'
+            writer = WriterFactory(fmt)
+            gc.collect()
+            timer.tic(None)
+            try:
+                writer.write(model, None)
+                _time = timer.toc('std_form')
+                self.recordData(fmt, _time)
+            except InvalidExpressionError:
+                pass
+
 
 @unittest.pytest.mark.performance
 @unittest.pytest.mark.lp
