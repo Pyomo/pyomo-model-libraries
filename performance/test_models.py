@@ -20,6 +20,7 @@ try:
 except ImportError:
     try:
         import numpy
+
         numpy_available = True
     except ImportError:
         numpy_available = False
@@ -38,23 +39,29 @@ from pyomo.opt import WriterFactory
 if __name__ == '__main__':
     import sys
     from pyomo.common.fileutils import this_file_dir
+
     sys.path.insert(0, os.path.dirname(this_file_dir()))
     __package__ = os.path.basename(this_file_dir())
 
 from .models.misc import (
-    pmedian, pmedian_quicksum, pmedian_tuple,
-    bilinear, bilinear_nlcontext,
-    diag_sum, diag_quicksum,
+    pmedian,
+    pmedian_quicksum,
+    pmedian_tuple,
+    bilinear,
+    bilinear_nlcontext,
+    diag_sum,
+    diag_quicksum,
 )
 from .models.jump import (
-    lqcp, lqcp_quicksum,
-    facility, facility_quicksum,
-    opf, opf_quicksum,
+    lqcp,
+    lqcp_quicksum,
+    facility,
+    facility_quicksum,
+    opf,
+    opf_quicksum,
     clnlbeam,
 )
-from .models.devel import (
-    osarwar_github_issue_691,
-)
+from .models.devel import osarwar_github_issue_691
 
 CWD = os.getcwd()
 
@@ -67,6 +74,7 @@ _calling_frame_function_locations = (
     lambda frame, name: getattr(frame.f_locals.get('self', None), name, None),
 )
 
+
 def _get_calling_function():
     frame = inspect.currentframe().f_back.f_back
     code = frame.f_code
@@ -75,6 +83,7 @@ def _get_calling_function():
         fcn = get_fcn(frame, name)
         if getattr(fcn, '__code__', None) == code:
             return fcn
+
 
 class TestModel(unittest.TestCase):
 
@@ -91,8 +100,8 @@ class TestModel(unittest.TestCase):
 
     def _run_test(self, model_lib, data):
         markers = [
-            mark.name for mark in
-            getattr(self, 'pytestmark', [])
+            mark.name
+            for mark in getattr(self, 'pytestmark', [])
             + getattr(_get_calling_function(), 'pytestmark', [])
         ]
         gc.collect()
@@ -115,12 +124,12 @@ class TestModel(unittest.TestCase):
             if fmt.split('_', 1)[0] not in markers:
                 continue
             writer = WriterFactory(fmt)
-            fname = os.path.join(CWD, 'tmp.test.'+fmt)
+            fname = os.path.join(CWD, 'tmp.test.' + fmt)
             self.assertFalse(os.path.exists(fname))
             gc.collect()
             try:
                 timer.tic(None)
-                writer(model, fname, lambda x:True, {})
+                writer(model, fname, lambda x: True, {})
                 _time = timer.toc(fmt)
                 self.assertTrue(os.path.exists(fname))
                 self.recordData(fmt, _time)
@@ -188,7 +197,7 @@ class TestMisc(TestModel):
     @unittest.pytest.mark.long
     def test_bilinear_nlcontext_100000(self):
         self._run_test(bilinear_nlcontext.create_model, 100000)
-        
+
     @unittest.pytest.mark.short
     def test_diag_sum_100(self):
         self._run_test(diag_sum.create_model, 100)
@@ -266,30 +275,34 @@ class TestJump(TestModel):
     @unittest.pytest.mark.short
     def test_opf_662(self):
         _dir = os.path.dirname(opf.__file__)
-        self._run_test(opf.create_model, (
-            os.path.join(_dir, 'IEEE662.bus'),
-            os.path.join(_dir, 'IEEE662.branch') ))
+        self._run_test(
+            opf.create_model,
+            (os.path.join(_dir, 'IEEE662.bus'), os.path.join(_dir, 'IEEE662.branch')),
+        )
 
     @unittest.pytest.mark.short
     def test_opf_quicksum_662(self):
         _dir = os.path.dirname(opf.__file__)
-        self._run_test(opf_quicksum.create_model, (
-            os.path.join(_dir, 'IEEE662.bus'),
-            os.path.join(_dir, 'IEEE662.branch') ))
+        self._run_test(
+            opf_quicksum.create_model,
+            (os.path.join(_dir, 'IEEE662.bus'), os.path.join(_dir, 'IEEE662.branch')),
+        )
 
     @unittest.pytest.mark.long
     def test_opf_6620(self):
         _dir = os.path.dirname(opf.__file__)
-        self._run_test(opf.create_model, (
-            os.path.join(_dir, 'IEEE6620.bus'),
-            os.path.join(_dir, 'IEEE6620.branch') ))
+        self._run_test(
+            opf.create_model,
+            (os.path.join(_dir, 'IEEE6620.bus'), os.path.join(_dir, 'IEEE6620.branch')),
+        )
 
     @unittest.pytest.mark.long
     def test_opf_quicksum_6620(self):
         _dir = os.path.dirname(opf.__file__)
-        self._run_test(opf_quicksum.create_model, (
-            os.path.join(_dir, 'IEEE6620.bus'),
-            os.path.join(_dir, 'IEEE6620.branch') ))
+        self._run_test(
+            opf_quicksum.create_model,
+            (os.path.join(_dir, 'IEEE6620.bus'), os.path.join(_dir, 'IEEE6620.branch')),
+        )
 
     #
     # Note: clnlbean contains cos() and cannot be sent to Baron
